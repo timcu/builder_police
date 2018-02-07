@@ -1,0 +1,2641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="StudySettings">
+    <StudyTaskManager>
+      <option name="course">
+        <Course>
+          <option name="authors">
+            <list>
+              <StepicUser>
+                <option name="accessToken" value="" />
+                <option name="firstName" value="D" />
+                <option name="guest" value="false" />
+                <option name="id" value="-1" />
+                <option name="lastName" value="Tim Cummings" />
+                <option name="refreshToken" value="" />
+              </StepicUser>
+            </list>
+          </option>
+          <option name="courseMode" value="Course Creator" />
+          <option name="courseType" value="PyCharm" />
+          <option name="description" value="Exercises to teach programming using a Minetest server with plugins irc, irc_commands, signs_lib, pymt" />
+          <option name="language" value="Python" />
+          <option name="languageCode" value="en" />
+          <option name="lessons">
+            <list>
+              <Lesson>
+                <option name="id" value="0" />
+                <option name="index" value="1" />
+                <option name="name" value="lesson1" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <EduTask>
+                      <option name="index" value="1" />
+                      <option name="name" value="Placing a block" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 1 - Placing a block&lt;/h1&gt;&#10;&lt;ol&gt;&#10;&lt;li&gt;Use Minetest to join the Minetest server with a name and password of your choosing. Don't use a password you use for anything else because other people will see your password&lt;/li&gt;&#10;&lt;li&gt;Ask the Minetest op to grant you privilege &quot;irc_builder&quot;&lt;/li&gt;&#10;&lt;li&gt;Navigate to your sign to find your first task. It will be at x=100, z=10 or higher. Press F5 to see your current location&lt;/li&gt; &#10;&lt;li&gt;In PyCharm Edu &amp;gt; File menu &amp;gt; Open... &amp;gt; coderdojo.py&lt;/li&gt;&#10;&lt;li&gt;Enter your name as mtuser (mtuser=&quot;myname&quot;)&lt;/li&gt;&#10;&lt;li&gt;Enter your password as mtuserpass (mtuserpass=&quot;mysecret&quot;)&lt;/li&gt;&#10;&lt;li&gt;Ask the Minetest op for details of the IRC server and fill in details in coderdojo.py&lt;/li&gt;&#10;&lt;li&gt;Save coderdojo.py file and close it&lt;/li&gt;&#10;&lt;/ol&gt; &#10;&lt;p&gt;This first task teaches you how to place a block using the set_node function. &#10;The following line places a stone block at x=100, y=14, z=0.&lt;/p&gt;&#10;&lt;code&gt;mc.set_node(100, 14, 0, &quot;default:stone&quot;)&lt;/code&gt;&#10;&lt;p&gt;The &lt;code&gt;set_node&lt;/code&gt; function has 4 parameters. &#10;They are x, y, z, and node_type. The first 3 parameters are the coordinates where the node will be placed.&#10;The last parameter is the name of the material to place. Examples are &quot;default:wood&quot;, &quot;default:dirt&quot;, &quot;wool:blue&quot;, &quot;default:glass&quot;, &quot;carts:rail&quot;.&#10;The material names are the name of the mod they come from, a colon (:), and then the material name within that mod.&lt;/p&gt;&#10;&lt;p&gt;Click the green triangle &quot;play&quot; button to run your program&lt;/p&gt;&#10;&lt;p&gt;Click the &quot;Check task&quot; button (first button in toolbar above) to &#10;check you have completed the task correctly and move on to next task.&lt;/p&gt;&#10;&lt;/html&gt;" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="202" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Value of x from sign in minetest" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="100" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="210" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Value of y from your sign in minetest" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="14" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="217" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Value of z from your sign in minetest" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="20" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="242" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Enter the name of the node type you want to create" />
+                                                    <option value="Remember strings need to be surrounded by quotes so they are not confused with variable names" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="node type" />
+                                                <option name="possibleAnswer" value="&quot;wool:orange&quot;" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="0" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="index" value="2" />
+                      <option name="name" value="Placing several blocks" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 2 - Placing several blocks&lt;/h1&gt;&#10;&lt;p&gt;The second task is to place a glass frame around the wool block drawn in the first task.&#10;The program on the left achieves this by storing the centre point coordinates&#10;in the variables x, y, and z, and then setting each of the parameters of set_node&#10;as a formula based on the reference point. The advantage of doing it this&#10;way is that the coordinates of the reference point can be changed and the &#10;structure will be built exactly the same but in a different position.&lt;/p&gt;&#10;&lt;p&gt;See if you can put in the correct missing formula to build a frame of glass &#10;all the way around the orange wool block&lt;/p&gt;  &#10;&lt;/html&gt;" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="215" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list />
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="20" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="276" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="For bottom row" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y-1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="323" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="To the right of wool node" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="z+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="486" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list />
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="567" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list />
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="variable" />
+                                                <option name="possibleAnswer" value="x" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="570" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list />
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="variable" />
+                                                <option name="possibleAnswer" value="y" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="index" value="3" />
+                      <option name="name" value="Placing a cuboid of blocks" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 3 - Cuboid&lt;/h1&gt;&#10;&lt;p&gt;&#10;This lesson introduces the set_nodes function which fills all positions in &#10;a cuboid with the same node type. The following command creates a cuboid of stone&#10;with diagonal corners at (x1, y1, z1) and (x2, y2, z2)&#10;&lt;/p&gt;&#10;&lt;code&gt;mc.set_nodes(x1, y1, z1, x2, y2, z2, &quot;default:stone&quot;)&lt;/code&gt;&#10;&lt;p&gt;&#10;Place a glass box around block at coordinates on sign in minetest. &#10;Box is to be made of &quot;default:glass&quot;. &#10;Centre block is to be from the wool mod and can be orange or some other colour.&#10;&lt;/p&gt;&#10;&lt;/html&gt;" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="217" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Find correct z value for centre of cube from sign in minetest" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="20" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="286" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="x value for opposite point of cube" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="291" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="y value for opposite corner of cube" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="296" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="z value for opposite corner of cube" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="z+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="310" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Complete the name of the material which will surround the wool block" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="material" />
+                                                <option name="possibleAnswer" value="glass" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="400" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Enter first three arguments to set_node function separated by columns" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="variables" />
+                                                <option name="possibleAnswer" value="x, y, z" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="410" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Enter the name of the material in the format &quot;modname:variation&quot;" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="material" />
+                                                <option name="possibleAnswer" value="wool:orange" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="index" value="4" />
+                      <option name="name" value="Tunnel" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 4 - Tunnel&lt;/h1&gt;&#10;&lt;p&gt;Using the set_nodes function, build a hollow tunnel of glass.&#10;You will need to create a solid cuboid of glass first and then create &#10;a cuboid of air inside it so that you are left with a hollow tunnel.&lt;/p&gt;" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="203" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Enter the x value for one end of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="93" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="211" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Enter the x value for the far end of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="70" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="218" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Enter the y value for the floor of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="14" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="225" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Enter your build position z value marking the centre of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="20" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="325" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula needs to return the y value of the floor of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y  " />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="330" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula needs to return the z value of the left wall of the tunnel" />
+                                                    <option value="Tunnel is 5 blocks wide so left wall will be 2 blocks to the left of centre block" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="z-2" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="339" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula needs to return the y value of the roof of the tunnel" />
+                                                    <option value="Tunnel is 7 blocks high so roof will be 6 blocks above floor" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y+6" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="344" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula needs to return the z value of the right wall of the tunnel." />
+                                                    <option value="Tunnel is 5 blocks wide so right wall will be 2 blocks to the right of centre block." />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="z+2" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="450" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula needs to return the y value one block higher than the floor of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="9" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="455" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula needs to return the z value one block in from the left wall of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="z-1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="10" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="464" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula needs to return the y value one block lower than the roof of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y+5" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="11" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="469" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula needs to return the z value one block in from the right wall of the tunnel." />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="z+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="index" value="5" />
+                      <option name="name" value="Tunnel floor" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 5 - Tunnel floor&lt;/h1&gt;&#10;&lt;p&gt;Change the floor of the tunnel to stone and place a &#10;torch every 4 blocks.&lt;/p&gt;&#10;" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="225" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="The z value of the centre of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="20" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="55" />
+                                      <option name="offset" value="512" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Node type is &quot;default:stone&quot;" />
+                                                    <option value="Use the set_nodes function from the MinetestConnection class" />
+                                                    <option value="Parameters for set_nodes are&#10;mc.set_nodes(x1, y1, z1, x2, y2, z2, item)" />
+                                                    <option value="y1 and y2 parameters are y" />
+                                                    <option value="You can enter formulae for z1 and z2 parameters" />
+                                                    <option value="The z value needs to go from z-1 to z+1" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="# type here the command to set all floor nodes to stone" />
+                                                <option name="possibleAnswer" value="mc.set_nodes(x1, y  , z-1, x2, y, z+1, &quot;default:stone&quot;)" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="5" />
+                                      <option name="offset" value="649" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Value of x at one end of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="start" />
+                                                <option name="possibleAnswer" value="x1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="4" />
+                                      <option name="offset" value="652" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Value of x at the other end of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="stop" />
+                                                <option name="possibleAnswer" value="x2" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="4" />
+                                      <option name="offset" value="655" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="How much you want to increase x by for each iteration of the loop. Enter 2 if you want to count up in 2s, eg 2, 4, 6, 8" />
+                                                    <option value="Has to be a negative number if you are counting backwards" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="step" />
+                                                <option name="possibleAnswer" value="-4" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="679" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Torch needs to be placed at coordinates one block above the floor" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="index" value="6" />
+                      <option name="name" value="Chequered square" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 6 - Chequered square&lt;/h1&gt;&#10;&lt;p&gt;Construct a vertical square shape of alternating wool colours in the sky with height of 9 blocks&lt;/p&gt;&#10;&lt;p&gt;Because the colours are alternating you can't use the &lt;code&gt;set_nodes&lt;/code&gt; command. &#10;You could set each node individually using the &lt;code&gt;set_node&lt;/code&gt; command but it will take a long time to run.&#10;Instead this program shows how to use the &lt;code&gt;set_node_list&lt;/code&gt; command which takes a list of xyz coordinates as its first &#10;parameter and an item as its second. For example:&lt;/p&gt;&#10;&lt;p&gt;&lt;code&gt;set_node_list( [(96,30,20), (98,30,20), (100,30,20)], &quot;wool:blue&quot; )&lt;/code&gt;&lt;/p&gt;&#10;&lt;p&gt;The first challenge will be to work out where to start building the square. Try drawing the square &#10;as a grid on a piece of paper and labelling the x and y coordinates of each grid location. That will &#10;tell you what x1 and y1 should be. If you can turn it into a formula based on centre position then you &#10;can easily build new squares just by providing a new cx, cy and width/height.&lt;/p&gt;&#10;&lt;p&gt;The second challenge is how to specify a different wool colour each &#10;time a node is set. There are several ways to do this and each one is correct.&#10;One solution can be achieved in one command. Use the hints to see if you can work it out.&lt;/p&gt;&#10;&lt;p&gt;Another solution is to draw the whole square in one colour&#10;first and then step in twos to replace individual blocks with the &#10;other colour.&lt;/o&gt;&#10;&lt;p&gt;Another solution is to keep track of the last colour used in a variable and&#10;then use &lt;code&gt;if/else&lt;/code&gt; conditional logic to ensure the other&#10;colour is used next time.&lt;/p&gt;&#10;&lt;p&gt;Or maybe you can think of another way of doing it. The choice is yours&lt;/p&gt;&#10;&lt;/html&gt;" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="364" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Choose one of the 16 wool colours" />
+                                                    <option value="Examples are white, black, red, orange, yellow, blue" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="colour" />
+                                                <option name="possibleAnswer" value="green" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="387" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Choose another colour" />
+                                                    <option value="Has to be different to the first colour" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="colour" />
+                                                <option name="possibleAnswer" value="blue" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="461" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="width of square you are building" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="9" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="472" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="height of square you are building" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="9" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="479" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="A formula based on cx and width which results in the minimum x value for blocks of the square" />
+                                                    <option value="result of formula should be an int" />
+                                                    <option value="Pseudo code&#10;&#10;x1 = centre x position - half the width" />
+                                                    <option value="Use integer division when finding half the height ( width // 2 ) so that result will be an int" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="cx - width // 2" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="500" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula based on centre y position and height" />
+                                                    <option value="Similar to formula for x1" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="cy - height // 2" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="10" />
+                                      <option name="offset" value="645" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Parameters of range function so the y iterates through all the y positions of the square" />
+                                                    <option value="range(stop): iterates from 0 to ('stop'-1) counting up in ones&#10;range(start, stop): iterates from 'start' to ('stop'-1) counting up in ones&#10;range(start, stop, step): iterates from 'start' to but not including 'stop' counting in 'step's." />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="parameters" />
+                                                <option name="possibleAnswer" value="y1, y2" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="10" />
+                                      <option name="offset" value="673" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Parameters for range to iterate through all x values of square" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="parameters" />
+                                                <option name="possibleAnswer" value="x1, x2" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="690" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Command or commands to set colour to alternating wool colours" />
+                                                    <option value="Adjacent blocks with the same value of y must have different colours" />
+                                                    <option value="colours[0] will use one colour&#10;colours[1] will use the other colour" />
+                                                    <option value="Statement will look like&#10;&#10;colour = colours['formula']&#10;&#10;But you need to replace 'formula' with a formula or variable which returns a 0 or 1 depending in which colour you want " />
+                                                    <option value="Choose different colours using if statements and/or modulo arithmetic" />
+                                                    <option value="The modulo operator is %. It gives the remainder after dividing. &#10;&#10;5 % 2 = 1&#10;6 % 2 = 0&#10;7 % 2 = 1" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="command" />
+                                                <option name="possibleAnswer" value="colour = colours[(y+x)%2]" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="index" value="7" />
+                      <option name="name" value="Chequered diamond" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 7 - Chequered diamond&lt;/h1&gt;&#10;&lt;p&gt;Construct a vertical diamond shape of alternating wool colours in the sky with height of 21 blocks&lt;/p&gt;&#10;&lt;p&gt;Most of the code is similar to the chequered square. This challenge is to come up with formulae for xlo and yhi,&#10;the low and high values of x where you want to place blocks. And remember, the hints can be your friend.&lt;/p&gt;&#10;&lt;p&gt;The 'Check Task' button above relies on minetest to evaluate this task.&#10;You may have to press it again when your program has finished to ensure &#10;minetest has had time to evaluate it.&lt;/p&gt;&#10;&lt;/html&gt;" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="5" />
+                                      <option name="offset" value="366" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Or choose another colour" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="white" />
+                                                <option name="possibleAnswer" value="white" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="380" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Or choose another colour" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="orange" />
+                                                <option name="possibleAnswer" value="orange" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="543" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Width of diamond in blocks" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="21" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="555" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Height of diamond in blocks" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="number" />
+                                                <option name="possibleAnswer" value="21" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="722" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Returns the starting value of x for each value of y" />
+                                                    <option value="Formula in terms of x1, y and cy" />
+                                                    <option value="If you can't create a single formula, try two formulae. One for y &lt;= cy and one for y &gt; cy" />
+                                                    <option value="It is possible to combine the two formulae into one using the abs() function which returns the absolute value of a number. The absolute value of negative numbers is the same number but made positive. The absolute value of positive numbers is the same number.&#10;&#10;abs(5) = 5&#10;abs(-3) = 3&#10;" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x1 + abs(y - cy)" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="749" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="The maximum value of x in the diamond for a given y value" />
+                                                    <option value="Formua in terms of x2, y, cy" />
+                                                    <option value="Same as previously, you can solve this formula with several lines of code based on whether y &lt;= cy or y &gt; cy" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x2 - abs(y - cy)" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="index" value="8" />
+                      <option name="name" value="Sloping tunnel" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 8 - Sloping tunnel&lt;/h1&gt;&#10;&lt;p&gt;Continue glass tunnel down on a diagonal when centre of &#10;tunnel floor goes from x1=69, y1=14 to x2=9, y2=46.&lt;/p&gt;&#10;&lt;p&gt;To ensure no lava or water leak into tunnel, build the &#10;full tunnel in glass first and then hollow it out with air.&#10;By never having an open end, water and lava can't flow in.&lt;/p&gt;&#10;&lt;p&gt;The 'Check Task' button above relies on minetest to evaluate this task.&#10;You may have to press it again when your program has finished to ensure &#10;minetest has had time to evaluate it.&lt;/p&gt;&#10;&lt;/html&gt;" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="549" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="in terms of x1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x1-i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="554" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="y value of floor of tunnel at position i" />
+                                                    <option value="in terms of y1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y1-i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="563" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="in terms of x1 and i" />
+                                                    <option value="all blocks in this cross section of the tunnel will have the same value of x" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x1-i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="568" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="y value of roof of sloping tunnel" />
+                                                    <option value="in terms of y1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y1-i+6" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="671" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="x value at cross section of tunnel in terms of x1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x1-i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="676" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="y value of floor at position i in tunnel in terms of y1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y1-i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="685" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="x value at position i in tunnel in terms of x1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x1-i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="690" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="y value of floor at position i in tunnel in terms of y1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y1-i  " />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="885" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="x value at position i in tunnel in terms of x1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x1-i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="9" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="890" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="y value of one block above floor at position i in tunnel in terms of y1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y1-i+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="10" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="901" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="x value of tunnel at position i in terms of x1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x1-i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="11" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="906" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="y value of block one block below roof at position i in tunnel in terms of y1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y1-i+5" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="12" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="931" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="A condition that is only True for every fourth value of i" />
+                                                    <option value="Use modulo operator (%) on i to check for every fourth value of i" />
+                                                    <option value="i%4 == 0" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="condition" />
+                                                <option name="possibleAnswer" value="i%4==0" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="13" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1022" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="x value of position i of tunnel in terms of x1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x1-i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="14" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1027" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="y value of one block above floor at position i of tunnel in terms of y1 and i" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y1-i+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="index" value="9" />
+                      <option name="name" value="Sloping tunnel - fast" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;style&gt;&#10;table {border-left: 1px solid gray; border-top: 1px solid gray}&#10;th, td {border-right: 1px solid gray; border-bottom: 1px solid gray}&#10;&lt;/style&gt;&#10;&lt;h1&gt;Task 8a - Sloping tunnel (fast)&lt;/h1&gt;&#10;&lt;p&gt;The previous task had to send lots of commands to minetest and &#10;each command takes about half a second&#10;so it took quite a while to complete. This task is an optional task&#10;to complete the same exercise using the mc.set_node_list command.&lt;p&gt;&#10;&lt;p&gt;The previous task created a lot of glass nodes and then replaced some of&#10;them with stone, some with air and some with torches. We have to work out all&#10;the nodes that have to be set and what the final &#10;value of the node is going to be. We use the nodes_map variable to&#10;store the latest node type for a set of coordinates.&lt;/p&gt;&#10;&lt;p&gt;&lt;table cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;th&gt;Command&lt;/th&gt;&lt;th&gt;nodes_map&lt;/th&gt;&lt;/tr&gt;&#10;&lt;tr&gt;&lt;td&gt;&lt;code&gt;# initial value&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;{}&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&#10;&lt;tr&gt;&lt;td&gt;&lt;code&gt;set_node(2, 4, 6, glass)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;{(2, 4, 6): &quot;default:glass&quot;}&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&#10;&lt;tr&gt;&lt;td&gt;&lt;code&gt;set_node(2, 5, 6, glass)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;{(2, 4, 6): &quot;default:glass&quot;,&lt;br&gt; (2, 5, 6): &quot;default:glass&quot;}&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&#10;&lt;tr&gt;&lt;td&gt;&lt;code&gt;set_node(2, 4, 6, stone)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;{(2, 4, 6): &quot;default:stone&quot;,&lt;br&gt; (2, 5, 6): &quot;default:glass&quot;}&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&#10;&lt;tr&gt;&lt;td&gt;&lt;code&gt;set_node(2, 6, 6, stone)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;{(2, 4, 6): &quot;default:stone&quot;,&lt;br&gt; (2, 5, 6): &quot;default:glass&quot;,&lt;br&gt; (2, 6, 6): &quot;default:stone&quot;}&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&#10;&lt;/table&gt;&#10;&lt;/p&gt;&#10;&lt;p&gt;When we convert nodes_map to node_lists we get:&lt;/p&gt;&#10;&lt;p&gt;&lt;code&gt;node_lists = {&lt;br /&gt;&#10;&quot;default:glass&quot;: [(2,5,6)],&#10;&quot;default:stone&quot;: [(2,4,6), (2,6,6)],&#10;&quot;air&quot;:           [],&#10;&quot;default:torch&quot;: []}&#10;&lt;/code&gt;&lt;/p&gt;&#10;&lt;p&gt;which is in a good format for using mc.set_node_list() command.&lt;/p&gt;&#10;&lt;p&gt;See if you can follow the code and work out how nodes_map is created and how it gets converted to node_lists.&lt;/p&gt;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1231" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula in terms of x1 and x2 which returns the number of 1 block wide sections in the tunnel from the start of the sloping section to the end of the sloping section inclusive" />
+                                                    <option value="If x1 was 5 and x2 was 2 the tunnel would have 4 sections which are 1 block wide" />
+                                                    <option value="Your formula should calculate to 61 which is the number of sections in the tunnel." />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x1-x2+1" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1291" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula in terms of x1 and i which returns x value of the i-th section of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x1 - i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1306" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula in terms of y1 and i which returns the y value of the floor of the i-th section of the tunnel" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="y1 - i" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="1689" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="A conditional statement which returns &lt;code&gt;True&lt;/code&gt; every fourth position along the tunnel and &lt;code&gt;False&lt;/code&gt; every other position. " />
+                                                    <option value="Use modulo operator (%)" />
+                                                    <option value="i%4 will return the following values as i counts upwards from 0&#10;&#10;0 1 2 3 0 1 2 3 0 1 2 3 ..." />
+                                                    <option value="i%4==0 will return the following values as i counts up from zero&#10;&#10;True False False False True False False False True False False False ..." />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="condition" />
+                                                <option name="possibleAnswer" value="i%4==0" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="index" value="10" />
+                      <option name="name" value="Stairs and rail" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 9 - Stairs and rail&lt;/h1&gt;&#10;&lt;p&gt;Put rail and powered rail along centre of your tunnel.&#10;Where the tunnel is sloping, place stairs down the left side. &lt;/p&gt;&#10;&lt;p&gt;Stairs need a direction as well as a type. The type is &quot;stairs:stair_stonebrick&quot;. &#10;The direction is stored in a second parameter called param2. To use &#10;a second parameter we use JSON (JavaScript Object Notation). The JSON string for &#10;stonebrick stairs sloping upward to positive z is&lt;p&gt; &#10;&lt;code&gt;'{&quot;name&quot;:&quot;stairs:stair_stonebrick&quot;,&quot;param2&quot;:&quot;0&quot;}'&lt;/code&gt;&#10;&lt;p&gt;The different values of param2 are&lt;/p&gt;&#10;&lt;div style=&quot;font-family:monospace&quot;&gt;0: z direction upward&lt;/div&gt;&#10;&lt;div style=&quot;font-family:monospace&quot;&gt;1: x direction upward&lt;/div&gt;&#10;&lt;div style=&quot;font-family:monospace&quot;&gt;2: z direction downward&lt;/div&gt;&#10;&lt;div style=&quot;font-family:monospace&quot;&gt;3: x direction downward&lt;/div&gt;&#10;&lt;p&gt;The 'Check Task' button above relies on minetest to evaluate this task.&#10;You may have to press it again when your program has finished to ensure &#10;minetest has had time to evaluate it.&lt;/p&gt;&#10;&lt;/html&gt;" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="11" />
+                                      <option name="offset" value="341" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="stonebrick stairs sloping down towards negative x" />
+                                                    <option value="Enclose JSON string in single quotes and use double quotes within the string" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="JSON string" />
+                                                <option name="possibleAnswer" value="'{&quot;name&quot;:&quot;stairs:stair_stonebrick&quot;,&quot;param2&quot;:&quot;1&quot;}'" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="399" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="item name for rail" />
+                                                    <option value="see task sign in minetest for item names you will need in this task" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="string" />
+                                                <option name="possibleAnswer" value="'carts:rail'" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="420" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="item name for powered rail" />
+                                                    <option value="see task string in minetest to see item names required in this task" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="string" />
+                                                <option name="possibleAnswer" value="'carts:powerrail'" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="856" />
+                                      <option name="selected" value="false" />
+                                      <option name="subtaskInfos">
+                                        <map>
+                                          <entry key="0">
+                                            <value>
+                                              <AnswerPlaceholderSubtaskInfo>
+                                                <option name="answer" value="" />
+                                                <option name="hasFrame" value="true" />
+                                                <option name="hints">
+                                                  <list>
+                                                    <option value="Formula in terms of x which will alternate every two blocks&#10;&#10;0 0 1 1 0 0 1 1 0 0 1 1 ..." />
+                                                    <option value="You know that j%2 will alternate every one block&#10;&#10;0 1 0 1 0 1 0 1 ...&#10;&#10;So replace j with something in terms of x which counts at half speed" />
+                                                    <option value="x//2 counts at half speed&#10;&#10;0 0 1 1 2 2 3 3 4 4 ..." />
+                                                    <option value="x//2%2 combines the two to get the alternating pattern&#10;&#10;0 0 1 1 0 0 1 1 ...&#10;&#10;There are other ways to do this" />
+                                                  </list>
+                                                </option>
+                                                <option name="needInsertText" value="false" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="x//2%2" />
+                                                <option name="selected" value="false" />
+                                                <option name="status" value="Solved" />
+                                              </AnswerPlaceholderSubtaskInfo>
+                                            </value>
+                                          </entry>
+                                        </map>
+                                      </option>
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                  </list>
+                </option>
+              </Lesson>
+            </list>
+          </option>
+          <option name="name" value="Minetest" />
+        </Course>
+      </option>
+      <option name="toolWindowMode" value="TEXT" />
+      <option name="turnEditingMode" value="false" />
+      <option name="VERSION" value="7" />
+    </StudyTaskManager>
+  </component>
+</project>
