@@ -14,23 +14,10 @@ y = pref.y
 
 def test_nodes():
     placeholders = get_answer_placeholders()
-    print("Len of placehoders", len(placeholders))
-    for i in range(len(placeholders)):
-        print(i, placeholders[i])
     pybotnick = "pt" + mtuser
     if len(pybotnick) > NICK_MAX_LEN:
         pybotnick = pybotnick[0:NICK_MAX_LEN]
-    print("about to connect as ",pybotnick, mtuser)
     mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick=pybotnick)
-    if placeholders[0] != str(x1):
-        failed("You are using incorrect x1 value=" + placeholders[0] + ". Should be " + str(x1))
-        return False
-    if placeholders[1] != str(x2):
-        failed("You are using incorrect x2 value=" + placeholders[1] + ". Should be " + str(x2))
-        return False
-    if placeholders[2] != str(y):
-        failed("You are using incorrect y value=" + placeholders[2] + ". Should be " + str(y))
-        return False
     str_z = placeholders[3]
     str_z_correct = mc.send_cmd("get_player_z " + mtuser)
     if str_z_correct != str_z:
@@ -74,10 +61,61 @@ def test_answer_placeholders():
     else:
         failed()
 
+def test_formula_phi(phi, stri, answer, list_data):
+    if len(phi) > len(answer) + 5:
+        failed(stri + " is too long. Correct answer only " + str(len(answer)) + " characters long. Your answer " + phi + " has length " + str(len(phi)))
+        return False
+    for data in list_data:
+        try:
+            guess = eval(phi, data)
+        except NameError:
+            list_vars = ""
+            comma = ""
+            for k in data:
+                list_vars += comma + k
+                comma = ", "
+            failed(stri + " should only be in terms of variables " + list_vars + " but includes other variables. It is " + phi )
+        correct = eval(phi, data)
+        if guess != correct:
+            failed(str + " gave incorrect answer for data " + str(data) + ". Correct answer: " + correct + ". Your answer: " + guess + ". Your formula: " + phi)
+            return False
+    return True
+
+
+def test_formula(placeholders, i, answer, list_data):
+    stri = "Answer " + str(i+1)
+    return test_formula_phi(placeholders[i], stri, answer, list_data)
+
+
+def test_string(placeholders, i, answer):
+    phi = placeholders[i]
+    stri = "Answer " + str(i+1)
+    if phi != answer:
+        failed(stri + " should be " + answer + ". You entered " + phi)
+        return False
+    return True
+
+
+def test_answer_placeholders():
+    placeholders = get_answer_placeholders()
+    if not test_string(placeholders, 0, str(x1)): return False
+    if not test_string(placeholders, 1, str(x2)): return False
+    if not test_string(placeholders, 2, str(y)): return False
+    if not test_formula(placeholders, 4, 'y'  , [{'y':14}, {'y':16}] ): return False
+    if not test_formula(placeholders, 5, 'z-2', [{'z':20}, {'z':50}] ): return False
+    if not test_formula(placeholders, 6, 'y+6', [{'y':14}, {'y':16}] ): return False
+    if not test_formula(placeholders, 7, 'z+2', [{'z':20}, {'z':50}] ): return False
+    if not test_formula(placeholders, 8, 'y+1', [{'y':14}, {'y':16}] ): return False
+    if not test_formula(placeholders, 9, 'z-1', [{'z':20}, {'z':50}] ): return False
+    if not test_formula(placeholders,10, 'y+5', [{'y':14}, {'y':16}] ): return False
+    if not test_formula(placeholders,11, 'z+1', [{'z':20}, {'z':50}] ): return False
+    passed()
+    return True
+
 
 if __name__ == '__main__':
-    run_common_tests()
-    #test_answer_placeholders()       # TODO: uncomment test call
-    test_nodes()
+    #run_common_tests()
+    if test_answer_placeholders():
+        test_nodes()
 
 

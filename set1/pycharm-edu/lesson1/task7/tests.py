@@ -22,9 +22,11 @@ def test_minetest():
         failed("Failed: Check 'Task 7 Assessment' sign in minetest to find out what else is required")
         return False
 
+
 if __name__ == '__main__':
     if not test_minetest():
-        run_common_tests()
+        pass
+        #run_common_tests()
         #test_answer_placeholders()
 
 

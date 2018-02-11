@@ -20,10 +20,11 @@ def test_nodes():
     if str_z_correct != str_z:
         failed("You are using incorrect z value=" + str_z + ". Should be " + str_z_correct)
         return False
+    pz = int(str_z_correct)
     for y in range(pref.y-1, pref.y+2):
-        for z in range(pref.z-1, pref.z+2):
+        for z in range(pz-1, pz+2):
             node=mc.get_node(pref.x,y,z)
-            if y == pref.y and z == pref.z:
+            if y == pref.y and z == pz:
                 if node[0:5] != "wool:":
                     failed("center node type does not start with 'wool:'. It is '" + node + "'")
                     return False
@@ -35,19 +36,43 @@ def test_nodes():
     return True
 
 
+def test_formula(placeholders, i, answer, list_data):
+    phi = placeholders[i]
+    stri = str(i+1)
+    if len(phi) > len(answer) + 5:
+        failed("Answer " + stri + " is too long. Correct answer only " + str(len(answer)) + " characters long. Your answer " + phi + " has length " + str(len(phi)))
+        return False
+    for data in list_data:
+        try:
+            guess = eval(phi, data)
+        except NameError:
+            list_vars = ""
+            comma = ""
+            for k in data:
+                list_vars += comma + k
+                comma = ", "
+            failed("Answer " + stri + " should only be in terms of variables " + list_vars + " but includes other variables. It is " + phi )
+        correct = eval(phi, data)
+        if guess != correct:
+            failed("Answer " + str + " gave incorrect answer for data " + str(data) + ". Correct answer: " + correct + ". Your answer: " + guess + ". Your formula: " + phi)
+            return False
+    return True
+
+
 def test_answer_placeholders():
     placeholders = get_answer_placeholders()
-    formula = placeholders[1]
-    if placeholders[1] != 'y-1':
-        failed("Second answer should be 'y-1' not '" + placeholders[1] + "'")
-        return False
+    if not test_formula(placeholders, 1, 'y-1', [{'y':14}, {'y':16}] ): return False
+    if not test_formula(placeholders, 2, 'z+1', [{'z':20}, {'z':50}] ): return False
+    if not test_formula(placeholders, 3, 'y+1', [{'y':14}, {'y':16}] ): return False
+    if not test_formula(placeholders, 4, 'x', [{'x':100}, {'x':50}] ): return False
+    if not test_formula(placeholders, 5, 'y', [{'y':14}, {'y':16}] ): return False
     passed()
     return True
 
 
 if __name__ == '__main__':
-    run_common_tests()
-    #test_answer_placeholders():
-    test_nodes()
+    #run_common_tests()
+    if test_answer_placeholders():
+        test_nodes()
 
 

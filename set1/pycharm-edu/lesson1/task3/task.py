@@ -5,7 +5,7 @@ mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel
 
 x = 100
 y = 14
-z = 20
+z = 0
 
 # Create a 3x3x3 solid cube of glass
 mc.set_nodes(x-1, y-1, z-1, x+1, y+1, z+1, "default:glass")

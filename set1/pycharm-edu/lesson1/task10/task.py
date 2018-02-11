@@ -5,6 +5,7 @@ mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel
 
 # start point of tunnel
 x1 = 69
+task4_x1 = 93
 y1 = 14
 z = int(mc.send_cmd('get_player_z ' + mtuser))
 
@@ -22,7 +23,7 @@ for i in range(61):
     #Add power rail
     #mc.set_node(x1-i,y1-i+1,z,prail)
     node_lists[prail].append((x1-i,y1-i+1,z))
-for x in range(x1,93+1):
+for x in range(x1,task4_x1+1):
     #Add rail or powerrail in pairs
     if x//2%2==0:
         #mc.set_node(x,y1+1,z,rail)

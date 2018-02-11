@@ -60,8 +60,8 @@ def test_answer_placeholders():
 
 
 if __name__ == '__main__':
-    run_common_tests()
-    # test_answer_placeholders()       # TODO: uncomment test call
+    #run_common_tests()
+    #if test_answer_placeholders():
     test_nodes()
 
 

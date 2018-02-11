@@ -20,32 +20,71 @@ def test_nodes():
     if str_z_correct != str_z:
         failed("You are using incorrect z value=" + str_z + ". Should be " + str_z_correct)
         return False
-    for x in range(pref.x-1, pref.x+2):
-        for y in range(pref.y-1, pref.y+2):
-            for z in range(pref.z-1, pref.z+2):
-                node=mc.get_node(x,y,z)
-                if y == pref.y and z == pref.z:
-                    if node[0:5] != "wool:":
-                        failed("center node type does not start with 'wool:'. It is '" + node + "'")
-                        return False
-                else:
-                    if node != "default:glass":
-                        failed("Node at x="+str(x)+", y="+str(y)+", z="+str(z)+" should be 'default:glass' but is '" + node + "'" )
-                        return False
+    z = int(str_z_correct)
+    str_count = mc.compare_nodes(pref.x-1, pref.y-1, z-1, pref.x+1, pref.y+1, z+1, "default:glass")
+    if str_count != '1':
+        failed("Cube should contain 1 block which is not glass. Yours contained " + str_count)
+        return False
     passed()
+    return True
+
+
+def test_formula_phi(phi, stri, answer, list_data):
+    if len(phi) > len(answer) + 5:
+        failed(stri + " is too long. Correct answer only " + str(len(answer)) + " characters long. Your answer " + phi + " has length " + str(len(phi)))
+        return False
+    for data in list_data:
+        try:
+            guess = eval(phi, data)
+        except NameError:
+            list_vars = ""
+            comma = ""
+            for k in data:
+                list_vars += comma + k
+                comma = ", "
+            failed(stri + " should only be in terms of variables " + list_vars + " but includes other variables. It is " + phi )
+        correct = eval(phi, data)
+        if guess != correct:
+            failed(str + " gave incorrect answer for data " + str(data) + ". Correct answer: " + correct + ". Your answer: " + guess + ". Your formula: " + phi)
+            return False
+    return True
+
+
+def test_formula(placeholders, i, answer, list_data):
+    stri = "Answer " + str(i+1)
+    return test_formula_phi(placeholders[i], stri, answer, list_data)
+
+
+def test_string(placeholders, i, answer):
+    phi = placeholders[i]
+    stri = "Answer " + str(i+1)
+    if phi != answer:
+        failed(stri + " should be " + answer + ". You entered " + phi)
+        return False
     return True
 
 
 def test_answer_placeholders():
     placeholders = get_answer_placeholders()
-    placeholder = placeholders[0]
-    if placeholder == "":       # TODO: your condition here
-        passed()
-    else:
-        failed()
+    if not test_formula(placeholders, 1, 'x+1', [{'x':50}, {'x':100}] ): return False
+    if not test_formula(placeholders, 2, 'y+1', [{'y':14}, {'y':16}] ): return False
+    if not test_formula(placeholders, 3, 'z+1', [{'z':20}, {'z':50}] ): return False
+    if not test_string (placeholders, 4, 'glass'): return False
+    list_var = [x.strip() for x in placeholders[5].strip().split(",")]
+    if len(list_var) != 3:
+        failed("Wrong number of arguments in answer 6. Should be 3. You have " + str(len(list_var)))
+        return False
+    if not test_formula_phi(list_var[0], "First argument in answer 6" , 'x', [{'x':100}, {'x':50}] ): return False
+    if not test_formula_phi(list_var[1], "Second argument in answer 6", 'y', [{'y':100}, {'y':50}] ): return False
+    if not test_formula_phi(list_var[2], "Third argument in answer 6" , 'z', [{'z':100}, {'z':50}] ): return False
+    if placeholders[6].find("wool:") != 0:
+        failed("Answer 7 should start with 'wool:'. Your answer is '" + placeholders[6] + "'")
+        return False
+    passed()
+    return True
 
 
 if __name__ == '__main__':
-    run_common_tests()
-    #test_answer_placeholders():
-    test_nodes()
+    #run_common_tests()
+    if test_answer_placeholders():
+        test_nodes()

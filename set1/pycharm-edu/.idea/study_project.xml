@@ -11,22 +11,22 @@
                 <option name="firstName" value="D" />
                 <option name="guest" value="false" />
                 <option name="id" value="-1" />
-                <option name="lastName" value="Tim Cummings" />
+                <option name="lastName" value="Tim Cummings - Triptera Pty Ltd" />
                 <option name="refreshToken" value="" />
               </StepicUser>
             </list>
           </option>
           <option name="courseMode" value="Course Creator" />
           <option name="courseType" value="PyCharm" />
-          <option name="description" value="Exercises to teach programming using a Minetest server with plugins irc, irc_commands, signs_lib, pymt" />
-          <option name="language" value="Python" />
+          <option name="description" value="Exercises to teach programming using a Minetest server with plugins irc, irc_builder, irc_commands, signs_lib" />
+          <option name="language" value="Python 3.x" />
           <option name="languageCode" value="en" />
           <option name="lessons">
             <list>
               <Lesson>
                 <option name="id" value="0" />
                 <option name="index" value="1" />
-                <option name="name" value="lesson1" />
+                <option name="name" value="Minetest 1 - Building" />
                 <option name="updateDate" />
                 <option name="taskList">
                   <list>
@@ -38,7 +38,7 @@
                       <option name="stepikPosition" value="0" />
                       <option name="taskTexts">
                         <map>
-                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 1 - Placing a block&lt;/h1&gt;&#10;&lt;ol&gt;&#10;&lt;li&gt;Use Minetest to join the Minetest server with a name and password of your choosing. Don't use a password you use for anything else because other people will see your password&lt;/li&gt;&#10;&lt;li&gt;Ask the Minetest op to grant you privilege &quot;irc_builder&quot;&lt;/li&gt;&#10;&lt;li&gt;Navigate to your sign to find your first task. It will be at x=100, z=10 or higher. Press F5 to see your current location&lt;/li&gt; &#10;&lt;li&gt;In PyCharm Edu &amp;gt; File menu &amp;gt; Open... &amp;gt; coderdojo.py&lt;/li&gt;&#10;&lt;li&gt;Enter your name as mtuser (mtuser=&quot;myname&quot;)&lt;/li&gt;&#10;&lt;li&gt;Enter your password as mtuserpass (mtuserpass=&quot;mysecret&quot;)&lt;/li&gt;&#10;&lt;li&gt;Ask the Minetest op for details of the IRC server and fill in details in coderdojo.py&lt;/li&gt;&#10;&lt;li&gt;Save coderdojo.py file and close it&lt;/li&gt;&#10;&lt;/ol&gt; &#10;&lt;p&gt;This first task teaches you how to place a block using the set_node function. &#10;The following line places a stone block at x=100, y=14, z=0.&lt;/p&gt;&#10;&lt;code&gt;mc.set_node(100, 14, 0, &quot;default:stone&quot;)&lt;/code&gt;&#10;&lt;p&gt;The &lt;code&gt;set_node&lt;/code&gt; function has 4 parameters. &#10;They are x, y, z, and node_type. The first 3 parameters are the coordinates where the node will be placed.&#10;The last parameter is the name of the material to place. Examples are &quot;default:wood&quot;, &quot;default:dirt&quot;, &quot;wool:blue&quot;, &quot;default:glass&quot;, &quot;carts:rail&quot;.&#10;The material names are the name of the mod they come from, a colon (:), and then the material name within that mod.&lt;/p&gt;&#10;&lt;p&gt;Click the green triangle &quot;play&quot; button to run your program&lt;/p&gt;&#10;&lt;p&gt;Click the &quot;Check task&quot; button (first button in toolbar above) to &#10;check you have completed the task correctly and move on to next task.&lt;/p&gt;&#10;&lt;/html&gt;" />
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 1 - Placing a block&lt;/h1&gt;&#10;&lt;ol&gt;&#10;&lt;li&gt;Use Minetest to join the Minetest server with a name and password of your choosing. Don't use a password you use for anything else because other people will see your password&lt;/li&gt;&#10;&lt;li&gt;Ask the Minetest op to grant you privilege &quot;irc_builder&quot;&lt;/li&gt;&#10;&lt;li&gt;Navigate to your sign to find your first task. It will be at x=100, z=10 or higher. Press F5 to see your current location&lt;/li&gt; &#10;&lt;li&gt;In PyCharm Edu &amp;gt; File menu &amp;gt; Open... &amp;gt; coderdojo.py&lt;/li&gt;&#10;&lt;li&gt;Enter your name as mtuser (mtuser=&quot;myname&quot;)&lt;/li&gt;&#10;&lt;li&gt;Enter your password as mtuserpass (mtuserpass=&quot;mysecret&quot;)&lt;/li&gt;&#10;&lt;li&gt;Ask the Minetest op for details of the IRC server and fill in details in coderdojo.py&lt;/li&gt;&#10;&lt;li&gt;Save coderdojo.py file and close it&lt;/li&gt;&#10;&lt;/ol&gt; &#10;&lt;p&gt;This first task teaches you how to place a block using the set_node function. &#10;The following line places a stone block at x=100, y=14, z=0.&lt;/p&gt;&#10;&lt;code&gt;mc.set_node(100, 14, 0, &quot;default:stone&quot;)&lt;/code&gt;&#10;&lt;p&gt;The &lt;code&gt;set_node&lt;/code&gt; function has 4 parameters. &#10;They are x, y, z, and node_type. The first 3 parameters are the coordinates where the node will be placed.&#10;The last parameter is the name of the material to place. Examples are &quot;default:wood&quot;, &quot;default:dirt&quot;, &quot;wool:blue&quot;, &quot;default:glass&quot;, &quot;carts:rail&quot;.&#10;The material names are the name of the mod they come from, a colon (:), and then the material name within that mod.&lt;/p&gt;&#10;&lt;p&gt;Click the green triangle &quot;play&quot; button to run your program or use keyboard ctrl-shift-F10.&lt;/p&gt;&#10;&lt;p&gt;Click the &quot;Check task&quot; button (first button in toolbar above) to &#10;check you have completed the task correctly and move on to next task.&lt;/p&gt;&#10;&lt;/html&gt;" />
                         </map>
                       </option>
                       <option name="testsText">
@@ -132,7 +132,7 @@
                                                 </option>
                                                 <option name="needInsertText" value="false" />
                                                 <option name="placeholderText" value="number" />
-                                                <option name="possibleAnswer" value="20" />
+                                                <option name="possibleAnswer" value="0" />
                                                 <option name="selected" value="false" />
                                                 <option name="status" value="Solved" />
                                               </AnswerPlaceholderSubtaskInfo>
@@ -146,7 +146,7 @@
                                       <option name="index" value="3" />
                                       <option name="initialState" />
                                       <option name="length" value="9" />
-                                      <option name="offset" value="242" />
+                                      <option name="offset" value="241" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -228,7 +228,7 @@
                                                 </option>
                                                 <option name="needInsertText" value="false" />
                                                 <option name="placeholderText" value="number" />
-                                                <option name="possibleAnswer" value="20" />
+                                                <option name="possibleAnswer" value="0" />
                                                 <option name="selected" value="false" />
                                                 <option name="status" value="Solved" />
                                               </AnswerPlaceholderSubtaskInfo>
@@ -242,7 +242,7 @@
                                       <option name="index" value="1" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="276" />
+                                      <option name="offset" value="275" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -272,7 +272,7 @@
                                       <option name="index" value="2" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="323" />
+                                      <option name="offset" value="322" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -302,7 +302,7 @@
                                       <option name="index" value="3" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="486" />
+                                      <option name="offset" value="485" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -330,7 +330,7 @@
                                       <option name="index" value="4" />
                                       <option name="initialState" />
                                       <option name="length" value="8" />
-                                      <option name="offset" value="567" />
+                                      <option name="offset" value="566" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -358,7 +358,7 @@
                                       <option name="index" value="5" />
                                       <option name="initialState" />
                                       <option name="length" value="8" />
-                                      <option name="offset" value="570" />
+                                      <option name="offset" value="569" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -439,7 +439,7 @@
                                                 </option>
                                                 <option name="needInsertText" value="false" />
                                                 <option name="placeholderText" value="number" />
-                                                <option name="possibleAnswer" value="20" />
+                                                <option name="possibleAnswer" value="0" />
                                                 <option name="selected" value="false" />
                                                 <option name="status" value="Solved" />
                                               </AnswerPlaceholderSubtaskInfo>
@@ -453,7 +453,7 @@
                                       <option name="index" value="1" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="286" />
+                                      <option name="offset" value="285" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -483,7 +483,7 @@
                                       <option name="index" value="2" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="291" />
+                                      <option name="offset" value="290" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -513,7 +513,7 @@
                                       <option name="index" value="3" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="296" />
+                                      <option name="offset" value="295" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -543,7 +543,7 @@
                                       <option name="index" value="4" />
                                       <option name="initialState" />
                                       <option name="length" value="8" />
-                                      <option name="offset" value="310" />
+                                      <option name="offset" value="309" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -573,7 +573,7 @@
                                       <option name="index" value="5" />
                                       <option name="initialState" />
                                       <option name="length" value="9" />
-                                      <option name="offset" value="400" />
+                                      <option name="offset" value="399" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -603,7 +603,7 @@
                                       <option name="index" value="6" />
                                       <option name="initialState" />
                                       <option name="length" value="8" />
-                                      <option name="offset" value="410" />
+                                      <option name="offset" value="409" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -776,7 +776,7 @@
                                                 </option>
                                                 <option name="needInsertText" value="false" />
                                                 <option name="placeholderText" value="number" />
-                                                <option name="possibleAnswer" value="20" />
+                                                <option name="possibleAnswer" value="0" />
                                                 <option name="selected" value="false" />
                                                 <option name="status" value="Solved" />
                                               </AnswerPlaceholderSubtaskInfo>
@@ -790,7 +790,7 @@
                                       <option name="index" value="4" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="325" />
+                                      <option name="offset" value="324" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -820,7 +820,7 @@
                                       <option name="index" value="5" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="330" />
+                                      <option name="offset" value="329" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -851,7 +851,7 @@
                                       <option name="index" value="6" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="339" />
+                                      <option name="offset" value="338" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -882,7 +882,7 @@
                                       <option name="index" value="7" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="344" />
+                                      <option name="offset" value="343" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -913,7 +913,7 @@
                                       <option name="index" value="8" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="450" />
+                                      <option name="offset" value="449" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -943,7 +943,7 @@
                                       <option name="index" value="9" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="455" />
+                                      <option name="offset" value="454" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -973,7 +973,7 @@
                                       <option name="index" value="10" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="464" />
+                                      <option name="offset" value="463" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -1003,7 +1003,7 @@
                                       <option name="index" value="11" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="469" />
+                                      <option name="offset" value="468" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -1086,7 +1086,7 @@
                                                 </option>
                                                 <option name="needInsertText" value="false" />
                                                 <option name="placeholderText" value="number" />
-                                                <option name="possibleAnswer" value="20" />
+                                                <option name="possibleAnswer" value="0" />
                                                 <option name="selected" value="false" />
                                                 <option name="status" value="Solved" />
                                               </AnswerPlaceholderSubtaskInfo>
@@ -1100,7 +1100,7 @@
                                       <option name="index" value="1" />
                                       <option name="initialState" />
                                       <option name="length" value="55" />
-                                      <option name="offset" value="512" />
+                                      <option name="offset" value="511" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -1135,7 +1135,7 @@
                                       <option name="index" value="2" />
                                       <option name="initialState" />
                                       <option name="length" value="5" />
-                                      <option name="offset" value="649" />
+                                      <option name="offset" value="648" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -1165,7 +1165,7 @@
                                       <option name="index" value="3" />
                                       <option name="initialState" />
                                       <option name="length" value="4" />
-                                      <option name="offset" value="652" />
+                                      <option name="offset" value="651" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -1195,7 +1195,7 @@
                                       <option name="index" value="4" />
                                       <option name="initialState" />
                                       <option name="length" value="4" />
-                                      <option name="offset" value="655" />
+                                      <option name="offset" value="654" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -1226,7 +1226,7 @@
                                       <option name="index" value="5" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="679" />
+                                      <option name="offset" value="678" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -1540,7 +1540,7 @@
                                       <option name="index" value="8" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="690" />
+                                      <option name="offset" value="699" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -1551,7 +1551,7 @@
                                                 <option name="hasFrame" value="true" />
                                                 <option name="hints">
                                                   <list>
-                                                    <option value="Command or commands to set colour to alternating wool colours" />
+                                                    <option value="Formula to set colour to alternating wool colours" />
                                                     <option value="Adjacent blocks with the same value of y must have different colours" />
                                                     <option value="colours[0] will use one colour&#10;colours[1] will use the other colour" />
                                                     <option value="Statement will look like&#10;&#10;colour = colours['formula']&#10;&#10;But you need to replace 'formula' with a formula or variable which returns a 0 or 1 depending in which colour you want " />
@@ -1560,8 +1560,8 @@
                                                   </list>
                                                 </option>
                                                 <option name="needInsertText" value="false" />
-                                                <option name="placeholderText" value="command" />
-                                                <option name="possibleAnswer" value="colour = colours[(y+x)%2]" />
+                                                <option name="placeholderText" value="formula" />
+                                                <option name="possibleAnswer" value="colours[(y+x)%2]" />
                                                 <option name="selected" value="false" />
                                                 <option name="status" value="Solved" />
                                               </AnswerPlaceholderSubtaskInfo>
@@ -2488,7 +2488,7 @@
                                       <option name="index" value="0" />
                                       <option name="initialState" />
                                       <option name="length" value="11" />
-                                      <option name="offset" value="341" />
+                                      <option name="offset" value="355" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -2519,7 +2519,7 @@
                                       <option name="index" value="1" />
                                       <option name="initialState" />
                                       <option name="length" value="6" />
-                                      <option name="offset" value="399" />
+                                      <option name="offset" value="413" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -2550,7 +2550,7 @@
                                       <option name="index" value="2" />
                                       <option name="initialState" />
                                       <option name="length" value="6" />
-                                      <option name="offset" value="420" />
+                                      <option name="offset" value="434" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -2581,7 +2581,7 @@
                                       <option name="index" value="3" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="856" />
+                                      <option name="offset" value="876" />
                                       <option name="selected" value="false" />
                                       <option name="subtaskInfos">
                                         <map>
@@ -2628,9 +2628,55 @@
                   </list>
                 </option>
               </Lesson>
+              <Lesson>
+                <option name="id" value="0" />
+                <option name="index" value="2" />
+                <option name="name" value="Minetest 2 - Functions and Modules" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <EduTask>
+                      <option name="index" value="1" />
+                      <option name="name" value="Tunnel function" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikPosition" value="0" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="Write task description here using markdown or html" />
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="index" value="1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                  </list>
+                </option>
+              </Lesson>
             </list>
           </option>
-          <option name="name" value="Minetest" />
+          <option name="name" value="Ninja 2 minetest course" />
         </Course>
       </option>
       <option name="toolWindowMode" value="TEXT" />

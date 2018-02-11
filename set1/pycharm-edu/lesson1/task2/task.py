@@ -4,7 +4,7 @@ mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel
 
 x = 100
 y = 14
-z = 20
+z = 0
 
 mc.set_node(x, y-1, z-1, "default:glass")
 mc.set_node(x, y-1, z  , "default:glass")

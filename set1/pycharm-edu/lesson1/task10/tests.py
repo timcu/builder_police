@@ -31,7 +31,7 @@ def test_answer_placeholders():
 
 
 if __name__ == '__main__':
-    if not test_minetest():
-        run_common_tests()
+    test_minetest()
+    #run_common_tests()
     # test_answer_placeholders()       # TODO: uncomment test call
 
