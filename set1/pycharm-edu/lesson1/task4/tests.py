@@ -5,7 +5,9 @@
 from test_helper import run_common_tests, failed, passed, get_answer_placeholders
 from ircbuilder import MinetestConnection, NICK_MAX_LEN
 from coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel
+from triptera_pe_tests import test_string, test_eval
 import pref
+
 
 x1 = pref.x-7
 x2 = pref.x-30
@@ -55,66 +57,23 @@ def test_nodes():
 
 def test_answer_placeholders():
     placeholders = get_answer_placeholders()
-    placeholder = placeholders[0]
-    if placeholder == "":       # TODO: your condition here
-        passed()
-    else:
-        failed()
-
-def test_formula_phi(phi, stri, answer, list_data):
-    if len(phi) > len(answer) + 5:
-        failed(stri + " is too long. Correct answer only " + str(len(answer)) + " characters long. Your answer " + phi + " has length " + str(len(phi)))
-        return False
-    for data in list_data:
-        try:
-            guess = eval(phi, data)
-        except NameError:
-            list_vars = ""
-            comma = ""
-            for k in data:
-                list_vars += comma + k
-                comma = ", "
-            failed(stri + " should only be in terms of variables " + list_vars + " but includes other variables. It is " + phi )
-        correct = eval(phi, data)
-        if guess != correct:
-            failed(str + " gave incorrect answer for data " + str(data) + ". Correct answer: " + correct + ". Your answer: " + guess + ". Your formula: " + phi)
-            return False
-    return True
-
-
-def test_formula(placeholders, i, answer, list_data):
-    stri = "Answer " + str(i+1)
-    return test_formula_phi(placeholders[i], stri, answer, list_data)
-
-
-def test_string(placeholders, i, answer):
-    phi = placeholders[i]
-    stri = "Answer " + str(i+1)
-    if phi != answer:
-        failed(stri + " should be " + answer + ". You entered " + phi)
-        return False
-    return True
-
-
-def test_answer_placeholders():
-    placeholders = get_answer_placeholders()
     if not test_string(placeholders, 0, str(x1)): return False
     if not test_string(placeholders, 1, str(x2)): return False
     if not test_string(placeholders, 2, str(y)): return False
-    if not test_formula(placeholders, 4, 'y'  , [{'y':14}, {'y':16}] ): return False
-    if not test_formula(placeholders, 5, 'z-2', [{'z':20}, {'z':50}] ): return False
-    if not test_formula(placeholders, 6, 'y+6', [{'y':14}, {'y':16}] ): return False
-    if not test_formula(placeholders, 7, 'z+2', [{'z':20}, {'z':50}] ): return False
-    if not test_formula(placeholders, 8, 'y+1', [{'y':14}, {'y':16}] ): return False
-    if not test_formula(placeholders, 9, 'z-1', [{'z':20}, {'z':50}] ): return False
-    if not test_formula(placeholders,10, 'y+5', [{'y':14}, {'y':16}] ): return False
-    if not test_formula(placeholders,11, 'z+1', [{'z':20}, {'z':50}] ): return False
+    if not test_eval(placeholders, 4, 'y'  , [{'y':14}, {'y':16}] ): return False
+    if not test_eval(placeholders, 5, 'z-2', [{'z':20}, {'z':50}] ): return False
+    if not test_eval(placeholders, 6, 'y+6', [{'y':14}, {'y':16}] ): return False
+    if not test_eval(placeholders, 7, 'z+2', [{'z':20}, {'z':50}] ): return False
+    if not test_eval(placeholders, 8, 'y+1', [{'y':14}, {'y':16}] ): return False
+    if not test_eval(placeholders, 9, 'z-1', [{'z':20}, {'z':50}] ): return False
+    if not test_eval(placeholders,10, 'y+5', [{'y':14}, {'y':16}] ): return False
+    if not test_eval(placeholders,11, 'z+1', [{'z':20}, {'z':50}] ): return False
     passed()
     return True
 
 
 if __name__ == '__main__':
-    #run_common_tests()
+    run_common_tests()
     if test_answer_placeholders():
         test_nodes()
 

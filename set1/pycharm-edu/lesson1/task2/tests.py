@@ -6,6 +6,7 @@ from test_helper import run_common_tests, failed, passed, get_answer_placeholder
 from ircbuilder import MinetestConnection, NICK_MAX_LEN
 from coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel
 import pref
+from triptera_pe_tests import test_eval
 
 
 def test_nodes():
@@ -36,42 +37,19 @@ def test_nodes():
     return True
 
 
-def test_formula(placeholders, i, answer, list_data):
-    phi = placeholders[i]
-    stri = str(i+1)
-    if len(phi) > len(answer) + 5:
-        failed("Answer " + stri + " is too long. Correct answer only " + str(len(answer)) + " characters long. Your answer " + phi + " has length " + str(len(phi)))
-        return False
-    for data in list_data:
-        try:
-            guess = eval(phi, data)
-        except NameError:
-            list_vars = ""
-            comma = ""
-            for k in data:
-                list_vars += comma + k
-                comma = ", "
-            failed("Answer " + stri + " should only be in terms of variables " + list_vars + " but includes other variables. It is " + phi )
-        correct = eval(phi, data)
-        if guess != correct:
-            failed("Answer " + str + " gave incorrect answer for data " + str(data) + ". Correct answer: " + correct + ". Your answer: " + guess + ". Your formula: " + phi)
-            return False
-    return True
-
-
 def test_answer_placeholders():
     placeholders = get_answer_placeholders()
-    if not test_formula(placeholders, 1, 'y-1', [{'y':14}, {'y':16}] ): return False
-    if not test_formula(placeholders, 2, 'z+1', [{'z':20}, {'z':50}] ): return False
-    if not test_formula(placeholders, 3, 'y+1', [{'y':14}, {'y':16}] ): return False
-    if not test_formula(placeholders, 4, 'x', [{'x':100}, {'x':50}] ): return False
-    if not test_formula(placeholders, 5, 'y', [{'y':14}, {'y':16}] ): return False
+    if not test_eval(placeholders, 1, 'y-1', [{'y':14}, {'y':16}] ): return False
+    if not test_eval(placeholders, 2, 'z+1', [{'z':20}, {'z':50}] ): return False
+    if not test_eval(placeholders, 3, 'y+1', [{'y':14}, {'y':16}] ): return False
+    if not test_eval(placeholders, 4, 'x', [{'x':100}, {'x':50}] ): return False
+    if not test_eval(placeholders, 5, 'y', [{'y':14}, {'y':16}] ): return False
     passed()
     return True
 
 
 if __name__ == '__main__':
-    #run_common_tests()
+    run_common_tests()
     if test_answer_placeholders():
         test_nodes()
 

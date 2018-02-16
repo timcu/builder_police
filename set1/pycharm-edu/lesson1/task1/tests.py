@@ -46,7 +46,7 @@ def test_answer_placeholders():
     return True
 
 if __name__ == '__main__':
-    # run_common_tests()
+    run_common_tests()
     if test_answer_placeholders():
         test_nodes()
 

@@ -50,18 +50,8 @@ def test_nodes():
     return True
 
 
-def test_answer_placeholders():
-    placeholders = get_answer_placeholders()
-    placeholder = placeholders[0]
-    if placeholder == "":       # TODO: your condition here
-        passed()
-    else:
-        failed()
-
-
 if __name__ == '__main__':
-    #run_common_tests()
-    #if test_answer_placeholders():
+    run_common_tests()
     test_nodes()
 
 
