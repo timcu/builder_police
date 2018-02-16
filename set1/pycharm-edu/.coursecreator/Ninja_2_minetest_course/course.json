@@ -1,0 +1,2025 @@
+{
+  "lessons": [
+    {
+      "id": 0,
+      "title": "Minetest 1 - Building",
+      "task_list": [
+        {
+          "name": "Placing a block",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "from ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\n\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\nx \u003d number\ny \u003d number\nz \u003d number\n\nmc.set_node(x, y, z, node type)\n\n\n\n\n\n\n\n\n\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 202,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Value of x from sign in minetest"
+                      ],
+                      "possible_answer": "100",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 213,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Value of y from your sign in minetest"
+                      ],
+                      "possible_answer": "14",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 224,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Value of z from your sign in minetest"
+                      ],
+                      "possible_answer": "0",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 253,
+                  "length": 9,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Enter the name of the node type you want to create",
+                        "Remember strings need to be surrounded by quotes so they are not confused with variable names"
+                      ],
+                      "possible_answer": "\"wool:orange\"",
+                      "placeholder_text": "node type",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\nfrom ircbuilder import MinetestConnection, NICK_MAX_LEN\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\nimport pref\n\ndef test_nodes():\n    placeholders \u003d get_answer_placeholders()\n    pybotnick \u003d \"pt\" + mtuser\n    if len(pybotnick) \u003e NICK_MAX_LEN:\n        pybotnick \u003d pybotnick[0:NICK_MAX_LEN]\n    print(\"about to connect as \",pybotnick, mtuser)\n    mc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick\u003dpybotnick)\n    str_z \u003d placeholders[2]\n    str_z_correct \u003d mc.send_cmd(\"get_player_z \" + mtuser)\n    if str_z_correct !\u003d str_z:\n        failed(\"You are using incorrect z value\u003d\" + str_z + \". Should be \" + str_z_correct)\n        return False\n    str_node\u003dmc.get_node(pref.x,pref.y,int(str_z))\n    #print(str_node)\n    if len(str_node) \u003c 5 or str_node[0:5] !\u003d \"wool:\":\n        failed(\"Centre node type does not start with \u0027wool:\u0027. Is currently \u0027\" + str_node + \"\u0027\")\n        return False\n    passed()\n    return True\n\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    str_x \u003d placeholders[0]\n    str_y \u003d placeholders[1]\n    if str_x !\u003d str(pref.x):\n        failed(\"You are using incorrect x value\u003d\" + str_x + \". Should be \" + str(pref.x))\n        print(\"This line is after failed\")\n        return False\n    if str_y !\u003d str(pref.y):\n        failed(\"You are using incorrect y value\u003d\" + str_y + \". Should be \" + str(pref.y))\n        print(\"This line is after failed\")\n        return False\n    print(\"This line is before passed\")\n    passed()\n    print(\"This line is after passed\")\n    return True\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    # run_common_tests()\n    if test_answer_placeholders():\n        test_nodes()\n\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eTask 1 - Placing a block\u003c/h1\u003e\n\u003col\u003e\n\u003cli\u003eUse Minetest to join the Minetest server with a name and password of your choosing. Don\u0027t use a password you use for anything else because other people will see your password\u003c/li\u003e\n\u003cli\u003eAsk the Minetest op to grant you privilege \"irc_builder\"\u003c/li\u003e\n\u003cli\u003eNavigate to your sign to find your first task. It will be at x\u003d100, z\u003d10 or higher. Press F5 to see your current location\u003c/li\u003e \n\u003cli\u003eIn PyCharm Edu \u0026gt; File menu \u0026gt; Open... \u0026gt; coderdojo.py\u003c/li\u003e\n\u003cli\u003eEnter your name as mtuser (mtuser\u003d\"myname\")\u003c/li\u003e\n\u003cli\u003eEnter your password as mtuserpass (mtuserpass\u003d\"mysecret\")\u003c/li\u003e\n\u003cli\u003eAsk the Minetest op for details of the IRC server and fill in details in coderdojo.py\u003c/li\u003e\n\u003cli\u003eSave coderdojo.py file and close it\u003c/li\u003e\n\u003c/ol\u003e \n\u003cp\u003eThis first task teaches you how to place a block using the set_node function. \nThe following line places a stone block at x\u003d100, y\u003d14, z\u003d0.\u003c/p\u003e\n\u003ccode\u003emc.set_node(100, 14, 0, \"default:stone\")\u003c/code\u003e\n\u003cp\u003eThe \u003ccode\u003eset_node\u003c/code\u003e function has 4 parameters. \nThey are x, y, z, and node_type. The first 3 parameters are the coordinates where the node will be placed.\nThe last parameter is the name of the material to place. Examples are \"default:wood\", \"default:dirt\", \"wool:blue\", \"default:glass\", \"carts:rail\".\nThe material names are the name of the mod they come from, a colon (:), and then the material name within that mod.\u003c/p\u003e\n\u003cp\u003eClick the green triangle \"play\" button to run your program or use keyboard ctrl-shift-F10.\u003c/p\u003e\n\u003cp\u003eClick the \"Check task\" button (first button in toolbar above) to \ncheck you have completed the task correctly and move on to next task.\u003c/p\u003e\n\u003c/html\u003e"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Placing several blocks",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "from ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser,mtuserpass, mtbotnick, channel\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\nx \u003d 100\ny \u003d 14\nz \u003d number\n\nmc.set_node(x, y-1, z-1, \"default:glass\")\nmc.set_node(x, formula, z  , \"default:glass\")\nmc.set_node(x, y-1, formula, \"default:glass\")\nmc.set_node(x, y  , z-1, \"default:glass\")\nmc.set_node(x, y  , z+1, \"default:glass\")\nmc.set_node(x, y+1, z-1, \"default:glass\")\nmc.set_node(x, formula, z  , \"default:glass\")\nmc.set_node(x, y+1, z+1, \"default:glass\")\nmc.set_node(variable, variable, z, \"wool:orange\")\n\n\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 215,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [],
+                      "possible_answer": "0",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 280,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "For bottom row"
+                      ],
+                      "possible_answer": "y-1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 331,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "To the right of wool node"
+                      ],
+                      "possible_answer": "z+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 498,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [],
+                      "possible_answer": "y+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 583,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [],
+                      "possible_answer": "x",
+                      "placeholder_text": "variable",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 593,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [],
+                      "possible_answer": "y",
+                      "placeholder_text": "variable",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\nfrom ircbuilder import MinetestConnection, NICK_MAX_LEN\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\nimport pref\nfrom triptera_pe_tests import test_eval\n\n\ndef test_nodes():\n    placeholders \u003d get_answer_placeholders()\n    pybotnick \u003d \"pt\" + mtuser\n    if len(pybotnick) \u003e NICK_MAX_LEN:\n        pybotnick \u003d pybotnick[0:NICK_MAX_LEN]\n    print(\"about to connect as \",pybotnick, mtuser)\n    mc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick\u003dpybotnick)\n    str_z \u003d placeholders[0]\n    str_z_correct \u003d mc.send_cmd(\"get_player_z \" + mtuser)\n    if str_z_correct !\u003d str_z:\n        failed(\"You are using incorrect z value\u003d\" + str_z + \". Should be \" + str_z_correct)\n        return False\n    pz \u003d int(str_z_correct)\n    for y in range(pref.y-1, pref.y+2):\n        for z in range(pz-1, pz+2):\n            node\u003dmc.get_node(pref.x,y,z)\n            if y \u003d\u003d pref.y and z \u003d\u003d pz:\n                if node[0:5] !\u003d \"wool:\":\n                    failed(\"center node type does not start with \u0027wool:\u0027. It is \u0027\" + node + \"\u0027\")\n                    return False\n            else:\n                if node !\u003d \"default:glass\":\n                    failed(\"Node at x\u003d\"+str(pref.x)+\", y\u003d\"+str(y)+\", z\u003d\"+str(z)+\" should be \u0027default:glass\u0027 but is \u0027\" + node + \"\u0027\" )\n                    return False\n    passed()\n    return True\n\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    if not test_eval(placeholders, 1, \u0027y-1\u0027, [{\u0027y\u0027:14}, {\u0027y\u0027:16}] ): return False\n    if not test_eval(placeholders, 2, \u0027z+1\u0027, [{\u0027z\u0027:20}, {\u0027z\u0027:50}] ): return False\n    if not test_eval(placeholders, 3, \u0027y+1\u0027, [{\u0027y\u0027:14}, {\u0027y\u0027:16}] ): return False\n    if not test_eval(placeholders, 4, \u0027x\u0027, [{\u0027x\u0027:100}, {\u0027x\u0027:50}] ): return False\n    if not test_eval(placeholders, 5, \u0027y\u0027, [{\u0027y\u0027:14}, {\u0027y\u0027:16}] ): return False\n    passed()\n    return True\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    #run_common_tests()\n    if test_answer_placeholders():\n        test_nodes()\n\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eTask 2 - Placing several blocks\u003c/h1\u003e\n\u003cp\u003eThe second task is to place a glass frame around the wool block drawn in the first task.\nThe program on the left achieves this by storing the centre point coordinates\nin the variables x, y, and z, and then setting each of the parameters of set_node\nas a formula based on the reference point. The advantage of doing it this\nway is that the coordinates of the reference point can be changed and the \nstructure will be built exactly the same but in a different position.\u003c/p\u003e\n\u003cp\u003eSee if you can put in the correct missing formula to build a frame of glass \nall the way around the orange wool block\u003c/p\u003e  \n\u003c/html\u003e"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Placing a cuboid of blocks",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "from ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\n\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\nx \u003d 100\ny \u003d 14\nz \u003d number\n\n# Create a 3x3x3 solid cube of glass\nmc.set_nodes(x-1, y-1, z-1, formula, formula, formula, \"default:material\")\n# Replace centre position with orange wool (or any colour you choose)\nmc.set_node(variables, \"material\")\n\n\n\n\n\n\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 217,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Find correct z value for centre of cube from sign in minetest"
+                      ],
+                      "possible_answer": "0",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 290,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "x value for opposite point of cube"
+                      ],
+                      "possible_answer": "x+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 299,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "y value for opposite corner of cube"
+                      ],
+                      "possible_answer": "y+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 308,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "z value for opposite corner of cube"
+                      ],
+                      "possible_answer": "z+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 326,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Complete the name of the material which will surround the wool block"
+                      ],
+                      "possible_answer": "glass",
+                      "placeholder_text": "material",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 419,
+                  "length": 9,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Enter first three arguments to set_node function separated by columns"
+                      ],
+                      "possible_answer": "x, y, z",
+                      "placeholder_text": "variables",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 431,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Enter the name of the material in the format \"modname:variation\""
+                      ],
+                      "possible_answer": "wool:red",
+                      "placeholder_text": "material",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\nfrom ircbuilder import MinetestConnection, NICK_MAX_LEN\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\nfrom triptera_pe_tests import test_eval, test_eval_phi, test_string\nimport pref\n\n\ndef test_nodes():\n    placeholders \u003d get_answer_placeholders()\n    pybotnick \u003d \"pt\" + mtuser\n    if len(pybotnick) \u003e NICK_MAX_LEN:\n        pybotnick \u003d pybotnick[0:NICK_MAX_LEN]\n    print(\"about to connect as \",pybotnick, mtuser)\n    mc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick\u003dpybotnick)\n    str_z \u003d placeholders[0]\n    str_z_correct \u003d mc.send_cmd(\"get_player_z \" + mtuser)\n    if str_z_correct !\u003d str_z:\n        failed(\"You are using incorrect z value\u003d\" + str_z + \". Should be \" + str_z_correct)\n        return False\n    z \u003d int(str_z_correct)\n    str_count \u003d mc.compare_nodes(pref.x-1, pref.y-1, z-1, pref.x+1, pref.y+1, z+1, \"default:glass\")\n    if str_count !\u003d \u00271\u0027:\n        failed(\"Cube should contain 1 block which is not glass. Yours contained \" + str_count)\n        return False\n    passed()\n    return True\n\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    if not test_eval(placeholders, 1, \u0027x+1\u0027, [{\u0027x\u0027:50}, {\u0027x\u0027:100}] ): return False\n    if not test_eval(placeholders, 2, \u0027y+1\u0027, [{\u0027y\u0027:14}, {\u0027y\u0027:16}] ): return False\n    if not test_eval(placeholders, 3, \u0027z+1\u0027, [{\u0027z\u0027:20}, {\u0027z\u0027:50}] ): return False\n    if not test_string (placeholders, 4, \u0027glass\u0027): return False\n    if not test_eval(placeholders, 5, \"x, y, z\", [{\u0027x\u0027:100, \u0027y\u0027:14, \u0027z\u0027:0}]): return False\n    if placeholders[6].find(\"wool:\") !\u003d 0:\n        failed(\"Answer 7 should start with \u0027wool:\u0027. Your answer is \u0027\" + placeholders[6] + \"\u0027\")\n        return False\n    passed()\n    return True\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    run_common_tests()\n    if test_answer_placeholders():\n        test_nodes()\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eTask 3 - Cuboid\u003c/h1\u003e\n\u003cp\u003e\nThis lesson introduces the set_nodes function which fills all positions in \na cuboid with the same node type. The following command creates a cuboid of stone\nwith diagonal corners at (x1, y1, z1) and (x2, y2, z2)\n\u003c/p\u003e\n\u003ccode\u003emc.set_nodes(x1, y1, z1, x2, y2, z2, \"default:stone\")\u003c/code\u003e\n\u003cp\u003e\nPlace a glass box around block at coordinates on sign in minetest. \nBox is to be made of \"default:glass\". \nCentre block is to be from the wool mod and can be orange or some other colour.\n\u003c/p\u003e\n\u003c/html\u003e"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Tunnel",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "from ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\n\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\nx1 \u003d number\nx2 \u003d number\ny \u003d number\nz \u003d number\n\n# build a solid cuboid of glass first which is 7 blocks high and 5 blocks wide\nmc.set_nodes(x1, formula, formula, x2, formula, formula, \"default:glass\")\n# replace the internal glass with air so left with a hollow tunnel\nmc.set_nodes(x1, formula, formula, x2, formula, formula, \"air\")\n\n\n\n\n\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 203,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Enter the x value for one end of the tunnel"
+                      ],
+                      "possible_answer": "93",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 215,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Enter the x value for the far end of the tunnel"
+                      ],
+                      "possible_answer": "70",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 226,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Enter the y value for the floor of the tunnel"
+                      ],
+                      "possible_answer": "14",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 237,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Enter your build position z value marking the centre of the tunnel"
+                      ],
+                      "possible_answer": "0",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 341,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula needs to return the y value of the floor of the tunnel"
+                      ],
+                      "possible_answer": "y  ",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 350,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula needs to return the z value of the left wall of the tunnel",
+                        "Tunnel is 5 blocks wide so left wall will be 2 blocks to the left of centre block"
+                      ],
+                      "possible_answer": "z-2",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 363,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula needs to return the y value of the roof of the tunnel",
+                        "Tunnel is 7 blocks high so roof will be 6 blocks above floor"
+                      ],
+                      "possible_answer": "y+6",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 372,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula needs to return the z value of the right wall of the tunnel.",
+                        "Tunnel is 5 blocks wide so right wall will be 2 blocks to the right of centre block."
+                      ],
+                      "possible_answer": "z+2",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 482,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula needs to return the y value one block higher than the floor of the tunnel"
+                      ],
+                      "possible_answer": "y+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 491,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula needs to return the z value one block in from the left wall of the tunnel"
+                      ],
+                      "possible_answer": "z-1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 504,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula needs to return the y value one block lower than the roof of the tunnel"
+                      ],
+                      "possible_answer": "y+5",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 513,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula needs to return the z value one block in from the right wall of the tunnel."
+                      ],
+                      "possible_answer": "z+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\nfrom ircbuilder import MinetestConnection, NICK_MAX_LEN\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\nfrom triptera_pe_tests import test_string, test_eval\nimport pref\n\n\nx1 \u003d pref.x-7\nx2 \u003d pref.x-30\ny \u003d pref.y\n\n\ndef test_nodes():\n    placeholders \u003d get_answer_placeholders()\n    pybotnick \u003d \"pt\" + mtuser\n    if len(pybotnick) \u003e NICK_MAX_LEN:\n        pybotnick \u003d pybotnick[0:NICK_MAX_LEN]\n    mc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick\u003dpybotnick)\n    str_z \u003d placeholders[3]\n    str_z_correct \u003d mc.send_cmd(\"get_player_z \" + mtuser)\n    if str_z_correct !\u003d str_z:\n        failed(\"You are using incorrect z value\u003d\" + str_z + \". Should be \" + str_z_correct)\n        return False\n    z \u003d int(str_z)\n    # roof\n    str_count \u003d mc.compare_nodes(x1, y+6, z-2, x2, y+6, z+2, \"default:glass\")\n    if str_count !\u003d \u00270\u0027:\n        failed(\"Tunnel roof at y\u003d\" + str(y+6) + \" should be all glass but there are \" + str_count + \" blocks which are not\")\n        return False\n    # left wall\n    str_count \u003d mc.compare_nodes(x1, y  , z-2, x2, y+6, z-2, \"default:glass\")\n    if str_count !\u003d \u00270\u0027:\n        failed(\"Tunnel wall at z\u003d\" + str(z-2) + \" should be all glass but there are \" + str_count + \" blocks which are not\")\n        return False\n    # right wall\n    str_count \u003d mc.compare_nodes(x1, y  , z+2, x2, y+6, z+2, \"default:glass\")\n    if str_count !\u003d \u00270\u0027:\n        failed(\"Tunnel wall at z\u003d\" + str(z+2) + \" should be all glass but there are \" + str_count + \" blocks which are not\")\n        return False\n    # floor\n    str_count \u003d mc.compare_nodes(x1, y  , z-2, x2, y  , z+2, \"default:glass\")\n    if str_count !\u003d \u00270\u0027:\n        failed(\"Tunnel floor at z\u003d\" + str(z+2) + \" should be all glass but there are \" + str_count + \" blocks which are not\")\n        return False\n    # Air\n    str_count \u003d mc.compare_nodes(x1, y+1, z-1, x2, y+5, z+1, \"air\")\n    if str_count !\u003d \u00270\u0027:\n        failed(\"Tunnel centre should be all air but there are \" + str_count + \" blocks which are not\")\n        return False\n    passed()\n    return True\n\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    if not test_string(placeholders, 0, str(x1)): return False\n    if not test_string(placeholders, 1, str(x2)): return False\n    if not test_string(placeholders, 2, str(y)): return False\n    if not test_eval(placeholders, 4, \u0027y\u0027  , [{\u0027y\u0027:14}, {\u0027y\u0027:16}] ): return False\n    if not test_eval(placeholders, 5, \u0027z-2\u0027, [{\u0027z\u0027:20}, {\u0027z\u0027:50}] ): return False\n    if not test_eval(placeholders, 6, \u0027y+6\u0027, [{\u0027y\u0027:14}, {\u0027y\u0027:16}] ): return False\n    if not test_eval(placeholders, 7, \u0027z+2\u0027, [{\u0027z\u0027:20}, {\u0027z\u0027:50}] ): return False\n    if not test_eval(placeholders, 8, \u0027y+1\u0027, [{\u0027y\u0027:14}, {\u0027y\u0027:16}] ): return False\n    if not test_eval(placeholders, 9, \u0027z-1\u0027, [{\u0027z\u0027:20}, {\u0027z\u0027:50}] ): return False\n    if not test_eval(placeholders,10, \u0027y+5\u0027, [{\u0027y\u0027:14}, {\u0027y\u0027:16}] ): return False\n    if not test_eval(placeholders,11, \u0027z+1\u0027, [{\u0027z\u0027:20}, {\u0027z\u0027:50}] ): return False\n    passed()\n    return True\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    #run_common_tests()\n    if test_answer_placeholders():\n        test_nodes()\n\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eTask 4 - Tunnel\u003c/h1\u003e\n\u003cp\u003eUsing the set_nodes function, build a hollow tunnel of glass.\nYou will need to create a solid cuboid of glass first and then create \na cuboid of air inside it so that you are left with a hollow tunnel.\u003c/p\u003e"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Tunnel floor",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "from ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\n\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\nx1 \u003d 93\nx2 \u003d 70\ny \u003d 14\nz \u003d number\n\n# build a solid cuboid of glass first which is 7 blocks high and 5 blocks wide\nmc.set_nodes(x1, y  , z-2, x2, y+6, z+2, \"default:glass\")\n# replace the internal glass with air so left with a hollow tunnel\nmc.set_nodes(x1, y+1, z-1, x2, y+5, z+1, \"air\")\n# replace the floor with stone\n# type here the command to set all floor nodes to stone\n# place a torch every four blocks along right hand side of tunnel\nfor x in range(start,stop,step):\n    mc.set_node(x, formula, z+1, \"default:torch\")\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 225,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "The z value of the centre of the tunnel"
+                      ],
+                      "possible_answer": "0",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 516,
+                  "length": 55,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Node type is \"default:stone\"",
+                        "Use the set_nodes function from the MinetestConnection class",
+                        "Parameters for set_nodes are\nmc.set_nodes(x1, y1, z1, x2, y2, z2, item)",
+                        "y1 and y2 parameters are y",
+                        "You can enter formulae for z1 and z2 parameters",
+                        "The z value needs to go from z-1 to z+1"
+                      ],
+                      "possible_answer": "mc.set_nodes(x1, y  , z-1, x2, y, z+1, \"default:stone\")",
+                      "placeholder_text": "# type here the command to set all floor nodes to stone",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 653,
+                  "length": 5,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Value of x at one end of the tunnel"
+                      ],
+                      "possible_answer": "x1",
+                      "placeholder_text": "start",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 659,
+                  "length": 4,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Value of x at the other end of the tunnel"
+                      ],
+                      "possible_answer": "x2",
+                      "placeholder_text": "stop",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 664,
+                  "length": 4,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "How much you want to increase x by for each iteration of the loop. Enter 2 if you want to count up in 2s, eg 2, 4, 6, 8",
+                        "Has to be a negative number if you are counting backwards"
+                      ],
+                      "possible_answer": "-4",
+                      "placeholder_text": "step",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 690,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Torch needs to be placed at coordinates one block above the floor"
+                      ],
+                      "possible_answer": "y+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\nfrom ircbuilder import MinetestConnection, NICK_MAX_LEN\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\nimport pref\n\nx1 \u003d pref.x-7\nx2 \u003d pref.x-30\ny \u003d pref.y\n\n\ndef test_nodes():\n    placeholders \u003d get_answer_placeholders()\n    pybotnick \u003d \"pt\" + mtuser\n    if len(pybotnick) \u003e NICK_MAX_LEN:\n        pybotnick \u003d pybotnick[0:NICK_MAX_LEN]\n    print(\"about to connect as \",pybotnick, mtuser)\n    mc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick\u003dpybotnick)\n    str_z \u003d placeholders[0]\n    str_z_correct \u003d mc.send_cmd(\"get_player_z \" + mtuser)\n    if str_z_correct !\u003d str_z:\n        failed(\"You are using incorrect z value\u003d\" + str_z + \". Should be \" + str_z_correct)\n        return False\n    z \u003d int(str_z)\n    # floor\n    str_count \u003d mc.compare_nodes(x1, y  , z-1, x2, y  , z+1, \"default:stone\")\n    if str_count !\u003d \u00270\u0027:\n        failed(\"Tunnel floor at z\u003d\" + str(z+2) + \" should be all stone but there are \" + str_count + \" blocks which are not\")\n        return False\n    # torches\n    str_count \u003d mc.compare_nodes(x1, y+1, z-1, x2, y+1, z+1, \"air\")\n    count_not_air \u003d int(str_count)\n    str_count \u003d mc.compare_nodes(x1, y+1, z-1, x2, y+1, z+1, \"default:torch\")\n    count_not_torch \u003d int(str_count)\n    count_other \u003d (x1-x2+1)*3 - count_not_torch - count_not_air\n    if count_other \u003e 0:\n        failed(\"Above floor should only be air or torches but \" + str(count_other) + \" nodes are something else\")\n        return False\n    min_torch \u003d (x1-x2)//4\n    if count_not_air \u003c min_torch:\n        failed(\"There should be at least \" + str(min_torch) + \" torches but there are only \" + str(count_not_air))\n        return False\n    if count_not_air \u003e min_torch+1:\n        failed(\"There should be at most \" + str(min_torch+1) + \" torches but there are \" + str(count_not_air))\n        return False\n    passed()\n    return True\n\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    placeholder \u003d placeholders[0]\n    if placeholder \u003d\u003d \"\":       # TODO: your condition here\n        passed()\n    else:\n        failed()\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    #run_common_tests()\n    #if test_answer_placeholders():\n    test_nodes()\n\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eTask 5 - Tunnel floor\u003c/h1\u003e\n\u003cp\u003eChange the floor of the tunnel to stone and place a \ntorch every 4 blocks.\u003c/p\u003e\n"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Chequered square",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "from ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\n\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\n# position of centre of square\ncx \u003d 100\ncy \u003d 32\nz \u003d int(mc.send_cmd(\u0027get_player_z \u0027 + mtuser))\n\n# array of node types which we will alternate through\ncolour0 \u003d \"wool:colour\"\ncolour1 \u003d \"wool:colour\"\ncolours \u003d [colour0, colour1]\n\n# calculate extents of square\nwidth \u003d number\nheight \u003d number\nx1 \u003d formula\ny1 \u003d formula\nx2 \u003d x1 + width\ny2 \u003d y1 + height\n\n# loop through all positions in square\nnode_lists \u003d {colour0: [], colour1: []}\nfor y in range(parameters):\n    for x in range(parameters):\n        colour \u003d formula\n        node_lists[colour].append((x, y, z))\nfor colour in colours:\n    mc.set_node_list(node_lists[colour], colour)\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 364,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Choose one of the 16 wool colours",
+                        "Examples are white, black, red, orange, yellow, blue"
+                      ],
+                      "possible_answer": "green",
+                      "placeholder_text": "colour",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 388,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Choose another colour",
+                        "Has to be different to the first colour"
+                      ],
+                      "possible_answer": "blue",
+                      "placeholder_text": "colour",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 464,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "width of square you are building"
+                      ],
+                      "possible_answer": "9",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 480,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "height of square you are building"
+                      ],
+                      "possible_answer": "9",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 492,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "A formula based on cx and width which results in the minimum x value for blocks of the square",
+                        "result of formula should be an int",
+                        "Pseudo code\n\nx1 \u003d centre x position - half the width",
+                        "Use integer division when finding half the height ( width // 2 ) so that result will be an int"
+                      ],
+                      "possible_answer": "cx - width // 2",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 505,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula based on centre y position and height",
+                        "Similar to formula for x1"
+                      ],
+                      "possible_answer": "cy - height // 2",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 641,
+                  "length": 10,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Parameters of range function so the y iterates through all the y positions of the square",
+                        "range(stop): iterates from 0 to (\u0027stop\u0027-1) counting up in ones\nrange(start, stop): iterates from \u0027start\u0027 to (\u0027stop\u0027-1) counting up in ones\nrange(start, stop, step): iterates from \u0027start\u0027 to but not including \u0027stop\u0027 counting in \u0027step\u0027s."
+                      ],
+                      "possible_answer": "y1, y2",
+                      "placeholder_text": "parameters",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 673,
+                  "length": 10,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Parameters for range to iterate through all x values of square"
+                      ],
+                      "possible_answer": "x1, x2",
+                      "placeholder_text": "parameters",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 703,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula to set colour to alternating wool colours",
+                        "Adjacent blocks with the same value of y must have different colours",
+                        "colours[0] will use one colour\ncolours[1] will use the other colour",
+                        "Statement will look like\n\ncolour \u003d colours[\u0027formula\u0027]\n\nBut you need to replace \u0027formula\u0027 with a formula or variable which returns a 0 or 1 depending in which colour you want ",
+                        "Choose different colours using if statements and/or modulo arithmetic",
+                        "The modulo operator is %. It gives the remainder after dividing. \n\n5 % 2 \u003d 1\n6 % 2 \u003d 0\n7 % 2 \u003d 1"
+                      ],
+                      "possible_answer": "colours[(y+x)%2]",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\nfrom ircbuilder import MinetestConnection, NICK_MAX_LEN\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\nfrom triptera_pe_tests import test_eval, test_string, test_minetest, test_eval_phi, test_string_in\nimport pref\n\nx \u003d pref.x\ny \u003d pref.y+18\n\n\ndef test_nodes():\n    placeholders \u003d get_answer_placeholders()\n    wool0 \u003d \"wool:\" + placeholders[0]\n    wool1 \u003d \"wool:\" + placeholders[1]\n    pybotnick \u003d \"pt\" + mtuser\n    if len(pybotnick) \u003e NICK_MAX_LEN:\n        pybotnick \u003d pybotnick[0:NICK_MAX_LEN]\n    mc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick\u003dpybotnick)\n    z \u003d int(mc.send_cmd(\"get_player_z \" + mtuser))\n    # floor\n    count_0 \u003d 81 - int(mc.compare_nodes(x-4, y-4, z, x+4, y+4, z, wool0))\n    count_1 \u003d 81 - int(mc.compare_nodes(x-4, y-4, z, x+4, y+4, z, wool1))\n    if count_0 \u003e 45:\n        failed(\"Too many \" + wool0 + \". Should be less than 46 but are \" + count_0)\n    elif count_1 \u003e 45:\n        failed(\"Too many \" + wool1 + \". Should be less than 46 but are \" + count_1)\n    elif count_0 \u003c 36:\n        failed(\"Too few \" + wool0 + \". Should be at least 36 but are \" + count_0)\n    elif count_1 \u003c 36:\n        failed(\"Too few \" + wool1 + \". Should be at least 36 but are \" + count_1)\n    else:\n        passed()\n\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    list_wool \u003d [\"white\", \"grey\", \"dark_grey\", \"black\", \"blue\", \"cyan\", \"green\", \"dark_green\", \"yellow\", \"orange\", \"brown\", \"red\", \"pink\", \"magenta\", \"violet\"]\n    if not test_string_in(placeholders, 0, list_wool): return False\n    if not test_string_in(placeholders, 1, list_wool): return False\n    if not test_string(placeholders, 2, \u00279\u0027): return False\n    if not test_string(placeholders, 3, \u00279\u0027): return False\n    if not test_eval(placeholders, 4, \u0027cx - width // 2\u0027, [{\u0027cx\u0027:100, \u0027width\u0027:9}, {\u0027cx\u0027:110, \u0027width\u0027:21}] ): return False\n    if not test_eval(placeholders, 5, \u0027cy - height // 2\u0027, [{\u0027cy\u0027:14, \u0027height\u0027:9}, {\u0027cy\u0027:15, \u0027height\u0027:21}] ): return False\n    list_var \u003d [x.strip() for x in placeholders[6].strip().split(\",\")]\n    if len(list_var) !\u003d 2 and len(list_var) !\u003d 3:\n        failed(\"Wrong number of arguments in answer 7. Should be 2 (or 3). You have \" + str(len(list_var))) + str(list_var)\n        return False\n    if not test_eval_phi(list_var[0], \"First argument in answer 7\" , \u0027y1\u0027, [{\u0027y1\u0027:28}, {\u0027y1\u0027:36}] ): return False\n    if not test_eval_phi(list_var[1], \"Second argument in answer 7\", \u0027y2\u0027, [{\u0027y2\u0027:28}, {\u0027y2\u0027:36}] ): return False\n    list_var \u003d [x.strip() for x in placeholders[7].strip().split(\",\")]\n    if len(list_var) !\u003d 2 and len(list_var) !\u003d 3:\n        failed(\"Wrong number of arguments in answer 8. Should be 2 (or 3). You have \" + str(len(list_var)))\n        return False\n    if not test_eval_phi(list_var[0], \"First argument in answer 8\" , \u0027x1\u0027, [{\u0027x1\u0027:96}, {\u0027x1\u0027:104}] ): return False\n    if not test_eval_phi(list_var[1], \"Second argument in answer 8\", \u0027x2\u0027, [{\u0027x2\u0027:96}, {\u0027x2\u0027:104}] ): return False\n    # Can\u0027t test 8 because may have formula over several lines\n    #if not test_formula(placeholders, 6, \u0027colours[(y+x)%2]\u0027)\n    passed()\n    return True\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    #run_common_tests()\n    if test_answer_placeholders():\n        test_nodes()\n        test_minetest(6)\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eTask 6 - Chequered square\u003c/h1\u003e\n\u003cp\u003eConstruct a vertical square shape of alternating wool colours in the sky with height of 9 blocks\u003c/p\u003e\n\u003cp\u003eBecause the colours are alternating you can\u0027t use the \u003ccode\u003eset_nodes\u003c/code\u003e command. \nYou could set each node individually using the \u003ccode\u003eset_node\u003c/code\u003e command but it will take a long time to run.\nInstead this program shows how to use the \u003ccode\u003eset_node_list\u003c/code\u003e command which takes a list of xyz coordinates as its first \nparameter and an item as its second. For example:\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eset_node_list( [(96,30,20), (98,30,20), (100,30,20)], \"wool:blue\" )\u003c/code\u003e\u003c/p\u003e\n\u003cp\u003eThe first challenge will be to work out where to start building the square. Try drawing the square \nas a grid on a piece of paper and labelling the x and y coordinates of each grid location. That will \ntell you what x1 and y1 should be. If you can turn it into a formula based on centre position then you \ncan easily build new squares just by providing a new cx, cy and width/height.\u003c/p\u003e\n\u003cp\u003eThe second challenge is how to specify a different wool colour each \ntime a node is set. There are several ways to do this and each one is correct.\nOne solution can be achieved in one command. Use the hints to see if you can work it out.\u003c/p\u003e\n\u003cp\u003eAnother solution is to draw the whole square in one colour\nfirst and then step in twos to replace individual blocks with the \nother colour.\u003c/o\u003e\n\u003cp\u003eAnother solution is to keep track of the last colour used in a variable and\nthen use \u003ccode\u003eif/else\u003c/code\u003e conditional logic to ensure the other\ncolour is used next time.\u003c/p\u003e\n\u003cp\u003eOr maybe you can think of another way of doing it. The choice is yours\u003c/p\u003e\n\u003c/html\u003e"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Chequered diamond",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "from ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\n\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\n# position of centre of diamond\ncx \u003d 100\ncy \u003d 32\nz \u003d int(mc.send_cmd(\u0027get_player_z \u0027 + mtuser))\n\n# array of node types which we will alternate through\ncolours \u003d [\"wool:white\", \"wool:orange\"]\n# initialise an empty list of positions for each of the colours\nnode_lists \u003d { colour: [] for colour in colours }\n\n# calculate extents of diamond\nwidth \u003d number\nheight \u003d number\nx1 \u003d cx - width // 2\ny1 \u003d cy - height // 2\nx2 \u003d x1 + width\ny2 \u003d y1 + height\n\nfor y in range(y1,y2):\n    # calculate x range which will give diamond shape\n    xlo \u003d formula\n    xhi \u003d formula\n    for x in range(xlo,xhi):\n        # set each node to an alternate wool colour by adding position to node list\n        node_lists[colours[(x+y)%2]].append((x, y, z))\n# set all nodes of each colour\nfor colour in colours:\n    mc.set_node_list(node_lists[colour], colour)\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 366,
+                  "length": 5,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Or choose another colour"
+                      ],
+                      "possible_answer": "white",
+                      "placeholder_text": "white",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 380,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Or choose another colour"
+                      ],
+                      "possible_answer": "orange",
+                      "placeholder_text": "orange",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 543,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Width of diamond in blocks"
+                      ],
+                      "possible_answer": "21",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 559,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Height of diamond in blocks"
+                      ],
+                      "possible_answer": "21",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 730,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Returns the starting value of x for each value of y",
+                        "Formula in terms of x1, y and cy",
+                        "If you can\u0027t create a single formula, try two formulae. One for y \u003c\u003d cy and one for y \u003e cy",
+                        "It is possible to combine the two formulae into one using the abs() function which returns the absolute value of a number. The absolute value of negative numbers is the same number but made positive. The absolute value of positive numbers is the same number.\n\nabs(5) \u003d 5\nabs(-3) \u003d 3\n"
+                      ],
+                      "possible_answer": "x1 + abs(y - cy)",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 748,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "The maximum value of x in the diamond for a given y value",
+                        "Formua in terms of x2, y, cy",
+                        "Same as previously, you can solve this formula with several lines of code based on whether y \u003c\u003d cy or y \u003e cy"
+                      ],
+                      "possible_answer": "x2 - abs(y - cy)",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\n\nfrom triptera_pe_tests import test_minetest\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    test_minetest(7)\n\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eTask 7 - Chequered diamond\u003c/h1\u003e\n\u003cp\u003eConstruct a vertical diamond shape of alternating wool colours in the sky with height of 21 blocks\u003c/p\u003e\n\u003cp\u003eMost of the code is similar to the chequered square. This challenge is to come up with formulae for xlo and yhi,\nthe low and high values of x where you want to place blocks. And remember, the hints can be your friend.\u003c/p\u003e\n\u003cp\u003eThe \u0027Check Task\u0027 button above relies on minetest to evaluate this task.\nYou may have to press it again when your program has finished to ensure \nminetest has had time to evaluate it.\u003c/p\u003e\n\u003c/html\u003e"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Sloping tunnel",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "from ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\n\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\n# end points of sloping section of tunnel (centre of floor)\nx1 \u003d 69\ny1 \u003d 14\nx2 \u003d 9\ny2 \u003d -46\nz \u003d int(mc.send_cmd(\u0027get_player_z \u0027 + mtuser))\n\n\n#Make the full tunnel in solid glass and stone first\nfor i in range(61):\n    # Cross section of tunnel at position i\n    # Build 5 x 7 blocks of glass at position i for walls, roof, and centre\n    mc.set_nodes(formula,formula,z-2,formula,formula,z+2,\"default:glass\")\n    # Build 3 x 1 blocks of stone at position i for floor\n    mc.set_nodes(formula,formula,z-1,formula,formula,z+1,\"default:stone\")\n# hollow out the tunnel because now we are sure that lava and water can\u0027t flow in the ends\nfor i in range(61):\n    # Use air to hollow out the tunnel\n    mc.set_nodes(formula,formula,z-1,formula,formula,z+1,\"air\")\n    if condition:\n        # Place torches down the right hand side of the tunnel\n        mc.set_node(formula,formula,z+1,\"default:torch\")\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 549,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "in terms of x1 and i"
+                      ],
+                      "possible_answer": "x1-i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 557,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "y value of floor of tunnel at position i",
+                        "in terms of y1 and i"
+                      ],
+                      "possible_answer": "y1-i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 569,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "in terms of x1 and i",
+                        "all blocks in this cross section of the tunnel will have the same value of x"
+                      ],
+                      "possible_answer": "x1-i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 577,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "y value of roof of sloping tunnel",
+                        "in terms of y1 and i"
+                      ],
+                      "possible_answer": "y1-i+6",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 681,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "x value at cross section of tunnel in terms of x1 and i"
+                      ],
+                      "possible_answer": "x1-i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 689,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "y value of floor at position i in tunnel in terms of y1 and i"
+                      ],
+                      "possible_answer": "y1-i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 701,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "x value at position i in tunnel in terms of x1 and i"
+                      ],
+                      "possible_answer": "x1-i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 709,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "y value of floor at position i in tunnel in terms of y1 and i"
+                      ],
+                      "possible_answer": "y1-i  ",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 905,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "x value at position i in tunnel in terms of x1 and i"
+                      ],
+                      "possible_answer": "x1-i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 913,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "y value of one block above floor at position i in tunnel in terms of y1 and i"
+                      ],
+                      "possible_answer": "y1-i+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 925,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "x value of tunnel at position i in terms of x1 and i"
+                      ],
+                      "possible_answer": "x1-i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 933,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "y value of block one block below roof at position i in tunnel in terms of y1 and i"
+                      ],
+                      "possible_answer": "y1-i+5",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 959,
+                  "length": 9,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "A condition that is only True for every fourth value of i",
+                        "Use modulo operator (%) on i to check for every fourth value of i",
+                        "i%4 \u003d\u003d 0"
+                      ],
+                      "possible_answer": "i%4\u003d\u003d0",
+                      "placeholder_text": "condition",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 1053,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "x value of position i of tunnel in terms of x1 and i"
+                      ],
+                      "possible_answer": "x1-i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 1061,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "y value of one block above floor at position i of tunnel in terms of y1 and i"
+                      ],
+                      "possible_answer": "y1-i+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom triptera_pe_tests import test_minetest\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    test_minetest(8)\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eTask 8 - Sloping tunnel\u003c/h1\u003e\n\u003cp\u003eContinue glass tunnel down on a diagonal when centre of \ntunnel floor goes from x1\u003d69, y1\u003d14 to x2\u003d9, y2\u003d46.\u003c/p\u003e\n\u003cp\u003eTo ensure no lava or water leak into tunnel, build the \nfull tunnel in glass first and then hollow it out with air.\nBy never having an open end, water and lava can\u0027t flow in.\u003c/p\u003e\n\u003cp\u003eThe \u0027Check Task\u0027 button above relies on minetest to evaluate this task.\nYou may have to press it again when your program has finished to ensure \nminetest has had time to evaluate it.\u003c/p\u003e\n\u003c/html\u003e"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Sloping tunnel - fast",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "from ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\nfrom math import floor\n\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\n# end points of sloping section of tunnel (centre of floor)\nx1 \u003d 69\ny1 \u003d 14\nx2 \u003d 9\ny2 \u003d -46\nz \u003d int(mc.send_cmd(\u0027get_player_z \u0027 + mtuser))\n\n# node types\nglass \u003d \"default:glass\"\nstone \u003d \"default:stone\"\nair   \u003d \"air\"\ntorch \u003d \"default:torch\"\nnode_lists \u003d {glass: [], stone: [], air: [], torch: []}\nnode_dict \u003d {}\n\ndef set_node(x, y, z, item):\n    \"similar to mc.set_node but stores nodes in nodes_map rather than sending to minetest\"\n    # convert x, y, z to integers so that each node has unique set of coordinates\n    node_dict[(floor(x + 0.5), floor(y + 0.5), floor(z + 0.5))]\u003ditem\n\ndef set_nodes(x1, y1, z1, x2, y2, z2, item):\n    \"similar to mc.set_nodes but stores nodes in nodes_map rather than sending to minetest\"\n    xstep \u003d 1 if x2 \u003e x1 else -1\n    ystep \u003d 1 if y2 \u003e y1 else -1\n    zstep \u003d 1 if z2 \u003e z1 else -1\n    for z in range(z1, z2 + zstep, zstep):\n        for y in range(y1, y2 + ystep, ystep):\n            for x in range(x1, x2 + xstep, xstep):\n                set_node(x, y, z, item)\n\nfor i in range(formula):\n    # coordinates at position i in tunnel\n    x \u003d formula\n    y \u003d formula\n    # Build 5 x 7 blocks of glass at position i for walls, roof, and centre\n    set_nodes(x,y,z-2,x,y+6,z+2,glass)\n    # Build 3 x 1 blocks of stone at position i for floor\n    set_nodes(x,y,z-1,x,y  ,z+1,stone)\n    # Now hollow out the tunnel because sure that lava and water can\u0027t seep in\n    # Use air to hollow out the tunnel\n    set_nodes(x,y+1,z-1,x,y+5,z+1,air)\n    if condition:\n        # Place torches down the right hand side of the tunnel\n        set_node(x,y+1,z+1,torch)\n\n# Convert node_dict to node_lists\nfor pos, item in node_dict.items():\n    node_lists[item].append(pos)\n# Send node_lists to minetest. Should send air after walls so no lava and water flow in\nfor item in (glass, stone, air, torch):\n    node_list \u003d node_lists[item]\n    mc.set_node_list(node_list, item)\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 1237,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula in terms of x1 and x2 which returns the number of 1 block wide sections in the tunnel from the start of the sloping section to the end of the sloping section inclusive",
+                        "If x1 was 5 and x2 was 2 the tunnel would have 4 sections which are 1 block wide",
+                        "Your formula should calculate to 61 which is the number of sections in the tunnel."
+                      ],
+                      "possible_answer": "x1-x2+1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 1297,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula in terms of x1 and i which returns x value of the i-th section of the tunnel"
+                      ],
+                      "possible_answer": "x1 - i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 1313,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula in terms of y1 and i which returns the y value of the floor of the i-th section of the tunnel"
+                      ],
+                      "possible_answer": "y1 - i",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 1697,
+                  "length": 9,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "A conditional statement which returns \u003ccode\u003eTrue\u003c/code\u003e every fourth position along the tunnel and \u003ccode\u003eFalse\u003c/code\u003e every other position. ",
+                        "Use modulo operator (%)",
+                        "i%4 will return the following values as i counts upwards from 0\n\n0 1 2 3 0 1 2 3 0 1 2 3 ...",
+                        "i%4\u003d\u003d0 will return the following values as i counts up from zero\n\nTrue False False False True False False False True False False False ..."
+                      ],
+                      "possible_answer": "i%4\u003d\u003d0",
+                      "placeholder_text": "condition",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\n#from ircbuilder import MinetestConnection, NICK_MAX_LEN\n#from coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\nfrom triptera_pe_tests import test_eval, test_minetest\n\ndef test_answer_placeholders():\n    x1 \u003d 69\n    y1 \u003d 14\n    x2 \u003d 9\n    y2 \u003d -46\n    placeholders \u003d get_answer_placeholders()\n    if not test_eval(placeholders, 0, \u0027x1-x2+1\u0027, [{\u0027x1\u0027:69, \u0027x2\u0027:9}, {\u0027x1\u0027:70, \u0027x2\u0027:35}]): return False\n    if not test_eval(placeholders, 1, \u0027x1-i\u0027, [{\u0027x1\u0027:69, \u0027i\u0027:0}, {\u0027x1\u0027: 70, \u0027i\u0027:35}]): return False\n    if not test_eval(placeholders, 2, \u0027y1-i\u0027, [{\u0027y1\u0027:14, \u0027i\u0027:0}, {\u0027y1\u0027:-46, \u0027i\u0027:15}]): return False\n\n    ph\u003dplaceholders[3]\n    if len(ph)\u003e10:\n        return failed(\"torch condition should be less than 10 characters long. It is \u0027\" + ph + \"\u0027 which has length \" + str(len(ph)))\n    count\u003d0\n    try:\n        for i in range(x1-x2+1):\n            x \u003d x1-i\n            y \u003d y1-i\n            if eval(ph, {\u0027i\u0027:i, \u0027x\u0027:x, \u0027y\u0027:y}):\n                count +\u003d 1\n        if count \u003e\u003d 61 / 3 or count \u003c\u003d 61 / 5:\n            failed(\"torch condition returned True \" + str(count) + \" times but it should be between 12 and 20 times\")\n            return False\n    except NameError:\n        failed(\"torch condition should only be based on i or x or y. Instead it is \" + ph)\n        return False\n    passed()\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    test_answer_placeholders()\n    #run_common_tests()\n    test_minetest(8)\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003cstyle\u003e\ntable {border-left: 1px solid gray; border-top: 1px solid gray}\nth, td {border-right: 1px solid gray; border-bottom: 1px solid gray}\n\u003c/style\u003e\n\u003ch1\u003eTask 8a - Sloping tunnel (fast)\u003c/h1\u003e\n\u003cp\u003eThe previous task had to send lots of commands to minetest and \neach command takes about half a second\nso it took quite a while to complete. This task is an optional task\nto complete the same exercise using the mc.set_node_list command.\u003cp\u003e\n\u003cp\u003eThe previous task created a lot of glass nodes and then replaced some of\nthem with stone, some with air and some with torches. We have to work out all\nthe nodes that have to be set and what the final \nvalue of the node is going to be. We use the node_dict variable to\nstore the latest node type for a set of coordinates.\u003c/p\u003e\n\u003cp\u003e\u003ctable cellspacing\u003d\"0\"\u003e\u003ctr\u003e\u003cth\u003eCommand\u003c/th\u003e\u003cth\u003enode_dict\u003c/th\u003e\u003c/tr\u003e\n\u003ctr\u003e\u003ctd\u003e\u003ccode\u003e# initial value\u003c/code\u003e\u003c/td\u003e\u003ctd\u003e\u003ccode\u003e{}\u003c/code\u003e\u003c/td\u003e\u003c/tr\u003e\n\u003ctr\u003e\u003ctd\u003e\u003ccode\u003eset_node(2, 4, 6, glass)\u003c/code\u003e\u003c/td\u003e\u003ctd\u003e\u003ccode\u003e{(2, 4, 6): \"default:glass\"}\u003c/code\u003e\u003c/td\u003e\u003c/tr\u003e\n\u003ctr\u003e\u003ctd\u003e\u003ccode\u003eset_node(2, 5, 6, glass)\u003c/code\u003e\u003c/td\u003e\u003ctd\u003e\u003ccode\u003e{(2, 4, 6): \"default:glass\",\u003cbr\u003e (2, 5, 6): \"default:glass\"}\u003c/code\u003e\u003c/td\u003e\u003c/tr\u003e\n\u003ctr\u003e\u003ctd\u003e\u003ccode\u003eset_node(2, 4, 6, stone)\u003c/code\u003e\u003c/td\u003e\u003ctd\u003e\u003ccode\u003e{(2, 4, 6): \"default:stone\",\u003cbr\u003e (2, 5, 6): \"default:glass\"}\u003c/code\u003e\u003c/td\u003e\u003c/tr\u003e\n\u003ctr\u003e\u003ctd\u003e\u003ccode\u003eset_node(2, 6, 6, stone)\u003c/code\u003e\u003c/td\u003e\u003ctd\u003e\u003ccode\u003e{(2, 4, 6): \"default:stone\",\u003cbr\u003e (2, 5, 6): \"default:glass\",\u003cbr\u003e (2, 6, 6): \"default:stone\"}\u003c/code\u003e\u003c/td\u003e\u003c/tr\u003e\n\u003c/table\u003e\n\u003c/p\u003e\n\u003cp\u003eWhen we convert node_dict to node_lists we get:\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003enode_lists \u003d {\u003cbr /\u003e\n\"default:glass\": [(2,5,6)],\n\"default:stone\": [(2,4,6), (2,6,6)],\n\"air\":           [],\n\"default:torch\": []}\n\u003c/code\u003e\u003c/p\u003e\n\u003cp\u003ewhich is in a good format for using mc.set_node_list() command.\u003c/p\u003e\n\u003cp\u003eSee if you can follow the code and work out how node_dict is created and how it gets converted to node_lists.\u003c/p\u003e\n\n"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Stairs and rail",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "from ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\n\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\n# start point of tunnel\nx1 \u003d 69\ntask4_x1 \u003d 93\ny1 \u003d 14\nz \u003d int(mc.send_cmd(\u0027get_player_z \u0027 + mtuser))\n\n# store node types in variables for easier use\nSTAIR_UP_X \u003d JSON string\nRAIL  \u003d string\nPOWER_RAIL \u003d string\nnode_lists \u003d {STAIR_UP_X:[], RAIL:[], POWER_RAIL:[]}\n\nfor i in range(61):\n    #Add stairs - Don\u0027t need stairs on very last block. Hence check i \u003c 60\n    if i \u003c 60:\n        node_lists[STAIR_UP_X].append((x1 - i, y1 - i, z - 1))\n    #Add power rail\n    node_lists[POWER_RAIL].append((x1 - i, y1 - i + 1, z))\nfor x in range(x1,task4_x1+1):\n    #Add rail or power rail in pairs\n    if formula\u003d\u003d0:\n        node_lists[RAIL].append((x, y1 + 1, z))\n    else:\n        node_lists[POWER_RAIL].append((x, y1 + 1, z))\nfor item in node_lists:\n    mc.set_node_list(node_lists[item], item)\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 360,
+                  "length": 11,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "stonebrick stairs sloping down towards negative x",
+                        "Enclose JSON string in single quotes and use double quotes within the string"
+                      ],
+                      "possible_answer": "\u0027{\"name\":\"stairs:stair_stonebrick\",\"param2\":\"1\"}\u0027",
+                      "placeholder_text": "JSON string",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 380,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "item name for rail",
+                        "see task sign in minetest for item names you will need in this task"
+                      ],
+                      "possible_answer": "\u0027carts:RAIL\u0027",
+                      "placeholder_text": "string",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 400,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "item name for powered rail",
+                        "see task string in minetest to see item names required in this task"
+                      ],
+                      "possible_answer": "\u0027carts:powerrail\u0027",
+                      "placeholder_text": "string",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 788,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Formula in terms of x which will alternate every two blocks\n\n0 0 1 1 0 0 1 1 0 0 1 1 ...",
+                        "You know that j%2 will alternate every one block\n\n0 1 0 1 0 1 0 1 ...\n\nSo replace j with something in terms of x which counts at half speed",
+                        "x//2 counts at half speed\n\n0 0 1 1 2 2 3 3 4 4 ...",
+                        "x//2%2 combines the two to get the alternating pattern\n\n0 0 1 1 0 0 1 1 ...\n\nThere are other ways to do this"
+                      ],
+                      "possible_answer": "x//2%2",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom triptera_pe_tests import test_minetest\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    test_minetest(9)\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eTask 9 - Stairs and rail\u003c/h1\u003e\n\u003cp\u003ePut rail and powered rail along centre of your tunnel.\nWhere the tunnel is sloping, place stairs down the left side. \u003c/p\u003e\n\u003cp\u003eStairs need a direction as well as a type. The type is \"stairs:stair_stonebrick\". \nThe direction is stored in a second parameter called param2. To use \na second parameter we use JSON (JavaScript Object Notation). The JSON string for \nstonebrick stairs sloping upward to positive z is\u003cp\u003e \n\u003ccode\u003e\u0027{\"name\":\"stairs:stair_stonebrick\",\"param2\":\"0\"}\u0027\u003c/code\u003e\n\u003cp\u003eThe different values of param2 are\u003c/p\u003e\n\u003cdiv style\u003d\"font-family:monospace\"\u003e0: z direction upward\u003c/div\u003e\n\u003cdiv style\u003d\"font-family:monospace\"\u003e1: x direction upward\u003c/div\u003e\n\u003cdiv style\u003d\"font-family:monospace\"\u003e2: z direction downward\u003c/div\u003e\n\u003cdiv style\u003d\"font-family:monospace\"\u003e3: x direction downward\u003c/div\u003e\n\u003cp\u003eThe \u0027Check Task\u0027 button above relies on minetest to evaluate this task.\nYou may have to press it again when your program has finished to ensure \nminetest has had time to evaluate it.\u003c/p\u003e\n\u003c/html\u003e"
+          },
+          "task_type": "edu"
+        }
+      ]
+    },
+    {
+      "id": 0,
+      "title": "Minetest 2 - Functions and Modules",
+      "task_list": [
+        {
+          "name": "Tuples",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "# Create a tuple with the three integers\nt1 \u003d (15, 6, 1234)\nprint(t1)\n\n# Create a tuple with two strings\nt2 \u003d (data elements)\nprint(t2)\n\n# Create a tuple with a string, an int and a float\n# in that order\nt3 \u003d (data elements)\nprint(t3)\n\n# Print the second element in t1 (should print 6)\nprint(t1[index])\n\n# Adding tuples creates a new tuple with all the elements\nt5 \u003d t1 + t2\nprint(t5,\" has ? elements. len(t5)\u003d\",len(t5))\n\n# Assign x to the first element in t1,\n# Assign y to the second element in t1,\n# Assign z to the third element in t1\nequation\nprint(\"x \u003d\", x, \" y \u003d\", y, \" z \u003d\", z)\n\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 111,
+                  "length": 13,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Strings must be surrounded by single quotes or double quotes"
+                      ],
+                      "possible_answer": "\"In a galaxy far far away\", \"there lived a dog\"",
+                      "placeholder_text": "data elements",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 210,
+                  "length": 13,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "int is the python term for integer",
+                        "float is the python term for decimal number or floating point number",
+                        "string is the python term for text"
+                      ],
+                      "possible_answer": "\"My golf handicap\", 1, 999.99",
+                      "placeholder_text": "data elements",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 295,
+                  "length": 5,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Tuple indexes are zero based so the first element has index 0",
+                        "Index should be an integer between 0 and 2 inclusive for a tuple of length 3."
+                      ],
+                      "possible_answer": "1",
+                      "placeholder_text": "index",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 390,
+                  "length": 1,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Enter a number which you think will be the correct number of elements in t5"
+                      ],
+                      "possible_answer": "5",
+                      "placeholder_text": "?",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 539,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "multiple variables can have values assigned in a single equation"
+                      ],
+                      "possible_answer": "x, y, z \u003d t1",
+                      "placeholder_text": "equation",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "from test_helper import run_common_tests, failed, passed, get_answer_placeholders\nfrom triptera_pe_tests import test_string, test_exec\nfrom html import escape\n\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    phi \u003d placeholders[0]\n    stri \u003d \"Answer 1\"\n    if len(phi) \u003e 50:\n        failed(stri + \" please keep length to less than 50 characters. Your answer \u0027\" + phi + \"\u0027 is \" + str(len(phi)) + \" characters.\")\n        return False\n    answer \u003d eval(\"(\" + phi + \")\", {}, {})\n    print(answer)\n    if not isinstance(answer, tuple):\n        failed(stri + \" is not a tuple. It is a \" + escape(str(type(answer))) + \". Your answer \u0027\" + phi + \"\u0027\")\n        return False\n    print(str(len(answer)))\n    if len(answer) !\u003d 2:\n        failed(stri + \" is supposed to contain 2 elements but has \" + str(len(answer)) + \". Your answer \u0027\" + phi + \"\u0027\")\n        return False\n    if not isinstance(answer[0],str):\n        failed(stri + \" first element is not a string. It is \" + repr(answer[0]) + \" which has type \" + escape(str(type(answer[0]))))\n        return False\n    print(str(type(answer[1])))\n    if not isinstance(answer[1],str):\n        failed(stri + \" second element is not a string. It is \" + repr(answer[1]) + \" which has type \" + escape(str(type(answer[1]))))\n        return False\n    phi \u003d placeholders[1]\n    stri \u003d \"Answer 2\"\n    if len(phi) \u003e 50:\n        failed(stri + \" please keep length to less than 50 characters. Your answer \u0027\" + phi + \"\u0027 is \" + str(len(phi)) + \" characters.\")\n        return False\n    answer \u003d eval(\"(\" + phi + \")\", {}, {})\n    if not isinstance(answer, tuple):\n        failed(stri + \" is not a tuple. It is a \" + escape(str(type(answer))) + \". Your answer \u0027\" + phi + \"\u0027\")\n        return False\n    if len(answer) !\u003d 3:\n        failed(stri + \" is supposed to contain 3 elements but has \" + str(len(answer)) + \". Your answer \u0027\" + phi + \"\u0027\")\n        return False\n    if not isinstance(answer[0],str):\n        failed(stri + \" first element is not a string. It is \" + repr(answer[0]) + \" which has type \" + escape(str(type(answer[0]))))\n        return False\n    if not isinstance(answer[1],int):\n        failed(stri + \" second element is not an int. It is \" + repr(answer[1]) + \" which has type \" + escape(str(type(answer[1]))))\n        return False\n    if not isinstance(answer[2],float):\n        failed(stri + \" third element is not a float. It is \" + repr(answer[2]) + \" which has type \" + escape(str(type(answer[2]))))\n        return False\n    if not test_string(placeholders, 2, \"1\"): return False\n    if not test_string(placeholders, 3, \"5\"): return False\n    if not test_exec(placeholders, 4, \"x, y, z \u003d t1\",[{\u0027t1\u0027:(15,6,1234)}]): return False\n    passed()\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    run_common_tests()\n    test_answer_placeholders()\n\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eData types\u003c/h1\u003e\n\u003cp\u003eThis lesson looks at more detail at some variable data types we \nhave used before. The best way to learn about data types is \nto experiment with them in the Python Console which can be \nfound in the tab at the bottom of this window. Open up the Python \nConsole by clicking on the tab. You can type the examples\nbelow directly in the console. On the right of the console\nis a window which shows the value of any variables you\nhave created.\u003c/p\u003e\n\u003cp\u003eFor example, type \u003ccode\u003ea\u003d\"cat\"\u003c/code\u003e in the console\nand on the right you will see \u003ccode\u003ea \u003d {str} \u0027cat\u0027\u003c/code\u003e\u003c/p\u003e\n\u003cp\u003eNow type \u003ccode\u003ea+\u003d\"cher\"\u003c/code\u003e and on the right you will \nsee \u003ccode\u003ea \u003d {str} \u0027catcher\u0027\u003c/code\u003e\u003c/p\u003e\n\u003ch2\u003eTuples\u003c/h2\u003e\n\u003cp\u003eThe first data type is a tuple, which is an immutable\ngroup of data surrounded by parentheses.\u003c/p\u003e\n\n\u003cdiv\u003e\u003ccode\u003e# Examples\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003et1 \u003d (3, 4, 12)        # three integers\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003et2 \u003d (\"three\", \"four\") # two strings\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003et3 \u003d (1.23, 45, \"cat\") # a decimal number, an integer and a string\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003et4 \u003d (t1, (5, 6, 30))  # two tuples\u003c/code\u003e\u003c/div\u003e\n\n\u003cp\u003eImmutable means that once the tuple has been created, \nyou can\u0027t change any element in the tuple. This makes \nprogramming with tuples less prone to errors than programming with lists\nwhich are mutable. (Lists are designated by square brackets \n\u003ccode\u003e[3, 4, 12]\u003c/code\u003e).\u003c/p\u003e\n\u003cp\u003eIndividual elements of a tuple are accessed by index value. For example \u003cp\u003e\n\u003cdiv\u003e\u003ccode\u003et1[0] # should display 3\u003c/code\u003e\u003cdiv\u003e\n\u003cdiv\u003e\u003ccode\u003et1[1] # should display 4\u003c/code\u003e\u003cdiv\u003e\n\u003cdiv\u003e\u003ccode\u003et1[2] # should display 12\u003c/code\u003e\u003cdiv\u003e\n\u003cp\u003eYou can also assign elements to multiple variables in a single statement.\u003c/p\u003e\n\u003cdiv\u003e\u003ccode\u003ex, y, z \u003d t3\u003c/code\u003e\u003cdiv\u003e\n\u003cdiv\u003e\u003ccode\u003ex # should display 1.23\u003c/code\u003e\u003cdiv\u003e\n\u003cdiv\u003e\u003ccode\u003ey # should display 45\u003c/code\u003e\u003cdiv\u003e\n\u003cdiv\u003e\u003ccode\u003ez # should display \u0027cat\u0027\u003c/code\u003e\u003cdiv\u003e\n\n"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Dictionaries",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "# Create an empty dictionary called score\nscores \u003d empty dictionary\n\n# Assign a score of 10 to a player called andy\nequation\n\n# Assign a score of 15 to a player called betty\nequation\n\n# Assign a score of 12 to a player called cathy\nequation\n\n# Add 3 to andy\u0027s score\nequation\n\n# Print all the scores\nprint(scores)\n\n# Find who has the highest scores\nmax_score \u003d None\nwinner \u003d None\nfor name,score in function:\n    if not max_score or max_score \u003c variable:\n        max_score \u003d variable\n        winner \u003d variable\nprint(\"Winner is\", winner, \"with a score of\", max_score)\n\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 51,
+                  "length": 16,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Dictionaries are denoted by curly braces",
+                        "A dictionary with keys and values looks like\n\n{\u0027another\u0027:\u0027mine\u0027, \u0027secret\u0027:\"don\u0027t look\"}"
+                      ],
+                      "possible_answer": "dict()",
+                      "placeholder_text": "empty dictionary",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 116,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Assign a score of 10 to andy",
+                        "key should be \u0027andy\u0027",
+                        "value should be 10",
+                        "dictionary to use is stored in variable scores",
+                        "scores[key] \u003d value"
+                      ],
+                      "possible_answer": "scores[\u0027andy\u0027] \u003d 10",
+                      "placeholder_text": "equation",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 174,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Set value of 15 for key \u0027betty\u0027"
+                      ],
+                      "possible_answer": "scores[\u0027betty\u0027] \u003d 15",
+                      "placeholder_text": "equation",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 232,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "set value of 12 to key \u0027cathy\u0027"
+                      ],
+                      "possible_answer": "scores[\u0027cathy\u0027] \u003d 12",
+                      "placeholder_text": "equation",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 266,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Get andy\u0027s score, add 3, and save it back in scores dictionary"
+                      ],
+                      "possible_answer": "scores[\u0027andy\u0027] +\u003d 3",
+                      "placeholder_text": "equation",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 397,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "function to return all the key:value pairs of data in a for loop",
+                        "function is a method of the dict class",
+                        "to run class method on scores use \n\nscores.\u003ci\u003efunction_name\u003c/i\u003e()",
+                        "items() is the name of the function to run on the scores object"
+                      ],
+                      "possible_answer": "scores.items()",
+                      "placeholder_text": "function",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 443,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "the variable name holding the current score as looping through scores items."
+                      ],
+                      "possible_answer": "score+1",
+                      "placeholder_text": "variable",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 473,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "the variable name holding the current score as looping through scores items."
+                      ],
+                      "possible_answer": "score",
+                      "placeholder_text": "variable",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 499,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "the variable name holding the current player\u0027s name as looping through scores items."
+                      ],
+                      "possible_answer": "name",
+                      "placeholder_text": "variable",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\nfrom triptera_pe_tests import test_eval, test_exec\n\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    if not test_eval(placeholders, 0, \"dict()\", list_data\u003d[{}]): return False\n    if not test_exec(placeholders, 1, \"scores[\u0027andy\u0027]\u003d10\",[{\"scores\":{}}]): return False\n    if not test_exec(placeholders, 2, \"scores[\u0027betty\u0027]\u003d15\",[{\"scores\":{\u0027andy\u0027:10}}]): return False\n    if not test_exec(placeholders, 3, \"scores[\u0027cathy\u0027]\u003d12\",[{\"scores\":{\u0027andy\u0027:10, \u0027betty\u0027:15}}]): return False\n    if not test_exec(placeholders, 4, \"scores[\u0027andy\u0027]\u003dscores[\u0027andy\u0027]+3\",[{\"scores\":{\u0027andy\u0027:10, \u0027betty\u0027:15, \u0027cathy\u0027:12}}]): return False\n    if not test_eval(placeholders, 5, \"scores.items()\", list_data\u003d[{\"scores\":{\u0027andy\u0027:13, \u0027betty\u0027:15, \u0027cathy\u0027:12}}]): return False\n    if not test_eval(placeholders, 6, \"score\", list_data\u003d[{\"score\":13}, {\u0027score\u0027:15}, {\u0027score\u0027:12}]): return False\n    if not test_eval(placeholders, 7, \"score\", list_data\u003d[{\"score\":13}, {\u0027score\u0027:15}, {\u0027score\u0027:12}]): return False\n    if not test_eval(placeholders, 8, \"name\", list_data\u003d[{\"name\":\u0027andy\u0027}, {\u0027name\u0027:\u0027betty\u0027}, {\u0027name\u0027:\u0027cathy\u0027}]): return False\n    passed()\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    run_common_tests()\n    test_answer_placeholders()\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch2\u003eDictionaries\u003c/h2\u003e\n\u003cp\u003eA dictionary is a mutable group of data elements that are accessed by keys rather than their numeric\nposition in the dictionary. The data type is named after the book by the same name because in the book \nthe word is the key and the meaning is the data element. You can only have one data element per key\nalthough that data element could be a complex data type such as a tuple, list or another dictionary.\nTo create a dictionary, the keys and values are separated by colons (:) and the \"key:value\" pairs are \nseparated by commas. Try the following examples in the console\u003c/p\u003e\n\u003cdiv\u003e\u003ccode\u003ed1\u003d{\u0027score\u0027:25, \u0027another\u0027:\u0027mine\u0027, 43:\u0027numeric key\u0027, \u0027secret\u0027:\"don\u0027t look\"} # creates dict\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003ed1[\u0027secret\u0027] # should display \"don\u0027t look\"\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003ed1[\u0027another\u0027]\u003d\u0027dog\u0027 # assigns new value for existing key\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003edel(d1[43]) # removes data element with key 43 \u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003edel(d1[\u0027secret\u0027]) # removes data element with key 43 \u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003ed1[\u0027height\u0027]\u003d180 # adds a new data element and key\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003ed1 # {\u0027score\u0027: 25, \u0027another\u0027: \u0027dog\u0027, \u0027height\u0027: 180}\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003efor k,v in d1.items(): print(\"key\u003d\",k,\" value\u003d\",v) # loops through key:value pairs\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003ed1\u003d{} # creates an empty dictionary\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003edi\u003ddict() # alternative method of creating empty dictionary\u003c/code\u003e\u003c/div\u003e\n"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Dictionary of tuples",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "import math\n\n# Create a new dictionary for node_dict\nnodes_dict \u003d {}\n\n# Set block at x\u003d15, y\u003d20, z\u003d10 to \"default:wood\" using a tuple for the x, y, z coordinates\nnodes_dict[(1number 2number 1number] \u003d \"default:wood\"\nprint(\"A:\", nodes_dict)\n\n# Set block at x\u003d16, y\u003d20, z\u003d10 to \"default:glass\"\nnstatementprint(\"B:\", nodes_dict)\n\n# Set two blocks at x\u003d16, y\u003d20, z\u003d10 and z\u003d11 to \"default:stone\"\nfor z in range(10,12):\n    nstatementprint(\"C:\", nodes_dict)\n\n# Set coordinates in variables at x\u003d15 y\u003d20, z\u003d10.1\nx \u003d 15\ny \u003d 20\nz \u003d 10.1\n# Set block at x, y, z to \"wool:blue\"\nnodes_dict[(x, y, z)] \u003d \"wool:blue\"\nprint(\"D:\", nodes_dict)\n\n# Remove node at x, y, z\ndstatementprint(\"E:\", nodes_dict)\n\n# Use a formula to convert float to int coordinates of the centre of the node\n# Use one of the four formulae in the test below (or make up your own)\nnodes_dict[(x, y, mformula] \u003d \"wool:blue\"\nprint(\"F:\", nodes_dict)\n\n# Test four formulae to see which is best for converting float to centre of node\nprint()\nprint(\"Test four formulae\")\nprint(\"  z       f1     f2     f3     f4\")\nprint(\"\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\")\nfor i in range(-24, 25, 2):\n    z \u003d i / 10\n    f1 \u003d int(z)\n    f2 \u003d math.floor(z)\n    f3 \u003d int(z+0.5)\n    f4 \u003d math.floor(z+0.5)\n    print(\"{: .2f}     {: d}     {: d}     {: d}     {: d}\".format(z, f1, f2, f3, f4))\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 175,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "First element of tuple",
+                        "value of x coordinate"
+                      ],
+                      "possible_answer": "5,",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 183,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Second element of the tuple",
+                        "value of y coordinate"
+                      ],
+                      "possible_answer": "0,",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 191,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Third element of tuple",
+                        "value of z coordinate"
+                      ],
+                      "possible_answer": "0)",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 293,
+                  "length": 9,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Set the value of nodes_dict item with index of (16, 20, 10) to \"default:glass\""
+                      ],
+                      "possible_answer": "odes_dict[(16, 20, 10)] \u003d \"default:glass\"\n",
+                      "placeholder_text": "statement",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 420,
+                  "length": 9,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Assign nodes_dict item to stone",
+                        "Tuple for index is in terms of z",
+                        "(16, 20, z)"
+                      ],
+                      "possible_answer": "odes_dict[(16, 20, z)] \u003d \"default:stone\"\n",
+                      "placeholder_text": "statement",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 654,
+                  "length": 9,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Use built-in function to delete an item from dict",
+                        "del()",
+                        "see previous task description if you have forgotten how to remove a node"
+                      ],
+                      "possible_answer": "el(nodes_dict[(x, y, z)])\n",
+                      "placeholder_text": "statement",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 856,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "formula in terms of z",
+                        "ensure floats in the range 9.51 to 10.49 will resolve to int of 10",
+                        "ensure floats in the range -1.49 to -0.51 will resolve to int of -1\nensure floats in the range -0.49 to 0.49 will resolve to int of 0 \nensure floats in the range 0.51 to 1.49 will resolve to int of 1"
+                      ],
+                      "possible_answer": "ath.floor(z+0.5))",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, passed, get_answer_placeholders\nfrom triptera_pe_tests import test_exec, test_string, test_eval\nimport math\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    if not test_string(placeholders, 0, \"15\"):\n        return False\n    if not test_string(placeholders, 1, \"20\"):\n        return False\n    if not test_string(placeholders, 2, \"10\"):\n        return False\n    if not test_exec(placeholders, 3, \"node_dict[(16, 20, 10)] \u003d \u0027default:glass\u0027\", [{\u0027node_dict\u0027: {(15, 20, 10): \u0027default:wood\u0027}}]):\n        return False\n    if not test_exec(placeholders, 4, \"node_dict[(16, 20, z)] \u003d \u0027default:stone\u0027\", [\n            {\u0027z\u0027: 10, \u0027node_dict\u0027: {(15, 20, 10): \u0027default:wood\u0027, (16, 20, 10): \u0027default:glass\u0027}},\n            {\u0027z\u0027: 11, \u0027node_dict\u0027: {(15, 20, 10): \u0027default:wood\u0027, (16, 20, 10): \u0027default:glass\u0027}}]):\n        return False\n    if not test_exec(placeholders, 5, \"del(node_dict[(x, y, z)])\", [{\u0027x\u0027: 15, \u0027y\u0027: 20, \u0027z\u0027: 10.1, \u0027node_dict\u0027: {(15, 20, 10.1): \u0027wool:blue\u0027}}]):\n        return False\n    if not test_eval(placeholders, 6, \"math.floor(z+0.5)\", [{\u0027z\u0027: -1.49}, {\u0027z\u0027: -0.51}, {\u0027z\u0027: -0.49}, {\u0027z\u0027: 0.49}, {\u0027z\u0027: 0.51}, {\u0027z\u0027: 1.49}], modules\u003d\"math\"):\n        return False\n    passed()\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    run_common_tests()\n    test_answer_placeholders()\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch2\u003eDictionary of Tuples\u003c/h2\u003e\n\u003cp\u003eBecause tuples are immutable, they can be used as\nkeys in a Dictionary. This is useful when storing our nodes_dict. It means if we set a data value\nin a dictionary with coordinates that have already been used it will replace the previous setting. \nIf there is no previous setting then a new \"key:value\" pair will be added to the dictionary.\u003c/p\u003e\n\u003c/p\u003e\n\u003cp\u003eTry the task on the left and see if you can predict\nwhat \u003ccode\u003enodes_dict\u003c/code\u003e will look like after each step.\n\u003c/p\u003e\n\u003cp\u003e\nAt the end is a \u003ccode\u003efor\u003c/code\u003e loop which \nchecks different formulae for a set of data. \nThis is a way of evaluating which is the right\nformula to use. For each value of z, write down\nwhat you think the correct integer should be\nand then see which formula gives the same answers.\nYou are looking for a formula which returns the \nz value of the centre of a block given the z value\nof any part of the block.\n\u003c/p\u003e\n\n"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Functions",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "import math\n\n\ndef set_node(nodes_dict, x, y, z, item):\n    \"\"\"similar to MinetestConnection.set_node but stores nodes in nodes rather than sending to minetest\n\n    nodes: {(x1, y1, z1): item1, (x2, y2, z2): item2, ...} Dictionary of nodes\n    x, y, z: coordinates to be added to nodes. They are converted to integers so that each node has unique set of coordinates\n    item: minetest item name as a string \"default:glass\", or json string \u0027{\"name\":\"default:torch\", \"param2\":\"1\"}\u0027\n    \"\"\"\n    x \u003d formula\n    y \u003d formula\n    z \u003d formula\n    nodes_dict[(x, y, z)] \u003d item\n\n\n# Create a new dictionary for node_dict\nnodes_dict \u003d {}\n\n# Set block at x\u003d15, y\u003d20, z\u003d10 to \"default:wood\" using a tuple for the x, y, z coordinates\nset_node(variable, number, number, number, string)\nprint(\"A:\", nodes_dict)\n\n# Set block at x\u003d16, y\u003d20, z\u003d10 to \"default:glass\"\nset_node(arguments)\nprint(\"B:\", nodes_dict)\n\n# Set two blocks at x\u003d16, y\u003d20, z\u003d10 and z\u003d11 to \"default:stone\"\nfor z in range(10,12):\n    set_node(arguments)\nprint(\"C:\", nodes_dict)\n\n# Set coordinates in variables at x\u003d15 y\u003d20, z\u003d10.1\nx \u003d 15\ny \u003d 20\nz \u003d 10.1\n# Set block at x, y, z to \"wool:blue\"\nset_node(arguments)\nprint(\"D:\", nodes_dict)\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 495,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "centre point of node"
+                      ],
+                      "possible_answer": "math.floor(x+0.5)",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 511,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "centre point of node"
+                      ],
+                      "possible_answer": "math.floor(y+0.5)",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 527,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "centre point of node"
+                      ],
+                      "possible_answer": "math.floor(z+0.5)",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 728,
+                  "length": 8,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "dictionary of nodes"
+                      ],
+                      "possible_answer": "nodes_dict",
+                      "placeholder_text": "variable",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 738,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "x value"
+                      ],
+                      "possible_answer": "15",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 746,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "y value"
+                      ],
+                      "possible_answer": "20",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 754,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "z value"
+                      ],
+                      "possible_answer": "10",
+                      "placeholder_text": "number",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 762,
+                  "length": 6,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "item name as string"
+                      ],
+                      "possible_answer": "\"default:wood\"",
+                      "placeholder_text": "string",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 855,
+                  "length": 9,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Five arguments are required"
+                      ],
+                      "possible_answer": "nodes_dict, 16, 20, 10, \"default:glass\"",
+                      "placeholder_text": "arguments",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 992,
+                  "length": 9,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Five arguments are required"
+                      ],
+                      "possible_answer": "nodes_dict, 16, 20, z, \"default:stone\"",
+                      "placeholder_text": "arguments",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 1150,
+                  "length": 9,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Five arguments are required"
+                      ],
+                      "possible_answer": "nodes_dict, x, y, z, \"wool:blue\"",
+                      "placeholder_text": "arguments",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\nfrom triptera_pe_tests import test_eval, test_string\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    if not test_eval(placeholders, 0, \"math.floor(x+0.5)\", [{\u0027x\u0027: -1.49}, {\u0027x\u0027: -0.51}, {\u0027x\u0027: -0.49}, {\u0027x\u0027: 0.49}, {\u0027x\u0027: 0.51}, {\u0027x\u0027: 1.49}], \"math\"):\n        return False\n    if not test_eval(placeholders, 1, \"math.floor(y+0.5)\", [{\u0027y\u0027: -1.49}, {\u0027y\u0027: -0.51}, {\u0027y\u0027: -0.49}, {\u0027y\u0027: 0.49}, {\u0027y\u0027: 0.51}, {\u0027y\u0027: 1.49}], \"math\"):\n        return False\n    if not test_eval(placeholders, 2, \"math.floor(z+0.5)\", [{\u0027z\u0027: -1.49}, {\u0027z\u0027: -0.51}, {\u0027z\u0027: -0.49}, {\u0027z\u0027: 0.49}, {\u0027z\u0027: 0.51}, {\u0027z\u0027: 1.49}], \"math\"):\n        return False\n    if not test_eval(placeholders, 3, \"node_dict\", [{\u0027node_dict\u0027:{(1,2,3):\"air\"}}]):\n        return False\n    if not test_string(placeholders, 4, \"15\"):\n        return False\n    if not test_string(placeholders, 5, \"20\"):\n        return False\n    if not test_string(placeholders, 6, \"10\"):\n        return False\n    if not test_eval(placeholders, 7, \u0027node_dict, 16, 20, 10, \"default:glass\"\u0027, [{\u0027node_dict\u0027:{(1,2,3):\"air\"}}]):\n        return False\n    if not test_eval(placeholders, 8, \u0027node_dict, 16, 20, z, \"default:stone\"\u0027, [{\u0027z\u0027:10,\u0027node_dict\u0027:{(1,2,3):\"air\"}}, {\u0027z\u0027:11,\u0027node_dict\u0027:{(1,2,3):\"air\"}}]):\n        return False\n    if not test_eval(placeholders, 9, \u0027node_dict, x, y, z, \"wool:blue\"\u0027, [{\u0027x\u0027:5,\u0027y\u0027:25,\u0027z\u0027:10,\u0027node_dict\u0027:{(1,2,3):\"air\"}}, {\u0027x\u0027:55,\u0027y\u0027:255,\u0027z\u0027:11,\u0027node_dict\u0027:{(3,2,3):\"air\"}}]):\n        return False\n    passed()\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    run_common_tests()\n    test_answer_placeholders()\n\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eFunctions\u003c/h1\u003e\n\u003cp\u003eWhen you need the same code to be used in several places, it\nis easier to put that code in a function and then call that function\nwhen it needs to run that code. Functions are defined used the \n\u003ccode\u003edef\u003c/code\u003e command, followed by the function name and then,\nin parentheses (), the arguments of the function.\u003c/p\u003e\n\u003cp\u003eIn the last task we discovered we needed to convert all \ncoordinates to integers when adding to nodes_dict. Otherwise new nodes\nfor the same position would not overwrite the old nodes. That will soon\nget tedious so we will create a function set_node() which\ndoes it for us.\u003c/p\u003e\n\u003c/html\u003e "
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Modules",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "statement to import the set_node function from the minetest_helper module\n\n\ndef set_nodes(nodes_dict, x1, y1, z1, x2, y2, z2, item):\n    \"\"\"similar to mc.set_nodes but stores nodes in node_dict rather than sending to minetest\"\"\"\n    step_x \u003d formula\n    step_y \u003d 1 if y2 \u003e y1 else -1\n    step_z \u003d 1 if z2 \u003e z1 else -1\n    for z in range(z1, z2 + step_z, step_z):\n        for y in range(y1, y2 + step_y, step_y):\n            for x in range(x1, x2 + step_x, step_x):\n                set_node(nodes_dict, x, y, z, item)\n\n\ndef node_lists_from_node_dict(node_dict):\n    \"\"\"Convert node_dict to node_lists\"\"\"\n    node_lists \u003d {}\n    for pos, item in node_dict.items():\n        if item not in node_lists:\n            node_lists[item] \u003d []\n        node_lists[item].append(pos)\n    return node_lists\n\n\ndef send_node_lists(mc, node_lists):\n    \"\"\"Send node_lists to minetest. Should send air after walls so no lava and water flow in\"\"\"\n    item_list \u003d list(node_lists.keys())\n    # Put air last\n    if \"air\" in item_list:\n        item_list.remove(\"air\")\n        item_list.append(\"air\")\n    for item in item_list:\n        node_list \u003d node_lists[item]\n        mc.set_node_list(node_list, item)\n\n\n# Create a new dictionary for node_dict\nnd \u003d {}\n\n# Set block at x\u003d15, y\u003d20, z\u003d10 to \"default:wood\" using a tuple for the x, y, z coordinates\nset_node(nd, 15, 20, 10, \"default:wood\")\nprint(\"A:\", nd)\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": [
+                {
+                  "offset": 0,
+                  "length": 73,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "Choose the form of the import statement where we can use set_node without a module name prefix:\n\n\u003cdiv\u003e\u003ccode\u003eimport \u003ci\u003emodule\u003c/i\u003e\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003eimport \u003ci\u003emodule.submodule\u003c/i\u003e\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003eimport \u003ci\u003emodule\u003c/i\u003e as \u003ci\u003ealias\u003c/i\u003e\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003efrom \u003ci\u003emodule\u003c/i\u003e import \u003ci\u003efunction\u003c/i\u003e\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003efrom \u003ci\u003emodule\u003c/i\u003e import \u003ci\u003esubmodule\u003c/i\u003e\u003c/code\u003e\u003c/div\u003e\n\u003cdiv\u003e\u003ccode\u003efrom \u003ci\u003emodule.submodule\u003c/i\u003e import \u003ci\u003esubsubmodule\u003c/i\u003e\u003c/code\u003e\u003c/div\u003e"
+                      ],
+                      "possible_answer": "from minetest_helper import set_node",
+                      "placeholder_text": "statement to import the set_node function from the minetest_helper module",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                },
+                {
+                  "offset": 242,
+                  "length": 7,
+                  "subtask_infos": {
+                    "0": {
+                      "hints": [
+                        "step_x is used in range() function to indicate whether x1 is stepping up or down to get to x2",
+                        "formula must return 1 to step up and -1 to step down",
+                        "formula must be in terms of x1 and x2",
+                        "Python ternary operator\n\n\u003ccode\u003ea if b else c\u003c/code\u003e\n\nmeans \n\nif b is True return a\nif b is False return c "
+                      ],
+                      "possible_answer": "1 if x2 \u003e x1 else -1",
+                      "placeholder_text": "formula",
+                      "has_frame": true,
+                      "need_insert_text": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\n\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    placeholder \u003d placeholders[0]\n    if placeholder \u003d\u003d \"\":       # TODO: your condition here\n        passed()\n    else:\n        failed()\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    run_common_tests()\n    # test_answer_placeholders()       # TODO: uncomment test call\n\n\n"
+          },
+          "task_texts": {
+            "task": "\u003chtml\u003e\n\u003ch1\u003eModules\u003c/h1\u003e\n\u003cp\u003eWhen we have a function that we want to call from different \npython programs we put it in a module. We have already seen how modules can\nbe imported. A module looks just like a python program. \u003c/p\u003e\n\u003cp\u003eWhen a\nmodule is imported, any code not in function definitions is run.\nWe normally don\u0027t want this so we only put function definitions \nin a module.\u003c/p\u003e\n\u003cp\u003eThe set_node function from the previous task has been put into \na module called minetest_helper.py. Now we can use it by importing\nit.\u003c/p\u003e"
+          },
+          "task_type": "edu"
+        },
+        {
+          "name": "Tunnel function",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {
+            "task.py": {
+              "name": "task.py",
+              "text": "# tunnel \u003d procedure to build tunnel\n\nfrom ircbuilder import MinetestConnection\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\nfrom minetest_helper import set_node, set_nodes, send_node_dict\n\nmc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)\n\n\ndef build_station_dirx(node_dict, platform, room, materials, levels\u003d1):\n    \"\"\"Build an direction_x running platform and station next to a direction_x tunnel\n\n    node_dict: {(x1, y1, z1): item1, (x2, y2, z2): item2, ...} Dictionary where all nodes are stored before being sent to minetest\n    platform: {\n        \u0027x\u0027: x position of centre of platform\n        \u0027y\u0027: y position of centre of platform\n        \u0027z\u0027: z position of centre of platform\n        \u0027length\u0027: length of platform (default\u003d10)\n    }\n    room: {\n        \u0027length\u0027: length of side of waiting room parallel to platform, excluding walls (default\u003d20)\n        \u0027width\u0027 : length of side of waiting room perpendicular to platform, excluding walls (default\u003d7)\n        \u0027height\u0027: height of room excluding floor and ceiling (default\u003d5)\n    }\n    materials: {\n        \u0027station_roof\u0027 : building material for roof (default:wood)\n        \u0027station_floor\u0027: building material for floor, platform and part of walls (default:wood)\n        \u0027station_door\u0027 : type of doors (doors:door_wood_a)\n        \u0027station_stair\u0027: type of stairs (stairs:stair_wood)\n    }\n    levels: number of stories high for station\"\"\"\n\n    platform_length \u003d platform[\u0027length\u0027]\n    if not platform_length:\n        platform_length \u003d 10\n    platform_x \u003d platform[\u0027x\u0027] - platform_length // 2\n    platform_y \u003d platform[\u0027y\u0027]\n    platform_z \u003d platform[\u0027z\u0027]\n\n    room_length \u003d room[\u0027length\u0027] if room[\u0027length\u0027] else 20\n    room_width \u003d room[\u0027width\u0027] if room[\u0027width\u0027] else 7\n    room_height \u003d room[\u0027height\u0027] if room[\u0027height\u0027] else 5\n\n    roof \u003d materials[\u0027station_roof\u0027] if \u0027station_roof\u0027 in materials else \u0027default:wood\u0027\n    floor \u003d materials[\u0027station_floor\u0027] if \u0027station_floor\u0027 in materials else \u0027default:wood\u0027\n    door \u003d materials[\u0027station_door\u0027] if \u0027station_door\u0027 in materials else \u0027door:door_wood_a\u0027\n    stair \u003d materials[\u0027station_stair\u0027] if \u0027station_stair\u0027 in materials else \u0027stairs:stair_wood\u0027\n\n    if levels \u003e 1 and room_length \u003c room_height + 3:\n        room_length \u003d room_height + 3\n    # external dimensions\n    station_length \u003d room_length + 2\n    station_width \u003d room_width + 2\n\n    # platform_length \u003d platform_x2 - xplatform1 + 1\n    platform_x2 \u003d platform_x + platform_length - 1\n    station_x1 \u003d platform_x - (station_length - platform_length) // 2\n    station_x2 \u003d station_x1 + station_length - 1\n    station_z2 \u003d platform_z - 1\n    station_z1 \u003d station_z2-station_width+1\n\n    stair_up_x \u003d \u0027{\"name\":\"\u0027 + stair + \u0027\", \"param2\":\"1\"}\u0027\n    stair_dn_x \u003d \u0027{\"name\":\"\u0027 + stair + \u0027\", \"param2\":\"3\"}\u0027\n\n    if door[-2:] in (\u0027_a\u0027, \u0027_b\u0027):\n        door \u003d door[:-2]\n    door_left \u003d \u0027{\"name\":\"\u0027 + door + \u0027_a\",\"param2\":\"2\"}\u0027\n    door_right \u003d \u0027{\"name\":\"\u0027 + door + \u0027_b\",\"param2\":\"2\"}\u0027\n\n    # Wooden platform with STAIR_UP_X at one end of platform\n    set_nodes(node_dict, platform_x, platform_y, platform_z, platform_x2, platform_y, platform_z, floor)\n    set_node(node_dict, platform_x - 1, platform_y, platform_z, stair_up_x)\n    set_node(node_dict, platform_x2 + 1, platform_y, platform_z, stair_dn_x)\n    # Wooden building 5 blocks high for each level\n    set_nodes(node_dict, station_x1, platform_y, station_z1, station_x2, platform_y + (1 + room_height) * levels - 1, station_z2, floor)\n    for level in range(0, levels):\n        set_nodes(node_dict, station_x1, platform_y + (1 + room_height) * level + 2, station_z1, station_x2, platform_y + (1 + room_height) * level + 4, station_z2, \"default:glass\")\n        set_nodes(node_dict, station_x1 + 1, platform_y + (1 + room_height) * level + 1, station_z1 + 1, station_x2 - 1, platform_y + (1 + room_height) * level + room_height, station_z2 - 1, \"air\")\n    # stairs between levels\n    stair_z \u003d station_z2 - 1\n    for y in range(0, (levels-1)*(room_height + 1)):\n        stair_y \u003d y + platform_y + 1\n        stair_x \u003d station_x2 - 2 - y % (room_height + 1)\n        set_node(node_dict, stair_x, stair_y, stair_z, stair_dn_x)\n        set_nodes(node_dict, stair_x, stair_y + 1, stair_z, stair_x, stair_y + 4, stair_z, \"air\")\n    # open the station to platform\n    set_nodes(node_dict, platform_x, platform_y + 1, station_z2, platform_x2, platform_y + room_height, station_z2, \"air\")\n    # Roof\n    roof_layer \u003d 0\n    layer_width \u003d station_width+2-2*roof_layer\n    roof_x1 \u003d station_x1-1\n    roof_x2 \u003d station_x2+1\n    while layer_width \u003e 0:\n        roof_y \u003d platform_y + (room_height + 1) * levels + roof_layer\n        roof_z2 \u003d station_z2+1-roof_layer\n        roof_z1 \u003d roof_z2 - layer_width + 1\n        set_nodes(node_dict, roof_x1, roof_y, roof_z1, roof_x2, roof_y, roof_z2, roof)\n        roof_layer +\u003d 1\n        layer_width \u003d station_width+2-2*roof_layer\n    # doors\n    set_node(node_dict, platform_x + 1, platform_y + 2, station_z1, \"air\")\n    set_node(node_dict, platform_x, platform_y + 2, station_z1, \"air\")\n    set_node(node_dict, platform_x + 1, platform_y + 1, station_z1, door_left)\n    set_node(node_dict, platform_x, platform_y + 1, station_z1, door_right)\n# build_station_dirx finished\n\n\ndef build_tunnel_dirx(minetest_connection, x1, x2, z, y1\u003dNone, y2\u003dNone, materials\u003dNone, floor\u003d10, tail\u003d10):\n    \"\"\"Builds an east-west tunnel (in the x direction)\n\n    minetest_connection should be the Minecraft connection object (create using mcpi.minecraft.Minecraft.create())\n    x1,x2 \u003d tunnel goes from x \u003d x1 to x \u003d x2 excluding x1 and x2 (east position)\n    z \u003d tunnel uses northerly position z\n    y1,y2 \u003d vertical position of base of tunnel at each end. If not provided then ground level is used\n    materials: {\n        \u0027station_roof\u0027 : building material for roof (default:wood)\n        \u0027station_floor\u0027: building material for floor, platform and part of walls (default:wood)\n        \u0027station_door\u0027 : type of doors (doors:door_wood_a)\n        \u0027station_stair\u0027: type of stairs (stairs:stair_wood)\n    }\n    floor \u003d minimum vertical position of tunnel\n    tail \u003d length of flat tunnel at each end\"\"\"\n\n    node_dict \u003d {}\n\n    if x1 \u003c x2:\n        xmin, y_at_xmin, xmax, y_at_xmax \u003d x1, y1, x2, y2\n    else:\n        xmin, y_at_xmin, xmax, y_at_xmax \u003d x2, y2, x1, y1\n\n    # xmin \u003d x value at one end of tunnel.\n    # xmax \u003d x value at other end of tunnel. Must be greater than xmin\n    # floor \u003d minimum value of y for long tunnels\n    # z \u003d north position for full length of tunnel\n    # tail \u003d length of horizontal at each end of tunnel\n\n    # Define blocks\n    stair_up_x \u003d \u0027{\"name\":\"stairs:stair_stonebrick\", \"param2\":\"1\"}\u0027\n    stair_dn_x \u003d \u0027{\"name\":\"stairs:stair_stonebrick\", \"param2\":\"3\"}\u0027\n    rail_powered \u003d \"carts:powerrail\"\n\n    # First check we are not going to end up in a tree\n    if not y_at_xmin:\n        y_at_xmin \u003d int(minetest_connection.get_ground_level(xmin, z))\n    if not y_at_xmax:\n        y_at_xmax \u003d int(minetest_connection.get_ground_level(xmax, z))\n    # Set a gold surveyors peg at endpoints of the tunnel\n    # We don\u0027t build here because our building would move ground level and next time\n    # we build it would build higher than previous build\n    set_node(node_dict, xmin, y_at_xmin, z, \"default:goldblock\")\n    set_node(node_dict, xmax, y_at_xmax, z, \"default:goldblock\")\n    # print(\"xmin, y_at_xmin\u003d\", xmin, y_at_xmin)\n    # print(\"xmax, y_at_xmax\u003d\", xmax, y_at_xmax)\n\n    # constants for tunnel_y_pos function\n    kx \u003d (xmax + xmin + y_at_xmin - y_at_xmax) // 2\n    ky \u003d y_at_xmin + tail + xmin - kx\n    if ky + 5 \u003e floor:\n        ymin \u003d ky + 5  # short tunnels\n    else:\n        ymin \u003d floor   # long tunnels\n\n    # tunnel_y_pos returns a vertical position of the tunnel\n    # for each value of the x position (eastposition)\n    def tunnel_y_pos(x_pos):\n        tunnel_y \u003d abs(x_pos - kx) + ky\n        if tunnel_y \u003c ymin:\n            return ymin\n        if x_pos \u003c kx:\n            if tunnel_y \u003e y_at_xmin:\n                return y_at_xmin\n        else:\n            if tunnel_y \u003e y_at_xmax:\n                return y_at_xmax\n        return tunnel_y\n\n    # the z coordinate for the tunnel doesn\u0027t change for the full length\n\n    # Initial loop to create a route made of solid glass with a stone base\n    # Loop treats xmin and xmax as exclusive boundaries otherwise tunnel will keep\n    # building on top of the last one each time you run it.\n    for x in range(xmin+1, xmax):\n        y \u003d tunnel_y_pos(x)\n        set_nodes(node_dict, x, y, z-2, x, y+6, z+2, \"default:glass\")\n        set_nodes(node_dict, x, y, z-1, x, y, z+1, \"default:stone\")\n\n    # Initialise previous value of y so can determine if stairs going up or down\n    yprev \u003d tunnel_y_pos(xmin+1)\n    # Second loop to convert solid glass into a tunnel\n    for x in range(xmin+2, xmax-1):\n        y \u003d tunnel_y_pos(x)\n        # replace centre glass with air to make it a tunnel\n        set_nodes(node_dict, x, y+1, z-1, x, y+5, z+1, \"air\")\n        # place a torch every 4 positions to light the tunnel\n        # variation 5 \u003d torch facing up\n        # every 4 blocks\n        # pos 0: powered RAIL and normal torch\n        # pos 1: powered RAIL\n        # pos 2: powered RAIL\n        # pos 3: powered RAIL\n        set_node(node_dict, x, y+1, z, rail_powered)\n        if x % 4 \u003d\u003d 0:\n            set_node(node_dict, x, y+1, z+1, \"default:torch\")\n        # check if stairs are going up or down\n        if y \u003e yprev:\n            # variation 0 \u003d stairs ascending to the east\n            set_node(node_dict, x, y, z-1, stair_up_x)\n        if y \u003c yprev:\n            # variation 1 \u003d stairs ascending to the west\n            set_node(node_dict, x-1, yprev, z-1, stair_dn_x)\n        yprev \u003d y\n\n    # build station at xmax\n    platform_length \u003d tail-3\n    platform_at_xmax \u003d {\n        \u0027x\u0027: xmax-platform_length//2-1,\n        \u0027y\u0027: y_at_xmax + 1,\n        \u0027z\u0027: z - 1,\n        \u0027length\u0027: platform_length\n    }\n    build_station_dirx(node_dict, platform_at_xmax, room\u003d{}, materials\u003dmaterials, levels\u003d3)\n\n    # build station at xmin\n    platform_at_xmin \u003d {\n        \u0027x\u0027: xmin + platform_length//2 + 2,\n        \u0027y\u0027: y_at_xmin + 1,\n        \u0027z\u0027: z - 1,\n        \u0027length\u0027: platform_length\n    }\n    build_station_dirx(node_dict, platform_at_xmin, room\u003d{}, materials\u003dmaterials)\n    send_node_dict(node_dict)\n\n# build_tunnel_dirx finished\n\nplayer_z \u003d int(mc.send_cmd(\u0027get_player_z \u0027 + mtuser))\n# stations are too wide to be adjacent. Offset every second one by 50 in the x direction\nx_offset \u003d (player_z // 10 % 2) * 50\nbuild_tunnel_dirx(mc, -300 + x_offset, -100 + x_offset, player_z)\n\n\n# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# See LICENSE.txt\n# Python code in task.py is free to be copied and reused.\n# Minetest course may not be copied without permission from Triptera Pty Ltd.\n# Minetest course is authorised for use at CoderDojo sessions in 2018.\n",
+              "placeholders": []
+            }
+          },
+          "test_files": {
+            "tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import run_common_tests, failed, passed, get_answer_placeholders\n\n\ndef test_answer_placeholders():\n    placeholders \u003d get_answer_placeholders()\n    placeholder \u003d placeholders[0]\n    if placeholder \u003d\u003d \"\":       # TODO: your condition here\n        passed()\n    else:\n        failed()\n\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    run_common_tests()\n    # test_answer_placeholders()       # TODO: uncomment test call\n\n\n"
+          },
+          "task_texts": {
+            "task": "Write task description here using markdown or html"
+          },
+          "task_type": "edu"
+        }
+      ]
+    },
+    {
+      "id": 0,
+      "title": "Edu additional materials",
+      "task_list": [
+        {
+          "name": "Edu additional materials",
+          "stepic_id": 0,
+          "position": 0,
+          "task_files": {},
+          "test_files": {
+            "minetest_helper.py": "import math\n\n\ndef set_node(node_dict, x, y, z, item):\n    \"\"\"similar to MinetestConnection.set_node but stores nodes in node_dict rather than sending to minetest\n\n    node_dict: {(x1, y1, z1): item1, (x2, y2, z2): item2, ...} Dictionary of nodes\n    x, y, z: coordinates to be added to nodes. They are converted to integers so that each node has unique set of coordinates\n    item: minetest item name as a string \"default:glass\", or json string \u0027{\"name\":\"default:torch\", \"param2\":\"1\"}\u0027\n    \"\"\"\n    x \u003d math.floor(x+0.5)\n    y \u003d math.floor(y+0.5)\n    z \u003d math.floor(z+0.5)\n    node_dict[(x, y, z)] \u003d item\n\n\ndef set_nodes(node_dict, x1, y1, z1, x2, y2, z2, item):\n    \"\"\"similar to MinetestConnection.set_nodes but stores nodes in node_dict rather than sending to minetest\"\"\"\n    step_x \u003d 1 if x2 \u003e x1 else -1\n    step_y \u003d 1 if y2 \u003e y1 else -1\n    step_z \u003d 1 if z2 \u003e z1 else -1\n    for z in range(z1, z2 + step_z, step_z):\n        for y in range(y1, y2 + step_y, step_y):\n            for x in range(x1, x2 + step_x, step_x):\n                set_node(node_dict, x, y, z, item)\n\n\ndef node_lists_with_cuboids(node_lists_flat):\n    \"\"\"Finds adjacent points in node_lists_flat and converts them to cuboids for data efficiency\"\"\"\n    node_lists \u003d {}\n    for item, v in node_lists_flat.items():\n        node_lists[item] \u003d []\n        # v is a list of singular tuples for given item\n        # vs is sorted in ascending order\n        vs \u003d sorted(v)\n        # look for consecutive blocks in x then y then z\n        while len(vs) \u003e 0:\n            start_x, start_y, start_z \u003d vs[0]\n            dx, dy, dz \u003d 0, 0, 0\n            tfx, tfy, tfz \u003d True, True, True\n            while tfx or tfy or tfz:\n                if tfx:\n                    x \u003d start_x+dx+1\n                    for y in range(start_y, start_y+dy+1):\n                        for z in range(start_z, start_z+dz+1):\n                            if not (x, y, z) in vs:\n                                tfx \u003d False\n                    if tfx:\n                        dx +\u003d 1\n                if tfy:\n                    y \u003d start_y+dy+1\n                    for x in range(start_x, start_x+dx+1):\n                        for z in range(start_z, start_z+dz+1):\n                            if not (x, y, z) in vs:\n                                tfy \u003d False\n                    if tfy:\n                        dy +\u003d 1\n                if tfz:\n                    z \u003d start_z+dz+1\n                    for x in range(start_x, start_x+dx+1):\n                        for y in range(start_y, start_y+dy+1):\n                            if not (x, y, z) in vs:\n                                tfz \u003d False\n                    if tfz:\n                        dz +\u003d 1\n            if dx \u003d\u003d 0 and dy \u003d\u003d 0 and dz \u003d\u003d 0:\n                node_lists[item].append((start_x, start_y, start_z))\n            else:\n                node_lists[item].append(((start_x, start_y, start_z), (start_x+dx, start_y+dy, start_z+dz)))\n                #print(\"Cuboid \" + item + \" \" + str(((start_x, start_y, start_z), (start_x+dx, start_y+dy, start_z+dz))))\n            for x in range(start_x, start_x+dx+1):\n                for y in range(start_y, start_y+dy+1):\n                    for z in range(start_z, start_z+dz+1):\n                        vs.remove((x, y, z))\n    return node_lists\n\n\ndef node_lists_from_node_dict(node_dict):\n    \"\"\"Convert node_dict to node_lists\"\"\"\n    node_lists \u003d {}\n    for pos, item in node_dict.items():\n        if item not in node_lists:\n            node_lists[item] \u003d []\n        node_lists[item].append(pos)\n    return node_lists_with_cuboids(node_lists)\n\n\ndef send_node_dict(mc, node_dict, end_list\u003d()):\n    \"\"\"Convert node_dict to node_lists and send to minetest\"\"\"\n    node_lists \u003d node_lists_from_node_dict(node_dict)\n    # Send node_lists to minetest. Should send air after walls so no lava and water flow in\n    item_list \u003d list(node_lists.keys())\n    if isinstance(end_list, str):\n        end_list \u003d (end_list,)\n    for item in end_list:\n        for key in item_list:\n            if key.find(item) \u003d\u003d 0:\n                item_list.remove(key)\n                item_list.append(key)\n    for item in item_list:\n        mc.set_node_list(node_lists[item], item)\n",
+            "requirements.txt": "http://192.168.17.100/pypi/ircbuilder/ircbuilder-0.0.3.tar.gz\n",
+            "pref.py": "x\u003d100\ny\u003d14\n",
+            "coderdojo.py": "mtuser \u003d \"tim\"      # your minetest username\nmtuserpass \u003d \"secret\"  # your minetest password. This file is not encrypted so don\u0027t use anything you want kept secret\n\n# The following must match your settings in minetest server \u003e Settings \u003e Advanced Settings \u003e Mods \u003e irc \u003e Basic \u003e\nircserver \u003d \"192.168.17.100\"   # same as IRC server\nmtbotnick \u003d \"mtserver\"   # same as Bot nickname\nchannel \u003d \"#coderdojo\"     # same as Channel to join\n",
+            "LICENSE.txt": "Copyright (c) 2018 Triptera Pty Ltd\n\nThis pycharm-edu course requires permission from Triptera Pty Ltd to use.\n\nPermission is hereby granted, to any person at a CoderDojo session in 2018\nto use the Software, including the right to copy, and/or distribute,\ncopies of the Software, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nAll python code in files called task.py is licensed with an MIT license.\n\nMIT License\n\nCopyright (c) 2018 Triptera Pty Ltd\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+            "test_helper.py": "import sys\n\n\ndef get_file_text(path):\n    \"\"\" Returns file text by path\"\"\"\n    file_io \u003d open(path, \"r\")\n    text \u003d file_io.read()\n    file_io.close()\n    return text\n\n\ndef get_file_output(encoding\u003d\"utf-8\", path\u003dsys.argv[-1], arg_string\u003d\"\"):\n    \"\"\"\n    Returns answer file output\n    :param encoding: to decode output in python3\n    :param path: path of file to execute\n    :return: list of strings\n    \"\"\"\n    import subprocess\n\n    proc \u003d subprocess.Popen([sys.executable, path], stdin\u003dsubprocess.PIPE, stdout\u003dsubprocess.PIPE,\n                            stderr\u003dsubprocess.STDOUT)\n    if arg_string:\n        for arg in arg_string.split(\"\\n\"):\n            proc.stdin.write(bytearray(str(arg) + \"\\n\", encoding))\n            proc.stdin.flush()\n\n    return list(map(lambda x: str(x.decode(encoding)), proc.communicate()[0].splitlines()))\n\n\ndef test_file_importable():\n    \"\"\" Tests there is no obvious syntax errors\"\"\"\n    path \u003d sys.argv[-1]\n    if not path.endswith(\".py\"):\n        import os\n\n        parent \u003d os.path.abspath(os.path.join(path, os.pardir))\n        python_files \u003d [f for f in os.listdir(parent) if os.path.isfile(os.path.join(parent, f)) and f.endswith(\".py\")]\n        for python_file in python_files:\n            if python_file \u003d\u003d \"tests.py\":\n                continue\n            check_importable_path(os.path.join(parent, python_file))\n        return\n    check_importable_path(path)\n\n\ndef check_importable_path(path):\n    \"\"\" Checks that file is importable.\n        Reports failure otherwise.\n    \"\"\"\n    saved_input \u003d patch_input()\n    try:\n        import_file(path)\n    except:\n        failed(\"The file contains syntax errors\", test_file_importable.__name__)\n        return\n    finally:\n        revert_input(saved_input)\n\n    passed(test_file_importable.__name__)\n\n\ndef patch_input():\n    def mock_fun(_m\u003d\"\"):\n        return \"mock\"\n\n    if sys.version_info[0] \u003d\u003d 3:\n        import builtins\n        save_input \u003d builtins.input\n        builtins.input \u003d mock_fun\n        return save_input\n    elif sys.version_info[0] \u003d\u003d 2:\n        import __builtin__\n        save_input \u003d __builtin__.raw_input\n        __builtin__.raw_input \u003d mock_fun\n        __builtin__.input \u003d mock_fun\n        return save_input\n\n\ndef revert_input(saved_input):\n    if sys.version_info[0] \u003d\u003d 3:\n        import builtins\n        builtins.input \u003d saved_input\n    elif sys.version_info[0] \u003d\u003d 2:\n        import __builtin__\n        __builtin__.raw_input \u003d saved_input\n        __builtin__.input \u003d saved_input\n\n\ndef import_file(path):\n    \"\"\" Returns imported file \"\"\"\n    if sys.version_info[0] \u003d\u003d 2 or sys.version_info[1] \u003c 3:\n        import imp\n\n        return imp.load_source(\"tmp\", path)\n    elif sys.version_info[0] \u003d\u003d 3:\n        import importlib.machinery\n\n        return importlib.machinery.SourceFileLoader(\"tmp\", path).load_module(\"tmp\")\n\n\ndef import_task_file():\n    \"\"\" Returns imported file.\n        Imports file from which check action was run\n    \"\"\"\n    path \u003d sys.argv[-1]\n    return import_file(path)\n\n\ndef test_is_not_empty():\n    \"\"\"\n        Checks that file is not empty\n    \"\"\"\n    path \u003d sys.argv[-1]\n    file_text \u003d get_file_text(path)\n\n    if len(file_text) \u003e 0:\n        passed()\n    else:\n        failed(\"The file is empty. Please, reload the task and try again.\")\n\n\ndef test_text_equals(text, error_text):\n    \"\"\"\n        Checks that answer equals text.\n    \"\"\"\n    path \u003d sys.argv[-1]\n    file_text \u003d get_file_text(path)\n\n    if file_text.strip() \u003d\u003d text:\n        passed()\n    else:\n        failed(error_text)\n\n\ndef test_answer_placeholders_text_deleted(error_text\u003d\"Don\u0027t just delete task text\"):\n    \"\"\"\n        Checks that all answer placeholders are not empty\n    \"\"\"\n    windows \u003d get_answer_placeholders()\n\n    for window in windows:\n        if len(window) \u003d\u003d 0:\n            failed(error_text)\n            return\n    passed()\n\n\ndef set_congratulation_message(message):\n    \"\"\" Overrides default \u0027Congratulations!\u0027 message \"\"\"\n    print(\"#educational_plugin CONGRATS_MESSAGE \" + message)\n\n\ndef failed(message\u003d\"Please, reload the task and try again.\", name\u003dNone):\n    \"\"\" Reports failure \"\"\"\n    if not name:\n        name \u003d sys._getframe().f_back.f_code.co_name\n    print(\"#educational_plugin \" + name + \" FAILED + \" + message)\n\n\ndef passed(name\u003dNone):\n    \"\"\" Reports success \"\"\"\n    if not name:\n        name \u003d sys._getframe().f_back.f_code.co_name\n    print(\"#educational_plugin \" + name + \" test OK\")\n\n\ndef get_answer_placeholders():\n    \"\"\"\n        Returns all answer placeholders text\n    \"\"\"\n    prefix \u003d \"#educational_plugin_window \u003d \"\n    path \u003d sys.argv[-1]\n    import os\n\n    file_name_without_extension \u003d os.path.splitext(path)[0]\n    windows_path \u003d file_name_without_extension + \"_windows\"\n    windows \u003d []\n    f \u003d open(windows_path, \"r\")\n    window_text \u003d \"\"\n    first \u003d True\n    for line in f.readlines():\n        if line.startswith(prefix):\n            if not first:\n                windows.append(window_text.strip())\n            else:\n                first \u003d False\n            window_text \u003d line[len(prefix):]\n        else:\n            window_text +\u003d line\n\n    if window_text:\n        windows.append(window_text.strip())\n\n    f.close()\n    return windows\n\n\ndef check_samples(samples\u003d()):\n    \"\"\"\n      Check script output for all samples. Sample is a two element list, where the first is input and\n      the second is output.\n    \"\"\"\n    for sample in samples:\n        if len(sample) \u003d\u003d 2:\n            output \u003d get_file_output(arg_string\u003dstr(sample[0]))\n            if \"\\n\".join(output) !\u003d sample[1]:\n                failed(\n                    \"Test from samples failed: \\n \\n\"\n                    \"Input:\\n{}\"\n                    \"\\n \\n\"\n                    \"Expected:\\n{}\"\n                    \"\\n \\n\"\n                    \"Your result:\\n{}\".format(str.strip(sample[0]), str.strip(sample[1]), \"\\n\".join(output)))\n                return\n        set_congratulation_message(\"All test from samples passed. Now we are checking your solution on Stepic server.\")\n\n    passed()\n\n\ndef run_common_tests(error_text\u003d\"Please, reload file and try again\"):\n    test_is_not_empty()\n    test_answer_placeholders_text_deleted()\n    test_file_importable()\n",
+            "triptera_pe_tests.py": "# © Copyright 2018 Triptera Pty Ltd\n# https://www.triptera.com.au\n# Authorised for use by CoderDojo in 2018\n\nfrom test_helper import failed, passed\nfrom ircbuilder import MinetestConnection, NICK_MAX_LEN\nfrom coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel\nfrom copy import deepcopy\nimport importlib\n\ndef test_minetest(num_task):\n    pybotnick \u003d \"pt\" + mtuser\n    if len(pybotnick) \u003e NICK_MAX_LEN:\n        pybotnick \u003d pybotnick[0:NICK_MAX_LEN]\n    mc \u003d MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick\u003dpybotnick)\n    task \u003d int(mc.send_cmd(\"get_player_task \" + mtuser))\n    if task \u003e num_task:\n        passed()\n        return True\n    else:\n        failed(\"Failed: Check \u0027Task \" + str(num_task) + \" Assessment\u0027 sign in minetest to find out what else is required\")\n        return False\n\n\ndef test_eval_phi(phi, str_answer_number, answer, list_data, modules\u003d()):\n    if len(phi) \u003e len(answer) + 5:\n        failed(str_answer_number + \" is too long. Correct answer only \" + str(len(answer)) + \" characters long. Your answer \" + phi + \" has length \" + str(len(phi)))\n        return False\n    global_data \u003d {}\n    if isinstance(modules, str):\n        modules \u003d (modules,)\n    for module in modules:\n        global_data[module] \u003d importlib.import_module(module)\n    for data in list_data:\n        try:\n            guess \u003d eval(phi, global_data, data)\n        except NameError:\n            list_vars \u003d \"\"\n            comma \u003d \"\"\n            for k in data:\n                list_vars +\u003d comma + k\n                comma \u003d \", \"\n            failed(str_answer_number + \" should only be in terms of variables \" + list_vars + \" but includes other variables. It is \" + phi)\n        correct \u003d eval(answer, global_data, data)\n        if guess !\u003d correct:\n            failed(str_answer_number + \" gave incorrect answer for data \" + str(data) + \". Correct answer: \" + str(correct) + \". Your answer: \" + str(guess) + \". Your formula: \" + phi)\n            return False\n    return True\n\n\ndef test_eval(placeholders, i, answer, list_data, modules\u003d()):\n    str_answer_number \u003d \"Answer \" + str(i+1)\n    return test_eval_phi(placeholders[i], str_answer_number, answer, list_data, modules)\n\n\ndef test_string(placeholders, i, answer):\n    phi \u003d placeholders[i]\n    stri \u003d \"Answer \" + str(i+1)\n    if phi !\u003d answer:\n        failed(stri + \" should be \" + answer + \". You entered \" + phi)\n        return False\n    return True\n\n\ndef test_string_in(placeholders, i, list_answer):\n    phi \u003d placeholders[i]\n    stri \u003d \"Answer \" + str(i+1)\n    if phi not in list_answer:\n        failed(stri + \" should be one of \" + str(list_answer) + \". You entered \" + phi)\n        return False\n    return True\n\n\ndef test_exec(placeholders, i, answer, list_data, modules\u003d()):\n    phi \u003d placeholders[i]\n    stri \u003d \"Answer \" + str(i+1)\n    # print(\"test_assignment\",stri,phi, list_data)\n    if len(phi) \u003e len(answer) + 5:\n        failed(stri + \" is too long. Correct answer only \" + str(len(answer)) + \" characters long. Your answer \" + phi + \" has length \" + str(len(phi)))\n        return False\n    global_data \u003d {}\n    if isinstance(modules, str):\n        modules \u003d (modules,)\n    for module in modules:\n        global_data[module] \u003d importlib.import_module(module)\n    for data in list_data:\n        locals_guess \u003d deepcopy(data)\n        locals_answer \u003d deepcopy(data)\n        try:\n            exec(phi, global_data, locals_guess)\n        except NameError:\n            list_vars \u003d \"\"\n            comma \u003d \"\"\n            for k in data:\n                list_vars +\u003d comma + k\n                comma \u003d \", \"\n            failed(stri + \" should only be in terms of variables \" + list_vars + \" but includes other variables. It is \" + phi )\n        exec(answer, global_data, locals_answer)\n        # print(\"answer\", locals_answer, \"guess\", locals_guess)\n        for k,v in locals_answer.items():\n            # print(\"k\",k,\"v\",v,\"guess[k]\",locals_guess[k])\n            if v !\u003d locals_guess[k]:\n                failed(stri + \" gave incorrect answer for data \" + str(data) + \". Correct answer: \" + str(locals_answer) + \". Your answer: \" + str(locals_guess) + \". Your statement: \" + phi)\n                return False\n    return True\n"
+          },
+          "task_texts": {},
+          "task_type": "edu"
+        }
+      ]
+    }
+  ],
+  "summary": "Exercises to teach programming using a Minetest server with mods irc, irc_builder, irc_commands, signs_lib, builder_police\n\nhttp://www.triptera.com.au/wordpress",
+  "title": "Ninja 2 minetest course",
+  "programming_language": "Python 3.x",
+  "language": "en"
+}
