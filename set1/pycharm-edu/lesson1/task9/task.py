@@ -17,12 +17,12 @@ stone = "default:stone"
 air   = "air"
 torch = "default:torch"
 node_lists = {glass: [], stone: [], air: [], torch: []}
-nodes_map = {}
+node_dict = {}
 
 def set_node(x, y, z, item):
     "similar to mc.set_node but stores nodes in nodes_map rather than sending to minetest"
     # convert x, y, z to integers so that each node has unique set of coordinates
-    nodes_map[(floor(x+0.5), floor(y+0.5), floor(z+0.5))]=item
+    node_dict[(floor(x + 0.5), floor(y + 0.5), floor(z + 0.5))]=item
 
 def set_nodes(x1, y1, z1, x2, y2, z2, item):
     "similar to mc.set_nodes but stores nodes in nodes_map rather than sending to minetest"
@@ -49,8 +49,8 @@ for i in range(x1-x2+1):
         # Place torches down the right hand side of the tunnel
         set_node(x,y+1,z+1,torch)
 
-# Convert nodes_map to node_lists
-for pos, item in nodes_map.items():
+# Convert node_dict to node_lists
+for pos, item in node_dict.items():
     node_lists[item].append(pos)
 # Send node_lists to minetest. Should send air after walls so no lava and water flow in
 for item in (glass, stone, air, torch):

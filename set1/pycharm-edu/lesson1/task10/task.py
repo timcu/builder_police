@@ -10,27 +10,23 @@ y1 = 14
 z = int(mc.send_cmd('get_player_z ' + mtuser))
 
 # store node types in variables for easier use
-stair = '{"name":"stairs:stair_stonebrick","param2":"1"}'
-rail  = 'carts:rail'
-prail = 'carts:powerrail'
-node_lists = {stair:[], rail:[], prail:[]}
+STAIR_UP_X = '{"name":"stairs:stair_stonebrick","param2":"1"}'
+RAIL  = 'carts:RAIL'
+POWER_RAIL = 'carts:powerrail'
+node_lists = {STAIR_UP_X:[], RAIL:[], POWER_RAIL:[]}
 
 for i in range(61):
     #Add stairs - Don't need stairs on very last block. Hence check i < 60
     if i < 60:
-        #mc.set_node(x1-i,y1-i,z-1,stair)
-        node_lists[stair].append((x1-i,y1-i,z-1))
+        node_lists[STAIR_UP_X].append((x1 - i, y1 - i, z - 1))
     #Add power rail
-    #mc.set_node(x1-i,y1-i+1,z,prail)
-    node_lists[prail].append((x1-i,y1-i+1,z))
+    node_lists[POWER_RAIL].append((x1 - i, y1 - i + 1, z))
 for x in range(x1,task4_x1+1):
-    #Add rail or powerrail in pairs
+    #Add rail or power rail in pairs
     if x//2%2==0:
-        #mc.set_node(x,y1+1,z,rail)
-        node_lists[rail].append((x,y1+1,z))
+        node_lists[RAIL].append((x, y1 + 1, z))
     else:
-        #mc.set_node(x,y1+1,z,prail)
-        node_lists[prail].append((x,y1+1,z))
+        node_lists[POWER_RAIL].append((x, y1 + 1, z))
 for item in node_lists:
     mc.set_node_list(node_lists[item], item)
 

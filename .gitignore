@@ -1,2 +1,5 @@
 set1/pycharm-edu/.idea/VirtualEnvironment
 set1/pycharm-edu/__pycache__
+set1/pycharm-edu/lesson2/task1/__pycache__
+set1/pycharm-edu/lesson1/task3/__pycache__
+*.pyc

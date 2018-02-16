@@ -10,7 +10,7 @@ z = 0
 # Create a 3x3x3 solid cube of glass
 mc.set_nodes(x-1, y-1, z-1, x+1, y+1, z+1, "default:glass")
 # Replace centre position with orange wool (or any colour you choose)
-mc.set_node(x, y, z, "wool:orange")
+mc.set_node(x, y, z, "wool:red")
 
 
 
