@@ -21,11 +21,12 @@ local task_1_assign = function(player_name)
 	set_nodes_rdd(pos, {x=-5,y=-1,z=-5}, {x=4,y=-1,z=4},   {name="default:stone"})
 	set_nodes_rdd(pos, {x=-5,y=0,z=-5},  {x=4,y=16,z=4},   {name="air"})
 	set_nodes_rdd(pos, {x=0,y=0,z=0},    {x=0,y=0,z=0},    {name="default:stone"})
+	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
 	local text=player_name.."\n \nx="..pos.x..'\ny='..(pos.y+4)..'\nz='..pos.z
 	irc_builder.set_sign(sign_pos, "-x", "signs:sign_yard", text)
 	sign_pos={x=pos.x+1,y=pos.y,z=pos.z}
-	text="Place an orange wool block at coordinates above\n \nwool:orange"
+	text="Place an orange wool block at x,y,z coordinates above\n \nwool:orange"
 	irc_builder.set_sign(sign_pos, "-x", "default:sign_wall_wood", text)
 end
 
