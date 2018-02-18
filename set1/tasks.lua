@@ -20,7 +20,7 @@ local task_1_assign = function(player_name)
 	set_nodes_rdd(pos, {x=-15,y=5,z=2},  {x=-25,y=7,z=4},  {name="default:obsidian"})
 	set_nodes_rdd(pos, {x=-5,y=-1,z=-5}, {x=4,y=-1,z=4},   {name="default:stone"})
 	set_nodes_rdd(pos, {x=-5,y=0,z=-5},  {x=4,y=16,z=4},   {name="air"})
-	set_nodes_rdd(pos, {x=0,y=0,z=0},    {x=0,y=0,z=0},    {name="default:stone"})
+	minetest.set_node(pos, {name="default:stone"})
 	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
 	local text=player_name.."\n \nx="..pos.x..'\ny='..(pos.y+4)..'\nz='..pos.z
@@ -46,7 +46,8 @@ end
 
 local task_2_assign = function(player_name)
 	local pos = builder_police.pos_build(player_name) 
-	set_nodes_rdd(pos, {x=0,y=0,z=0},    {x=0,y=0,z=0},    {name="default:stone"})
+	minetest.set_node(pos, {name="default:stone"})
+	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
 	local text=player_name.."\n \nx="..pos.x..'\ny='..(pos.y+4)..'\nz='..pos.z
 	irc_builder.set_sign(sign_pos, "-x", "signs:sign_yard", text)
@@ -82,7 +83,8 @@ end
 
 local task_3_assign = function(player_name)
 	local pos = builder_police.pos_build(player_name) 
-	set_nodes_rdd(pos, {x=0,y=0,z=0},    {x=0,y=0,z=0},    {name="default:stone"})
+	minetest.set_node(pos, {name="default:stone"})
+	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
 	local text=player_name.."\n \nx="..pos.x..'\ny='..(pos.y+4)..'\nz='..pos.z
 	irc_builder.set_sign(sign_pos, "-x", "signs:sign_yard", text)
@@ -124,6 +126,7 @@ local task_4_assign = function(player_name)
 	set_nodes_rdd(pos, {x=-10,y=12,z=-5},    {x=10,y=32,z=4},    {name="air"})
 	-- assign task 4
 	minetest.set_node(pos, {name="default:stone"})
+	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
 	local text=player_name.."\n \nx="..pos.x..'\ny='..(pos.y+4)..'\nz='..pos.z
 	irc_builder.set_sign(sign_pos, "-x", "signs:sign_yard", text)
@@ -239,8 +242,9 @@ end
 
 local task_6_assign = function(player_name)
 	local pos = builder_police.pos_build(player_name) 
-	local pos_chest = vector.add(pos,{x=-31,y=5,z=0})
+	-- local pos_chest = vector.add(pos,{x=-31,y=5,z=0})
 	minetest.set_node(pos, {name="default:stone"})
+	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
 	local text=player_name.." Task 6\n \nChequered Square"
 	irc_builder.set_sign(sign_pos, "-x", "signs:sign_yard", text)
@@ -278,8 +282,9 @@ end
 
 local task_7_assign = function(player_name)
 	local pos = builder_police.pos_build(player_name) 
-	local pos_chest = vector.add(pos,{x=-31,y=5,z=0})
+	-- local pos_chest = vector.add(pos,{x=-31,y=5,z=0})
 	minetest.set_node(pos, {name="default:stone"})
+	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
 	local text=player_name.." Task 7\n \nChequered Diamond"
 	irc_builder.set_sign(sign_pos, "-x", "signs:sign_yard", text)
@@ -331,6 +336,7 @@ local task_8_assign = function(player_name)
 	local pos = builder_police.pos_build(player_name) 
 	local pos_chest = vector.add(pos,{x=-31,y=5,z=0})
 	minetest.set_node(pos, {name="default:stone"})
+	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
 	local text=player_name.."\n \nLook in chest in your tunnel"
 	irc_builder.set_sign(sign_pos, "-x", "signs:sign_yard", text)
@@ -421,6 +427,7 @@ local task_9_assign = function(player_name)
 
 	local pos_chest = vector.add(pos,{x=-31-61,y=5-60,z=0})
 	minetest.set_node(pos, {name="default:stone"})
+	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
 	local text=player_name.."\n \nLook in chest at bottom of your tunnel"
 	irc_builder.set_sign(sign_pos, "-x", "signs:sign_yard", text)
@@ -483,6 +490,9 @@ end
 
 local task_10_assign = function(player_name)
 	local pos = builder_police.pos_build(player_name) 
+	local pos_chest = vector.add(pos,{x=-31-61-3,y=5-60,z=-2})
+	minetest.set_node(pos, {name="default:stone"})
+	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
 	local text=player_name.."\n \nLook in chest in subway for a cart"
 	irc_builder.set_sign(sign_pos, "-x", "signs:sign_yard", text)
@@ -518,6 +528,15 @@ local task_10_assign = function(player_name)
     --mc.setBlock(x-31-60-4,y+4-60+1,z,69,13) #lever
     minetest.set_node(vector.add(pos, {x=-31-60-4,y=4-60+1,z=-4}), {name="default:torch", param2=1})
     minetest.set_node(vector.add(pos, {x=-31-60-4,y=4-60+1,z= 4}), {name="default:torch", param2=1})
+    -- put cart in chest in subway
+	local chest_name="default:chest"
+	local chest_node=minetest.get_node(pos_chest)
+	if chest_node.name ~= chest_name then
+		minetest.set_node(pos_chest, {name=chest_name,param2=3})
+	end
+	local meta=minetest.get_meta(pos_chest)
+	local invref = meta:get_inventory()
+	invref:add_item("main",ItemStack("carts:cart"))
 end
 
 local task_10_test = function(player_name)
