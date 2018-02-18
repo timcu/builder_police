@@ -7,7 +7,7 @@ x = 100
 y = 14
 z = 0
 
-mc.set_node(x, y, z, "wool:orange")
+mc.set_node(x, y, z, "wool:green")
 
 
 

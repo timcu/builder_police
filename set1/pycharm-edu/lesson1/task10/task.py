@@ -11,7 +11,7 @@ z = int(mc.send_cmd('get_player_z ' + mtuser))
 
 # store node types in variables for easier use
 STAIR_UP_X = '{"name":"stairs:stair_stonebrick","param2":"1"}'
-RAIL  = 'carts:RAIL'
+RAIL  = 'carts:rail'
 POWER_RAIL = 'carts:powerrail'
 node_lists = {STAIR_UP_X:[], RAIL:[], POWER_RAIL:[]}
 

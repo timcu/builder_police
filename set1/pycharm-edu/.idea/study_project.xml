@@ -163,7 +163,7 @@
                                                 </option>
                                                 <option name="needInsertText" value="false" />
                                                 <option name="placeholderText" value="node type" />
-                                                <option name="possibleAnswer" value="&quot;wool:orange&quot;" />
+                                                <option name="possibleAnswer" value="&quot;wool:green&quot;" />
                                                 <option name="selected" value="false" />
                                                 <option name="status" value="Solved" />
                                               </AnswerPlaceholderSubtaskInfo>
@@ -1623,7 +1623,7 @@
                                                 <option name="hasFrame" value="true" />
                                                 <option name="hints">
                                                   <list>
-                                                    <option value="Or choose another colour" />
+                                                    <option value="Or choose another colour from [&quot;white&quot;, &quot;grey&quot;, &quot;dark_grey&quot;, &quot;black&quot;, &quot;blue&quot;, &quot;cyan&quot;, &quot;green&quot;, &quot;dark_green&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;brown&quot;, &quot;red&quot;, &quot;pink&quot;, &quot;magenta&quot;, &quot;violet&quot;]" />
                                                   </list>
                                                 </option>
                                                 <option name="needInsertText" value="false" />
@@ -1653,7 +1653,7 @@
                                                 <option name="hasFrame" value="true" />
                                                 <option name="hints">
                                                   <list>
-                                                    <option value="Or choose another colour" />
+                                                    <option value="Or choose another colour from [&quot;white&quot;, &quot;grey&quot;, &quot;dark_grey&quot;, &quot;black&quot;, &quot;blue&quot;, &quot;cyan&quot;, &quot;green&quot;, &quot;dark_green&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;brown&quot;, &quot;red&quot;, &quot;pink&quot;, &quot;magenta&quot;, &quot;violet&quot;]" />
                                                   </list>
                                                 </option>
                                                 <option name="needInsertText" value="false" />
@@ -1745,7 +1745,7 @@
                                                   <list>
                                                     <option value="Returns the starting value of x for each value of y" />
                                                     <option value="Formula in terms of x1, y and cy" />
-                                                    <option value="If you can't create a single formula, try two formulae. One for y &lt;= cy and one for y &gt; cy" />
+                                                    <option value="If you can't create a single formula, try two formulae. One for y &amp;le; cy and one for y &amp;gt; cy" />
                                                     <option value="It is possible to combine the two formulae into one using the abs() function which returns the absolute value of a number. The absolute value of negative numbers is the same number but made positive. The absolute value of positive numbers is the same number.&#10;&#10;abs(5) = 5&#10;abs(-3) = 3&#10;" />
                                                   </list>
                                                 </option>
@@ -1778,7 +1778,7 @@
                                                   <list>
                                                     <option value="The maximum value of x in the diamond for a given y value" />
                                                     <option value="Formua in terms of x2, y, cy" />
-                                                    <option value="Same as previously, you can solve this formula with several lines of code based on whether y &lt;= cy or y &gt; cy" />
+                                                    <option value="Same as previously, you can solve this formula with several lines of code based on whether y &amp;le; cy or y &amp;gt; cy" />
                                                   </list>
                                                 </option>
                                                 <option name="needInsertText" value="false" />
@@ -2337,8 +2337,8 @@
                                                 <option name="hasFrame" value="true" />
                                                 <option name="hints">
                                                   <list>
-                                                    <option value="Formula in terms of x1 and x2 which returns the number of 1 block wide sections in the tunnel from the start of the sloping section to the end of the sloping section inclusive" />
-                                                    <option value="If x1 was 5 and x2 was 2 the tunnel would have 4 sections which are 1 block wide" />
+                                                    <option value="Formula in terms of x1 and x2 which returns the number of single-block thick cross-sections in the tunnel from the start of the sloping section to the end of the sloping section inclusive" />
+                                                    <option value="If x1 was 5 and x2 was 2 the tunnel would have 4 sections which are 1 block thick" />
                                                     <option value="Your formula should calculate to 61 which is the number of sections in the tunnel." />
                                                   </list>
                                                 </option>
@@ -2431,8 +2431,8 @@
                                                   <list>
                                                     <option value="A conditional statement which returns &lt;code&gt;True&lt;/code&gt; every fourth position along the tunnel and &lt;code&gt;False&lt;/code&gt; every other position. " />
                                                     <option value="Use modulo operator (%)" />
-                                                    <option value="i%4 will return the following values as i counts upwards from 0&#10;&#10;0 1 2 3 0 1 2 3 0 1 2 3 ..." />
-                                                    <option value="i%4==0 will return the following values as i counts up from zero&#10;&#10;True False False False True False False False True False False False ..." />
+                                                    <option value="i%4 will return the following values as i counts upwards from zero&#10;&#10;&lt;p&gt;0 1 2 3 0 1 2 3 0 1 2 3 ...&lt;/p&gt;" />
+                                                    <option value="i%4==0 will return the following values as i counts up from zero&#10;&#10;&lt;p&gt;&lt;code&gt;True False False False True False False False True False False False ...&lt;/code&gt;&lt;p&gt;" />
                                                   </list>
                                                 </option>
                                                 <option name="needInsertText" value="false" />
@@ -2536,7 +2536,7 @@
                                                 </option>
                                                 <option name="needInsertText" value="false" />
                                                 <option name="placeholderText" value="string" />
-                                                <option name="possibleAnswer" value="'carts:RAIL'" />
+                                                <option name="possibleAnswer" value="'carts:rail'" />
                                                 <option name="selected" value="false" />
                                                 <option name="status" value="Solved" />
                                               </AnswerPlaceholderSubtaskInfo>
@@ -2592,10 +2592,10 @@
                                                 <option name="hasFrame" value="true" />
                                                 <option name="hints">
                                                   <list>
-                                                    <option value="Formula in terms of x which will alternate every two blocks&#10;&#10;0 0 1 1 0 0 1 1 0 0 1 1 ..." />
-                                                    <option value="You know that j%2 will alternate every one block&#10;&#10;0 1 0 1 0 1 0 1 ...&#10;&#10;So replace j with something in terms of x which counts at half speed" />
-                                                    <option value="x//2 counts at half speed&#10;&#10;0 0 1 1 2 2 3 3 4 4 ..." />
-                                                    <option value="x//2%2 combines the two to get the alternating pattern&#10;&#10;0 0 1 1 0 0 1 1 ...&#10;&#10;There are other ways to do this" />
+                                                    <option value="Formula in terms of x which will alternate every two blocks&#10;&#10;&lt;p&gt;0 0 1 1 0 0 1 1 0 0 1 1 ...&lt;/p&gt;" />
+                                                    <option value="You know that j%2 will alternate every one block&#10;&#10;&lt;p&gt;0 1 0 1 0 1 0 1 ...&lt;/p&gt;&#10;&#10;So replace j with something in terms of x which counts at half speed" />
+                                                    <option value="x//2 counts at half speed&#10;&#10;&lt;p&gt;0 0 1 1 2 2 3 3 4 4 ...&lt;/p&gt;" />
+                                                    <option value="x//2%2 combines the two to get the alternating pattern&#10;&#10;&lt;p&gt;0 0 1 1 0 0 1 1 ...&lt;/p&gt;&#10;&#10;There are other ways to do this" />
                                                   </list>
                                                 </option>
                                                 <option name="needInsertText" value="false" />
@@ -3509,7 +3509,7 @@
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
-                                      <option name="index" value="4" />
+                                      <option name="index" value="3" />
                                       <option name="initialState" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="686" />
@@ -3539,7 +3539,7 @@
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
-                                      <option name="index" value="5" />
+                                      <option name="index" value="4" />
                                       <option name="initialState" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="690" />
@@ -3569,7 +3569,7 @@
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
-                                      <option name="index" value="6" />
+                                      <option name="index" value="5" />
                                       <option name="initialState" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="694" />
@@ -3599,7 +3599,7 @@
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
-                                      <option name="index" value="7" />
+                                      <option name="index" value="6" />
                                       <option name="initialState" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="698" />
@@ -3629,7 +3629,7 @@
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
-                                      <option name="index" value="8" />
+                                      <option name="index" value="7" />
                                       <option name="initialState" />
                                       <option name="length" value="9" />
                                       <option name="offset" value="816" />
@@ -3659,7 +3659,7 @@
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
-                                      <option name="index" value="9" />
+                                      <option name="index" value="8" />
                                       <option name="initialState" />
                                       <option name="length" value="9" />
                                       <option name="offset" value="988" />
@@ -3689,7 +3689,7 @@
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
-                                      <option name="index" value="10" />
+                                      <option name="index" value="9" />
                                       <option name="initialState" />
                                       <option name="length" value="9" />
                                       <option name="offset" value="1180" />

@@ -37,7 +37,7 @@ def test_answer_placeholders():
 
 
 if __name__ == '__main__':
-    test_answer_placeholders()
-    run_common_tests()
-    test_minetest(8)
+    if test_answer_placeholders():
+        run_common_tests()
+        test_minetest(8)
 
