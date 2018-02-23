@@ -1,7 +1,5 @@
 
-local set_nodes_rdd = function(ref, delta1, delta2, item)
-	local pos1 = vector.add(ref, delta1)
-	local pos2 = vector.add(ref, delta2)
+local set_nodes = function(pos1, pos2, item)
 	local stepx=(pos1.x<=pos2.x) and 1 or -1
 	local stepy=(pos1.y<=pos2.y) and 1 or -1
 	local stepz=(pos1.z<=pos2.z) and 1 or -1
@@ -12,6 +10,12 @@ local set_nodes_rdd = function(ref, delta1, delta2, item)
 			end
 		end
 	end
+end
+
+local set_nodes_rdd = function(ref, delta1, delta2, item)
+	local pos1 = vector.add(ref, delta1)
+	local pos2 = vector.add(ref, delta2)
+	set_nodes(pos1, pos2, item)
 end
 
 local task_1_assign = function(player_name)
@@ -441,9 +445,8 @@ local task_9_assign = function(player_name)
 	irc_builder.add_book_to_chest(player_name, pos_chest, {title="Task 9 for "..player_name, text=text})
 end
     
-local task_9_test = function(player_name)
-	local pos = builder_police.pos_build(player_name) 
-	local pos_assess = vector.add(pos, {x=0,y=0,z=1})
+local task_9_test_from_pos = function(pos)
+	--local pos = builder_police.pos_build(player_name) 
     local torches = 0
     local text
     local node
@@ -456,20 +459,17 @@ local task_9_test = function(player_name)
 	        node=minetest.get_node({x=x, y=floory, z=pos.z-1})
 			if node.name:find("stairs:") ~= 1 then
 				text = "Task 9 Assessment\n \nBlock at ("..x..", "..floory..", "..(pos.z-1)..") is type '"..node.name.."' but should be 'stairs:stair_stonebrick' or similar"
-				irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
-				return false
+				return false, text
 			end
 			if node.param2 ~= 1 then
 				text = "Task 9 Assessment\n \nBlock at ("..x..", "..floory..", "..(pos.z-1)..") has param2 '"..node.param2.."' but should be 1 to be descending with negative x"
-				irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
-				return false
+				return false, text
 			end
 		end
         node=minetest.get_node({x=x, y=floory+1, z=pos.z})
 		if node.name ~= "carts:rail" and node.name ~= "carts:powerrail" then
 			text = "Task 9 Assessment\n \nBlock at ("..x..", "..(floory+1)..", "..pos.z..") is type '"..node.name.."' but should be 'carts:rail' or 'carts:powerrail'"
-			irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
-			return false
+			return false, text
 		end
 		-- TODO check enough powerrail
 	end -- for i
@@ -478,14 +478,19 @@ local task_9_test = function(player_name)
 		local node=minetest.get_node({x=x,y=pos.y+5,z=pos.z})
 		if node.name ~= "carts:rail" and node.name ~= "carts:powerrail" then
 			text = "Task 9 Assessment\n \nBlock at ("..x..", "..(pos.y+5)..", "..pos.z..") is type '"..node.name.."' but should be 'carts:rail' or 'carts:powerrail'"
-			irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
-			return false
+			return false, text
 		end
 	end
 	text = "Task 9 Assessment\n \nCompleted"
+    return true, text
+end
+
+local task_9_test = function(player_name)
+	local pos = builder_police.pos_build(player_name) 
+	local pos_assess = vector.add(pos, {x=0,y=0,z=1})
+	local success, text = task_9_test_from_pos(pos)
 	irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
-    return true
-    -- TODO Task 10 put cart in chest so player can run cart from their tunnel to someone elses
+	return success
 end
 
 local task_10_assign = function(player_name)
@@ -537,15 +542,63 @@ local task_10_assign = function(player_name)
 	local meta=minetest.get_meta(pos_chest)
 	local invref = meta:get_inventory()
 	invref:add_item("main",ItemStack("carts:cart"))
+	-- Build ladder and walkway to task 11
+	local z11 = pos.z
+	local x11 = pos.x - 200 + (math.floor(z11/10) % 2) * 50
+	local y11 = irc_builder.get_ground_level(x11, z11)
+	minetest.set_node({x=x11, y=y11, z=z11}, {name="default:goldblock"})
+	local x10 = pos.x - 25
+	local y10 = pos.y + 4
+	local z10 = pos.z
+	local ramp = math.abs(y11-y10) --length of sloping ramp between levels
+	-- small tunnel to go around sloping part of tunnel
+	set_nodes({x=x10+ 2, y=y10  , z=z10-2}, {x=x10-22, y=y10+6, z=z10-6}, {name="default:glass"})
+	set_nodes({x=x10+ 1, y=y10  , z=z10-3}, {x=x10-21, y=y10  , z=z10-5}, {name="default:stone"})
+	set_nodes({x=x10+ 1, y=y10  , z=z10-2}, {x=x10- 3, y=y10  , z=z10-2}, {name="default:stone"})
+	set_nodes({x=x10-17, y=y10  , z=z10-2}, {x=x10-21, y=y10  , z=z10-2}, {name="default:stone"})
+	set_nodes({x=x10+ 1, y=y10+1, z=z10-3}, {x=x10-21, y=y10+5, z=z10-5}, {name="air"})
+	set_nodes({x=x10+ 1, y=y10+1, z=z10-2}, {x=x10- 3, y=y10+5, z=z10-2}, {name="air"})
+	set_nodes({x=x10-17, y=y10+1, z=z10-2}, {x=x10-21, y=y10+5, z=z10-2}, {name="air"})
+	set_nodes({x=x10-17, y=y10  , z=z10-1}, {x=x10-23, y=y10  , z=z10+1}, {name="default:stone"})
+	set_nodes({x=x10-17, y=y10+1, z=z10-1}, {x=x10-23, y=y10+5, z=z10+1}, {name="air"})
+	local stepy=(y10<=y11) and 1 or -1
+	print("y10 "..y10.." y11 "..y11)
+	local stair
+	for i=1,ramp do
+		print("x "..(x10-23-i).." y "..(y10+i*stepy))
+		set_nodes({x=x10-23-i, y=y10+i*stepy  , z=z10-1}, {x=x10-23-i, y=y10+i*stepy  , z=z10+1}, {name="default:stone"})
+		set_nodes({x=x10-23-i, y=y10+i*stepy+1, z=z10-1}, {x=x10-23-i, y=y10+i*stepy+5, z=z10+1}, {name="air"})
+	end	
+	if stepy > 0 then
+		stair = {name="stairs:stair_stonebrick", param2="3"}
+		for i=1,ramp do
+			minetest.set_node({x=x10-23-i, y=y10+i*stepy  , z=z10-1}, stair)
+		end
+	else
+		stair = {name="stairs:stair_stonebrick", param2="1"}
+		for i=0,ramp-1 do
+			minetest.set_node({x=x10-23-i, y=y10+i*stepy  , z=z10-1}, stair)
+		end
+	end
+	set_nodes({x=x10-23-ramp-1, y=y11  , z=z11-1}, {x=x11+1, y=y11  , z=z11+1}, {name="default:stone"})
+	set_nodes({x=x10-23-ramp-1, y=y11+1, z=z11-1}, {x=x11+1, y=y11+5, z=z11+1}, {name="air"})
 end
 
 local task_10_test = function(player_name)
 	local pos = builder_police.pos_build(player_name) 
 	local pos_assess = vector.add(pos, {x=0,y=0,z=1})
     local text
-	text = "Task 10 Assessment\n \nTask 10 is not a programming task, although you may need to assist your neighbour's programming task to complete"
+	text = "Task 10 Assessment\n \nTask 10 is not a programming task, although you may need to assist your neighbour's programming task to complete."
+	local pos_left = vector.add(pos, {x=0, y=0, z=-builder_police.get_delta_z()})
+	local pos_right = vector.add(pos, {x=0, y=0, z=-builder_police.get_delta_z()})
+	local test = task_9_test_from_pos(pos_left) or task_9_test_from_pos(pos_right)
+	if test then 
+		text = text .. " Well done! One of your neighbours has also completed Task 9."
+	else
+		text = text .. " Currently neither of your neighbours has completed Task 9."
+	end
 	irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
-    return true
+    return test
 end
 
 

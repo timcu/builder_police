@@ -70,8 +70,8 @@ local assign_player_z = function(player_name)
 	if tbl_storage.fields[key] then
 		--print(key.." already "..tbl_storage.fields[key])
 	else
-		local next_z = tonumber(tonumber(read_key('next_z')))
-		local delta_z = tonumber(tonumber(read_key('delta_z')))
+		local next_z = tonumber(read_key('next_z'))
+		local delta_z = tonumber(read_key('delta_z'))
 		tbl_storage.fields[key]=next_z
 		write_key('next_z',next_z + delta_z)
 		write_storage()
@@ -84,13 +84,16 @@ local get_ground_level = function(x, z)
 end  
 
 builder_police = {
-	version="0.0.2",
+	version="0.0.5",
 }
 builder_police.get_player_z = function(player_name)
 	local key = player_name..'_build_z'
 	local z = tonumber(tbl_storage.fields[key])
 	-- print("Ground level at 100," .. z .. " = "..get_ground_level(100, z))	
 	return z
+end
+builder_police.get_delta_z = function()
+	return tonumber(read_key('delta_z'))
 end
 
 local get_player_task = function(player_name)
@@ -191,7 +194,7 @@ minetest.register_chatcommand("set_player_task", {
 	privs = {police = true},
 	func = function(name, param)
 		local player_name, task = param:match("(%S+) (%d+)")
-		task_number = tonumber(task)
+		local task_number = tonumber(task)
 		if task_number then
 			set_player_task(player_name, task_number)
 			return true, player_name.."'s next task is now "..get_player_task(player_name)

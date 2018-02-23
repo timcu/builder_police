@@ -33,7 +33,7 @@
                     <EduTask>
                       <option name="index" value="1" />
                       <option name="name" value="Placing a block" />
-                      <option name="status" value="Solved" />
+                      <option name="status" value="Failed" />
                       <option name="stepId" value="0" />
                       <option name="stepikPosition" value="0" />
                       <option name="taskTexts">
@@ -74,7 +74,7 @@
                                                 <option name="placeholderText" value="number" />
                                                 <option name="possibleAnswer" value="100" />
                                                 <option name="selected" value="false" />
-                                                <option name="status" value="Solved" />
+                                                <option name="status" value="Failed" />
                                               </AnswerPlaceholderSubtaskInfo>
                                             </value>
                                           </entry>
@@ -104,7 +104,7 @@
                                                 <option name="placeholderText" value="number" />
                                                 <option name="possibleAnswer" value="14" />
                                                 <option name="selected" value="false" />
-                                                <option name="status" value="Solved" />
+                                                <option name="status" value="Failed" />
                                               </AnswerPlaceholderSubtaskInfo>
                                             </value>
                                           </entry>
@@ -134,7 +134,7 @@
                                                 <option name="placeholderText" value="number" />
                                                 <option name="possibleAnswer" value="0" />
                                                 <option name="selected" value="false" />
-                                                <option name="status" value="Solved" />
+                                                <option name="status" value="Failed" />
                                               </AnswerPlaceholderSubtaskInfo>
                                             </value>
                                           </entry>
@@ -165,7 +165,7 @@
                                                 <option name="placeholderText" value="node type" />
                                                 <option name="possibleAnswer" value="&quot;wool:green&quot;" />
                                                 <option name="selected" value="false" />
-                                                <option name="status" value="Solved" />
+                                                <option name="status" value="Failed" />
                                               </AnswerPlaceholderSubtaskInfo>
                                             </value>
                                           </entry>
@@ -1113,7 +1113,7 @@
                                                   <list>
                                                     <option value="Node type is &quot;default:stone&quot;" />
                                                     <option value="Use the set_nodes function from the MinetestConnection class" />
-                                                    <option value="Parameters for set_nodes are&#10;mc.set_nodes(x1, y1, z1, x2, y2, z2, item)" />
+                                                    <option value="&lt;p&gt;Parameters for set_nodes are&lt;/p&gt;&#10;&lt;p&gt;mc.set_nodes(x1, y1, z1, x2, y2, z2, item)&lt;/p&gt;" />
                                                     <option value="y1 and y2 parameters are y" />
                                                     <option value="You can enter formulae for z1 and z2 parameters" />
                                                     <option value="The z value needs to go from z-1 to z+1" />
@@ -1428,7 +1428,7 @@
                                                   <list>
                                                     <option value="A formula based on cx and width which results in the minimum x value for blocks of the square" />
                                                     <option value="result of formula should be an int" />
-                                                    <option value="Pseudo code&#10;&#10;x1 = centre x position - half the width" />
+                                                    <option value="&lt;p&gt;Pseudo code&lt;/p&gt;&#10;&lt;p&gt;x1 = centre x position - half the width&lt;/p&gt;" />
                                                     <option value="Use integer division when finding half the height ( width // 2 ) so that result will be an int" />
                                                   </list>
                                                 </option>
@@ -1491,7 +1491,7 @@
                                                 <option name="hints">
                                                   <list>
                                                     <option value="Parameters of range function so the y iterates through all the y positions of the square" />
-                                                    <option value="range(stop): iterates from 0 to ('stop'-1) counting up in ones&#10;range(start, stop): iterates from 'start' to ('stop'-1) counting up in ones&#10;range(start, stop, step): iterates from 'start' to but not including 'stop' counting in 'step's." />
+                                                    <option value="&lt;div&gt;range(stop): iterates from 0 to ('stop'-1) counting up in ones&lt;/div&gt;&#10;&lt;div&gt;range(start, stop): iterates from 'start' to ('stop'-1) counting up in ones&lt;/div&gt;&#10;&lt;div&gt;range(start, stop, step): iterates from 'start' to but not including 'stop' counting in 'step's.&lt;/div&gt;" />
                                                   </list>
                                                 </option>
                                                 <option name="needInsertText" value="false" />
@@ -1553,10 +1553,10 @@
                                                   <list>
                                                     <option value="Formula to set colour to alternating wool colours" />
                                                     <option value="Adjacent blocks with the same value of y must have different colours" />
-                                                    <option value="colours[0] will use one colour&#10;colours[1] will use the other colour" />
-                                                    <option value="Statement will look like&#10;&#10;colour = colours['formula']&#10;&#10;But you need to replace 'formula' with a formula or variable which returns a 0 or 1 depending in which colour you want " />
+                                                    <option value="&lt;div&gt;colours[0] will use one colour&lt;/div&gt;&#10;&lt;div&gt;colours[1] will use the other colour&lt;/div&gt;" />
+                                                    <option value="&lt;p&gt;Statement will look like&lt;/p&gt;&#10;&#10;&lt;p&gt;colour = colours['formula']&lt;/p&gt;&#10;&#10;&lt;p&gt;But you need to replace 'formula' with a formula or variable which returns a 0 or 1 depending in which colour you want &lt;/p&gt;" />
                                                     <option value="Choose different colours using if statements and/or modulo arithmetic" />
-                                                    <option value="The modulo operator is %. It gives the remainder after dividing. &#10;&#10;5 % 2 = 1&#10;6 % 2 = 0&#10;7 % 2 = 1" />
+                                                    <option value="&lt;p&gt;The modulo operator is %. It gives the remainder after dividing. &lt;/p&gt;&#10;&#10;&lt;div&gt;5 % 2 = 1&lt;/div&gt;&#10;&lt;div&gt;6 % 2 = 0&lt;/div&gt;&#10;&lt;div&gt;7 % 2 = 1&lt;/div&gt;&#10;" />
                                                   </list>
                                                 </option>
                                                 <option name="needInsertText" value="false" />
@@ -4407,7 +4407,7 @@
               </Lesson>
             </list>
           </option>
-          <option name="name" value="Ninja 2 minetest course" />
+          <option name="name" value="Ninja 2 minetest course v5" />
         </Course>
       </option>
       <option name="toolWindowMode" value="TEXT" />
