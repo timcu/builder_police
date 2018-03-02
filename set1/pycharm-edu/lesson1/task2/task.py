@@ -1,5 +1,5 @@
 from ircbuilder import MinetestConnection
-from coderdojo import ircserver, mtuser,mtuserpass, mtbotnick, channel
+from coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel
 mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)
 
 x = 100
