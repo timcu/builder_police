@@ -331,7 +331,7 @@ minetest.register_globalstep(function(dtime)
 						end
 					end
 					-- check players who were in jail for punching other players and remobilise them if they have completed next task
-					if (player_jail_free_task and task > player_jail_free_task) then
+					if (player_jail_free_task and (task > player_jail_free_task or player_jail_free_task > #builder_police.tasks)) then
 						set_player_jail_free_task(player_name, 0)
 						player:set_physics_override({jump=1, speed=1, gravity=1})
 					end

@@ -12,6 +12,7 @@ def set_nodes(x1, y1, z1, x2, y2, z2, item):
             for x in range(x1, x2 + step_x, step_x):
                 # Use the set_node function from the minetest_helper module
                 node_dict.update(set_node(x, y, z, item))
+    return node_dict
 
 
 def node_lists_from_node_dict(node_dict):

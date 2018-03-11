@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55400f37-27d8-4960-8cc2-53675d334851" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../init.lua" afterPath="$PROJECT_DIR$/../../init.lua" />
-      <change beforePath="$PROJECT_DIR$/.idea/Minetest.iml" afterPath="$PROJECT_DIR$/.idea/Minetest.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/study_project.xml" afterPath="$PROJECT_DIR$/.idea/study_project.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/coderdojo.py" afterPath="$PROJECT_DIR$/coderdojo.py" />
-      <change beforePath="$PROJECT_DIR$/lesson1/task2/task.py" afterPath="$PROJECT_DIR$/lesson1/task2/task.py" />
+      <change beforePath="$PROJECT_DIR$/lesson2/task5/task.py" afterPath="$PROJECT_DIR$/lesson2/task5/task.py" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +17,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="task.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lesson2/task7/task.py">
+          <provider selected="true" editor-type-id="StudyEditor">
+            <state relative-caret-position="-30">
+              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coderdojo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coderdojo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -74,9 +103,7 @@
         <option value="$PROJECT_DIR$/lesson1/task8/tests.py" />
         <option value="$PROJECT_DIR$/lesson2/task6/tests.py" />
         <option value="$PROJECT_DIR$/triptera_pe_tests.py" />
-        <option value="$PROJECT_DIR$/lesson2/task3/task.py" />
         <option value="$PROJECT_DIR$/lesson2/task4/task.py" />
-        <option value="$PROJECT_DIR$/lesson2/task5/task.py" />
         <option value="$PROJECT_DIR$/lesson2/task6/task.py" />
         <option value="$PROJECT_DIR$/lesson2/task7/tests.py" />
         <option value="$PROJECT_DIR$/lesson2/task7/task.py" />
@@ -98,17 +125,20 @@
         <option value="$PROJECT_DIR$/lesson1/task10/task.py" />
         <option value="$PROJECT_DIR$/lesson1/task1/task.py" />
         <option value="$PROJECT_DIR$/../../../irc_builder/python/ircbuilder/__init__.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/coderdojo.py" />
         <option value="$PROJECT_DIR$/lesson1/task3/task.py" />
         <option value="$PROJECT_DIR$/lesson1/task5/task.py" />
         <option value="$PROJECT_DIR$/lesson1/task4/task.py" />
         <option value="$PROJECT_DIR$/lesson1/task2/task.py" />
+        <option value="$PROJECT_DIR$/lesson2/task3/task.py" />
+        <option value="$PROJECT_DIR$/lesson2/task5/task.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/coderdojo.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="1193" />
+    <option name="y" value="155" />
     <option name="width" value="1367" />
     <option name="height" value="1285" />
   </component>
@@ -130,7 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,60 +170,25 @@
             <path>
               <item name="pycharm-edu" type="b2602c69:ProjectViewProjectNode" />
               <item name="pycharm-edu" type="ef639090:CCCourseNode" />
-              <item name="lesson1" type="e994c609:CCLessonNode" />
+              <item name="lesson2" type="e994c609:CCLessonNode" />
             </path>
             <path>
               <item name="pycharm-edu" type="b2602c69:ProjectViewProjectNode" />
               <item name="pycharm-edu" type="ef639090:CCCourseNode" />
-              <item name="lesson1" type="e994c609:CCLessonNode" />
-              <item name="task1" type="83e62b93:CCTaskNode" />
-            </path>
-            <path>
-              <item name="pycharm-edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pycharm-edu" type="ef639090:CCCourseNode" />
-              <item name="lesson1" type="e994c609:CCLessonNode" />
-              <item name="task2" type="83e62b93:CCTaskNode" />
-            </path>
-            <path>
-              <item name="pycharm-edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pycharm-edu" type="ef639090:CCCourseNode" />
-              <item name="lesson1" type="e994c609:CCLessonNode" />
-              <item name="task3" type="83e62b93:CCTaskNode" />
-            </path>
-            <path>
-              <item name="pycharm-edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pycharm-edu" type="ef639090:CCCourseNode" />
-              <item name="lesson1" type="e994c609:CCLessonNode" />
-              <item name="task4" type="83e62b93:CCTaskNode" />
-            </path>
-            <path>
-              <item name="pycharm-edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pycharm-edu" type="ef639090:CCCourseNode" />
-              <item name="lesson1" type="e994c609:CCLessonNode" />
-              <item name="task5" type="83e62b93:CCTaskNode" />
-            </path>
-            <path>
-              <item name="pycharm-edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pycharm-edu" type="ef639090:CCCourseNode" />
-              <item name="lesson1" type="e994c609:CCLessonNode" />
+              <item name="lesson2" type="e994c609:CCLessonNode" />
               <item name="task6" type="83e62b93:CCTaskNode" />
             </path>
             <path>
               <item name="pycharm-edu" type="b2602c69:ProjectViewProjectNode" />
               <item name="pycharm-edu" type="ef639090:CCCourseNode" />
-              <item name="lesson1" type="e994c609:CCLessonNode" />
+              <item name="lesson2" type="e994c609:CCLessonNode" />
               <item name="task7" type="83e62b93:CCTaskNode" />
-            </path>
-            <path>
-              <item name="pycharm-edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pycharm-edu" type="ef639090:CCCourseNode" />
-              <item name="lesson1" type="e994c609:CCLessonNode" />
-              <item name="task8" type="83e62b93:CCTaskNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -358,10 +352,11 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1367" height="1285" extended-state="0" />
+    <frame x="1193" y="155" width="1367" height="1285" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2264151" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Task Description" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16679245" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28452832" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Task Description" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17584905" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29268292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41241685" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -519,45 +514,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lesson2/task3/task.py">
-      <provider selected="true" editor-type-id="StudyEditor">
-        <state relative-caret-position="312">
-          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lesson2/task4/task.py">
-      <provider selected="true" editor-type-id="StudyEditor">
-        <state relative-caret-position="864">
-          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lesson2/task5/task.py">
-      <provider selected="true" editor-type-id="StudyEditor">
-        <state relative-caret-position="312">
-          <caret line="13" column="57" lean-forward="false" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minetest_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2635">
-          <caret line="365" column="0" lean-forward="true" selection-start-line="365" selection-start-column="0" selection-end-line="365" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="167" column="18" lean-forward="false" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lesson2/task7/task.py">
-      <provider selected="true" editor-type-id="StudyEditor">
-        <state relative-caret-position="785">
-          <caret line="141" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -688,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lesson2/task6/task.py">
-      <provider selected="true" editor-type-id="StudyEditor">
-        <state relative-caret-position="0">
-          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lesson1/task9/task.py">
       <provider selected="true" editor-type-id="StudyEditor">
         <state relative-caret-position="364">
@@ -710,28 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coderdojo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lesson1/task2/task.py">
       <provider selected="true" editor-type-id="StudyEditor">
         <state relative-caret-position="60">
           <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,9 +674,6 @@
       <provider selected="true" editor-type-id="StudyEditor">
         <state relative-caret-position="300">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,7 +691,6 @@
       <provider selected="true" editor-type-id="StudyEditor">
         <state relative-caret-position="105">
           <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,7 +698,6 @@
       <provider selected="true" editor-type-id="StudyEditor">
         <state relative-caret-position="105">
           <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +705,6 @@
       <provider selected="true" editor-type-id="StudyEditor">
         <state relative-caret-position="225">
           <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +712,6 @@
       <provider selected="true" editor-type-id="StudyEditor">
         <state relative-caret-position="345">
           <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,6 +719,69 @@
       <provider selected="true" editor-type-id="StudyEditor">
         <state relative-caret-position="150">
           <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson2/task3/task.py">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state relative-caret-position="480">
+          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson2/task4/task.py">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state relative-caret-position="135">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minetest_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5475">
+          <caret line="365" column="0" lean-forward="true" selection-start-line="365" selection-start-column="0" selection-end-line="365" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson2/task5/task.py">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state relative-caret-position="210">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson2/task6/task.py">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state relative-caret-position="-583">
+          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson2/task7/task.py">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state relative-caret-position="-30">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coderdojo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
