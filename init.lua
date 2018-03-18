@@ -261,13 +261,14 @@ end)
 
 local pvp = minetest.settings:get("enable_pvp")
 if pvp then
-	print("registering on punchplayer")
+	-- print("registering on punchplayer")
 	minetest.register_on_punchplayer(function(hittee, hitter, time_from_last_punch, tool_capabilities, dir, damage)
 		local player_name = hitter:get_player_name()
 		local task = get_player_task(player_name)
 		if not task or task < 1 then task = 1 end
 		hitter:set_physics_override({jump=0, speed=0, gravity=0})
-		set_player_jail_free_task(player_name, task + 1)
+		-- player has to complete current task to get out of jail
+		set_player_jail_free_task(player_name, task)
 		hitter:setpos({x=102,y=9.5,z=builder_police.get_player_z(player_name)})
 		minetest.chat_send_all(player_name..' has been jailed and immobilised for one task for hitting '..hittee:get_player_name())
 	end)
