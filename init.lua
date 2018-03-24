@@ -103,7 +103,6 @@ local get_player_task = function(player_name)
 end
 
 local set_player_task = function(player_name, task)
-	--print(player_name..' assigned task '..task)
 	minetest.chat_send_all(player_name..' assigned task '..task)
 	local key = player_name..'_task'
 	tbl_storage.fields[key] = task
@@ -118,10 +117,10 @@ local get_player_jail_free_task = function(player_name)
 end
 
 local set_player_jail_free_task = function(player_name, task)
-	--print(player_name..' assigned task '..task)
 	local key = player_name..'_jail_free_task'
 	tbl_storage.fields[key] = task
 	write_storage()
+	--print(player_name.." has been jailed until completion of task "..task)
 end
 
 local get_jail_free_task = function()
@@ -219,7 +218,12 @@ minetest.register_chatcommand("get_player_task", {
 	description = "Gets the number of the first task which has not yet been completed by player",
 	privs = {},
 	func = function(name, player_name)
-		return true, ""..get_player_task(player_name)
+		local task = get_player_task(player_name)
+		if task then
+			return true, ""..task
+		else
+			return false, "No task for "..player_name
+		end
 	end,
 })
 
@@ -233,6 +237,31 @@ minetest.register_chatcommand("set_player_task", {
 		if task_number then
 			set_player_task(player_name, task_number)
 			return true, player_name.."'s next task is now "..get_player_task(player_name)
+		else
+			return false, "You must provide a player_name and numerical task_number"
+		end
+	end,
+})
+
+minetest.register_chatcommand("get_player_jail_free_task", {
+	params = "<player_name>",
+	description = "Gets the task which has to be completed by player to get out of jail",
+	privs = {},
+	func = function(name, player_name)
+		return true, ""..get_player_task(player_name)
+	end,
+})
+
+minetest.register_chatcommand("set_player_jail_free_task", {
+	params = "<player_name> <task_number>",
+	description = "Sets the task which has to be completed by player to get out of jail",
+	privs = {police = true},
+	func = function(name, param)
+		local player_name, task = param:match("(%S+) (%d+)")
+		local task_number = tonumber(task)
+		if task_number then
+			set_player_jail_free_task(player_name, task_number)
+			return true, player_name.."'s jail free task is now "..get_player_jail_free_task(player_name)
 		else
 			return false, "You must provide a player_name and numerical task_number"
 		end
@@ -264,13 +293,16 @@ if pvp then
 	-- print("registering on punchplayer")
 	minetest.register_on_punchplayer(function(hittee, hitter, time_from_last_punch, tool_capabilities, dir, damage)
 		local player_name = hitter:get_player_name()
-		local task = get_player_task(player_name)
-		if not task or task < 1 then task = 1 end
-		hitter:set_physics_override({jump=0, speed=0, gravity=0})
-		-- player has to complete current task to get out of jail
-		set_player_jail_free_task(player_name, task)
-		hitter:setpos({x=102,y=9.5,z=builder_police.get_player_z(player_name)})
-		minetest.chat_send_all(player_name..' has been jailed and immobilised for one task for hitting '..hittee:get_player_name())
+		local z = builder_police.get_player_z(player_name)
+		if z then 
+			local task = get_player_task(player_name)
+			if not task or task < 1 then task = 1 end
+			hitter:set_physics_override({jump=0, speed=0, gravity=0})
+			-- player has to complete current task to get out of jail
+			set_player_jail_free_task(player_name, task)
+			hitter:setpos({x=102,y=9.5,z=z})
+			minetest.chat_send_all(player_name..' has been jailed and immobilised for one task for hitting '..hittee:get_player_name())
+		end
 	end)
 end
 
