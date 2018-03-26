@@ -196,7 +196,7 @@
                       <option name="stepikPosition" value="0" />
                       <option name="taskTexts">
                         <map>
-                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 2 - Placing several blocks&lt;/h1&gt;&#10;&lt;p&gt;The second task is to place a glass frame around the wool block drawn in the first task.&#10;The program on the left achieves this by storing the centre point coordinates&#10;in the variables x, y, and z, and then setting each of the parameters of set_node&#10;as a formula based on the reference point. The advantage of doing it this&#10;way is that the coordinates of the reference point can be changed and the &#10;structure will be built exactly the same but in a different position.&lt;/p&gt;&#10;&lt;p&gt;See if you can put in the correct missing formula to build a frame of glass &#10;all the way around the orange wool block&lt;/p&gt;  &#10;&lt;/html&gt;" />
+                          <entry key="task" value="&lt;html&gt;&#10;&lt;h1&gt;Task 2 - Placing several blocks&lt;/h1&gt;&#10;&lt;p&gt;The second task is to place a glass frame around the wool block drawn in the first task.&#10;The program on the left achieves this by storing the centre point coordinates&#10;in the variables x, y, and z, and then setting each of the parameters of set_node&#10;as a formula based on the reference point. The advantage of doing it this&#10;way is that the coordinates of the reference point can be changed and the &#10;structure will be built exactly the same but in a different position.&lt;/p&gt;&#10;&lt;p&gt;See if you can put in the correct missing formula to build a frame of glass &#10;all the way around the orange wool block&lt;/p&gt;  &#10;&lt;img src=&quot;https://www.triptera.com.au/triptera_banner.png&quot; width=&quot;300&quot; /&gt;&#10;&lt;img src=&quot;glass_frame.png&quot; /&gt;&#10;&lt;p&gt;&lt;a href=&quot;https://www.triptera.com.au/&quot;&gt;https://www.triptera.com.au&lt;/a&gt;&lt;/p&gt;&#10;&lt;/html&gt;" />
                         </map>
                       </option>
                       <option name="testsText">
@@ -205,6 +205,22 @@
                       <option name="updateDate" />
                       <option name="taskFiles">
                         <map>
+                          <entry key=".DS_Store">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="index" value="2" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value=".DS_Store" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
                           <entry key="task.py">
                             <value>
                               <TaskFile>
@@ -4407,7 +4423,7 @@
               </Lesson>
             </list>
           </option>
-          <option name="name" value="Ninja 2 minetest course v6 lan pip" />
+          <option name="name" value="Ninja 2 minetest course v7" />
         </Course>
       </option>
       <option name="toolWindowMode" value="TEXT" />
