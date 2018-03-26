@@ -7,6 +7,8 @@ from ircbuilder import MinetestConnection, NICK_MAX_LEN
 from coderdojo import ircserver, mtuser, mtuserpass, mtbotnick, channel
 from copy import deepcopy
 import importlib
+import json
+import re
 
 def test_minetest(num_task):
     pybotnick = "pt" + mtuser
@@ -107,3 +109,54 @@ def test_exec(placeholders, i, answer, list_data, modules=()):
                 failed(stri + " gave incorrect answer for data " + str(data) + ". Correct answer: " + str(locals_answer) + ". Your answer: " + str(locals_guess) + ". Your statement: " + phi)
                 return False
     return True
+
+
+def test_building_with_pattern(mc, building_pattern):
+    player_z = int(mc.send_cmd('get_player_z ' + mtuser))
+    building_guess = mc.building
+    building_correct = building_pattern(player_z)
+    for key, pattern in building_correct.items():
+        try:
+            guess = building_guess[key]
+        except KeyError:
+            failed("Missing build at " + str(key) + ". Should match " + str(pattern) )
+            return False
+        if guess[0]=='{':
+            guess_dict=json.loads(guess)
+        else:
+            guess_dict = {'name': guess}
+        if pattern[0]=='{':
+            pattern=json.loads(pattern)
+        try:
+            guess_dict['name']
+        except KeyError:
+            failed("Dict missing 'name' at " + str(key) + ". Dict is " + str(guess_dict) + " which should match " + str(pattern) )
+            return False
+        if not isinstance(guess_dict['name'], str):
+            failed("Dict 'name' not str at " + str(key) + ". Dict is " + str(guess_dict) + " of which 'name' is type " + str(type(guess_dict['name'])) + " but should be a str matching " + str(pattern) )
+            return False
+        if isinstance(pattern, str):
+            if not re.fullmatch(pattern, guess_dict['name']):
+                failed("Build at " + str(key) + " is " + guess_dict['name'] + " which doesn't match " + pattern)
+                return False
+        else:
+            for pat_key, pat_pattern in pattern.items():
+                if pat_key == 'name':
+                    if not re.fullmatch(pat_pattern, guess_dict['name']):
+                        failed("Build 'name' at " + str(key) + " is " + guess_dict['name'] + " which doesn't match " + pat_pattern)
+                        return False
+                else:
+                    try:
+                        guess_dict[pat_key]
+                    except KeyError:
+                        failed("Guess at " + str(key) + " is " + str(guess) + " missing '" + pat_key + "' which should match " + pat_pattern)
+                        return False
+                    if not re.fullmatch(pat_pattern, guess_dict[pat_key]):
+                        failed("Guess at " + str(key) + " is " + str(guess) + " wrong '" + pat_key + "' which should match " + pat_pattern)
+                        return False
+    passed()
+    return True
+
+
+def mock_send_building(self, end_list=()):
+    pass
