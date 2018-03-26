@@ -107,6 +107,9 @@ local set_player_task = function(player_name, task)
 	local key = player_name..'_task'
 	tbl_storage.fields[key] = task
 	write_storage()
+	if task>0 and task<=#builder_police.tasks then
+		builder_police.tasks[task](player_name) 
+	end
 	print(player_name.." has been assigned task "..task)
 end
 
@@ -328,7 +331,7 @@ minetest.register_globalstep(function(dtime)
 				if not task or task < 1 then
 					task = 1
 					set_player_task(player_name, task)
-					builder_police.tasks[task](player_name) 
+					--builder_police.tasks[task](player_name) 
 				end
 				while builder_police.tests[task](player_name) and task < #builder_police.tests do
 					if player_name and task then
@@ -348,7 +351,7 @@ minetest.register_globalstep(function(dtime)
 					end		
 					task = task + 1
 					set_player_task(player_name, task)
-					builder_police.tasks[task](player_name) 
+					--builder_police.tasks[task](player_name) 
 				end
 				-- test current players to see which ones need to be in jail
 				local player = players[player_name]
