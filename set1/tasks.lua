@@ -355,12 +355,29 @@ local task_8_assign = function(player_name)
 	minetest.set_node(pos_chest, {name="default:chest",param2=3})
 	irc_builder.add_book_to_chest(player_name, pos_chest, {title="Task 8 for "..player_name, text=text})
 
+    -- check tunnel to the left and right for obsidian_glass which means neighbour up to task 10
+	local node_left = minetest.get_node(vector.add(pos, {x=-31-60-3, y=4-60+1, z=-5}))
+	local node_right = minetest.get_node(vector.add(pos, {x=-31-60-3, y=4-60+1, z=5}))
+
 	set_nodes_rdd(pos, {x=-31-60-1,y=4-60  ,z=5}, {x=-31-60-5,y=4-60+6,z=-5}, {name="default:glass"})	
 	set_nodes_rdd(pos, {x=-31-60-2,y=4-60+1,z=4}, {x=-31-60-4,y=4-60+5,z=-4}, {name="air"})	
 	set_nodes_rdd(pos, {x=-31-60-1,y=4-60  ,z=5}, {x=-31-60-5,y=4-60  ,z=-5}, {name="default:stone"})	
 	minetest.set_node(vector.add(pos, {x=-31-60-4,y=4-60+1,z=-3}), {name="default:torch", param2=1}) 
 	minetest.set_node(vector.add(pos, {x=-31-60-4,y=4-60+1,z= 0}), {name="default:torch", param2=1}) 
 	minetest.set_node(vector.add(pos, {x=-31-60-4,y=4-60+1,z= 3}), {name="default:torch", param2=1}) 
+	
+	if node_left.name == "wool:green" then
+        -- tunnel to the left is complete so safe to open up. Re-place green which we set to glass above
+        set_nodes_rdd(pos, {x=-31-60-2,y=4-60+1,z=-5}, {x=-31-60-4,y=4-60+5,z=-5}, {name="air"})
+        minetest.set_node(vector.add(pos, {x=-31-60-3,y=4-60+1,z=-5}), {name="wool:green"})
+    end
+    -- check tunnel to the right
+	if node_right.name == "wool:red" then
+        -- tunnel to the right is complete so safe to open up. Re-place red which we set to glass above
+        set_nodes_rdd(pos, {x=-31-60-2,y=4-60+1,z=5}, {x=-31-60-4,y=4-60+5,z=5}, {name="air"})
+        minetest.set_node(vector.add(pos, {x=-31-60-3,y=4-60+1,z=5}), {name="wool:red"})
+    end
+
 end
 
 local task_8_test = function(player_name)
@@ -507,30 +524,27 @@ local task_10_assign = function(player_name)
 	irc_builder.set_sign(sign_pos, "-x", "default:sign_wall_wood", text)
     -- check tunnel to the left
 	local node = minetest.get_node(vector.add(pos, {x=-31-60-3, y=4-60+1, z=-5}))
-	if node.name == "default:obsidian_glass" then
+	if node.name == "wool:green" then
         -- tunnel to the left is complete so safe to open up
         set_nodes_rdd(pos, {x=-31-60-2,y=4-60+1,z=-5}, {x=-31-60-4,y=4-60+5,z=-5}, {name="air"})
         minetest.set_node(vector.add(pos, {x=-31-60-3,y=4-60+1,z=-5}), {name="carts:rail"})
     else
-        minetest.set_node(vector.add(pos, {x=-31-60-3,y=4-60+1,z=-5}), {name="default:obsidian_glass"})
+        minetest.set_node(vector.add(pos, {x=-31-60-3,y=4-60+1,z=-5}), {name="wool:red"})
     end
     -- check tunnel to the right
 	local node = minetest.get_node(vector.add(pos, {x=-31-60-3, y=4-60+1, z=5}))
-	if node.name == "default:obsidian_glass" then
-        -- tunnel to the left is complete so safe to open up
+	if node.name == "wool:red" then
+        -- tunnel to the right is complete so safe to open up
         set_nodes_rdd(pos, {x=-31-60-2,y=4-60+1,z=5}, {x=-31-60-4,y=4-60+5,z=5}, {name="air"})
         minetest.set_node(vector.add(pos, {x=-31-60-3,y=4-60+1,z=5}), {name="carts:rail"})
     else
-        minetest.set_node(vector.add(pos, {x=-31-60-3,y=4-60+1,z=5}), {name="default:obsidian_glass"})
+        minetest.set_node(vector.add(pos, {x=-31-60-3,y=4-60+1,z=5}), {name="wool:green"})
     end
     -- build rail in subway
     set_nodes_rdd(pos, {x=-31-60-1,y=4-60+1,z=0}, {x=-31-60-2,y=4-60+1,z=0}, {name="carts:rail"})
     set_nodes_rdd(pos, {x=-31-60-3,y=4-60+1,z=-4}, {x=-31-60-3,y=4-60+1,z=4}, {name="carts:rail"})
     set_nodes_rdd(pos, {x=-31-60-3,y=4-60+1,z=-3}, {x=-31-60-3,y=4-60+1,z=-2}, {name="carts:powerrail"})
     set_nodes_rdd(pos, {x=-31-60-3,y=4-60+1,z=3}, {x=-31-60-3,y=4-60+1,z=2}, {name="carts:powerrail"})
-    --mc.setBlock(x-31-60-4,y+4-60+1,z-2,block.TORCH_REDSTONE.id,5)
-    --mc.setBlock(x-31-60-4,y+4-60+1,z+2,block.TORCH_REDSTONE.id,5)
-    --mc.setBlock(x-31-60-4,y+4-60+1,z,69,13) #lever
     minetest.set_node(vector.add(pos, {x=-31-60-4,y=4-60+1,z=-4}), {name="default:torch", param2=1})
     minetest.set_node(vector.add(pos, {x=-31-60-4,y=4-60+1,z= 4}), {name="default:torch", param2=1})
     -- put cart in chest in subway
@@ -561,13 +575,24 @@ local task_10_assign = function(player_name)
 	set_nodes({x=x10-17, y=y10+1, z=z10-2}, {x=x10-21, y=y10+5, z=z10-2}, {name="air"})
 	set_nodes({x=x10-17, y=y10  , z=z10-1}, {x=x10-23, y=y10  , z=z10+1}, {name="default:stone"})
 	set_nodes({x=x10-17, y=y10+1, z=z10-1}, {x=x10-23, y=y10+5, z=z10+1}, {name="air"})
+	for i=3,16,4 do
+		minetest.set_node({x=x10-i,y=y10+1,z=z10-3}, {name="default:torch",param2=1})
+	end
+	for i=17,22,4 do
+		minetest.set_node({x=x10-i,y=y10+1,z=z10+1}, {name="default:torch",param2=1})
+	end
 	local stepy=(y10<=y11) and 1 or -1
 	print("y10 "..y10.." y11 "..y11)
 	local stair
 	for i=1,ramp do
-		print("x "..(x10-23-i).." y "..(y10+i*stepy))
-		set_nodes({x=x10-23-i, y=y10+i*stepy  , z=z10-1}, {x=x10-23-i, y=y10+i*stepy  , z=z10+1}, {name="default:stone"})
-		set_nodes({x=x10-23-i, y=y10+i*stepy+1, z=z10-1}, {x=x10-23-i, y=y10+i*stepy+5, z=z10+1}, {name="air"})
+		local x = x10-23-i
+		local y = y10+i*stepy
+		print("x "..x.." y "..y)
+		set_nodes({x=x, y=y  , z=z10-1}, {x=x, y=y  , z=z10+1}, {name="default:stone"})
+		set_nodes({x=x, y=y+1, z=z10-1}, {x=x, y=y+5, z=z10+1}, {name="air"})
+		if x%4 == 0 then
+			minetest.set_node({x=x, y=y+1, z=z10+1}, {name="default:torch",param2=1})
+		end
 	end	
 	if stepy > 0 then
 		stair = {name="stairs:stair_stonebrick", param2="3"}
@@ -582,6 +607,11 @@ local task_10_assign = function(player_name)
 	end
 	set_nodes({x=x10-23-ramp-1, y=y11  , z=z11-1}, {x=x11+1, y=y11  , z=z11+1}, {name="default:stone"})
 	set_nodes({x=x10-23-ramp-1, y=y11+1, z=z11-1}, {x=x11+1, y=y11+5, z=z11+1}, {name="air"})
+	for x=x11+1,x10-23-ramp-1 do
+		if x%4 == 0 then
+			minetest.set_node({x=x, y=y11+1, z=z10+1}, {name="default:torch",param2=1})
+		end
+	end	
 end
 
 local task_10_test = function(player_name)
