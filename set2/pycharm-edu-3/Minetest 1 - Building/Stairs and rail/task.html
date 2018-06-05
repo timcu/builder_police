@@ -1,0 +1,27 @@
+<html>
+<h1>Task 9 - Stairs and rail</h1>
+<p>Put rail and powered rail along centre of your tunnel.
+Where the tunnel is sloping, place stairs down the left side. </p>
+<p>Where the tunnel is flat we don't need so much power
+rail. Use two pieces of rail followed by two pieces of
+power rail, and keep alternating two at a time.</p>
+<p>Stairs need a direction as well as a type. The type is "stairs:stair_stonebrick".
+The direction is stored in a second parameter called param2. To use 
+a second parameter we use JSON (JavaScript Object Notation). The JSON string for 
+stonebrick stairs sloping upward to positive z is<p> 
+<code>'{"name":"stairs:stair_stonebrick","param2":"0"}'</code>
+<p>The different values of param2 are</p>
+<div style="font-family:monospace">0: z direction upward</div>
+<div style="font-family:monospace">1: x direction upward</div>
+<div style="font-family:monospace">2: z direction downward</div>
+<div style="font-family:monospace">3: x direction downward</div>
+<p>The first image shows the stairs and rail on the
+sloping section of the tunnel.</p>
+<img src="stairs_and_rail.png" width="100%" />
+<p>The second image shows the flat part of the tunnel
+with rail and power rail each in pairs</p>
+<img src="rail_in_pairs.png" width="100%" />
+<p>The 'Check Task' button above relies on minetest to evaluate this task.
+You may have to press it again when your program has finished to ensure 
+minetest has had time to evaluate it.</p>
+</html>

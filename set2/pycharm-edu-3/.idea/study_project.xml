@@ -1,0 +1,2251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="StudySettings">
+    <StudyTaskManager>
+      <option name="course">
+        <Course>
+          <option name="authors">
+            <list>
+              <StepicUser>
+                <option name="accessToken" value="" />
+                <option name="firstName" value="D" />
+                <option name="guest" value="false" />
+                <option name="id" value="-1" />
+                <option name="lastName" value="Tim Cummings - Triptera Pty Ltd" />
+                <option name="refreshToken" value="" />
+              </StepicUser>
+            </list>
+          </option>
+          <option name="courseMode" value="Course Creator" />
+          <option name="courseType" value="PyCharm" />
+          <option name="customPresentableName" />
+          <option name="description" value="Exercises to teach programming using a Minetest server with mods irc, irc_builder, irc_commands, signs_lib, builder_police&#10;&#10;http://www.triptera.com.au/wordpress" />
+          <option name="index" value="-1" />
+          <option name="language" value="Python 3.x" />
+          <option name="languageCode" value="en" />
+          <option name="name" value="Ninja 3 advanced minetest course v3" />
+          <option name="items">
+            <list>
+              <Lesson>
+                <option name="customPresentableName" />
+                <option name="id" value="0" />
+                <option name="index" value="1" />
+                <option name="name" value="Minetest 1 - Building" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Minetest setup&lt;/h1&gt;&#10;&lt;ol&gt;&#10;&lt;li&gt;Use Minetest to join the Minetest server with a name and password of your choosing. Don't use a password you use for anything else because other people will see your password. Passwords should not contain spaces.&lt;/li&gt;&#10;&lt;li&gt;Check if you have the &lt;code&gt;irc_builder&lt;/code&gt; privilege by typing &lt;code&gt;/privs&lt;/code&gt; in Minetest chat. If not ask the Minetest op for it.&lt;/li&gt;&#10;&lt;li&gt;Fill in your connection details to Minetest in the program on the left.&#10;    &lt;ul&gt;&#10;&lt;li&gt;Enter your name as mtuser (mtuser=&quot;myname&quot;)&lt;/li&gt;&#10;&lt;li&gt;Enter your password as mtuserpass (mtuserpass=&quot;mysecret&quot;)&lt;/li&gt;&#10;&lt;li&gt;Ask the Minetest op for details of the IRC server and fill in details on the left&lt;/li&gt;&#10;    &lt;/ul&gt;&#10;&lt;/li&gt;&#10;&lt;li&gt;Click the &quot;Check task&quot; button above. (checklist with a big green tick)&lt;/li&gt;&#10;    &lt;li&gt;When you have completed this setup you will see &quot;Congratulations!&quot;. Click the blue right arrow to&#10;move to the first task.&lt;/li&gt;&#10;&lt;/ol&gt;&#10;&lt;p&gt;Here is an example of how to fill in the details.&lt;/p&gt;&#10;&lt;code&gt;&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;mtuser = &quot;tim&quot;      # your minetest username&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;mtuserpass = &quot;not_so_secret&quot;  # your minetest password. This file is not encrypted so don't use anything you want kept secret&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;player_z = 10       # your z value from sign in minetest with your username on it&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;# The following must match your settings in minetest server &gt; Settings &gt; Advanced Settings &gt; Mods &gt; irc &gt; Basic &gt;&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;ircserver = &quot;irc.rizon.net&quot;   # same as IRC server&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;mtbotnick = &quot;mtserver&quot;   # same as Bot nickname&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;channel = &quot;##minetest-python-course&quot;     # same as Channel to join&lt;/code&gt;&lt;br /&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="index" value="1" />
+                      <option name="name" value="Set up Minetest" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Your name that you use to log in to Minetest. It is case sensitive so needs to match upper and lower case letters. It should not contain spaces. It will match the name on your sign in Minetest. " />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="10" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="username" />
+                                      <option name="possibleAnswer" value="username" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="The password you use to log in to Minetest. It should not contain spaces. If you Minetest password contains spaces you will need to change it. Use the chat command /setpassword to set you password in Minetest." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="60" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="password" />
+                                      <option name="possibleAnswer" value="password" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="The z value from your sign in Minetest" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="178" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="0" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Task 6 - Chequered square&lt;/h1&gt;&#10;&lt;p&gt;Construct a vertical square shape of alternating wool colours in the sky with height of 9 blocks&lt;/p&gt;&#10;&lt;p&gt;Because the colours are alternating you can't set them all in one &lt;code&gt;build&lt;/code&gt; command.&#10;&lt;p&gt;The first challenge will be to work out where to start building the square. Try drawing the square&#10;as a grid on a piece of paper and labelling the x and y coordinates of each grid location. That will &#10;tell you what x1 and y1 should be. If you can turn it into a formula based on centre position then you &#10;can easily build new squares just by providing a new cx, cy and width/height.&lt;/p&gt;&#10;&lt;p&gt;The second challenge is how to specify a different wool colour each &#10;time a node is set. There are several ways to do this and each one is correct.&#10;One solution can be achieved in one command. Use the hints to see if you can work it out.&lt;/p&gt;&#10;&lt;p&gt;Another solution is to draw the whole square in one colour&#10;first and then step in twos to replace individual blocks with the &#10;other colour.&lt;/o&gt;&#10;&lt;p&gt;Another solution is to keep track of the last colour used in a variable and&#10;then use &lt;code&gt;if/else&lt;/code&gt; conditional logic to ensure the other&#10;colour is used next time.&lt;/p&gt;&#10;&lt;p&gt;Or maybe you can think of another way of doing it. The choice is yours&lt;/p&gt;&#10;&lt;img src=&quot;chequered_square.png&quot; width=&quot;100%&quot; /&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="index" value="2" />
+                      <option name="name" value="Chequered square" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="chequered_square.png">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="chequered_square.png" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Choose one of the 16 wool colours" />
+                                          <option value="Examples are white, black, red, orange, yellow, blue" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="343" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="colour" />
+                                      <option name="possibleAnswer" value="green" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Choose another colour" />
+                                          <option value="Has to be different to the first colour" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="366" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="colour" />
+                                      <option name="possibleAnswer" value="blue" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="width of square you are building" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="440" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="9" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="height of square you are building" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="451" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="9" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="A formula based on cx and width which results in the minimum x value for blocks of the square" />
+                                          <option value="result of formula should be an int" />
+                                          <option value="&lt;p&gt;Pseudo code&lt;/p&gt;&#10;&lt;p&gt;x1 = centre x position - half the width&lt;/p&gt;" />
+                                          <option value="Use integer division when finding half the height ( width // 2 ) so that result will be an int" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="458" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="cx - width // 2" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Formula based on centre y position and height" />
+                                          <option value="Similar to formula for x1" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="479" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="cy - height // 2" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Parameters of range function so the y iterates through all the y positions of the square" />
+                                          <option value="&lt;div&gt;range(stop): iterates from 0 to ('stop'-1) counting up in ones&lt;/div&gt;&#10;&lt;div&gt;range(start, stop): iterates from 'start' to ('stop'-1) counting up in ones&lt;/div&gt;&#10;&lt;div&gt;range(start, stop, step): iterates from 'start' to but not including 'stop' counting in 'step's.&lt;/div&gt;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="10" />
+                                      <option name="offset" value="624" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="parameters" />
+                                      <option name="possibleAnswer" value="y1, y2" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Parameters for range to iterate through all x values of square" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="10" />
+                                      <option name="offset" value="652" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="parameters" />
+                                      <option name="possibleAnswer" value="x1, x2" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Formula to set colour to alternating wool colours" />
+                                          <option value="Adjacent blocks with the same value of y must have different colours" />
+                                          <option value="&lt;div&gt;colours[0] will use one colour&lt;/div&gt;&#10;&lt;div&gt;colours[1] will use the other colour&lt;/div&gt;" />
+                                          <option value="&lt;p&gt;Statement will look like&lt;/p&gt;&#10;&#10;&lt;p&gt;colour = colours['formula']&lt;/p&gt;&#10;&#10;&lt;p&gt;But you need to replace 'formula' with a formula or variable which returns a 0 or 1 depending in which colour you want &lt;/p&gt;" />
+                                          <option value="Choose different colours using if statements and/or modulo arithmetic" />
+                                          <option value="&lt;p&gt;The modulo operator is %. It gives the remainder after dividing. &lt;/p&gt;&#10;&#10;&lt;div&gt;5 % 2 = 1&lt;/div&gt;&#10;&lt;div&gt;6 % 2 = 0&lt;/div&gt;&#10;&lt;div&gt;7 % 2 = 1&lt;/div&gt;&#10;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="678" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="colours[(y+x)%2]" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Task 7 - Chequered diamond&lt;/h1&gt;&#10;&lt;p&gt;Construct a vertical diamond shape of alternating wool colours in the sky with height of 21 blocks&lt;/p&gt;&#10;&lt;p&gt;Most of the code is similar to the chequered square. This challenge is to come up with formulae for xlo and yhi,&#10;the low and high values of x where you want to place blocks. And remember, the hints can be your friend.&lt;/p&gt;&#10;&lt;img src=&quot;chequered_diamond.png&quot; width=&quot;100%&quot;&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="index" value="3" />
+                      <option name="name" value="Chequered diamond" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="chequered_diamond.png">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="chequered_diamond.png" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Or choose another colour from [&quot;white&quot;, &quot;grey&quot;, &quot;dark_grey&quot;, &quot;black&quot;, &quot;blue&quot;, &quot;cyan&quot;, &quot;green&quot;, &quot;dark_green&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;brown&quot;, &quot;red&quot;, &quot;pink&quot;, &quot;magenta&quot;, &quot;violet&quot;]" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="5" />
+                                      <option name="offset" value="346" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="white" />
+                                      <option name="possibleAnswer" value="white" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Or choose another colour from [&quot;white&quot;, &quot;grey&quot;, &quot;dark_grey&quot;, &quot;black&quot;, &quot;blue&quot;, &quot;cyan&quot;, &quot;green&quot;, &quot;dark_green&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;brown&quot;, &quot;red&quot;, &quot;pink&quot;, &quot;magenta&quot;, &quot;violet&quot;]" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="360" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="orange" />
+                                      <option name="possibleAnswer" value="orange" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Width of diamond in blocks" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="409" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="21" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Height of diamond in blocks" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="421" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="21" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Returns the starting value of x for each value of y" />
+                                          <option value="Formula in terms of x1, y and cy" />
+                                          <option value="If you can't create a single formula, try two formulae. One for y &amp;le; cy and one for y &amp;gt; cy" />
+                                          <option value="It is possible to combine the two formulae into one using the abs() function which returns the absolute value of a number. The absolute value of negative numbers is the same number but made positive. The absolute value of positive numbers is the same number.&#10;&#10;abs(5) = 5&#10;abs(-3) = 3&#10;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="677" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="x1 + abs(y - cy)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="The maximum value of x in the diamond for a given y value" />
+                                          <option value="Formua in terms of x2, y, cy" />
+                                          <option value="Same as previously, you can solve this formula with several lines of code based on whether y &amp;le; cy or y &amp;gt; cy" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="704" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="x2 - abs(y - cy)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Task 8 - Sloping tunnel&lt;/h1&gt;&#10;&lt;p&gt;Continue glass tunnel down on a diagonal when centre of &#10;tunnel floor goes from x1=69, y1=14 to x2=9, y2=46.&lt;/p&gt;&#10;&lt;p&gt;To ensure no lava or water leak into tunnel, build the &#10;full tunnel in glass first and then hollow it out with air.&#10;By never having an open end, water and lava can't flow in.&lt;/p&gt;&#10;&lt;p&gt;To create a sloping tunnel you have to build it in&#10;segments. You build a new segment for each value of x.&#10;The image below shows three segments several blocks apart.&lt;/p&gt;&#10;&lt;img src=&quot;tunnel_segments_separate.png&quot; width=&quot;100%&quot; /&gt;&#10;&lt;p&gt;If you build segments for each value of x then the segments are&#10;    joined and you have a continuous tunnel.&lt;/p&gt;&#10;&lt;img src=&quot;tunnel_segments_joined.png&quot; width=&quot;100%&quot; /&gt;&#10;&lt;p&gt;The 'Check Task' button above relies on minetest to evaluate this task.&#10;You may have to press it again when your program has finished to ensure &#10;minetest has had time to evaluate it.&lt;/p&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="index" value="4" />
+                      <option name="name" value="Sloping tunnel" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Formula in terms of x1 and x2 which returns the number of segments in the tunnel." />
+                                          <option value="Each segment has a single value of x" />
+                                          <option value="If x1 = 7 and x2 = 5 then there will be 3 values of x (7, 6, 5). " />
+                                          <option value="x1 - x2 + 1" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="396" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="x1 - x2 + 1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="x position of tunnel segment as a formula in terms of x1 and i" />
+                                          <option value="When i = 0, x = 69 ( = x1)" />
+                                          <option value="When i = 1, x = 68 (x1 - 1)" />
+                                          <option value="&lt;div&gt;When i = 2, x = x1 - 2&lt;/div&gt;&#10;&lt;div&gt;When i = 3, x = x1 - 3&lt;/div&gt;&#10;&lt;div&gt;When i = 4, x = x1 - 4&lt;/div&gt;&#10;&lt;div&gt;...&lt;/div&gt;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="722" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="x1 - i" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="y position of tunnel segment floor in terms of y1 and i" />
+                                          <option value="When i = 0, y = 14 (y1)" />
+                                          <option value="When i = 1, y = 13 (y1 - i)" />
+                                          <option value="&lt;div&gt;When i = 2, y = y1 - 2&lt;/div&gt;&#10;&lt;div&gt;When i = 3, y = y1 - 3&lt;/div&gt;&#10;&lt;div&gt;When i = 4, y = y1 - 4&lt;/div&gt;&#10;&lt;div&gt;...&lt;/div&gt;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="737" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="y1 - i" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="z position of corner of tunnel segment in terms of ref_z and width_tunnel" />
+                                          <option value="ref_z is centre of tunnel so z will be half the tunnel width less than ref_z " />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="752" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="ref_z - width_tunnel // 2" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Formula in terms of y and height_tunnel which returns one more than the highest value of y for glass in this tunnel at position i." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="881" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="y + height_tunnel" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Formula in terms of z and width_tunnel which returns one more than the highest value of z of the glass in the tunnel." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="927" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="z + width_tunnel" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Iterators can be a tuple of numbers &lt;code&gt;(0, 1, 2, 3)&lt;/code&gt;, a list of numbers &lt;code&gt;[0, 1, 2, 3]&lt;/code&gt;, or a range of numbers &lt;code&gt;range(4)&lt;/code&gt;." />
+                                          <option value="This iterator needs to provide all the values of z for the stone floor." />
+                                          <option value="It should return 3 values" />
+                                          <option value="The numbers can be as formulae in terms of z or ref_z, or just as numbers" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="1072" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="iterator" />
+                                      <option name="possibleAnswer" value="(z + 1, z + 2, z + 3)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Same as formula for x in first loop" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1303" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="x1 - i" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Same as formula for y in first loop" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1318" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="y1 - i" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Same as formula for z in first loop" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="9" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1333" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="ref_z - width_tunnel // 2" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Formula in terms of y and height_tunnel which is one more than the vertical position of the highest air block in segment &lt;code&gt;i&lt;/code&gt; of the tunnel." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="10" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1390" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="y + height_tunnel - 1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Same as range_z_floor" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="11" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="1431" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="iterator" />
+                                      <option name="possibleAnswer" value="(z + 1, z + 2, z + 3)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="A condition that is only True for every fourth value of i" />
+                                          <option value="Use modulo operator (%) on i to check for every fourth value of i" />
+                                          <option value="i%4 == 0" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="12" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="1507" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="condition" />
+                                      <option name="possibleAnswer" value="i%4==0" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="y value of one block above floor at position i of tunnel in terms of y" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="13" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1597" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value=" y + 1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="tunnel_segments_joined.png">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="tunnel_segments_joined.png" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="tunnel_segments_separate.png">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="tunnel_segments_separate.png" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Task 9 - Stairs and rail&lt;/h1&gt;&#10;&lt;p&gt;Put rail and powered rail along centre of your tunnel.&#10;Where the tunnel is sloping, place stairs down the left side. &lt;/p&gt;&#10;&lt;p&gt;Where the tunnel is flat we don't need so much power&#10;rail. Use two pieces of rail followed by two pieces of&#10;power rail, and keep alternating two at a time.&lt;/p&gt;&#10;&lt;p&gt;Stairs need a direction as well as a type. The type is &quot;stairs:stair_stonebrick&quot;.&#10;The direction is stored in a second parameter called param2. To use &#10;a second parameter we use JSON (JavaScript Object Notation). The JSON string for &#10;stonebrick stairs sloping upward to positive z is&lt;p&gt; &#10;&lt;code&gt;'{&quot;name&quot;:&quot;stairs:stair_stonebrick&quot;,&quot;param2&quot;:&quot;0&quot;}'&lt;/code&gt;&#10;&lt;p&gt;The different values of param2 are&lt;/p&gt;&#10;&lt;div style=&quot;font-family:monospace&quot;&gt;0: z direction upward&lt;/div&gt;&#10;&lt;div style=&quot;font-family:monospace&quot;&gt;1: x direction upward&lt;/div&gt;&#10;&lt;div style=&quot;font-family:monospace&quot;&gt;2: z direction downward&lt;/div&gt;&#10;&lt;div style=&quot;font-family:monospace&quot;&gt;3: x direction downward&lt;/div&gt;&#10;&lt;p&gt;The first image shows the stairs and rail on the&#10;sloping section of the tunnel.&lt;/p&gt;&#10;&lt;img src=&quot;stairs_and_rail.png&quot; width=&quot;100%&quot; /&gt;&#10;&lt;p&gt;The second image shows the flat part of the tunnel&#10;with rail and power rail each in pairs&lt;/p&gt;&#10;&lt;img src=&quot;rail_in_pairs.png&quot; width=&quot;100%&quot; /&gt;&#10;&lt;p&gt;The 'Check Task' button above relies on minetest to evaluate this task.&#10;You may have to press it again when your program has finished to ensure &#10;minetest has had time to evaluate it.&lt;/p&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="index" value="5" />
+                      <option name="name" value="Stairs and rail" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="rail_in_pairs.png">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="rail_in_pairs.png" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="stairs_and_rail.png">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="stairs_and_rail.png" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="stonebrick stairs sloping down towards negative x" />
+                                          <option value="Enclose JSON string in single quotes and use double quotes within the string" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="11" />
+                                      <option name="offset" value="373" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="JSON string" />
+                                      <option name="possibleAnswer" value="'{&quot;name&quot;:&quot;stairs:stair_stonebrick&quot;,&quot;param2&quot;:&quot;1&quot;}'" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="item name for rail" />
+                                          <option value="see task sign in minetest for item names you will need in this task" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="431" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="string" />
+                                      <option name="possibleAnswer" value="'carts:rail'" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="item name for powered rail" />
+                                          <option value="see task string in minetest to see item names required in this task" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="457" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="string" />
+                                      <option name="possibleAnswer" value="'carts:powerrail'" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Formula in terms of x which will alternate every two blocks&#10;&#10;&lt;p&gt;0 0 1 1 0 0 1 1 0 0 1 1 ...&lt;/p&gt;" />
+                                          <option value="You know that j%2 will alternate every one block&#10;&#10;&lt;p&gt;0 1 0 1 0 1 0 1 ...&lt;/p&gt;&#10;&#10;So replace j with something in terms of x which counts at half speed" />
+                                          <option value="x//2 counts at half speed&#10;&#10;&lt;p&gt;0 0 1 1 2 2 3 3 4 4 ...&lt;/p&gt;" />
+                                          <option value="x//2%2 combines the two to get the alternating pattern&#10;&#10;&lt;p&gt;0 0 1 1 0 0 1 1 ...&lt;/p&gt;&#10;&#10;There are other ways to do this" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="845" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="x//2%2" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="customPresentableName" />
+                <option name="id" value="0" />
+                <option name="index" value="2" />
+                <option name="name" value="Minetest 2 - Functions and Modules" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Data types&lt;/h1&gt;&#10;&lt;p&gt;This lesson looks at more detail at some variable data types we &#10;have used before. The best way to learn about data types is &#10;to experiment with them in the Python Console which can be &#10;found in the tab at the bottom of this window. Open up the Python &#10;Console by clicking on the tab. You can type the examples&#10;below directly in the console. On the right of the console&#10;is a window which shows the value of any variables you&#10;have created.&lt;/p&gt;&#10;&lt;p&gt;For example, type &lt;code&gt;a=&quot;cat&quot;&lt;/code&gt; in the console&#10;and on the right you will see &lt;code&gt;a = {str} 'cat'&lt;/code&gt;&lt;/p&gt;&#10;&lt;p&gt;Now type &lt;code&gt;a+=&quot;cher&quot;&lt;/code&gt; and on the right you will &#10;see &lt;code&gt;a = {str} 'catcher'&lt;/code&gt;&lt;/p&gt;&#10;&lt;h2&gt;Tuples&lt;/h2&gt;&#10;&lt;p&gt;The first data type is a tuple, which is an immutable&#10;group of data surrounded by parentheses.&lt;/p&gt;&#10;&#10;&lt;div&gt;&lt;code&gt;# Examples&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;t1 = (3, 4, 12)        # three integers&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;t2 = (&quot;three&quot;, &quot;four&quot;) # two strings&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;t3 = (1.23, 45, &quot;cat&quot;) # a decimal number, an integer and a string&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;t4 = (t1, (5, 6, 30))  # two tuples&lt;/code&gt;&lt;/div&gt;&#10;&#10;&lt;p&gt;Immutable means that once the tuple has been created, &#10;you can't change any element in the tuple. This makes &#10;programming with tuples less prone to errors than programming with lists&#10;which are mutable. (Lists are designated by square brackets &#10;&lt;code&gt;[3, 4, 12]&lt;/code&gt;).&lt;/p&gt;&#10;&lt;p&gt;Individual elements of a tuple are accessed by index value. For example &lt;p&gt;&#10;&lt;div&gt;&lt;code&gt;t1[0] # should display 3&lt;/code&gt;&lt;div&gt;&#10;&lt;div&gt;&lt;code&gt;t1[1] # should display 4&lt;/code&gt;&lt;div&gt;&#10;&lt;div&gt;&lt;code&gt;t1[2] # should display 12&lt;/code&gt;&lt;div&gt;&#10;&lt;p&gt;You can also assign elements to multiple variables in a single statement.&lt;/p&gt;&#10;&lt;div&gt;&lt;code&gt;x, y, z = t3&lt;/code&gt;&lt;div&gt;&#10;&lt;div&gt;&lt;code&gt;x # should display 1.23&lt;/code&gt;&lt;div&gt;&#10;&lt;div&gt;&lt;code&gt;y # should display 45&lt;/code&gt;&lt;div&gt;&#10;&lt;div&gt;&lt;code&gt;z # should display 'cat'&lt;/code&gt;&lt;div&gt;&#10;&#10;" />
+                      <option name="index" value="1" />
+                      <option name="name" value="Tuples" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Strings must be surrounded by single quotes or double quotes" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="13" />
+                                      <option name="offset" value="111" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="data elements" />
+                                      <option name="possibleAnswer" value="&quot;In a galaxy far far away&quot;, &quot;there lived a dog&quot;" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="int is the python term for integer" />
+                                          <option value="float is the python term for decimal number or floating point number" />
+                                          <option value="string is the python term for text" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="13" />
+                                      <option name="offset" value="244" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="data elements" />
+                                      <option name="possibleAnswer" value="&quot;My golf handicap&quot;, 1, 999.99" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Tuple indexes are zero based so the first element has index 0" />
+                                          <option value="Index should be an integer between 0 and 2 inclusive for a tuple of length 3." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="5" />
+                                      <option name="offset" value="345" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="index" />
+                                      <option name="possibleAnswer" value="1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Enter a number which you think will be the correct number of elements in t5" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="1" />
+                                      <option name="offset" value="436" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="?" />
+                                      <option name="possibleAnswer" value="5" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="multiple variables can have values assigned in a single equation" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="585" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="equation" />
+                                      <option name="possibleAnswer" value="x, y, z = t1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h2&gt;Dictionaries&lt;/h2&gt;&#10;&lt;p&gt;A dictionary is a mutable group of data elements that are accessed by keys rather than their numeric&#10;position in the dictionary. The data type is named after the book by the same name because in the book &#10;the word is the key and the meaning is the data element. You can only have one data element per key&#10;although that data element could be a complex data type such as a tuple, list or another dictionary.&#10;To create a dictionary, the keys and values are separated by colons (:) and the &quot;key:value&quot; pairs are &#10;separated by commas. Try the following examples in the console&lt;/p&gt;&#10;&lt;div&gt;&lt;code&gt;d1={'score':25, 'another':'mine', 43:'numeric key', 'secret':&quot;don't look&quot;} # creates dict&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;d1['secret'] # should display &quot;don't look&quot;&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;d1['another']='dog' # assigns new value for existing key&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;del(d1[43]) # removes data element with key 43 &lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;del(d1['secret']) # removes data element with key 43 &lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;d1['height']=180 # adds a new data element and key&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;d1 # {'score': 25, 'another': 'dog', 'height': 180}&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;for k,v in d1.items(): print(&quot;key=&quot;,k,&quot; value=&quot;,v) # loops through key:value pairs&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;d1={} # creates an empty dictionary&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;di=dict() # alternative method of creating empty dictionary&lt;/code&gt;&lt;/div&gt;&#10;" />
+                      <option name="index" value="2" />
+                      <option name="name" value="Dictionaries" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Dictionaries are denoted by curly braces" />
+                                          <option value="A dictionary with keys and values looks like&#10;&#10;{'another':'mine', 'secret':&quot;don't look&quot;}" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="16" />
+                                      <option name="offset" value="51" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="empty dictionary" />
+                                      <option name="possibleAnswer" value="dict()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Assign a score of 10 to andy" />
+                                          <option value="key should be 'andy'" />
+                                          <option value="value should be 10" />
+                                          <option value="dictionary to use is stored in variable scores" />
+                                          <option value="scores[key] = value" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="106" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="equation" />
+                                      <option name="possibleAnswer" value="scores['andy'] = 10" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Set value of 15 for key 'betty'" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="175" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="equation" />
+                                      <option name="possibleAnswer" value="scores['betty'] = 15" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="set value of 12 to key 'cathy'" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="245" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="equation" />
+                                      <option name="possibleAnswer" value="scores['cathy'] = 12" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Get andy's score, add 3, and save it back in scores dictionary" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="291" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="equation" />
+                                      <option name="possibleAnswer" value="scores['andy'] += 3" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="function to return all the key:value pairs of data in a for loop" />
+                                          <option value="function is a method of the dict class" />
+                                          <option value="to run class method on scores use &#10;&#10;scores.&lt;i&gt;function_name&lt;/i&gt;()" />
+                                          <option value="items() is the name of the function to run on the scores object" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="433" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="function" />
+                                      <option name="possibleAnswer" value="scores.items()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="the variable name holding the current score as looping through scores items." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="485" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="variable" />
+                                      <option name="possibleAnswer" value="score+1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="the variable name holding the current score as looping through scores items." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="514" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="variable" />
+                                      <option name="possibleAnswer" value="score" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="the variable name holding the current player's name as looping through scores items." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="537" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="variable" />
+                                      <option name="possibleAnswer" value="name" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h2&gt;Dictionary of Tuples&lt;/h2&gt;&#10;&lt;p&gt;Because tuples are immutable, they can be used as&#10;keys in a Dictionary. This is useful when storing our nodes_dict. It means if we set a data value&#10;in a dictionary with coordinates that have already been used it will replace the previous setting. &#10;If there is no previous setting then a new &quot;key:value&quot; pair will be added to the dictionary.&lt;/p&gt;&#10;&lt;/p&gt;&#10;&lt;p&gt;Try the task on the left and see if you can predict&#10;what &lt;code&gt;nodes_dict&lt;/code&gt; will look like after each step.&#10;&lt;/p&gt;&#10;&lt;p&gt;&#10;At the end is a &lt;code&gt;for&lt;/code&gt; loop which &#10;checks different formulae for a set of data. &#10;This is a way of evaluating which is the right&#10;formula to use. For each value of z, write down&#10;what you think the correct integer should be&#10;and then see which formula gives the same answers.&#10;You are looking for a formula which returns the &#10;z value of the centre of a block given the z value&#10;of any part of the block.&#10;&lt;/p&gt;&#10;&#10;" />
+                      <option name="index" value="3" />
+                      <option name="name" value="Dictionary of tuples" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="First element of tuple" />
+                                          <option value="value of x coordinate" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="172" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="15" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Second element of the tuple" />
+                                          <option value="value of y coordinate" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="176" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="20" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Third element of tuple" />
+                                          <option value="value of z coordinate" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="180" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="10" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Set the value of nodes_dict item with index of (16, 20, 10) to &quot;default:glass&quot;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="277" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="statement" />
+                                      <option name="possibleAnswer" value="node_dict[(16, 20, 10)] = &quot;default:glass&quot;" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Assign nodes_dict item to stone&#10;" />
+                                          <option value="Tuple for index is in terms of z&#10;" />
+                                          <option value="(16, 20, z)" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="435" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="statement" />
+                                      <option name="possibleAnswer" value="node_dict[(16, 20, z)] = &quot;default:stone&quot;" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Use built-in function to delete an item from dict" />
+                                          <option value="del()&#10;" />
+                                          <option value="see previous task description if you have forgotten how to remove a node" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="697" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="statement" />
+                                      <option name="possibleAnswer" value="del(node_dict[(x, y, z)])" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="formula in terms of z" />
+                                          <option value="ensure floats in the range 9.51 to 10.49 will resolve to int of 10&#10;" />
+                                          <option value="&lt;div&gt;ensure floats in the range -1.49 to -0.51 will resolve to int of -1&lt;/div&gt;&#10;&lt;div&gt;ensure floats in the range -0.49 to 0.49 will resolve to int of 0&lt;/div&gt; &#10;&lt;div&gt;ensure floats in the range 0.51 to 1.49 will resolve to int of 1&lt;/div&gt;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="913" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="math.floor(z + 0.5)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Functions&lt;/h1&gt;&#10;&lt;p&gt;When you need the same code to be used in several places, it&#10;is easier to put that code in a function and then call that function&#10;when it needs to run that code. Functions are defined used the &#10;&lt;code&gt;def&lt;/code&gt; command, followed by the function name and then,&#10;in parentheses (), the arguments of the function.&lt;/p&gt;&#10;&lt;p&gt;In the last task we discovered we needed to convert all &#10;coordinates to integers when adding to nodes_dict. Otherwise new nodes&#10;for the same position would not overwrite the old nodes. That will soon&#10;get tedious so we will create a function &lt;code&gt;build()&lt;/code&gt; which&#10;does it for us.&lt;/p&gt;&#10;&lt;p&gt;&lt;code&gt;build()&lt;/code&gt; will return a dictionary with the new&#10;node in it. We will merge that with our existing dictionary &#10;using the dict &lt;code&gt;update()&lt;/code&gt; function which overwrites&#10;existing data when key is the same.&lt;/p&gt; &#10;&lt;/html&gt; &#10;" />
+                      <option name="index" value="4" />
+                      <option name="name" value="Functions" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="centre point of node" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="408" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="math.floor(x+0.5)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="centre point of node" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="434" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="math.floor(y+0.5)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="centre point of node" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="460" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="math.floor(z+0.5)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="x value" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="680" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="15" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="y value" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="684" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="20" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="z value" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="688" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="number" />
+                                      <option name="possibleAnswer" value="10" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="item name as string" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="6" />
+                                      <option name="offset" value="692" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="string" />
+                                      <option name="possibleAnswer" value="&quot;default:wood&quot;" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Five arguments are required" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="807" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="arguments" />
+                                      <option name="possibleAnswer" value="16, 20, 10, &quot;default:glass&quot;" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Five arguments are required" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="976" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="arguments" />
+                                      <option name="possibleAnswer" value="16, 20, z, &quot;default:stone&quot;" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Five arguments are required" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="9" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="1165" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="arguments" />
+                                      <option name="possibleAnswer" value="x, y, z, &quot;wool:blue&quot;" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;style&gt;&#10;table {border-left: 1px solid gray; border-top: 1px solid gray}&#10;th, td {border-right: 1px solid gray; border-bottom: 1px solid gray}&#10;&lt;/style&gt;&#10;&lt;h1&gt;Modules&lt;/h1&gt;&#10;&lt;p&gt;When we have a function that we want to call from different &#10;python programs we put it in a module. We have already seen how modules can&#10;be imported. A module looks just like a python program. &lt;/p&gt;&#10;&lt;p&gt;When a&#10;module is imported, any code not in function definitions is run.&#10;We normally don't want this so we only put function definitions &#10;in a module.&lt;/p&gt;&#10;&lt;p&gt;The &lt;code&gt;build()&lt;/code&gt; function from the previous task has been put into&#10;a module called minetest_helper.py. Now we can use it by importing&#10;it.&lt;/p&gt;&#10;&lt;p&gt;In this task we are creating a new function &lt;code&gt;build_cuboid()&lt;/code&gt; which&#10;replaces the &lt;code&gt;MinetestConnection.set_nodes()&lt;/code&gt; function&#10;but saves nodes in a node dictionary to be sent more efficiently later&#10; to minetest as a batch of data.&lt;/p&gt;&#10;&lt;p&gt;The second function we are creating, &lt;code&gt;node_lists_from_node_dict()&lt;/code&gt;,&#10;converts the &lt;code&gt;node_dict&lt;/code&gt; to one &lt;code&gt;node_list&lt;/code&gt; per item and &#10;stores them all in another list. Each &lt;code&gt;node_list&lt;/code&gt; can be used in &#10;&lt;code&gt;MinetestConnection.set_node_list()&lt;/code&gt;.&lt;/p&gt;&#10;&lt;p&gt;The third function, &lt;code&gt;send_node_lists()&lt;/code&gt;,&#10; sends each &lt;code&gt;node_list&lt;/code&gt; to minetest. We have &#10;to give the user of this function a facility to send some items after others.&#10;For example, when creating a tunnel, the air should be done last because&#10;we don't want lava and water flowing into tunnel during construction. Also &#10;items such as doors which take two nodes but are only specified by one node&#10;should be built after air when it is certain that no blocks exist on those &#10;nodes. (Programmer needs to have already left air space for the doors).&lt;/p&gt; &#10;&lt;p&gt;This task.py is an example of a module that has no executable code when&#10;imported. All the code is in function definitions. &#10;When we have completed creating these functions, they will be&#10;added to the minetest_helper module for later use&lt;/p&gt;&#10;&lt;h2&gt;Using a &lt;code&gt;dict&lt;/code&gt; of nodes&lt;/h2&gt;&#10;&lt;p&gt;When building tunnels we created a lot of glass nodes and then replaced some of&#10;them with stone, some with air and some with torches. We have to work out all&#10;the nodes that have to be set and what the final &#10;value of the node is going to be. We use the node_dict variable to&#10;store the latest node type for a set of coordinates.&lt;/p&gt;&#10;&lt;p&gt;&lt;table cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;th&gt;Command&lt;/th&gt;&lt;th&gt;node_dict&lt;/th&gt;&lt;/tr&gt;&#10;&lt;tr&gt;&lt;td&gt;&lt;code&gt;# initial value&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;{}&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&#10;&lt;tr&gt;&lt;td&gt;&lt;code&gt;set_node(2, 4, 6, glass)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;{(2, 4, 6): &quot;default:glass&quot;}&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&#10;&lt;tr&gt;&lt;td&gt;&lt;code&gt;set_node(2, 5, 6, glass)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;{(2, 4, 6): &quot;default:glass&quot;,&lt;br&gt; (2, 5, 6): &quot;default:glass&quot;}&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&#10;&lt;tr&gt;&lt;td&gt;&lt;code&gt;set_node(2, 4, 6, stone)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;{(2, 4, 6): &quot;default:stone&quot;,&lt;br&gt; (2, 5, 6): &quot;default:glass&quot;}&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&#10;&lt;tr&gt;&lt;td&gt;&lt;code&gt;set_node(2, 6, 6, stone)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;{(2, 4, 6): &quot;default:stone&quot;,&lt;br&gt; (2, 5, 6): &quot;default:glass&quot;,&lt;br&gt; (2, 6, 6): &quot;default:stone&quot;}&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&#10;&lt;/table&gt;&#10;&lt;/p&gt;&#10;&lt;p&gt;When we convert node_dict to node_lists we get:&lt;/p&gt;&#10;&lt;p&gt;&lt;code&gt;node_lists = {&lt;br /&gt;&#10;&quot;default:glass&quot;: [(2,5,6)],&#10;&quot;default:stone&quot;: [(2,4,6), (2,6,6)],&#10;&quot;air&quot;:           [],&#10;&quot;default:torch&quot;: []}&#10;&lt;/code&gt;&lt;/p&gt;&#10;&lt;p&gt;which is in a good format for using &lt;code&gt;mc.set_node_list()&lt;/code&gt; command.&lt;/p&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="index" value="5" />
+                      <option name="name" value="Modules" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Choose one form of the import statement:&#10;&#10;&lt;div&gt;&lt;code&gt;import &lt;i&gt;module&lt;/i&gt;&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;import &lt;i&gt;module.submodule&lt;/i&gt;&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;import &lt;i&gt;module&lt;/i&gt; as &lt;i&gt;alias&lt;/i&gt;&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;from &lt;i&gt;module&lt;/i&gt; import &lt;i&gt;function&lt;/i&gt;&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;from &lt;i&gt;module&lt;/i&gt; import &lt;i&gt;submodule&lt;/i&gt;&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;from &lt;i&gt;module.submodule&lt;/i&gt; import &lt;i&gt;subsubmodule&lt;/i&gt;&lt;/code&gt;&lt;/div&gt;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="73" />
+                                      <option name="offset" value="0" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="statement to import the set_node function from the minetest_helper module" />
+                                      <option name="possibleAnswer" value="from minetest_helper import build" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="step_x is used in range() function to indicate whether x1 is stepping up or down to get to x2" />
+                                          <option value="formula must return 1 to step up and -1 to step down" />
+                                          <option value="formula must be in terms of x1 and x2" />
+                                          <option value="Python ternary operator&#10;&lt;div&gt;&lt;code&gt;&lt;i&gt;a&lt;/i&gt; if &lt;i&gt;b&lt;/i&gt; else &lt;i&gt;c&lt;/i&gt;&lt;/code&gt;&lt;/div&gt;&#10;means&#10;&lt;div&gt;&lt;code&gt;if &lt;i&gt;b&lt;/i&gt; is true return &lt;i&gt;a&lt;/i&gt;&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;if &lt;i&gt;b&lt;/i&gt; is false return &lt;i&gt;c&lt;/i&gt;&lt;/code&gt;&lt;/div&gt;" />
+                                          <option value="When using the ternary operator&#10;&lt;div&gt;&lt;code&gt;&lt;i&gt;true_result&lt;/i&gt; if &lt;i&gt;condition&lt;/i&gt; else &lt;/i&gt;false_result&lt;/i&gt;&lt;/code&gt;&lt;/div&gt;&#10;The &lt;i&gt;condition&lt;/i&gt; can be formula in terms of x1 and x2 which returns True or False." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="212" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="1 if x2 &gt; x1 else -1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="formula in terms of y1 and y2, to return 1 or -1" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="246" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="1 if y2 &gt; y1 else -1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="formula in terms of z1 and z2" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="280" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="1 if z2 &gt; z1 else -1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="The following statement creates a new list and stores it in the variable called my_list&#10;&lt;div&gt;&lt;code&gt;my_list = []&lt;/code&gt;&lt;/div&gt;" />
+                                          <option value="The following statement stores the variable my_list in the dictionary my_dict with key = &quot;mine&quot;&#10;&lt;div&gt;&lt;code&gt;my_dict[&quot;mine&quot;] = my_list&lt;/code&gt;&lt;/div&gt; " />
+                                          <option value="The following statement stores a new list in dictionary my_dict with variable my_key having the value of the key&#10;&lt;div&gt;&lt;code&gt;my_dict[my_key] = []&lt;/code&gt;&lt;/div&gt;" />
+                                          <option value="Statement should be in terms of the two variables: node_lists and item" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="787" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="statement" />
+                                      <option name="possibleAnswer" value="node_lists[item] = []" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Find the list for the current item and append the current pos to it." />
+                                          <option value="If you have a dictionary of lists called my_dict, then the list with the key equal to &quot;default:glass&quot; is retrieved by&#10;&lt;div&gt;&lt;code&gt;my_dict[&quot;default:glass&quot;]&lt;/code&gt;&lt;/div&gt;" />
+                                          <option value="Lists have a built-in function append() which adds a value to the end of a list&#10;&lt;div&gt;&lt;code&gt;my_list.append((12, 34, 56))&lt;/code&gt;&lt;/div&gt;&#10;appends the tuple (12, 34, 56) to the list stored in variable my_list. " />
+                                          <option value="Statement should be in terms of the three variables: node_lists, item, pos" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="886" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="statement" />
+                                      <option name="possibleAnswer" value="node_lists[item].append(pos)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="add key to the list item_list at the end" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="1919" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="statement" />
+                                      <option name="possibleAnswer" value="item_list.append(key)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="mc.set_node_list() takes two arguments. List of (x, y, z) coordinates to be set to a block, and the name of the block" />
+                                          <option value="formula in terms of node_lists and item which returns the list of nodes to be set to the value of item" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="2052" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="node_lists[item]" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Railway station&lt;/h1&gt;&#10;&lt;p&gt;We have all the helper functions to build &#10;complex structures quickly saved in the minetest_helper.py&#10;module. Now we can start building them. The first &#10;structure will be a railway station.&lt;/p&gt;&#10;&lt;p&gt;The design of the station will be implemented in a&#10;function. The user of this function will be able&#10;to change the appearance by setting arguments to the function&#10;such as &lt;/p&gt;&#10;&lt;ul&gt;&#10;&lt;li&gt;location&lt;/li&gt;&#10;&lt;li&gt;length of platform&lt;/li&gt;&#10;&lt;li&gt;size of waiting room&lt;/li&gt;&#10;&lt;li&gt;building materials&lt;/li&gt;&#10;&lt;li&gt;number of storeys (levels)&lt;/li&gt;&#10;&lt;/ul&gt;&#10;&lt;p&gt;We make life a bit easier for the user by providing defaults &#10;for arguments which are not set explicitly. This means the user&#10;only has to provide specifications which are different to the &#10;defaults. The only data which needs to be provided is the &#10;location of the station. The user needs to pass in a dictionary&#10;for the function to store the built node data before it is&#10;sent to minetest&lt;/p&gt;&#10;&lt;p&gt;Try to follow through the function to see how the different&#10;parts of the station are built. There are comments before each&#10;section because it is not obvious from reading set_nodes commands&#10;what is being achieved at each step.&lt;/p&gt; &#10;&lt;p&gt;Once we are finished developing this function we will add&#10;it to minetest_helper.py module so it can be called from other &#10;functions.&lt;/p&gt;&#10;&lt;p&gt;Three level station&lt;/p&gt;&#10;&lt;img src=&quot;station_3_levels.png&quot; width=&quot;100%&quot; /&gt;&#10;&lt;p&gt;One level station&lt;/p&gt;&#10;&lt;img src=&quot;station_1_level.png&quot; width=&quot;100%&quot; /&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="index" value="6" />
+                      <option name="name" value="Railway station" />
+                      <option name="status" value="Failed" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="station_1_level.png">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="station_1_level.png" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="station_3_levels.png">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="station_3_levels.png" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="formula in terms of platform which returns the z coordinate" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1619" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="platform['z']" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="formula in terms of room which returns the value of the height attribute of room if it exists" />
+                                          <option value="If room['height'] doesn't exist return the default value" />
+                                          <option value="See function documentation (between &quot;&quot;&quot; and &quot;&quot;&quot; just after function definition) for default value of room height " />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="1805" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="room['height'] if 'height' in room else 5" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="formula in terms of materials which returns value of materials['station_stair'] if it exists" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="2177" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="materials['station_stair'] if 'station_stair' in materials else 'stairs:stair_wood'" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="formula in terms of door which returns the value of door without the last two characters" />
+                                          <option value="Use the slicing notation to get a slice of a string. Test the following in Python console.&#10;&lt;div&gt;&lt;code&gt;a = 'abcdefg'&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;a[2:5]  #  'cde'&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;a[:5]  #  'abcde'&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code&gt;a[:-1]  # 'abcdef'&lt;/code&gt;&lt;/div&gt;&#10;First number is the start point (inclusive, defaults to 0 if omitted). &#10;Second number is the end point (exclusive). If second number is negative it counts back from the end." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="3071" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="door[:-2]" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="a formula in terms of levels which allows &lt;code&gt;for&lt;/code&gt; to loop with &lt;code&gt;level&lt;/code&gt; going from zero to one less than the number of levels." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="3804" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="range(0, levels)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="formula in terms of station_width and roof_layer which returns the width of the roof at that layer" />
+                                          <option value="The bottom layer is layer 0 and it increases by one each layer up it goes" />
+                                          <option value="formula is the same as the layer_width formula used earlier in the code" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="5221" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="station_width + 2 - 2 * roof_layer" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="HTML" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Tunnel with stations&lt;/h1&gt;&#10;&lt;p&gt;This task puts together everything we have learnt in this&#10;course. Our tunnel code from the first lesson is put into &#10;a function. It also calls the build_station_dirx function to &#10;put a station at either end. See if you can solve the four&#10;challenges in the code and then you will have a functional &#10;tunnel builder. After this you can start creating your own &#10;functions to build structures in minetest. Thanks for &#10;completing the course.&lt;/p&gt;&#10;&lt;p&gt;HAVE FUN!!&lt;/p&gt;&#10;&lt;img src=&quot;station_tunnel_interior.png&quot; width=&quot;100%&quot; /&gt;&#10;&lt;img src=&quot;station_tunnel_exterior.png&quot; width=&quot;100%&quot; /&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="index" value="7" />
+                      <option name="name" value="Tunnel with stations" />
+                      <option name="status" value="Failed" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="station_tunnel_exterior.png">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="station_tunnel_exterior.png" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="station_tunnel_interior.png">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="station_tunnel_interior.png" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Set the values of xmin, y_at_xmin, xmax, y_at_xmax when x2 &gt; x1" />
+                                          <option value="Use x1, x2, y1, y2" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="1516" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="statement" />
+                                      <option name="possibleAnswer" value="xmin, y_at_xmin, xmax, y_at_xmax = x2, y2, x1, y1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Formula in terms of tunnel_y and y_at_xmin which checks that we are not building the tunnel floor higher than  ground level at xmin." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="7" />
+                                      <option name="offset" value="3138" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="formula" />
+                                      <option name="possibleAnswer" value="tunnel_y &gt; y_at_xmin" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Please provide 3 arguments to this function" />
+                                          <option value="Make sure you pass on room size and materials that were in function build_tunnel_dirx arguments" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="5241" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="arguments" />
+                                      <option name="possibleAnswer" value="platform_at_xmax, room=room, materials=materials, levels=3" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Please provide 3 arguments" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="9" />
+                                      <option name="offset" value="5592" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="arguments" />
+                                      <option name="possibleAnswer" value="platform_at_xmin, room=room, materials=materials" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                  </list>
+                </option>
+              </Lesson>
+            </list>
+          </option>
+        </Course>
+      </option>
+      <option name="VERSION" value="9" />
+      <option name="myUserTests">
+        <map />
+      </option>
+    </StudyTaskManager>
+  </component>
+</project>

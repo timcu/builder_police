@@ -1,0 +1,17 @@
+<html>
+<h1>Functions</h1>
+<p>When you need the same code to be used in several places, it
+is easier to put that code in a function and then call that function
+when it needs to run that code. Functions are defined used the 
+<code>def</code> command, followed by the function name and then,
+in parentheses (), the arguments of the function.</p>
+<p>In the last task we discovered we needed to convert all 
+coordinates to integers when adding to nodes_dict. Otherwise new nodes
+for the same position would not overwrite the old nodes. That will soon
+get tedious so we will create a function <code>build()</code> which
+does it for us.</p>
+<p><code>build()</code> will return a dictionary with the new
+node in it. We will merge that with our existing dictionary 
+using the dict <code>update()</code> function which overwrites
+existing data when key is the same.</p> 
+</html> 

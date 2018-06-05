@@ -1,0 +1,18 @@
+<html>
+<h2>Dictionaries</h2>
+<p>A dictionary is a mutable group of data elements that are accessed by keys rather than their numeric
+position in the dictionary. The data type is named after the book by the same name because in the book 
+the word is the key and the meaning is the data element. You can only have one data element per key
+although that data element could be a complex data type such as a tuple, list or another dictionary.
+To create a dictionary, the keys and values are separated by colons (:) and the "key:value" pairs are 
+separated by commas. Try the following examples in the console</p>
+<div><code>d1={'score':25, 'another':'mine', 43:'numeric key', 'secret':"don't look"} # creates dict</code></div>
+<div><code>d1['secret'] # should display "don't look"</code></div>
+<div><code>d1['another']='dog' # assigns new value for existing key</code></div>
+<div><code>del(d1[43]) # removes data element with key 43 </code></div>
+<div><code>del(d1['secret']) # removes data element with key 43 </code></div>
+<div><code>d1['height']=180 # adds a new data element and key</code></div>
+<div><code>d1 # {'score': 25, 'another': 'dog', 'height': 180}</code></div>
+<div><code>for k,v in d1.items(): print("key=",k," value=",v) # loops through key:value pairs</code></div>
+<div><code>d1={} # creates an empty dictionary</code></div>
+<div><code>di=dict() # alternative method of creating empty dictionary</code></div>

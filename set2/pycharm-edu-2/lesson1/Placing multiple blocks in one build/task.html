@@ -1,0 +1,30 @@
+<html>
+<style type="text/css">.t1 {margin-left: 2em;}</style>
+<h1>Task 3c - Placing multiple blocks in one build</h1>
+<p>There is an even easier way than using <code>for</code> loops.</p>
+<h2>Task</h2>
+<p>Place a 3x3x3 cube of glass blocks centred at (100, 14, ref_z). Use wool for the centre block</p>
+<p>Once you have completed this task, Minetest task 3 will be complete.</p>
+<img src="glass_cube.png" />
+<h2>Lesson</h2>
+<p>Placing multiple blocks of the same kind at the same time is such a common
+requirement, the <code>build</code> command has been designed to accept number sequences
+for the x, y and z coordinates. Previously we have used a <code>for</code> loop.</p>
+<code>for y in [13, 14, 15]:</code><br>
+<code class="t1">mc.build(99, y, 0, glass)</code><br>
+<p>This can now be rewritten in one line</p>
+<code>mc.build(99, [13, 14, 15], 0, glass)</code><br>
+<p>It will place three glass blocks at (99, 13, 0), (99, 14, 0) and (99, 15, 0).
+Number sequences are not restricted to one parameter. If there is more than one sequence
+then it works like nested loops.</p>
+<code>mc.build([99, 100], [13, 14, 15], 0, glass)</code><br>
+<p>places six glass blocks at (99, 13, 0), (99, 14, 0), (99, 15, 0), (100, 13, 0), (100, 14, 0), (100, 15, 0).</p>
+<p>Each sequence of numbers can be stored in a variable rather than typed directly
+in the <code>build</code> command. The numbers in the sequences don't even need to be consecutive. </p>
+<code>seq_x = [99, 101]</code><br>
+<code>seq_y = [13, 15]</code><br>
+<code>mc.build(seq_x, seq_y, 0, glass)</code><br>
+<p>places four glass blocks at (99, 13, 0), (99, 15, 0), (101, 13, 0), (101, 15, 0).</p>
+<h2>Overwriting positions</h2>
+<p>If you do more than one <code>build</code> command for the same position, the second command will overwrite
+the first command</p>

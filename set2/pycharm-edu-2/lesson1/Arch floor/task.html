@@ -1,0 +1,18 @@
+<html>
+<h1>Arch floor</h1>
+<p>The single arch is almost complete.</p>
+<h2>Task</h2>
+<p>Fix the floor under the arch by changing it from glass to stone</p>
+<p>Place a torch on the floor at <code>(ref_z + 1)</code></p>
+<img src="arch_floor.png" />
+<h2>Lesson</h2>
+<p>In this task you will need to enter the complete <code>build</code> command.
+The <code>build</code> command is called from a <code>MinetestConnection</code> object. If your
+<code>MinetestConnection</code> object is stored in a variable called <code>mc</code> then
+<code>build</code> can be called from <code>mc</code>.</p>
+<code>mc.build(x, y, z, item)</code>
+<p>where x, y and z are the coordinates of the location to build the item. They can each be single
+numbers or sequences of numbers. The item is a str or dict describing the block properties.
+(More on dicts later)</p>
+
+</html>
