@@ -19,11 +19,11 @@
           <option name="courseMode" value="Course Creator" />
           <option name="courseType" value="PyCharm" />
           <option name="customPresentableName" />
-          <option name="description" value="Teaches simple python concepts using a virtual world in minetest. If you want to run this course on your own server, follow instructions at https://www.triptera.com.au/wordpress/2018/02/24/python-programming-course-using-minetest/" />
+          <option name="description" value="Teaches simple python concepts using a virtual world in minetest. If you want to run this course on your own server, follow instructions at &lt;a href=&quot;https://www.triptera.com.au/wordpress/2018/02/24/python-programming-course-using-minetest/&quot;&gt;Triptera wordpress&lt;/a&gt;&#10;&#10;Requires PyCharm Edu 2018.1.2 or later" />
           <option name="index" value="-1" />
           <option name="language" value="Python 3.x" />
           <option name="languageCode" value="en" />
-          <option name="name" value="Ninja 2 easy minetest course v2" />
+          <option name="name" value="Ninja 2 easy minetest course v3" />
           <option name="items">
             <list>
               <Lesson>
@@ -2172,7 +2172,7 @@
                                           <option value="number or formula returning a sequence of all the x values where carpet is to be laid" />
                                           <option value="carpet starts at &lt;code&gt;path_x_min&lt;/code&gt;" />
                                           <option value="last x value for carpet is same as last x value in &lt;code&gt;range_x_castle_int&lt;/code&gt;" />
-                                          <option value="&lt;code&gt;range(105, 128)&lt;/code&gt;&lt;br&gt;&lt;br&gt;or&lt;br&gt;&lt;br&gt;&#10;&lt;code&gt;range(path_x_min, castle_x_min + castle_length - 1)&lt;/code&gt;&lt;br&gt;&lt;br&gt;or&lt;br&gt;&lt;br&gt;&#10;a list of numbers!" />
+                                          <option value="&lt;code&gt;range(105, 129)&lt;/code&gt;&lt;br&gt;&#10;&lt;br&gt;&#10;or&lt;br&gt;&#10;&lt;br&gt;&#10;&lt;code&gt;range(path_x_min, castle_x_min + castle_length - 1)&lt;/code&gt;&lt;br&gt;&#10;&lt;br&gt;&#10;or&lt;br&gt;&#10;&lt;br&gt;&#10;a list of numbers!" />
                                         </list>
                                       </option>
                                       <option name="index" value="7" />

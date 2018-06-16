@@ -287,7 +287,7 @@
                                       <option name="index" value="6" />
                                       <option name="initialState" />
                                       <option name="length" value="10" />
-                                      <option name="offset" value="624" />
+                                      <option name="offset" value="584" />
                                       <option name="placeholderDependency" />
                                       <option name="placeholderText" value="parameters" />
                                       <option name="possibleAnswer" value="y1, y2" />
@@ -305,7 +305,7 @@
                                       <option name="index" value="7" />
                                       <option name="initialState" />
                                       <option name="length" value="10" />
-                                      <option name="offset" value="652" />
+                                      <option name="offset" value="612" />
                                       <option name="placeholderDependency" />
                                       <option name="placeholderText" value="parameters" />
                                       <option name="possibleAnswer" value="x1, x2" />
@@ -328,7 +328,7 @@
                                       <option name="index" value="8" />
                                       <option name="initialState" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="678" />
+                                      <option name="offset" value="638" />
                                       <option name="placeholderDependency" />
                                       <option name="placeholderText" value="formula" />
                                       <option name="possibleAnswer" value="colours[(y+x)%2]" />
