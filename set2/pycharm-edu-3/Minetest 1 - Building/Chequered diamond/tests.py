@@ -40,17 +40,18 @@ def building_pattern(player_z):
 def test_building():
     from task import mc
     success = test_building_with_pattern(mc, building_pattern)
-    if success:
-        # Check no adjacent blocks the same
-        keys=sorted(mc.building.keys())
-        key_prev=(-100, -100, -100)
-        wool_prev = ""
-        for key in keys:
-            wool = mc.building[key]
-            if wool == wool_prev and abs(key[0]-key_prev[0]) < 2 and abs(key[1]-key_prev[1]) < 2:
-                # adjacent the same so fail
-                failed("Blocks at " + str(key_prev) + " and " + str(key) + " are adjacent but are both " + str(wool))
-                return False
+    if not success:
+        return False
+    # Check no adjacent blocks the same
+    keys=sorted(mc.building.keys())
+    key_prev=(-100, -100, -100)
+    wool_prev = ""
+    for key in keys:
+        wool = mc.building[key]
+        if wool == wool_prev and abs(key[0]-key_prev[0]) < 2 and abs(key[1]-key_prev[1]) < 2:
+            # adjacent the same so fail
+            failed("Blocks at " + str(key_prev) + " and " + str(key) + " are adjacent but are both " + str(wool))
+            return False
     return True
 
 
