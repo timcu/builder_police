@@ -22,7 +22,6 @@ x2 = x1 + width
 y2 = y1 + height
 
 # loop through all positions in square
-node_lists = {colour0: [], colour1: []}
 for y in range(y1, y2):
     for x in range(x1, x2):
         colour = colours[(y+x)%2]
