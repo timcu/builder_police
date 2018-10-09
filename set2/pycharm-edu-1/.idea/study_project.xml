@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="StudySettings">
+    <StudyTaskManager>
+      <option name="course">
+        <Course>
+          <option name="authors">
+            <list>
+              <StepicUser>
+                <option name="accessToken" value="" />
+                <option name="firstName" value="D" />
+                <option name="guest" value="false" />
+                <option name="id" value="-1" />
+                <option name="lastName" value="Tim Cummings - Triptera Pty Ltd" />
+                <option name="refreshToken" value="" />
+              </StepicUser>
+            </list>
+          </option>
+          <option name="courseMode" value="Course Creator" />
+          <option name="courseType" value="PyCharm" />
+          <option name="customPresentableName" />
+          <option name="description" value="An introduction to Python with some simple exercises to create a program which counts down and a program which guesses a number." />
+          <option name="index" value="-1" />
+          <option name="language" value="Python" />
+          <option name="languageCode" value="en" />
+          <option name="name" value="Ninja 1 countdowns and number guessing v2" />
+          <option name="items">
+            <list>
+              <Lesson>
+                <option name="customPresentableName" />
+                <option name="id" value="0" />
+                <option name="index" value="1" />
+                <option name="name" value="lesson1" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;Use the print() function to display a message. If the message is text it needs to &#10;be surrounded with quotation marks (&quot; or '). Numbers do not need quotation marks.&lt;/p&gt;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;This program will display a countdown sequence.&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Fix the program to properly count down from 5 to 0.&#10; It is missing the step between 3 and 1.&lt;/p&gt;&#10;&lt;ul&gt;&lt;li&gt;Click the green triangle (left of program) to run your program&lt;/li&gt;&#10;&lt;li&gt;Click the check task button (above) to test your program is correct&lt;/li&gt;&#10;&lt;li&gt;Click the right arrow (above) to move to the next task&lt;/li&gt;&#10;&lt;/ul&gt;&#10;" />
+                      <option name="index" value="1" />
+                      <option name="name" value="task1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="type in &lt;code&gt;print(2)&lt;/code&gt;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="56" />
+                                      <option name="offset" value="46" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="# show the number 2. It should show after 3 but before 1" />
+                                      <option name="possibleAnswer" value="print(3)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;It is a good idea to add comments to your code. They don't affect code operation. They are there to make &#10;it easier for people reading the code to understand it.&#10;Comments start with &lt;code&gt;#&lt;/code&gt;. Comments can be the whole line&#10;or at the end of a line. Indentation of comments does not affect program flow.&lt;/p&gt;&#10;&lt;div style=&quot;left-margin:2em;&quot;&gt;&lt;code&gt;# This is a comment taking a whole line&lt;/code&gt;&lt;/div&gt;&#10;&lt;div style=&quot;left-margin:2em;&quot;&gt;&lt;code&gt;a=5 # This is a comment at the end of a line&lt;/code&gt;&lt;/div&gt;&#10;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;This program will display a countdown sequence&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;The programmer has tried to add a comment to this program in the first line but now his program won't run. &#10;Fix the code so that the comment is still in the program and it can run.&lt;/p&gt;" />
+                      <option name="index" value="2" />
+                      <option name="name" value="task2" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Comments in python start with a #" />
+                                          <option value="Replace 'Comment: ' with '# '" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="8" />
+                                      <option name="offset" value="0" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="Comment:" />
+                                      <option name="possibleAnswer" value="# " />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;Use variables to store data that can be used later.&lt;/p&gt;&#10;&lt;p&gt;Text data is called a string and must be surrounded quotation marks. &#10;Numbers without quotation marks are treated as a number which means you can do &#10;arithmetic with them. &#10;Numbers with quotation marks are treated as a string which means you can combine it &#10;with other strings to make a message.&#10;&lt;/p&gt;&#10;&lt;p&gt;Variables can be called any name as long as the name doesn't clash with a&#10; python language word (coloured blue in our example) and must start with a letter. &#10; Variable names can't include spaces but can include underscores (_)&lt;/p&gt;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;This program will display a countdown sequence and then display the final action.&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Change the final action from &lt;b&gt;do something&lt;/b&gt; to &lt;b&gt;blast off&lt;/b&gt;&lt;/p&gt;&#10;" />
+                      <option name="index" value="3" />
+                      <option name="name" value="task3" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Enter the correct action between the quotation marks" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="12" />
+                                      <option name="offset" value="16" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="do something" />
+                                      <option name="possibleAnswer" value="blast off" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="&lt;style&gt;&#10;.reserved {color: blue; font-weight:bold;}&#10;&lt;/style&gt;&#10;&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;If you want to use the same few lines of your program over and over again&#10;use a loop to save typing. One type is the 'for' loop.&lt;/p&gt;&#10;&#10;&lt;code style='margin-left:2em;'&gt;for variable_name in sequence:&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:4em;'&gt;# example lines of code using different value of variable_name each time&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:4em;'&gt;total += variable_name&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:4em;'&gt;print(variable_name, total)&lt;/code&gt;&lt;br /&gt;&#10;&#10;&lt;p&gt;Every line that gets repeated has to be indented. That is how python knows what is in the loop.&#10;The first line which is not indented will not be executed until after the loop is complete.&lt;/p&gt;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;Quickly count down from 10 to 1 and then display the final action&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Complete the 'for' statement. It needs a variable name. You will need to fix the sequence also.&lt;/p&gt;&#10;&#10;" />
+                      <option name="index" value="4" />
+                      <option name="name" value="task4" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Use the same variable name as will later be used in the print function" />
+                                          <option value="counter" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="13" />
+                                      <option name="offset" value="48" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="variable_name" />
+                                      <option name="possibleAnswer" value="counter" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Add more numbers separated by commas to this sequence." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="17" />
+                                      <option name="offset" value="60" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="10, 9, 8, 5, 2, 1" />
+                                      <option name="possibleAnswer" value="10,9,8,7,6,5,4,3,2,1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;Python provides a &lt;b&gt;range&lt;/b&gt; function which is easier to use than typing every value in a sequence.&#10;The &lt;b&gt;range&lt;/b&gt; function has up to three arguments giving the start value, the end value and the&#10;increment value. Note that range includes up to but not including the end value. If you don't&#10;provide an increment it is assumed to be 1. If you don't provide a start value it is assumed to &#10;be 0. If you only provide two values they are assumed to be start value and end value. &#10;If you only provide one value it is assumed to be end value&lt;/p&gt;&#10;&#10;&lt;code style='margin-left:2em;'&gt;range(3)         # equivalent to (0, 1, 2)&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:2em;'&gt;range(2, 5)      # equivalent to (2, 3, 4)&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:2em;'&gt;range(4, 0)      # equivalent to ()&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:2em;'&gt;range(4, 0, -1)  # equivalent to (4, 3, 2, 1)&lt;/code&gt;&lt;br /&gt;&#10;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;Count down from 20 to 1 before blast off&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Enter the correct parameters in the &lt;b&gt;range&lt;/b&gt; function to count down from 20 to 1&lt;/p&gt;&#10;&#10;&lt;/html&gt;&#10;" />
+                      <option name="index" value="5" />
+                      <option name="name" value="task5" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Enter three parameters, separated by commas" />
+                                          <option value="First parameter is start value (inclusive, i.e. it is included in the sequence)" />
+                                          <option value="Second parameter is stop value (exclusive, i.e. it is not included in the sequence)" />
+                                          <option value="Third parameter is increment. Use a negative number to decrement." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="10" />
+                                      <option name="offset" value="65" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="parameters" />
+                                      <option name="possibleAnswer" value="20,0,-1" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="&lt;html&gt;&lt;head&gt;&#10;&lt;style&gt;&#10;.reserved {color: blue; font-weight:bold;}&#10;.comment {color: gray; font-style: italic;}&#10;&lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;The &lt;b&gt;time&lt;/b&gt; module has a &lt;b&gt;sleep&lt;/b&gt; function to pause program for a number of seconds.&#10;The &lt;b&gt;time&lt;/b&gt; module is not included by default so has to be imported.&lt;/p&gt;&#10;&lt;code style='margin-left:2em;'&gt;from time import sleep&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:2em;'&gt;sleep(2) #sleeps for 2 seconds&lt;/code&gt;&lt;br /&gt;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;Count down in seconds until blast off&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Enter a statement in the loop which will pause for 1 second each time it does the loop.&#10;Remember that all statements in loop must be indented by the same amount.&lt;/p&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="index" value="6" />
+                      <option name="name" value="task6" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Use the &lt;code&gt;sleep()&lt;/code&gt; function from the &lt;code&gt;time&lt;/code&gt; module" />
+                                          <option value="Enter a parameter of 1 to specify a sleep time of 1 second" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="66" />
+                                      <option name="offset" value="124" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="# put the program to sleep for 1 second so countdown not too quick" />
+                                      <option name="possibleAnswer" value="sleep(1)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;To make a game different every time you play, &#10;it is good to have a random number generator such as the roll of a die. The &lt;b&gt;random&lt;/b&gt; module has &#10;a &lt;b&gt;randint(a,b)&lt;/b&gt; function which will return a random integer between the values of &lt;b&gt;a&lt;/b&gt; and &#10;&lt;b&gt;b&lt;/b&gt; inclusively. You will often use this function when writing games.&lt;/p&gt;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;Returns a random value between 1 and 6 every time the program is run. This simulates the roll &#10;of a six-sided die.&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Write the program to just return a random number between 1 and 6. The program can be three lines long.&lt;/p&gt;&#10;&lt;p&gt;The first line needs to import the correct function from the random module. Remember in the previous task&#10;the sleep function was imported from the time module using:&lt;/p&gt;&#10;&lt;code&gt;from time import sleep&lt;/code&gt;&#10;&lt;p&gt;The second line needs to call the imported function and store the result in a variable called die_roll&lt;/p&gt;&#10;&lt;p&gt;The third line needs to print the value of die_roll&lt;/p&gt;" />
+                      <option name="index" value="7" />
+                      <option name="name" value="task7" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="In the previous exercise you imported the sleep function from the time module" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="53" />
+                                      <option name="offset" value="1" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="# import the required function from the random module" />
+                                      <option name="possibleAnswer" value="from random import randint" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="&lt;code&gt;randint(a, b)&lt;/code&gt; will return a random integer between &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; inclusively. " />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="67" />
+                                      <option name="offset" value="39" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="function which returns a random integer between 1 and 6 inclusively" />
+                                      <option name="possibleAnswer" value="randint(1,6)" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map />
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="&lt;style&gt;&#10;.reserved {color: blue; font-weight:bold;}&#10;.comment {color: gray; font-style: italic;}&#10;.subs {color: gray; font-style: italic;}&#10;.indent {margin-left:2em; }&#10;.indent2 {margin-left:4em; }&#10;&lt;/style&gt;&#10;&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;Previously we looked at &lt;code&gt;for&lt;/code&gt; loops which repeat the &#10;same lines of code a fixed number of times. Another loop structure is &#10;the &lt;code&gt;while&lt;/code&gt; loop which will repeat the lines of code while some &#10;condition is &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;&#10;&lt;div&gt;&lt;code class=&quot;indent&quot;&gt;while&lt;/code&gt; &lt;code class=&quot;subs&quot;&gt;condition:&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code class=&quot;indent2&quot;&gt;# lines of code&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code class=&quot;indent2&quot;&gt;# which are to be repeated&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code class=&quot;indent2&quot;&gt;# all indented the same amount&lt;/code&gt;&lt;/div&gt;&#10;&lt;p&gt;&lt;code class=&quot;subs&quot;&gt;condition&lt;/code&gt; is often of the form&lt;/[&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code class=&quot;subs&quot;&gt;value1 operator value2&lt;/code&gt;&lt;/div&gt;&#10;&lt;p&gt;where &lt;code class=&quot;subs&quot;&gt;operator&lt;/code&gt; is one of the following&lt;/p&gt;&#10;&lt;code class=&quot;indent&quot;&gt;== # value1 equals value2&lt;/code&gt;&lt;br /&gt;&#10;&lt;code class=&quot;indent&quot;&gt;!= # value1 does not equal value2&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;&amp;lt; &amp;nbsp;# value1 is less than value2&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;&amp;gt; &amp;nbsp;# value1 is greater than value2&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;&amp;lt;= # value1 is less than or equal to value2&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;&amp;gt;= # value1 is greater than or equal to value2&lt;/code&gt;&lt;br/&gt;&#10;&lt;p&gt;The &lt;code&gt;if&lt;/code&gt; statement is similar to the &lt;code&gt;while&lt;/code&gt; statement but only executes&#10;once the indented lines which follow. &#10;&lt;code&gt;if elif else&lt;/code&gt; can be used to check several conditions with different responses&#10;for each condition.&lt;/p&gt;&#10;&lt;code class=&quot;indent&quot;&gt;if condition1:&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent2&quot;&gt;# What to do if condition1 is True&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;elif condition2:&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent2&quot;&gt;# What to do if condition1 is False and condition2 is True&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;elif condition3:&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent2&quot;&gt;# What to do if condition1 and condition2 are False and condition3 is True&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;else&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent2&quot;&gt;# What to do if all conditions are False&lt;/code&gt;&lt;br/&gt;&#10;&lt;p&gt;This program also introduces the &lt;code&gt;input&lt;/code&gt; function to get string data from the user. The &lt;code&gt;int&lt;/code&gt;&#10;function converts it to an integer number so that the program can compare it to the answer.&lt;/p&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;# Use input function to get the guess from the user (as a string)&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;s=input(&quot;Guess?&quot;)&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;# Check that guess is an integer by surrounding in try: except ValueError: else:&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;try:&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;# Convert from string to integer. If it can't be converted, &lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;# jump to &quot;except ValueError&quot;. Otherwise jump to &quot;else&quot;&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;guess=int(s)&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;except ValueError:&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;# Entered value can not be converted to integer&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;print(&quot;Your guess of '&quot; + s + &quot;' is not an integer (whole number). Please only enter integers.&quot;)&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;else:&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;# Code in the else: only runs if there was no error in the try: section (converting to integer)&lt;/code&gt;&lt;/div&gt;&#10;&#10;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;Asks user to guess a random number between 0 and 63 and then gives clues until user guesses the number&lt;p&gt;&#10;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Enter the correct operator in each of the conditional statements so program will stop when answer is correctly guessed. Also need to enter the correct conditions &#10;so the program responds correctly after each guess&lt;/p&gt;&#10;" />
+                      <option name="index" value="8" />
+                      <option name="name" value="task8" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Enter an &lt;code&gt;operator&lt;/code&gt; which will return &lt;code&gt;True&lt;/code&gt; when &lt;code&gt;while&lt;/code&gt; loop is looping and &lt;code&gt;False&lt;/code&gt; when &lt;code&gt;while&lt;/code&gt; is to loop no more." />
+                                          <option value="Keep looping while &lt;code&gt;guess&lt;/code&gt; is not equal to &lt;code&gt;answer&lt;/code&gt;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="3" />
+                                      <option name="offset" value="651" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="op1" />
+                                      <option name="possibleAnswer" value="!=" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Enter an &lt;code&gt;operator&lt;/code&gt; which will return &lt;code&gt;False&lt;/code&gt; when the maximum number of guesses is reached." />
+                                          <option value="&lt;code&gt;guesses&lt;/code&gt; is less than &lt;code&gt;10&lt;/code&gt;" />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="3" />
+                                      <option name="offset" value="673" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="op2" />
+                                      <option name="possibleAnswer" value="&lt;" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Enter an &lt;code&gt;operator&lt;/code&gt; which will return &lt;code&gt;True&lt;/code&gt; when the guess is too high." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="3" />
+                                      <option name="offset" value="938" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="op3" />
+                                      <option name="possibleAnswer" value="&gt;" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Enter an &lt;code&gt;operator&lt;/code&gt; which return &lt;code&gt;True&lt;code&gt; when the guess is too low." />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="3" />
+                                      <option name="offset" value="1069" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="op4" />
+                                      <option name="possibleAnswer" value="&lt;" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list>
+                                          <option value="Enter an &lt;code&gt;operator&lt;/code&gt; which will return &lt;code&gt;True&lt;/code&gt; when &lt;code&gt;guess&lt;/code&gt; and &lt;code&gt;answer&lt;/code&gt; are the same. " />
+                                        </list>
+                                      </option>
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="3" />
+                                      <option name="offset" value="1434" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="op5" />
+                                      <option name="possibleAnswer" value="==" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </EduTask>
+                  </list>
+                </option>
+              </Lesson>
+            </list>
+          </option>
+        </Course>
+      </option>
+      <option name="VERSION" value="9" />
+      <option name="myUserTests">
+        <map />
+      </option>
+    </StudyTaskManager>
+  </component>
+</project>
