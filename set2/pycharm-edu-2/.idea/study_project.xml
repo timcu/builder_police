@@ -3,7 +3,9 @@
   <component name="StudySettings">
     <StudyTaskManager>
       <option name="course">
-        <Course>
+        <RemoteCourse>
+          <option name="adaptive" value="false" />
+          <option name="additionalMaterialsUpdateDate" value="0" />
           <option name="authors">
             <list>
               <StepicUser>
@@ -16,22 +18,41 @@
               </StepicUser>
             </list>
           </option>
+          <option name="compatible" value="true" />
           <option name="courseMode" value="Course Creator" />
           <option name="courseType" value="PyCharm" />
           <option name="customPresentableName" />
-          <option name="description" value="Teaches simple python concepts using a virtual world in minetest. If you want to run this course on your own server, follow instructions at &lt;a href=&quot;https://www.triptera.com.au/wordpress/2018/02/24/python-programming-course-using-minetest/&quot;&gt;Triptera wordpress&lt;/a&gt;&#10;&#10;Requires PyCharm Edu 2018.1.2 or later" />
+          <option name="description" value="Teaches simple python concepts using a virtual world in minetest. This course can use the free online minetest server at demo.pythonator.com:30000.&#10;&#10;See https://pythonator.com for more details.&#10;&#10;Requires PyCharm Edu 2018.2 or later" />
+          <option name="fromZip" value="false" />
+          <option name="id" value="47300" />
           <option name="index" value="-1" />
+          <option name="instructors">
+            <list>
+              <option value="39599470" />
+            </list>
+          </option>
           <option name="language" value="Python 3.x" />
           <option name="languageCode" value="en" />
-          <option name="name" value="Ninja 2 easy minetest course v3" />
+          <option name="loadSolutions" value="true" />
+          <option name="name" value="pythonator b2 easy" />
+          <option name="public" value="true" />
+          <option name="sectionIds">
+            <list>
+              <option value="67508" />
+            </list>
+          </option>
+          <option name="stepikChangeStatus" value="Info changed" />
+          <option name="type" value="pycharm7 Python 3.x" />
+          <option name="updateDate" value="1539158926000" />
           <option name="items">
             <list>
               <Lesson>
                 <option name="customPresentableName" value="lesson1" />
-                <option name="id" value="0" />
+                <option name="id" value="179702" />
                 <option name="index" value="1" />
                 <option name="name" value="lesson1" />
-                <option name="updateDate" />
+                <option name="stepikChangeStatus" value="Up to date" />
+                <option name="updateDate" value="1539158931000" />
                 <option name="taskList">
                   <list>
                     <EduTask>
@@ -40,17 +61,18 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
-                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Minetest setup&lt;/h1&gt;&#10;&lt;ol&gt;&#10;&lt;li&gt;Use Minetest to join the Minetest server with a name and password of your choosing. Don't use a password you use for anything else because other people will see your password. Passwords should not contain spaces.&lt;/li&gt;&#10;&lt;li&gt;Check if you have the &lt;code&gt;irc_builder&lt;/code&gt; privilege by typing &lt;code&gt;/privs&lt;/code&gt; in Minetest chat. If not ask the Minetest op for it.&lt;/li&gt;&#10;&lt;li&gt;Fill in your connection details to Minetest in the program on the left.&#10;    &lt;ul&gt;&#10;&lt;li&gt;Enter your name as mtuser (mtuser=&quot;myname&quot;)&lt;/li&gt;&#10;&lt;li&gt;Enter your password as mtuserpass (mtuserpass=&quot;mysecret&quot;)&lt;/li&gt;&#10;&lt;li&gt;Ask the Minetest op for details of the IRC server and fill in details on the left&lt;/li&gt;&#10;    &lt;/ul&gt;&#10;&lt;/li&gt;&#10;&lt;li&gt;Click the &quot;Check task&quot; button above. (checklist with a big green tick)&lt;/li&gt;&#10;    &lt;li&gt;When you have completed this setup you will see &quot;Congratulations!&quot;. Click the blue right arrow to&#10;move to the first task.&lt;/li&gt;&#10;&lt;/ol&gt;&#10;&lt;p&gt;Here is an example of how to fill in the details.&lt;/p&gt;&#10;&lt;code&gt;&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;mtuser = &quot;tim&quot;      # your minetest username&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;mtuserpass = &quot;not_so_secret&quot;  # your minetest password. This file is not encrypted so don't use anything you want kept secret&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;player_z = 10       # your z value from sign in minetest with your username on it&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;# The following must match your settings in minetest server &gt; Settings &gt; Advanced Settings &gt; Mods &gt; irc &gt; Basic &gt;&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;ircserver = &quot;irc.rizon.net&quot;   # same as IRC server&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;mtbotnick = &quot;mtserver&quot;   # same as Bot nickname&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;channel = &quot;##minetest-python-course&quot;     # same as Channel to join&lt;/code&gt;&lt;br /&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Minetest setup&lt;/h1&gt;&#10;&lt;ol&gt;&#10;    &lt;li&gt;The first step is to play Minetest :). Play online and connect to a Pythonator server.&#10;        You can even connect to the free server at &lt;code&gt;demo.pythonator.com&lt;/code&gt; using port&#10;        &lt;code&gt;30000&lt;/code&gt;.&#10;        Use a name and password of your choosing, and as long as no-one else has chosen that&#10;        name you will be able to login. &lt;/li&gt;&#10;    &lt;li&gt;Please don't use spaces in your name or password. If you need to change your password in&#10;    Minetest press the [esc] key and click the [Change password] button.&lt;/li&gt;&#10;    &lt;li&gt;Don't use a password you want keep secret because there is very low security on this&#10;    server and other people can find out your password. I don't mind if your password&#10;    is just &quot;&lt;em&gt;password&lt;/em&gt;&quot; but be prepared for others to login as you if you&#10;    do that.&lt;/li&gt;&#10;&lt;li&gt;Check if you have the &lt;code&gt;irc_builder&lt;/code&gt; privilege by typing&#10;    &lt;code&gt;/privs&lt;/code&gt; in Minetest chat. It should be automatic but if not ask&#10;    the Minetest op for that privilege.&lt;/li&gt;&#10;&lt;li&gt;Fill in your connection details to Minetest in the program on the left.&#10;    &lt;ul&gt;&#10;&lt;li&gt;Enter your name as mtuser (mtuser=&quot;myname&quot;)&lt;/li&gt;&#10;&lt;li&gt;Enter your password as mtuserpass (mtuserpass=&quot;mysecret&quot;)&lt;/li&gt;&#10;        &lt;li&gt;Find your z value from the sign in Minetest with your name in it.&#10;        Every player gets a unique value.&lt;/li&gt;&#10;&lt;li&gt;Server details default for the &lt;code&gt;demo.pythonator.com&lt;/code&gt; server. For other servers ask your Minetest op.&lt;/li&gt;&#10;    &lt;/ul&gt;&#10;&lt;/li&gt;&#10;&lt;li&gt;Click the [Check] button below or [Check task] above. &lt;/li&gt;&#10;    &lt;li&gt;When you have completed this setup correctly you will see &quot;Congratulations!&quot;.&#10;        Click the right arrow to move to the first task.&lt;/li&gt;&#10;&lt;/ol&gt;&#10;&lt;p&gt;Here is an example of how to fill in the details for LAN servers at CoderDojo.&lt;/p&gt;&#10;&lt;code&gt;&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;mtuser = &quot;tim&quot;      # your minetest username&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;mtuserpass = &quot;not_so_secret&quot;  # your minetest password. This file is not encrypted so don't use anything you want kept secret&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;player_z = 10       # your z value from sign in minetest with your username on it&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;# The following must match your settings in minetest server &gt; Settings &gt; Advanced Settings &gt; Mods &gt; irc &gt; Basic &gt;&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;ircserver = &quot;192.168.17.100&quot;   # same as IRC server&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;mtbotnick = &quot;mtserver&quot;   # same as Bot nickname&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;channel = &quot;#coderdojo&quot;     # same as Channel to join&lt;/code&gt;&lt;br /&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="1" />
                       <option name="name" value="Set up Minetest" />
                       <option name="status" value="Failed" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
-                        </map>
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505956" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -64,6 +86,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="10" />
                                       <option name="placeholderDependency" />
@@ -80,6 +103,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="60" />
                                       <option name="placeholderDependency" />
@@ -99,6 +123,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="178" />
                                       <option name="placeholderDependency" />
@@ -111,15 +136,20 @@
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list />
+                                        <list>
+                                          <option value="host name or ip address of IRC server (chat server). " />
+                                          <option value="For LAN servers it will be something like &#10;&lt;br /&gt;&lt;br /&gt;&#10;&lt;code&gt;192.168.17.100&lt;/code&gt;" />
+                                          <option value="If you are using the Pythonator demo, you should use the triptera server&#10;&lt;br /&gt;&lt;br /&gt;&#10;&lt;code&gt;irc.triptera.com.au&lt;/code&gt;" />
+                                        </list>
                                       </option>
                                       <option name="index" value="3" />
                                       <option name="initialState" />
-                                      <option name="length" value="14" />
+                                      <option name="initializedFromDependency" value="false" />
+                                      <option name="length" value="19" />
                                       <option name="offset" value="371" />
                                       <option name="placeholderDependency" />
-                                      <option name="placeholderText" value="192.168.17.100" />
-                                      <option name="possibleAnswer" value="irc.rizon.net" />
+                                      <option name="placeholderText" value="irc.triptera.com.au" />
+                                      <option name="possibleAnswer" value="irc.triptera.com.au" />
                                       <option name="selected" value="false" />
                                       <option name="status" />
                                       <option name="studentAnswer" />
@@ -133,8 +163,9 @@
                                       </option>
                                       <option name="index" value="4" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
-                                      <option name="offset" value="421" />
+                                      <option name="offset" value="427" />
                                       <option name="placeholderDependency" />
                                       <option name="placeholderText" value="mtserver" />
                                       <option name="possibleAnswer" value="mtserver" />
@@ -151,11 +182,12 @@
                                       </option>
                                       <option name="index" value="5" />
                                       <option name="initialState" />
-                                      <option name="length" value="10" />
-                                      <option name="offset" value="466" />
+                                      <option name="initializedFromDependency" value="false" />
+                                      <option name="length" value="11" />
+                                      <option name="offset" value="472" />
                                       <option name="placeholderDependency" />
-                                      <option name="placeholderText" value="#coderdojo" />
-                                      <option name="possibleAnswer" value="##minetest-python-course" />
+                                      <option name="placeholderText" value="#pythonator" />
+                                      <option name="possibleAnswer" value="#pythonator" />
                                       <option name="selected" value="false" />
                                       <option name="status" />
                                       <option name="studentAnswer" />
@@ -164,16 +196,23 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" value="# TODO: type solution here&#10;" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;from ircbuilder import MinetestConnection&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;def test_config():&#10;    from task import mtuser, mtuserpass, mtbotnick, ircserver, channel, player_z&#10;    file = open(&quot;../../minetest_irc.py&quot;, &quot;w&quot;)&#10;    file.write('mtuser = &quot;' + mtuser + '&quot;       # your minetest username\n')&#10;    file.write('mtuserpass = &quot;' + mtuserpass + '&quot;   # your minetest password. This file is not encrypted so don\'t use anything you want kept secret\n')&#10;    file.write('player_z = ' + str(player_z) + '  # your z value from sign in minetest with your username on it\n')&#10;    file.write('\n')&#10;    file.write('# The following must match your settings in minetest server &gt; Settings &gt; Advanced Settings &gt; Mods &gt; irc &gt; Basic &gt;\n')&#10;    file.write('ircserver = &quot;' + ircserver + '&quot;   # same as IRC server\n')&#10;    file.write('mtbotnick = &quot;' + mtbotnick + '&quot;   # same as Bot nickname\n')&#10;    file.write('channel = &quot;' + channel + '&quot;     # same as Channel to join\n')&#10;    file.close()&#10;    mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)&#10;    z = mc.send_cmd('get_player_z ' + mtuser)&#10;    try:&#10;        if int(z)!=player_z:&#10;            failed(&quot;Your player_z should be &quot; + z + &quot;, not &quot; + str(player_z))&#10;            return False&#10;    except TypeError:&#10;        failed(&quot;Didn't get an int for player_z. Instead got &quot; + str(z) + &quot; which has type &quot; + str(type(z)))&#10;        return False&#10;    except ValueError:&#10;        failed(&quot;Didn't get an int for player_z. Instead got &quot; + str(z) + &quot; which has type &quot; + str(type(z)))&#10;        return False&#10;    passed()&#10;    return True&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    test_config()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" value="1539158934000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -182,14 +221,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Task 1a - Placing a block&lt;/h1&gt;&#10;&lt;p&gt;Let's start building!&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Visit the Minetest world and find your sign. It will have coordinates where you need to &#10;create a wool block. Enter the z coordinate in the program on the left.&lt;/p&gt;&#10;&lt;img src=&quot;wool_green.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;This first task teaches you how to place a block using the &lt;code&gt;build&lt;/code&gt; command from MinetestConnection.&#10;The following line places a stone block at x=100, y=14, z=0. The &lt;code&gt;build&lt;/code&gt; command saves all the blocks in a &lt;code&gt;building&lt;/code&gt; and then the &lt;code&gt;building&lt;/code&gt; is sent to Minetest using the &lt;code&gt;send_building&lt;/code&gt; command.&lt;/p&gt;&#10;&lt;code&gt;mc.build(100, 14, 0, &quot;default:stone&quot;)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;mc.send_building()&lt;/code&gt;&#10;&lt;p&gt;The &lt;code&gt;build&lt;/code&gt; command has 4 parameters.&#10;They are x, y, z, and node_type. The first 3 parameters are the coordinates where the node will be placed.&#10;The last parameter is the name of the material to place. Examples are &quot;default:wood&quot;, &quot;default:dirt&quot;, &quot;wool:blue&quot;, &quot;default:glass&quot;, &quot;carts:rail&quot;.&#10;The material names are the name of the mod they come from, a colon (:), and then the material name within that mod.&lt;/p&gt;&#10;&lt;p&gt;Hints are available by clicking the light bulb above.&lt;/p&gt;&#10;&lt;p&gt;Click the green triangle &quot;play&quot; button to run your program or use keyboard ctrl-shift-F10.&lt;/p&gt;&#10;&lt;p&gt;Click the &quot;Check task&quot; button (first button in toolbar above) to&#10;check you have completed the task correctly and move on to next task.&lt;/p&gt;&#10;&lt;p&gt;When you have completed this task (Congratulations!) click the blue right arrow to&#10;move to the next task.&lt;/p&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="2" />
                       <option name="name" value="Placing a block" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505957" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -206,6 +248,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="219" />
                                       <option name="placeholderDependency" />
@@ -219,16 +262,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158937000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -237,14 +285,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Task 1b - Placing a block using variables&lt;/h1&gt;&#10;&lt;p&gt;This is a repeat of Minetest Task 1 using variables instead of numbers. Fill in the rectangles&#10;in the program task.py on the left. Use hints to find out exactly what needs to be done.&#10;Ctrl-shift-F10 to run the program. &quot;Check task&quot; button above to check it is done correctly.&#10;Click the left blue arrow to return to the previous task or the right blue arrow to go&#10;to the next task.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Store coordinates of wool location in variables and then use variables in the build command to&#10;place the wool.&lt;/p&gt;&#10;&lt;img src=&quot;wool_blue.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;Variables are memory to store data in a computer program.&#10;They can store numbers or text or many other forms of data.&#10;To store data in a variable, give it a name and put the data in it using an equals sign.&lt;/p&gt;&#10;&lt;code&gt;my_variable = 100&lt;/code&gt;&#10;&lt;p&gt;The above line creates a new variable called &lt;code&gt;my_variable&lt;/code&gt; and gives it the value 100.&lt;/p&gt;&#10;&lt;p&gt;Storing data in variables helps when you don't know the data when you are writing the program but will know it&#10;when the program is run. For example the z value is different for every player. The program can be written before the&#10;player is known and the z value can be filled later. The program on the left has a variable called &lt;code&gt;ref_z&lt;/code&gt; which&#10;stores the player's z value. It is called &lt;code&gt;ref_z&lt;/code&gt; because all your building will use it as a reference coordinate&#10;and you will build relative to it.&lt;/p&gt;&#10;&lt;p&gt;To use the data in a variable, type its variable name where you previously typed the data. For example, if your &lt;code&gt;ref_z&lt;/code&gt; was 0:&lt;/p&gt;&#10;&lt;code&gt;mc.build(100, 14, 0, &quot;wool:blue&quot;)&lt;/code&gt;&#10;&lt;p&gt;becomes&lt;/p&gt;&#10;&lt;code&gt;mc.build(ref_x, ref_y, ref_z, wool)&lt;/code&gt;&#10;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="3" />
                       <option name="name" value="Placing a block using variables" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505958" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -260,6 +311,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="221" />
                                       <option name="placeholderDependency" />
@@ -278,6 +330,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="232" />
                                       <option name="placeholderDependency" />
@@ -296,6 +349,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="264" />
                                       <option name="placeholderDependency" />
@@ -309,16 +363,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158939000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -327,14 +386,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Task 2 - Placing several blocks&lt;/h1&gt;&#10;&lt;p&gt;This is the easy course. Whenever the task asks for variable names&#10;or a formula, then it is also correct to just type in a number or list of numbers.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Find your sign in Minetest to find your second task. Then complete the program on the left&#10;to satisfy the task.&lt;/p&gt;&#10;&lt;img src=&quot;glass_frame.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;A program starts at the top and runs each line in sequence. If you want to place&#10;several blocks, create a new &lt;code&gt;build&lt;/code&gt; command for each block. When you have finished&#10;all the &lt;code&gt;build&lt;/code&gt; commands, run the &lt;code&gt;send_building&lt;/code&gt; command to&#10;send all the blocks you have built to Minetest. If two of the &lt;code&gt;build&lt;/code&gt; commands&#10;have the same x, y, z coordinates, the second will replace the previous block before it even gets sent&#10;to Minetest.&lt;/p&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="4" />
                       <option name="name" value="Placing several blocks" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505959" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -350,6 +412,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="209" />
                                       <option name="placeholderDependency" />
@@ -368,6 +431,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="304" />
                                       <option name="placeholderDependency" />
@@ -386,6 +450,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="417" />
                                       <option name="placeholderDependency" />
@@ -404,6 +469,7 @@
                                       </option>
                                       <option name="index" value="3" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="7" />
                                       <option name="offset" value="552" />
                                       <option name="placeholderDependency" />
@@ -417,16 +483,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158942000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -435,14 +506,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;style type=&quot;text/css&quot;&gt;.t1 {margin-left: 2em;}&lt;/style&gt;&#10;&lt;h1&gt;Task 3a - Placing blocks using a &lt;code&gt;for&lt;/code&gt; loop&lt;/h1&gt;&#10;&lt;p&gt;The previous example was a lot of typing to place 9 blocks. Is there an easier way?&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Place 9 obsidian glass blocks in a square at x = 99. Centre of square is &#10;y = 14 and z = your player z value from Minetest. This will partially complete Minetest &#10;Task 3 which you can read on your sign in Minetest.&lt;/p&gt;&#10;&lt;img src=&quot;og99.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;In the previous example we needed&#10;    nine &lt;code&gt;build&lt;/code&gt; commands to place nine blocks.&#10;Doing repetitive tasks is what computers are good at. If we are repeating the same task several times we tell the&#10;computer to run in a loop until the task has been done the correct number of times. Unfortunately the task was&#10;slightly different each time. Let's look at six of the commands in a slightly different order.&lt;/p&gt;&#10;&lt;code&gt;mc.build(99, 13, ref_z - 1, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;mc.build(99, 13, ref_z + 1, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;mc.build(99, 14, ref_z - 1, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;mc.build(99, 14, ref_z + 1, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;mc.build(99, 15, ref_z - 1, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;mc.build(99, 15, ref_z + 1, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;p&gt;There are three pairs of commands which are almost the same except the y coordinate is different each time. This is where a &lt;code&gt;for&lt;/code&gt;&#10;can be used. We use a variable, in this case &lt;code&gt;y&lt;/code&gt; which has a different value each time through the&#10;loop. We start the loop with &lt;/p&gt;&#10;&lt;code&gt;for&lt;/code&gt; &lt;em&gt;variable name&lt;/em&gt; &lt;code&gt;in&lt;/code&gt; &lt;em&gt;sequence&lt;/em&gt;&lt;code&gt;:&lt;/code&gt;&#10;&lt;p&gt;The sequence is the list of values to use for that variable&#10;each time through the loop. All the lines to be repeated in the loop are indented. The loop ends when the indentation&#10;finishes. For example:&lt;/p&gt;&#10;&lt;code&gt;for y in (13, 14, 15):&lt;/code&gt;&lt;/br&gt;&#10;&lt;code class=&quot;t1&quot;&gt;print(y)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;print(&quot;finished&quot;)&lt;/code&gt;&lt;br&gt;&#10;&lt;p&gt;will have the following output&lt;/p&gt;&#10;&lt;pre&gt;13&#10;14&#10;15&#10;finished&lt;/pre&gt;&#10;&lt;p&gt;The six lines above can be replaced with three lines.&lt;/p&gt;&#10;&lt;code&gt;for y in (13, 14, 15):&lt;/code&gt;&lt;br&gt;&#10;&lt;code class=&quot;t1&quot;&gt;mc.build(99, y, ref_z - 1, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;code class=&quot;t1&quot;&gt;mc.build(99, y, ref_z + 1, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="5" />
                       <option name="name" value="Placing blocks using a for loop" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505960" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -460,6 +534,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="354" />
                                       <option name="placeholderDependency" />
@@ -478,6 +553,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="423" />
                                       <option name="placeholderDependency" />
@@ -491,16 +567,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158944000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -509,14 +590,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;style&gt;.t1 { margin-left:2em } .t2 {margin-left:4em;}&lt;/style&gt;&#10;&lt;h1&gt;Task 3b - Placing blocks using nested &lt;code&gt;for&lt;/code&gt; loops&lt;/h1&gt;&#10;&lt;p&gt;Nested loops are a loop within a loop.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Place a 3x3 square of obsidian glass at x = 101. &#10;Centre of square at y = 14 and z = player z. Remember you can used formulae (eg ref_z - 1, ref_z, ref_z + 1) or &#10;numbers (eg 19, 20, 21) in the sequence in the &lt;code&gt;for&lt;/code&gt; statement.&lt;/p&gt;&#10;&lt;p&gt;This will also add to Minetest Task 3. However, because we have used obsidian glass rather&#10;then normal glass, Minetest won't accept your task attempt as complete yet. &lt;/p&gt;&#10;&lt;img src=&quot;og101.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;If you want your program to loop with two values changing you can nest the &lt;code&gt;for&lt;/code&gt;&#10;loops. We already have a loop for y. Within the loop we can have a loop for z. Any code&#10;in the z loop needs to be indented twice. Code in the y loop is only indented once. &lt;/p&gt;&#10;&lt;code&gt;for y in (13, 14, 15):&lt;/code&gt;&lt;br&gt;&#10;&lt;code class=&quot;t1&quot;&gt;for z in (19, 20, 21):&lt;/code&gt;&lt;br&gt;&#10;&lt;code class=&quot;t2&quot;&gt;print(&quot;y&quot;, y, &quot;z&quot;, z)&lt;/code&gt;&#10;&lt;p&gt;In your task.py python program on the left, there is&#10;a print statement in the z loop. When you run the code using ctrl-shift-F10 you can see the&#10;values of y and z each time through the loop.&lt;/p&gt;&#10;&lt;p&gt;In the sequence of numbers you can use numbers, variables or even formulae using the variables.&#10;Here is an example using formulae.&lt;/p&gt;&#10;&lt;code&gt;for z in (ref_z - 1, ref_z, ref_z + 1):&lt;/code&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="6" />
                       <option name="name" value="Placing blocks using nested for loops" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505961" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -534,6 +618,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="338" />
                                       <option name="placeholderDependency" />
@@ -547,16 +632,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158947000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -565,14 +655,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;style type=&quot;text/css&quot;&gt;.t1 {margin-left: 2em;}&lt;/style&gt;&#10;&lt;h1&gt;Task 3c - Placing multiple blocks in one build&lt;/h1&gt;&#10;&lt;p&gt;There is an even easier way than using &lt;code&gt;for&lt;/code&gt; loops.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Place a 3x3x3 cube of glass blocks centred at (100, 14, ref_z). Use wool for the centre block&lt;/p&gt;&#10;&lt;p&gt;Once you have completed this task, Minetest task 3 will be complete.&lt;/p&gt;&#10;&lt;img src=&quot;glass_cube.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;Placing multiple blocks of the same kind at the same time is such a common&#10;requirement, the &lt;code&gt;build&lt;/code&gt; command has been designed to accept number sequences&#10;for the x, y and z coordinates. Previously we have used a &lt;code&gt;for&lt;/code&gt; loop.&lt;/p&gt;&#10;&lt;code&gt;for y in [13, 14, 15]:&lt;/code&gt;&lt;br&gt;&#10;&lt;code class=&quot;t1&quot;&gt;mc.build(99, y, 0, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;p&gt;This can now be rewritten in one line&lt;/p&gt;&#10;&lt;code&gt;mc.build(99, [13, 14, 15], 0, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;p&gt;It will place three glass blocks at (99, 13, 0), (99, 14, 0) and (99, 15, 0).&#10;Number sequences are not restricted to one parameter. If there is more than one sequence&#10;then it works like nested loops.&lt;/p&gt;&#10;&lt;code&gt;mc.build([99, 100], [13, 14, 15], 0, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;p&gt;places six glass blocks at (99, 13, 0), (99, 14, 0), (99, 15, 0), (100, 13, 0), (100, 14, 0), (100, 15, 0).&lt;/p&gt;&#10;&lt;p&gt;Each sequence of numbers can be stored in a variable rather than typed directly&#10;in the &lt;code&gt;build&lt;/code&gt; command. The numbers in the sequences don't even need to be consecutive. &lt;/p&gt;&#10;&lt;code&gt;seq_x = [99, 101]&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;seq_y = [13, 15]&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;mc.build(seq_x, seq_y, 0, glass)&lt;/code&gt;&lt;br&gt;&#10;&lt;p&gt;places four glass blocks at (99, 13, 0), (99, 15, 0), (101, 13, 0), (101, 15, 0).&lt;/p&gt;&#10;&lt;h2&gt;Overwriting positions&lt;/h2&gt;&#10;&lt;p&gt;If you do more than one &lt;code&gt;build&lt;/code&gt; command for the same position, the second command will overwrite&#10;the first command&lt;/p&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="7" />
                       <option name="name" value="Placing multiple blocks in one build" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505962" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -591,6 +684,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="305" />
                                       <option name="placeholderDependency" />
@@ -609,6 +703,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="343" />
                                       <option name="placeholderDependency" />
@@ -627,6 +722,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="381" />
                                       <option name="placeholderDependency" />
@@ -640,16 +736,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158949000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -658,14 +759,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Task 4 - Tunnel&lt;/h1&gt;&#10;&lt;p&gt;Visit the Minetest world to find your next task. You will have to climb down a ladder to find your&#10;    next task on two signs.&#10;    In Minetest you descend ladders using the &amp;lt;shift&amp;gt; key. To ascend, use &amp;lt;space&amp;gt;.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Build a tunnel by building a cuboid of glass and then building a cuboid of air in the centre.&lt;/p&gt;&#10;&lt;img src=&quot;glass_cuboid.png&quot; /&gt;&lt;br /&gt;&#10;&lt;img src=&quot;glass_tunnel.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;Number sequences are used frequently so Python has a &lt;code&gt;range()&lt;/code&gt; function which can&#10;produce them easily. The &lt;code&gt;range()&lt;/code&gt; function has up to three arguments, the start value, the stop value and the&#10;increment value. A trap with the &lt;code&gt;range()&lt;/code&gt; function is it counts up to but not including&#10;the stop value. This is actually useful because it means when increment is 1 (the default)&#10;the stop value minus the start value is the length of the sequence, and in our case that means the&#10;number of blocks placed.&lt;/p&gt;&#10;&lt;p&gt;The three forms of the &lt;code&gt;range()&lt;/code&gt; function are:&lt;/p&gt;&#10;&lt;code&gt;range(stop)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;range(start, stop)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;range(start, stop, increment)&lt;/code&gt;&lt;br&gt;&#10;&lt;p&gt;Examples&lt;/p&gt;&#10;&lt;code&gt;range(3) # equivalent to (0, 1, 2)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;range(2, 5) # equivalent to (2, 3, 4)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;range(4, 0) # equivalent to () because range() won't count backwards by default&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;range(4, 0, -1) # equivalent to (4, 3, 2, 1)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;range(70, 93, 4) # equivalent to (70, 74, 78, 82, 86, 90)&lt;/code&gt;&lt;br&gt;&#10;&lt;p&gt;Your task in Minetest will have a height, a width,&#10;x1, x2, y and z values. These numbers will need to be assigned correctly to the variables&#10;ref_z, x_max, x_min, floor_y, tunnel_height, tunnel_width.&lt;/p&gt;&#10;&lt;p&gt;In this task store sequences of numbers in range_y_ext and range_z_ext. Start with entering as&#10;lists of numbers. If you feel confident, convert that list to use the &lt;code&gt;range()&lt;/code&gt;&#10;function. Once that works, try using variable names and formulae. They will be similar to&#10;those used in range_x, range_y_int and range_z_int.&lt;/p&gt;&#10;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="8" />
                       <option name="name" value="Tunnel" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505963" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -681,6 +785,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="256" />
                                       <option name="placeholderDependency" />
@@ -699,6 +804,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="267" />
                                       <option name="placeholderDependency" />
@@ -717,6 +823,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="280" />
                                       <option name="placeholderDependency" />
@@ -735,6 +842,7 @@
                                       </option>
                                       <option name="index" value="3" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="316" />
                                       <option name="placeholderDependency" />
@@ -753,6 +861,7 @@
                                       </option>
                                       <option name="index" value="4" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="333" />
                                       <option name="placeholderDependency" />
@@ -774,6 +883,7 @@
                                       </option>
                                       <option name="index" value="5" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="635" />
                                       <option name="placeholderDependency" />
@@ -792,6 +902,7 @@
                                       </option>
                                       <option name="index" value="6" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="689" />
                                       <option name="placeholderDependency" />
@@ -810,6 +921,7 @@
                                       </option>
                                       <option name="index" value="7" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="1004" />
                                       <option name="placeholderDependency" />
@@ -828,6 +940,7 @@
                                       </option>
                                       <option name="index" value="8" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="1134" />
                                       <option name="placeholderDependency" />
@@ -841,16 +954,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158951000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -859,14 +977,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Task 5 - Tunnel floor&lt;/h1&gt;&#10;&lt;p&gt;Look in your tunnel in the Minetest world to see Task 5. &lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Replace the floor of the tunnel with stone and place a torch every four blocks.&#10;Think carefully when you are filling in your task.py program whether you need &#10;a single number or sequence of numbers for each answer.&#10;&lt;/p&gt;&#10;&lt;img src=&quot;tunnel_floor.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;Remember when using the &lt;code&gt;range()&lt;/code&gt; function you can specify the step as&#10;well as the start and stop values.&lt;/p&gt;&#10;&lt;code&gt;range(&lt;em&gt;start, stop, step&lt;/em&gt;)&lt;/code&gt;&#10;&lt;p&gt;The step value defaults to &lt;code&gt;1&lt;/code&gt; if you don't include it which is fine if you are&#10;counting up in ones. However, if you are counting up in fours, include a step value of 4.&#10;If you are counting down, make sure your step is negative.&lt;/p&gt;&#10;&lt;code&gt;range(93, 70, -4) # is equivalent to (93, 89, 85, 81, 77, 73)&lt;/code&gt;&#10;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="9" />
                       <option name="name" value="Tunnel floor" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505964" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -882,6 +1003,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="974" />
                                       <option name="placeholderDependency" />
@@ -900,6 +1022,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="1307" />
                                       <option name="placeholderDependency" />
@@ -918,6 +1041,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="7" />
                                       <option name="offset" value="1385" />
                                       <option name="placeholderDependency" />
@@ -931,11 +1055,12 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -946,16 +1071,21 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="false" />
+                                <option name="name" value="tunnel_floor.png" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="tunnel_floor.png" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158956000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -964,14 +1094,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Wall of glass&lt;/h1&gt;&#10;&lt;p&gt;There are several steps to this program which is&#10;going to build some arches over the path heading&#10;from your signpost in the positive x direction. Each arch will&#10;have the same profile as a cross section of the tunnel&#10;you have just built.&lt;/p&gt;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Build a solid wall of glass 7 high x 5 wide at x = 105. Glass block in the centre at the &#10;bottom of the wall should be at y = 9, z = &lt;em&gt;your player z&lt;/em&gt;.&lt;/p&gt;&#10;&lt;p&gt;This is not one of the tasks assigned by Minetest. It is a repetition of Minetest tasks&#10;4 and 5 with some variations.&lt;/p&gt;&#10;&lt;img src=&quot;glass_wall.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;The first step is to build a glass wall. This is similar to the first step in&#10;building the tunnel which was to build a solid glass cuboid.&lt;/p&gt;&#10;&lt;ul&gt;&#10;&lt;li&gt;The minimum x value on the path is 105 so store that in variable &lt;code&gt;path_x_min&lt;/code&gt;&lt;/li&gt;&#10;&lt;li&gt;The stone on the path is at level 9 so store that in variable &lt;code&gt;floor_y&lt;/code&gt;&lt;/li&gt;&#10;&lt;li&gt;The arch will have same dimensions as tunnel, 7 high and 5 wide, so store in &lt;code&gt;arch_height&lt;/code&gt; and &lt;code&gt;arch_width&lt;/code&gt;&lt;/li&gt;&#10;&lt;/ul&gt;&#10;&lt;p&gt;We need to calculate the z position of the sides of the arch. We know the z position&#10;of the centre of the arch and we know the width of the arch. Hence the formula is&lt;/p&gt;&#10;&lt;code&gt;wall_z = ref_z - arch_width // 2&lt;/code&gt;&#10;&lt;p&gt;We are going to store the x values of the arches in variable &lt;code&gt;range_x_arch&lt;/code&gt;. For testing we&#10;will start with one x value. Let us use the start of the path which is &lt;code&gt;path_x_min&lt;/code&gt;.&lt;/p&gt;&#10;&lt;code&gt;range_x_arch = path_x_min&lt;/code&gt;&#10;&lt;p&gt;Store the external dimensions of the arch in &lt;code&gt;range_y_ext&lt;/code&gt; and &lt;code&gt;range_z_ext&lt;/code&gt;.&lt;/p&gt;&#10;&lt;code&gt;range_y_ext = range(floor_y, floor_y + arch_height)&lt;/code&gt;&lt;br&gt;&#10;&lt;code&gt;range_z_ext = range(wall_z, wall_z + arch_width)&lt;/code&gt;&#10;&lt;p&gt;Remember that the &lt;code&gt;range()&lt;/code&gt; function returns a sequence of numbers. For&#10;our purposes the formula above for &lt;code&gt;range_y_ext&lt;/code&gt; is equivalent to typing:&lt;/p&gt;&#10;&lt;code&gt;range_y_ext = [9, 10, 11, 12, 13, 14, 15]&lt;/code&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="10" />
                       <option name="name" value="Wall of glass" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505965" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="glass_wall.png">
@@ -981,11 +1114,12 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="false" />
+                                <option name="name" value="glass_wall.png" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="glass_wall.png" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -1002,6 +1136,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="380" />
                                       <option name="placeholderDependency" />
@@ -1020,6 +1155,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="421" />
                                       <option name="placeholderDependency" />
@@ -1038,6 +1174,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="512" />
                                       <option name="placeholderDependency" />
@@ -1056,6 +1193,7 @@
                                       </option>
                                       <option name="index" value="3" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="584" />
                                       <option name="placeholderDependency" />
@@ -1074,6 +1212,7 @@
                                       </option>
                                       <option name="index" value="4" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="7" />
                                       <option name="offset" value="732" />
                                       <option name="placeholderDependency" />
@@ -1092,6 +1231,7 @@
                                       </option>
                                       <option name="index" value="5" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="799" />
                                       <option name="placeholderDependency" />
@@ -1110,6 +1250,7 @@
                                       </option>
                                       <option name="index" value="6" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="854" />
                                       <option name="placeholderDependency" />
@@ -1128,6 +1269,7 @@
                                       </option>
                                       <option name="index" value="7" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="906" />
                                       <option name="placeholderDependency" />
@@ -1141,16 +1283,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158969000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -1159,14 +1306,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Arch - hollow&lt;/h1&gt;&#10;&lt;p&gt;That wall doesn't look like an arch!&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Remove the centre part of the&#10;wall so it becomes an arch. Remember for the &lt;code&gt;range_y_int&lt;/code&gt;&#10;and &lt;code&gt;range_z_int&lt;/code&gt; you can use a list&#10;of numbers or a formula.&lt;/p&gt;&#10;&lt;code&gt;range_y_int = [10, 11, 12, 13, 14]&lt;/code&gt;&#10;&lt;p&gt;or&lt;/p&gt;&#10;&lt;code&gt;range_y_int = range(floor_y + 1, floor_y + arch_height - 1)&lt;/code&gt;&lt;br /&gt;&#10;&lt;img src=&quot;arch.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;To remove blocks we replace them with &lt;code&gt;&quot;air&quot;&lt;/code&gt;.&lt;/p&gt;&#10;&lt;p&gt;In your program, the external dimensions are for&#10;the glass blocks on the outside of the arch &lt;code&gt;range_y_ext, range_z_ext&lt;/code&gt;. The internal dimensions are for the air blocks on the&#10;inside of the arch &lt;code&gt;range_y_int, range_z_int&lt;/code&gt;.&lt;p&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="11" />
                       <option name="name" value="Arch" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505966" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="arch.png">
@@ -1176,11 +1326,12 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="false" />
+                                <option name="name" value="arch.png" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="arch.png" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -1198,6 +1349,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="985" />
                                       <option name="placeholderDependency" />
@@ -1217,6 +1369,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="1045" />
                                       <option name="placeholderDependency" />
@@ -1237,6 +1390,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="9" />
                                       <option name="offset" value="1450" />
                                       <option name="placeholderDependency" />
@@ -1250,16 +1404,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158975000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -1268,14 +1427,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Arch floor&lt;/h1&gt;&#10;&lt;p&gt;The single arch is almost complete.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Fix the floor under the arch by changing it from glass to stone&lt;/p&gt;&#10;&lt;p&gt;Place a torch on the floor at &lt;code&gt;(ref_z + 1)&lt;/code&gt;&lt;/p&gt;&#10;&lt;img src=&quot;arch_floor.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt;In this task you will need to enter the complete &lt;code&gt;build&lt;/code&gt; command.&#10;The &lt;code&gt;build&lt;/code&gt; command is called from a &lt;code&gt;MinetestConnection&lt;/code&gt; object. If your&#10;&lt;code&gt;MinetestConnection&lt;/code&gt; object is stored in a variable called &lt;code&gt;mc&lt;/code&gt; then&#10;&lt;code&gt;build&lt;/code&gt; can be called from &lt;code&gt;mc&lt;/code&gt;.&lt;/p&gt;&#10;&lt;code&gt;mc.build(x, y, z, item)&lt;/code&gt;&#10;&lt;p&gt;where x, y and z are the coordinates of the location to build the item. They can each be single&#10;numbers or sequences of numbers. The item is a str or dict describing the block properties.&#10;(More on dicts later)&lt;/p&gt;&#10;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="12" />
                       <option name="name" value="Arch floor" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505967" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="arch_floor.png">
@@ -1285,11 +1447,12 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="false" />
+                                <option name="name" value="arch_floor.png" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="arch_floor.png" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -1306,6 +1469,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="832" />
                                       <option name="placeholderDependency" />
@@ -1325,6 +1489,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="9" />
                                       <option name="offset" value="1768" />
                                       <option name="placeholderDependency" />
@@ -1343,6 +1508,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="9" />
                                       <option name="offset" value="1849" />
                                       <option name="placeholderDependency" />
@@ -1356,16 +1522,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158980000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -1374,14 +1545,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Arches&lt;/h1&gt;&#10;&lt;p&gt;Now that you have built one arch it is easy to build several arches.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Change the&#10;value of &lt;code&gt;range_x_arch&lt;/code&gt; to be a sequence of four x values where &#10;each arch is separated by three blocks. ie the values are counting up in fours.&lt;/p&gt;&#10;&lt;img src=&quot;arches.png&quot; /&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="13" />
                       <option name="name" value="Arches" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505968" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="arches.png">
@@ -1391,11 +1565,12 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="false" />
+                                <option name="name" value="arches.png" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="arches.png" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -1414,6 +1589,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="880" />
                                       <option name="placeholderDependency" />
@@ -1427,16 +1603,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158988000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -1445,14 +1626,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Castle base&lt;/h1&gt;&#10;&lt;p&gt;We are going to start by building the base of the castle.&#10;The base will be a room with four walls and no roof. We can &#10;build this by building a cuboid of stone and then inside that&#10;a cuboid of air. We will replace two blocks in the front wall&#10;to make a doorway.&lt;/p&gt;&#10;&lt;p&gt;The base section of the castle will be 5 blocks high. &#10;The length of the castle will be 9 blocks. The width of the &#10;castle will be 5 blocks.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Create a 9 x 5 x 5 open top stone box starting at x = 121, y = 9. Add a 2 x 1 doorway.&lt;/p&gt;&#10;&lt;img src=&quot;castle_base.png&quot; /&gt;&#10;&lt;/html&gt;&#10;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="14" />
                       <option name="name" value="Castle base" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505969" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="castle_base.png">
@@ -1462,11 +1646,12 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="false" />
+                                <option name="name" value="castle_base.png" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="castle_base.png" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -1483,6 +1668,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="540" />
                                       <option name="placeholderDependency" />
@@ -1501,6 +1687,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="589" />
                                       <option name="placeholderDependency" />
@@ -1519,6 +1706,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="654" />
                                       <option name="placeholderDependency" />
@@ -1540,6 +1728,7 @@
                                       </option>
                                       <option name="index" value="3" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="7" />
                                       <option name="offset" value="813" />
                                       <option name="placeholderDependency" />
@@ -1561,6 +1750,7 @@
                                       </option>
                                       <option name="index" value="4" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="897" />
                                       <option name="placeholderDependency" />
@@ -1581,6 +1771,7 @@
                                       </option>
                                       <option name="index" value="5" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="968" />
                                       <option name="placeholderDependency" />
@@ -1599,6 +1790,7 @@
                                       </option>
                                       <option name="index" value="6" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="1029" />
                                       <option name="placeholderDependency" />
@@ -1619,6 +1811,7 @@
                                       </option>
                                       <option name="index" value="7" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="1718" />
                                       <option name="placeholderDependency" />
@@ -1632,16 +1825,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158994000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -1650,14 +1848,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Castle windows&lt;/h1&gt;&#10;&lt;p&gt;Let us place some iron bar type windows on the front wall and side walls&#10;    of the castle.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Place three windows on each side wall. The windows will&#10;be 3 blocks high and one block wide and evenly spaced along the side&#10;wall. They will not touch the floor but can go to the full height of&#10;the castle base.&lt;/p&gt;&#10;&lt;p&gt;Place one window along the front wall. It will be three blocks wide&#10;and one block high. It will be placed on the top row of blocks of the &#10;castle base.&lt;/p&gt;&#10;&lt;img src=&quot;castle_windows.png&quot; /&gt;&#10;&lt;h2&gt;Lesson&lt;/h2&gt;&#10;&lt;p&gt; We will use bars for our windows &quot;xpanes:bar_flat&quot;.&#10;The problem with bars is we have to specify a direction as well&#10;as a the building material name.&lt;/p&gt;&#10;&lt;p&gt;Python has a dict type which means dictionary. A dict contains&#10;multiple pieces of data in a single variable. We have also&#10;seen lists store multiple pieces of data.&lt;/p&gt;&#10;&lt;code&gt;my_list = [13, 14, 15]&lt;/code&gt;&#10;&lt;p&gt;The difference with dicts is they can give names to&#10;each piece of data in the variable. The names are called keys&#10;and you use the key to specify which piece of data you want.&lt;/p&gt;&#10;&lt;code&gt;my_dict = {&quot;name&quot;:&quot;xpanes:bar_flat&quot;, &quot;direction&quot;:&quot;+x&quot;}&lt;/code&gt;&#10;&lt;p&gt;The example above has two pieces of data, &quot;xpanes:bar_flat&quot; is a&#10;str and is the first piece of data. It has a key &quot;name&quot;. The second&#10;piece of data is &quot;+x&quot; which is also a str. It has a key &quot;direction&quot;.&lt;/p&gt;&#10;&lt;p&gt;For &quot;xpanes:bar_flat&quot; there are two possible directions&#10;and they are the directions in which a player would be looking to&#10;look through the window. The &quot;+x&quot; direction means player would be looking in direction&#10;of the x axis. If no direction is specified then &quot;+x&quot; is used by default.&#10;The &quot;+z&quot; direction means player would be looking in the direction&#10;of the z axis. &lt;/p&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="15" />
                       <option name="name" value="Castle windows" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505970" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -1673,6 +1874,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="7" />
                                       <option name="offset" value="1051" />
                                       <option name="placeholderDependency" />
@@ -1693,6 +1895,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="1636" />
                                       <option name="placeholderDependency" />
@@ -1714,6 +1917,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="1770" />
                                       <option name="placeholderDependency" />
@@ -1733,6 +1937,7 @@
                                       </option>
                                       <option name="index" value="3" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="2365" />
                                       <option name="placeholderDependency" />
@@ -1752,6 +1957,7 @@
                                       </option>
                                       <option name="index" value="4" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="2470" />
                                       <option name="placeholderDependency" />
@@ -1765,16 +1971,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539158998000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -1783,14 +1994,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;body&gt;&#10;&lt;h1&gt;Castle roof&lt;/h1&gt;&#10;&lt;p&gt;The castle roof sits on top of the castle base. It is a similar shape to the castle base,&#10;an open box without a top, but it extends on block on every side in the x and z directions&#10;and is only three blocks high.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Add a 11 x 7 x 3 open top stone box on top of the castle base to be the roof. &lt;/p&gt;&#10;&lt;p&gt;Add a ladder so that players can climb up the ladder to the roof. Ladder&#10;needs a direction so that its orientation is known and in which part of the cube of space the&#10;ladder should be placed. See the hints for more details.&lt;/p&gt;&#10;&lt;img src=&quot;castle_roof.png&quot; /&gt;&#10;&lt;img src=&quot;ladder.png&quot; /&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="16" />
                       <option name="name" value="Castle roof" />
                       <option name="status" value="Unchecked" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505971" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="castle_roof.png">
@@ -1800,11 +2014,12 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="false" />
+                                <option name="name" value="castle_roof.png" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="castle_roof.png" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -1815,11 +2030,12 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="false" />
+                                <option name="name" value="ladder.png" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="ladder.png" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -1836,6 +2052,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="1052" />
                                       <option name="placeholderDependency" />
@@ -1855,6 +2072,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="1998" />
                                       <option name="placeholderDependency" />
@@ -1873,6 +2091,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="2075" />
                                       <option name="placeholderDependency" />
@@ -1892,6 +2111,7 @@
                                       </option>
                                       <option name="index" value="3" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="2154" />
                                       <option name="placeholderDependency" />
@@ -1911,6 +2131,7 @@
                                       </option>
                                       <option name="index" value="4" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="3097" />
                                       <option name="placeholderDependency" />
@@ -1930,6 +2151,7 @@
                                       </option>
                                       <option name="index" value="5" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="3168" />
                                       <option name="placeholderDependency" />
@@ -1951,6 +2173,7 @@
                                       </option>
                                       <option name="index" value="6" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="3290" />
                                       <option name="placeholderDependency" />
@@ -1964,16 +2187,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539159002000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -1982,14 +2210,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Castle&lt;/h1&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;To finish off the castle, add a door at the entrance, crenels on the roof&#10;and red carpet under the arches, through the door and to the ladder.&lt;/p&gt;&#10;&lt;h2&gt;Door&lt;/h2&gt;&#10;&lt;p&gt;Only the bottom half of a door needs to be placed and the top half will automatically&#10;appear. It is important therefore to ensure top space for door is air. Otherwise the door&#10;will not be able to move.&lt;/p&gt;&#10;&lt;p&gt;The name for a wooden door is &lt;code&gt;&quot;doors:door_wood_a&quot;&lt;/code&gt;.&#10;The &lt;code&gt;&quot;_a&quot;&lt;/code&gt; at the end means the left door of a pair. If the door ended in &#10;&lt;code&gt;&quot;_b&quot;&lt;/code&gt; it would be the right door.&lt;/p&gt;&#10;&lt;p&gt;Doors also need a &quot;direction&quot; parameter. The direction is the direction the player is&#10;facing when viewing the door. When a player is viewing the door in that direction the &#10;door will be flush with any wall beside it. Possible directions are &#10;&lt;code&gt;&quot;+x&quot;, &quot;-x&quot;, &quot;+z&quot;, &quot;-z&quot;&lt;/code&gt;. Experiment with different values to find the door direction&#10;you like the best.&lt;/p&gt;&#10;&lt;h2&gt;Crenels and Merlons&lt;/h2&gt;&#10;&lt;p&gt;The classic castle design has a square tooth wall protecting soldiers in the castle. The gaps&#10;between the teeth are called crenels and the soldiers can shoot arrows or fling other&#10;projectiles through them. The teeth are called merlons and they protect the soldiers from&#10;the attackers. We currently have a solid wall so need to add crenels for soldiers to &#10;shoot arrows through. The crenels will be in every second position. We can't have a crenel &#10;in the corners because the merlons will obscure them. &lt;/p&gt;&#10;&lt;p&gt;See if you can use &lt;code&gt;range()&lt;/code&gt; functions to place crenels every second block&#10;on the walls of the roof.&lt;/p&gt;&#10;&lt;h2&gt;Carpet&lt;/h2&gt;&#10;&lt;p&gt;Red wool will make a fitting carpet for your castle.&lt;/p&gt;&#10;&lt;img src=&quot;crenels.png&quot; width=&quot;100%&quot; /&gt;&lt;br /&gt;&#10;&lt;img src=&quot;red_carpet.png&quot; width=&quot;100%&quot; /&gt;&#10;&lt;h2&gt;Congratulations&lt;/h2&gt;&#10;&lt;p&gt;When you have finished this task you have finished all the tasks in this course.&lt;/p&gt;&#10;&lt;p&gt;Well done!&lt;/p&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="17" />
                       <option name="name" value="Castle" />
                       <option name="status" value="Solved" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map />
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505972" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="crenels.png">
@@ -1999,11 +2230,12 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="false" />
+                                <option name="name" value="crenels.png" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="crenels.png" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -2014,11 +2246,12 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="false" />
+                                <option name="name" value="red_carpet.png" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="red_carpet.png" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -2036,6 +2269,7 @@
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="6" />
                                       <option name="offset" value="1073" />
                                       <option name="placeholderDependency" />
@@ -2058,6 +2292,7 @@
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="4" />
                                       <option name="offset" value="1153" />
                                       <option name="placeholderDependency" />
@@ -2079,6 +2314,7 @@
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="7" />
                                       <option name="offset" value="2748" />
                                       <option name="placeholderDependency" />
@@ -2100,6 +2336,7 @@
                                       </option>
                                       <option name="index" value="3" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="7" />
                                       <option name="offset" value="2786" />
                                       <option name="placeholderDependency" />
@@ -2120,6 +2357,7 @@
                                       </option>
                                       <option name="index" value="4" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="7" />
                                       <option name="offset" value="2852" />
                                       <option name="placeholderDependency" />
@@ -2138,6 +2376,7 @@
                                       </option>
                                       <option name="index" value="5" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="7" />
                                       <option name="offset" value="2874" />
                                       <option name="placeholderDependency" />
@@ -2156,6 +2395,7 @@
                                       </option>
                                       <option name="index" value="6" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="3913" />
                                       <option name="placeholderDependency" />
@@ -2177,6 +2417,7 @@
                                       </option>
                                       <option name="index" value="7" />
                                       <option name="initialState" />
+                                      <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="8" />
                                       <option name="offset" value="4183" />
                                       <option name="placeholderDependency" />
@@ -2190,16 +2431,21 @@
                                   </list>
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map />
+                      </option>
+                      <option name="updateDate" value="1539159010000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -2208,16 +2454,17 @@
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="HTML" />
                       <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h1&gt;Flag&lt;/h1&gt;&#10;&lt;p&gt;You have finished the course, but you now you get to build a flag on your castle using&#10;    your own design.&lt;/p&gt;&#10;&lt;h2&gt;Task&lt;/h2&gt;&#10;&lt;p&gt;Build a flag pole and at the top of the flag pole put a flag of your own design.&lt;/p&gt;&#10;&lt;h2&gt;Size&lt;/h2&gt;&#10;&lt;p&gt;Set the values of variables &lt;code&gt;flag_height&lt;/code&gt; and &lt;code&gt;flag_width&lt;/code&gt;.&#10;    &lt;code&gt;flag_height&lt;/code&gt; is the  height of the flag measured from the top&#10;    of the flag pole to the top of the flag. &lt;code&gt;flag_width&lt;/code&gt; is measured from&#10;    the flag_pole in the x direction. Try to keep them within 21 x 21 blocks.&lt;/p&gt;&#10;&lt;h2&gt;Colours&lt;/h2&gt;&#10;&lt;p&gt;Put all the colours you want to use in the &lt;code&gt;list&lt;/code&gt; variable &lt;code&gt;colours&lt;/code&gt;.&lt;/p&gt;&#10;&lt;code&gt;colours = [&quot;wool:green&quot;, &quot;wool:blue&quot;]  # to use the two colours green and blue.&lt;/code&gt;&#10;&lt;p&gt;Python has a feature called &quot;list comprehension&quot; which makes it easier to create longer lists.&#10;    Look it up if you want to find out more about it. Here is an example that creates a list containing&#10;    all 15 colours of wool.&#10;&lt;/p&gt;&#10;&lt;code&gt;colours = [&quot;wool:&quot; + colour for colour in &quot;white|grey|dark_grey|black|blue|cyan|green|dark_green|yellow|orange|brown|red|pink|magenta|violet&quot;.split(&quot;|&quot;)]&lt;/code&gt;&#10;&lt;h2&gt;Stripe width&lt;/h2&gt;&#10;&lt;p&gt;If you are using more than one colour you can set the &lt;code&gt;stripe_width&lt;/code&gt; to be used in the flag pattern.&lt;/p&gt;&#10;&lt;h2&gt;Pattern&lt;/h2&gt;&#10;&lt;p&gt;The next step is to choose the pattern you want for your flag. Here are some examples.&lt;/p&gt;&#10;&lt;h3&gt;Single colour&lt;/h3&gt;&#10;&lt;code&gt;c = 0&lt;/code&gt;&#10;&lt;h3&gt;Vertical stripes&lt;/h3&gt;&#10;&lt;code&gt;c = x // stripe_width % num_colours&lt;/code&gt;&#10;&lt;h3&gt;Horizontal stripes&lt;/h3&gt;&#10;&lt;code&gt;c = y // stripe_width % num_colours&lt;/code&gt;&#10;&lt;h3&gt;Diagonal stripes&lt;/h3&gt;&#10;&lt;code&gt;c = (x + y) // stripe_width % num_colours&lt;/code&gt;&#10;&lt;p&gt;or for the other diagonal&lt;/p&gt;&#10;&lt;code&gt;c = (x - y) // stripe_width % num_colours&lt;/code&gt;&#10;&lt;h3&gt;Cross centred on centre of flag&lt;/h3&gt;&#10;&lt;code&gt;cx = pole_x + flag_length / 2&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;cy = flag_y + flag_height / 2&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;c = int(min(abs(x-cx), abs(y-cy))) // stripe_width % num_colours&lt;/code&gt;&#10;&lt;h3&gt;Squares centred on centre of flag&lt;/h3&gt;&#10;&lt;code&gt;cx = pole_x + flag_length / 2&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;cy = flag_y + flag_height / 2&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;c = int(max(abs(x-cx), abs(y-cy))) // stripe_width % num_colours&lt;/code&gt;&#10;&lt;h3&gt;Circles centred on front bottom corner of flag&lt;/h3&gt;&#10;&lt;code&gt;cx = pole_x&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;cy = flag_y&lt;/code&gt;&lt;br /&gt;&#10;&lt;code&gt;c = int(math.sqrt((x-cx)**2 + (y-cy)**2) ) // stripe_width % num_colours&lt;/code&gt;&#10;&lt;h2&gt;Flag shape&lt;/h2&gt;&#10;&lt;p&gt;The shape of the flag can be defined in a function. This program contains&#10;    three functions and you can choose one of them to define your flag shape.&#10;    For the very advanced, try creating your own function.&#10;&lt;/p&gt;&#10;&lt;h3&gt;Rectangle&lt;/h3&gt;&#10;&lt;code&gt;if rectangle_flag(x, y):&lt;/code&gt;&#10;&lt;h3&gt;Triangle with full length at top of flag pole&lt;/h3&gt;&#10;&lt;code&gt;if triangle_top_flag(x, y):&lt;/code&gt;&#10;&lt;h3&gt;Half ellipse&lt;/h3&gt;&#10;&lt;code&gt;if half_ellipse_flag(x, y):&lt;/code&gt;&#10;&lt;br&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
                       <option name="index" value="18" />
                       <option name="name" value="Flag" />
                       <option name="status" value="Failed" />
-                      <option name="stepId" value="0" />
-                      <option name="testsText">
-                        <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
-                        </map>
-                      </option>
-                      <option name="updateDate" />
+                      <option name="stepId" value="505973" />
+                      <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -2227,25 +2474,33 @@
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="true" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# TODO: type solution here&#10;" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="userCreated" value="false" />
-                                <option name="name" value="task.py" />
-                                <option name="text" value="# TODO: type solution here&#10;" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
                         </map>
                       </option>
+                      <option name="testsText">
+                        <map>
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;from unittest import mock&#10;from triptera_pe_tests import mock_send_building, mock_create&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;@mock.patch('ircbuilder.MinetestConnection.create', mock_create)&#10;@mock.patch('ircbuilder.MinetestConnection.send_building', mock_send_building)&#10;def run_patched_tests():&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;    # test_building()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_patched_tests()&#10;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" value="1539159015000" />
                     </EduTask>
                   </list>
                 </option>
+                <option name="unitId" value="154345" />
               </Lesson>
             </list>
           </option>
-        </Course>
+        </RemoteCourse>
       </option>
-      <option name="VERSION" value="9" />
+      <option name="VERSION" value="11" />
       <option name="myUserTests">
         <map />
       </option>
