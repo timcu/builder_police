@@ -72,7 +72,7 @@
                       <option name="name" value="Set up Minetest" />
                       <option name="status" value="Failed" />
                       <option name="stepId" value="505956" />
-                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="stepikChangeStatus" value="Info and Content changed" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -82,7 +82,9 @@
                                   <list>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list />
+                                        <list>
+                                          <option value="your minetest username" />
+                                        </list>
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
@@ -99,7 +101,9 @@
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list />
+                                        <list>
+                                          <option value="your minetest password" />
+                                        </list>
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
@@ -231,7 +235,7 @@
                       <option name="name" value="Placing a block" />
                       <option name="status" value="Solved" />
                       <option name="stepId" value="505957" />
-                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="stepikChangeStatus" value="Info and Content changed" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
@@ -600,7 +604,7 @@
                       <option name="name" value="Placing blocks using nested for loops" />
                       <option name="status" value="Solved" />
                       <option name="stepId" value="505961" />
-                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="stepikChangeStatus" value="Info and Content changed" />
                       <option name="taskFiles">
                         <map>
                           <entry key="task.py">
