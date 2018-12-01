@@ -84,7 +84,7 @@ local get_ground_level = function(x, z)
 end  
 
 builder_police = {
-	version="0.0.5",
+	version="0.0.6",
 }
 builder_police.get_player_z = function(player_name)
 	local key = player_name..'_build_z'
@@ -95,6 +95,20 @@ end
 
 builder_police.get_delta_z = function()
 	return tonumber(read_key('delta_z'))
+end
+
+builder_police.get_player_num_quiz = function(player_name)
+	local key = player_name..'_quiz'
+	local num_quiz = tonumber(tbl_storage.fields[key])
+	return num_quiz and tonumber(num_quiz) or 0
+end
+
+builder_police.set_player_num_quiz = function(player_name, num_quiz)
+	minetest.chat_send_all(player_name..' assigned quiz '..num_quiz)
+	local key = player_name..'_quiz'
+	tbl_storage.fields[key] = num_quiz
+	write_storage()
+	print(player_name.." has been assigned quiz "..num_quiz)
 end
 
 local get_player_task = function(player_name)
@@ -216,6 +230,46 @@ minetest.register_chatcommand("set_jail_free_task", {
 	end,
 })
 
+minetest.register_chatcommand("quiz", {
+	params = "<player_name>",
+	description = "Sets up current question in quiz",
+	privs = {},
+	func = function(name, player_name)
+		if not player_name or player_name == '' then
+			player_name = name
+		end
+		builder_police.assign_quiz(player_name)
+		local num_quiz = builder_police.get_player_num_quiz(player_name)
+		local quiz = builder_police.get_quiz(player_name)
+		if num_quiz and quiz then
+			minetest.chat_send_all("Quiz "..num_quiz.." for "..player_name..": "..quiz.question)
+			for i,a in ipairs(quiz.answers) do
+				minetest.chat_send_all(a)
+			end
+		else
+			return false, "No quiz for "..player_name
+		end
+		return true
+	end,
+})
+
+minetest.register_chatcommand("set_player_quiz", {
+	params = "<player_name> <quiz_number>",
+	description = "Sets the number of the first task which has not yet been completed by player",
+	privs = {police = true},
+	func = function(name, param)
+		local player_name, str_quiz = param:match("(%S+) (%d+)")
+		local num_quiz = tonumber(str_quiz)
+		if num_quiz then
+			builder_police.set_player_num_quiz(player_name, num_quiz)
+			builder_police.assign_quiz(player_name)
+			return true, player_name.."'s next quiz is now "..builder_police.get_player_num_quiz(player_name)
+		else
+			return false, "You must provide a player_name and numerical quiz_number"
+		end
+	end,
+})
+
 minetest.register_chatcommand("get_player_task", {
 	params = "<player_name>",
 	description = "Gets the number of the first task which has not yet been completed by player",
@@ -276,6 +330,7 @@ builder_police.pos_build = function(player_name)
 end
 
 dofile(minetest.get_modpath(mod_this) .. "/set1/tasks.lua")
+dofile(minetest.get_modpath(mod_this) .. "/set1/quizzes.lua")
 
 minetest.register_on_joinplayer(function(player)
 	assign_player_z(player:get_player_name())
@@ -320,6 +375,7 @@ minetest.register_globalstep(function(dtime)
 		local players = {}
 		for _,player in ipairs(minetest.get_connected_players()) do
 			players[player:get_player_name()]=player
+			builder_police.test_quiz_for_player(player)
 		end
 		--print("Jail free task ")
 		--print(jail_free_task)
@@ -327,32 +383,32 @@ minetest.register_globalstep(function(dtime)
 			for player_name in str_player_names:gmatch("%S+") do
 				local z = builder_police.get_player_z(player_name)
 				local task = get_player_task(player_name)
+				local num_quiz = builder_police.get_player_num_quiz(player_name)
 				local player_jail_free_task = get_player_jail_free_task(player_name)
 				if not task or task < 1 then
 					task = 1
 					set_player_task(player_name, task)
-					--builder_police.tasks[task](player_name) 
 				end
 				while builder_police.tests[task](player_name) and task < #builder_police.tests do
 					if player_name and task then
 						-- player has completed their next task
 						minetest.chat_send_all(player_name.." has completed task "..task)
 						-- check what privileges player gets for completing task and grant them
-						local privs = minetest.get_player_privs(player_name)
-						local task_privileges = get_task_privileges()
-						local count = 1
-						for p in task_privileges:gmatch("(%S+)") do
-							if count <= task and p and p ~= "-" then
-								privs[p] = true
-							end
-							count = count + 1
-						end
-						minetest.set_player_privs(player_name, privs)
 					end		
 					task = task + 1
 					set_player_task(player_name, task)
 					--builder_police.tasks[task](player_name) 
 				end
+				local privs = minetest.get_player_privs(player_name)
+				local task_privileges = get_task_privileges()
+				local count = 1
+				for p in task_privileges:gmatch("(%S+)") do
+					if count <= task-1 + math.floor((num_quiz-1) / 5) and p and p ~= "-" then
+						privs[p] = true
+					end
+					count = count + 1
+				end
+				minetest.set_player_privs(player_name, privs)
 				-- test current players to see which ones need to be in jail
 				local player = players[player_name]
 				if player then
@@ -363,6 +419,7 @@ minetest.register_globalstep(function(dtime)
 						if p.x < p1.x or p.x > p2.x or p.y < p1.y or p.y > p2.y or p.z < p1.z + z or p.z > p2.z + z then
 							--player:set_physics_override({jump=0, speed=0, gravity=0})
 							--print(minetest.serialize(p)..minetest.serialize(p1)..minetest.serialize(p2))
+							minetest.set_node({x=102,y=9,z=z},"default:stone")
 							player:setpos({x=102,y=9.5,z=z})
 						end
 					end
