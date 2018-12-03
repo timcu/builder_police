@@ -419,7 +419,7 @@ minetest.register_globalstep(function(dtime)
 						if p.x < p1.x or p.x > p2.x or p.y < p1.y or p.y > p2.y or p.z < p1.z + z or p.z > p2.z + z then
 							--player:set_physics_override({jump=0, speed=0, gravity=0})
 							--print(minetest.serialize(p)..minetest.serialize(p1)..minetest.serialize(p2))
-							minetest.set_node({x=102,y=9,z=z},"default:stone")
+							minetest.set_node({x=102,y=9,z=z},{name="default:stone"})
 							player:setpos({x=102,y=9.5,z=z})
 						end
 					end
