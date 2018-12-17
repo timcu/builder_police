@@ -22,7 +22,7 @@ while guess != answer and guesses < 10:
         # check if guess is too high
         if guess > answer:
             print("Your guess of " + str(guess) + " is too high")
-        # check if guess it too low
+        # check if guess is too low
         elif guess < answer:
             print("Your guess of " + str(guess) + " is too low")
 # The following lines are not included in the 'while' loop because the indentation has returned

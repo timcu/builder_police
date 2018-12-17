@@ -2,39 +2,58 @@
 <project version="4">
   <component name="StudySettings">
     <StudyTaskManager>
+      <option name="VERSION" value="11" />
+      <option name="myUserTests">
+        <map />
+      </option>
       <option name="course">
-        <Course>
+        <RemoteCourse>
+          <option name="additionalMaterialsUpdateDate" value="0" />
           <option name="authors">
             <list>
-              <StepicUser>
-                <option name="accessToken" value="" />
+              <StepikUserInfo>
                 <option name="firstName" value="D" />
                 <option name="guest" value="false" />
-                <option name="id" value="-1" />
-                <option name="lastName" value="Tim Cummings - Triptera Pty Ltd" />
-                <option name="refreshToken" value="" />
-              </StepicUser>
+                <option name="id" value="39599470" />
+                <option name="lastName" value="Tim Cummings" />
+              </StepikUserInfo>
             </list>
           </option>
+          <option name="compatible" value="true" />
           <option name="courseMode" value="Course Creator" />
           <option name="courseType" value="PyCharm" />
           <option name="customPresentableName" />
-          <option name="description" value="An introduction to Python with some simple exercises to create a program which counts down and a program which guesses a number." />
+          <option name="description" value="An introduction to Python with some simple exercises to create a program which counts down and a program which guesses a number.&#10;&#10;This is the first course in stream b of pythonator series.&#10;&#10;https://pythonator.com" />
           <option name="fromZip" value="false" />
+          <option name="id" value="50842" />
           <option name="index" value="-1" />
-          <option name="language" value="Python 3.x" />
+          <option name="instructors">
+            <list>
+              <option value="39599470" />
+            </list>
+          </option>
+          <option name="language" value="Python" />
           <option name="languageCode" value="en" />
+          <option name="loadSolutions" value="true" />
           <option name="name" value="pythonator b1 easy" />
+          <option name="public" value="false" />
+          <option name="sectionIds">
+            <list>
+              <option value="74733" />
+            </list>
+          </option>
           <option name="stepikChangeStatus" value="Up to date" />
+          <option name="type" value="pycharm8 Python" />
+          <option name="updateDate" value="1545019858000" />
           <option name="items">
             <list>
               <Lesson>
                 <option name="customPresentableName" />
-                <option name="id" value="0" />
+                <option name="id" value="197620" />
                 <option name="index" value="1" />
                 <option name="name" value="lesson1" />
                 <option name="stepikChangeStatus" value="Up to date" />
-                <option name="updateDate" />
+                <option name="updateDate" value="1545019862000" />
                 <option name="taskList">
                   <list>
                     <EduTask>
@@ -43,7 +62,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;Use the print() function to display a message. If the message is text it needs to &#10;be surrounded with quotation marks (&quot; or '). Numbers do not need quotation marks.&lt;/p&gt;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;This program will display a countdown sequence.&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Fix the program to properly count down from 5 to 0.&#10; It is missing the step between 3 and 1.&lt;/p&gt;&#10;&lt;ul&gt;&lt;li&gt;Click the green triangle (left of program) to run your program&lt;/li&gt;&#10;&lt;li&gt;Click the check task button (above) to test your program is correct&lt;/li&gt;&#10;&lt;li&gt;Click the right arrow (above) to move to the next task&lt;/li&gt;&#10;&lt;/ul&gt;&#10;" />
+                      <option name="descriptionText" value="## Lesson&#10;Use the `print()` function to display a message. If the message is text it needs to&#10;be surrounded with quotation marks (&quot; or '). Numbers do not need quotation marks.&#10;&#10;## Program&#10;This program will display a countdown sequence.&#10;&#10;## Task&#10;Fix the program to properly count down from 5 to 0.&#10; It is missing the step between 3 and 1.&#10;&#10;- Click the green triangle (left of program) or press ctrl-shift-F10 to run your program&#10;- Click the [Check] button (below) to test your program is correct&#10;- Click the [Next] button (below after clicking [Check]) to move to the next task&#10;&#10;&lt;div class='hint'&gt;type in &lt;code&gt;print(2)&lt;/code&gt;&lt;/div&gt;&#10;&lt;br&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -53,7 +72,7 @@
                       <option name="index" value="1" />
                       <option name="name" value="task1" />
                       <option name="status" value="Unchecked" />
-                      <option name="stepId" value="0" />
+                      <option name="stepId" value="569753" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
@@ -64,9 +83,7 @@
                                   <list>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="type in &lt;code&gt;print(2)&lt;/code&gt;" />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
@@ -75,7 +92,7 @@
                                       <option name="offset" value="46" />
                                       <option name="placeholderDependency" />
                                       <option name="placeholderText" value="# show the number 2. It should show after 3 but before 1" />
-                                      <option name="possibleAnswer" value="print(3)" />
+                                      <option name="possibleAnswer" value="print(2)" />
                                       <option name="selected" value="false" />
                                       <option name="status" value="Unchecked" />
                                       <option name="studentAnswer" />
@@ -83,7 +100,7 @@
                                     </AnswerPlaceholder>
                                   </list>
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="task.py" />
                                 <option name="text" value="# TODO: type solution here&#10;" />
                                 <option name="trackChanges" value="true" />
@@ -97,10 +114,10 @@
                       </option>
                       <option name="testsText">
                         <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders, get_file_output&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if &quot;print(&quot; in placeholder:&#10;        passed()&#10;    else:&#10;        failed('use the print() function with a number between 1 and 3')&#10;&#10;&#10;def test_output():&#10;    correct=&quot;5,4,3,2,1,0&quot;.split(&quot;,&quot;)&#10;    correct.insert(0,&quot;Countdown&quot;)&#10;    actual=get_file_output()&#10;    if len(actual)!=len(correct):&#10;        failed(&quot;Output should be &quot; + str(len(correct)) + &quot; lines, not &quot; + str(len(actual)))&#10;        return&#10;    for i in range(len(correct)):&#10;        if correct[i]!=actual[i]:&#10;            failed(&quot;Output line &quot; + str(i+1) + &quot; should be &quot; + correct[i])&#10;    passed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    test_output()&#10;    test_answer_placeholders()&#10;&#10;&#10;" />
                         </map>
                       </option>
-                      <option name="updateDate" />
+                      <option name="updateDate" value="1545019863000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -108,7 +125,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;It is a good idea to add comments to your code. They don't affect code operation. They are there to make &#10;it easier for people reading the code to understand it.&#10;Comments start with &lt;code&gt;#&lt;/code&gt;. Comments can be the whole line&#10;or at the end of a line. Indentation of comments does not affect program flow.&lt;/p&gt;&#10;&lt;div style=&quot;left-margin:2em;&quot;&gt;&lt;code&gt;# This is a comment taking a whole line&lt;/code&gt;&lt;/div&gt;&#10;&lt;div style=&quot;left-margin:2em;&quot;&gt;&lt;code&gt;a=5 # This is a comment at the end of a line&lt;/code&gt;&lt;/div&gt;&#10;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;This program will display a countdown sequence&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;The programmer has tried to add a comment to this program in the first line but now his program won't run. &#10;Fix the code so that the comment is still in the program and it can run.&lt;/p&gt;" />
+                      <option name="descriptionText" value="## Lesson&#10;It is a good idea to add comments to your code. They don't affect code operation. They are there to make&#10;it easier for people reading the code to understand it.&#10;Comments start with `#`. Comments can be the whole line&#10;or at the end of a line. Indentation of comments does not affect program flow.&#10;&#10;        # This is a comment taking a whole line&#10;        a = 5  # This is a comment at the end of a line&#10;&#10;## Program&#10;This program will display a countdown sequence&#10;&#10;## Task&#10;The programmer has tried to add a comment to this program in the first line but now his program won't run.&#10;Fix the code so that the comment is still in the program and it can run.&#10;&#10;&lt;div class='hint'&gt;Comments in python start with a #&lt;/div&gt;&#10;&lt;div class='hint'&gt;Replace 'Comment: ' with '# '&lt;/div&gt;&#10;&lt;br&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -118,7 +135,7 @@
                       <option name="index" value="2" />
                       <option name="name" value="task2" />
                       <option name="status" value="Unchecked" />
-                      <option name="stepId" value="0" />
+                      <option name="stepId" value="569754" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
@@ -129,10 +146,7 @@
                                   <list>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Comments in python start with a #" />
-                                          <option value="Replace 'Comment: ' with '# '" />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
@@ -163,10 +177,10 @@
                       </option>
                       <option name="testsText">
                         <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder[0:1] == &quot;#&quot;:&#10;        passed()&#10;    else:&#10;        failed(&quot;Need to start comment with #&quot;)&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    test_answer_placeholders()&#10;&#10;&#10;" />
                         </map>
                       </option>
-                      <option name="updateDate" />
+                      <option name="updateDate" value="1545019864000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -174,7 +188,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;Use variables to store data that can be used later.&lt;/p&gt;&#10;&lt;p&gt;Text data is called a string and must be surrounded quotation marks. &#10;Numbers without quotation marks are treated as a number which means you can do &#10;arithmetic with them. &#10;Numbers with quotation marks are treated as a string which means you can combine it &#10;with other strings to make a message.&#10;&lt;/p&gt;&#10;&lt;p&gt;Variables can be called any name as long as the name doesn't clash with a&#10; python language word (coloured blue in our example) and must start with a letter. &#10; Variable names can't include spaces but can include underscores (_)&lt;/p&gt;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;This program will display a countdown sequence and then display the final action.&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Change the final action from &lt;b&gt;do something&lt;/b&gt; to &lt;b&gt;blast off&lt;/b&gt;&lt;/p&gt;&#10;" />
+                      <option name="descriptionText" value="## Lesson&#10;Use variables to store data that can be used later.&#10;&#10;Text data is called a string and must be surrounded quotation marks.&#10;Numbers without quotation marks are treated as a number which means you can do &#10;arithmetic with them. &#10;Numbers with quotation marks are treated as a string which means you can combine it &#10;with other strings to make a message.&#10;&#10;Variables can be called any name as long as the name doesn't clash with a&#10; python language word (coloured blue in our example) and must start with a letter. &#10; Variable names can't include spaces but can include underscores (_)&#10;&#10;## Program&#10;This program will display a countdown sequence and then display the final action.&#10;&#10;## Task&#10;Change the final action from &lt;b&gt;do something&lt;/b&gt; to &lt;b&gt;blast off&lt;/b&gt;&#10;&#10;&lt;div class='hint'&gt;Enter the correct action between the quotation marks&lt;/div&gt;&#10;&lt;br&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -183,8 +197,8 @@
                       </option>
                       <option name="index" value="3" />
                       <option name="name" value="task3" />
-                      <option name="status" value="Unchecked" />
-                      <option name="stepId" value="0" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="569755" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
@@ -195,9 +209,7 @@
                                   <list>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Enter the correct action between the quotation marks" />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
@@ -208,7 +220,7 @@
                                       <option name="placeholderText" value="do something" />
                                       <option name="possibleAnswer" value="blast off" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -228,10 +240,10 @@
                       </option>
                       <option name="testsText">
                         <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders, get_file_output&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if &quot;blast off&quot; == placeholder:&#10;        passed()&#10;    else:&#10;        failed('Incorrect action. Should be &quot;blast off&quot;')&#10;&#10;&#10;def test_output():&#10;    correct=&quot;Countdown,5,4,3,2,1,blast off&quot;.split(&quot;,&quot;)&#10;    actual=get_file_output()&#10;    if len(actual)!=len(correct):&#10;        failed(&quot;Output should be &quot; + str(len(correct)) + &quot; lines, not &quot; + str(len(actual)))&#10;        return&#10;    for i in range(len(correct)):&#10;        if correct[i]!=actual[i]:&#10;            failed(&quot;Output line &quot; + str(i+1) + &quot; should be &quot; + correct[i])&#10;    passed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    test_output()&#10;    test_answer_placeholders()&#10;&#10;&#10;" />
                         </map>
                       </option>
-                      <option name="updateDate" />
+                      <option name="updateDate" value="1545019866000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -239,7 +251,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="&lt;style&gt;&#10;.reserved {color: blue; font-weight:bold;}&#10;&lt;/style&gt;&#10;&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;If you want to use the same few lines of your program over and over again&#10;use a loop to save typing. One type is the 'for' loop.&lt;/p&gt;&#10;&#10;&lt;code style='margin-left:2em;'&gt;for variable_name in sequence:&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:4em;'&gt;# example lines of code using different value of variable_name each time&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:4em;'&gt;total += variable_name&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:4em;'&gt;print(variable_name, total)&lt;/code&gt;&lt;br /&gt;&#10;&#10;&lt;p&gt;Every line that gets repeated has to be indented. That is how python knows what is in the loop.&#10;The first line which is not indented will not be executed until after the loop is complete.&lt;/p&gt;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;Quickly count down from 10 to 1 and then display the final action&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Complete the 'for' statement. It needs a variable name. You will need to fix the sequence also.&lt;/p&gt;&#10;&#10;" />
+                      <option name="descriptionText" value="## Lesson&#10;If you want to use the same few lines of your program over and over again&#10;use a loop to save typing. One type is the 'for' loop.&#10;&#10;        for variable_name in sequence:&#10;            # example lines of code using different value of variable_name each time&#10;            total += variable_name&#10;            print(variable_name, total)&#10;&#10;Every line that gets repeated has to be indented. That is how python knows what is in the loop.&#10;The first line which is not indented will not be executed until after the loop is complete.&#10;&#10;## Program&#10;Quickly count down from 10 to 1 and then display the final action&#10;&#10;## Task&#10;Complete the `for` statement. It needs a variable name. You will need to fix the sequence also.&#10;&#10;&lt;div class='hint'&gt;&#10;  Use the same variable in the &lt;code&gt;for&lt;/code&gt; statement as will later be used in the&#10;  &lt;code&gt;print&lt;/code&gt; function&#10;&lt;/div&gt;&#10;&lt;div class='hint'&gt;The variable used in &lt;code&gt;print(counter)&lt;/code&gt; has name &lt;code&gt;counter&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class='hint'&gt;The sequence in the &lt;code&gt;for&lt;/code&gt; statement also needs fixing. Add more numbers separated by commas to this sequence.&lt;/div&gt;&#10;&lt;br&gt;&#10;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -248,8 +260,8 @@
                       </option>
                       <option name="index" value="4" />
                       <option name="name" value="task4" />
-                      <option name="status" value="Unchecked" />
-                      <option name="stepId" value="0" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="569756" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
@@ -260,10 +272,7 @@
                                   <list>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Use the same variable name as will later be used in the print function" />
-                                          <option value="counter" />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
@@ -274,15 +283,13 @@
                                       <option name="placeholderText" value="variable_name" />
                                       <option name="possibleAnswer" value="counter" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Add more numbers separated by commas to this sequence." />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
@@ -293,7 +300,7 @@
                                       <option name="placeholderText" value="10, 9, 8, 5, 2, 1" />
                                       <option name="possibleAnswer" value="10,9,8,7,6,5,4,3,2,1" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -313,10 +320,10 @@
                       </option>
                       <option name="testsText">
                         <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders, get_file_output&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;counter&quot;:&#10;        passed()&#10;    else:&#10;        failed(&quot;Variable name should be 'counter' not '&quot; + placeholder + &quot;'&quot;)&#10;&#10;&#10;def test_output():&#10;    correct=list(map(str,range(10,0,-1)))&#10;    correct.append(&quot;blast off&quot;)&#10;    correct.insert(0,&quot;Countdown&quot;)&#10;    actual=get_file_output()&#10;    if len(actual)!=len(correct):&#10;        failed(&quot;Output should be &quot; + str(len(correct)) + &quot; lines, not &quot; + str(len(actual)))&#10;        return&#10;    for i in range(len(correct)):&#10;        if correct[i]!=actual[i]:&#10;            failed(&quot;Output line &quot; + str(i+1) + &quot; should be &quot; + correct[i])&#10;    passed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    test_output()&#10;    test_answer_placeholders()&#10;&#10;&#10;" />
                         </map>
                       </option>
-                      <option name="updateDate" />
+                      <option name="updateDate" value="1545019867000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -324,7 +331,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="&lt;html&gt;&#10;&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;Python provides a &lt;b&gt;range&lt;/b&gt; function which is easier to use than typing every value in a sequence.&#10;The &lt;b&gt;range&lt;/b&gt; function has up to three arguments giving the start value, the end value and the&#10;increment value. Note that range includes up to but not including the end value. If you don't&#10;provide an increment it is assumed to be 1. If you don't provide a start value it is assumed to &#10;be 0. If you only provide two values they are assumed to be start value and end value. &#10;If you only provide one value it is assumed to be end value&lt;/p&gt;&#10;&#10;&lt;code style='margin-left:2em;'&gt;range(3)         # equivalent to (0, 1, 2)&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:2em;'&gt;range(2, 5)      # equivalent to (2, 3, 4)&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:2em;'&gt;range(4, 0)      # equivalent to ()&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:2em;'&gt;range(4, 0, -1)  # equivalent to (4, 3, 2, 1)&lt;/code&gt;&lt;br /&gt;&#10;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;Count down from 20 to 1 before blast off&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Enter the correct parameters in the &lt;b&gt;range&lt;/b&gt; function to count down from 20 to 1&lt;/p&gt;&#10;&#10;&lt;/html&gt;&#10;" />
+                      <option name="descriptionText" value="## Lesson&#10;Python provides a `range()` function which is easier to use than typing every value in a sequence.&#10;The `range()` function has up to three arguments giving the start value, the stop value and the&#10;step value. Note that range includes up to but not including the stop value. If you don't&#10;provide a step it is assumed to be 1. If you don't provide a start value it is assumed to&#10;be 0. If you only provide two values they are assumed to be start value and stop value.&#10;If you only provide one value it is assumed to be stop value.&#10;&#10;        range(3)         # equivalent to (0, 1, 2)&#10;        range(2, 5)      # equivalent to (2, 3, 4)&#10;        range(4, 0)      # equivalent to ()&#10;        range(4, 0, -1)  # equivalent to (4, 3, 2, 1)&#10;&#10;## Program&#10;Count down from 20 to 1 before blast off&#10;&#10;## Task&#10;Enter the correct parameters in the `range()` function to count down from 20 to 1&#10;&#10;&lt;div class='hint'&gt;The &lt;code&gt;range()&lt;/code&gt; function requires up to three parameters, separated by commas&lt;/div&gt;&#10;&lt;div class='hint'&gt;First parameter is start value (inclusive, i.e. it is included in the sequence)&lt;/div&gt;&#10;&lt;div class='hint'&gt;Second parameter is stop value (exclusive, i.e. it is not included in the sequence)&lt;/div&gt;&#10;&lt;div class='hint'&gt;Third parameter is step value. Use a negative number to step down.&lt;/div&gt;&#10;&lt;div class='hint'&gt;Third parameter should be -1 is count down by 1 each iteration.&lt;/div&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -333,8 +340,8 @@
                       </option>
                       <option name="index" value="5" />
                       <option name="name" value="task5" />
-                      <option name="status" value="Unchecked" />
-                      <option name="stepId" value="0" />
+                      <option name="status" value="Solved" />
+                      <option name="stepId" value="569757" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
@@ -345,12 +352,7 @@
                                   <list>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Enter three parameters, separated by commas" />
-                                          <option value="First parameter is start value (inclusive, i.e. it is included in the sequence)" />
-                                          <option value="Second parameter is stop value (exclusive, i.e. it is not included in the sequence)" />
-                                          <option value="Third parameter is increment. Use a negative number to decrement." />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
@@ -361,7 +363,7 @@
                                       <option name="placeholderText" value="parameters" />
                                       <option name="possibleAnswer" value="20,0,-1" />
                                       <option name="selected" value="false" />
-                                      <option name="status" value="Unchecked" />
+                                      <option name="status" value="Solved" />
                                       <option name="studentAnswer" />
                                       <option name="useLength" value="false" />
                                     </AnswerPlaceholder>
@@ -381,10 +383,10 @@
                       </option>
                       <option name="testsText">
                         <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders, get_file_output&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;counter&quot;:&#10;        passed()&#10;    else:&#10;        failed(&quot;Variable name should be 'counter' not '&quot; + placeholder + &quot;'&quot;)&#10;&#10;&#10;def test_output():&#10;    correct=list(map(str,range(20,0,-1)))&#10;    correct.append(&quot;blast off&quot;)&#10;    correct.insert(0,&quot;Countdown&quot;)&#10;    actual=get_file_output()&#10;    if len(actual)!=len(correct):&#10;        failed(&quot;Output should be &quot; + str(len(correct)) + &quot; lines, not &quot; + str(len(actual)))&#10;        return&#10;    for i in range(len(correct)):&#10;        if correct[i]!=actual[i]:&#10;            failed(&quot;Line &quot; + str(i+1) + &quot; should be &quot; + correct[i])&#10;    passed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    test_output()&#10;    #test_answer_placeholders()&#10;&#10;&#10;" />
                         </map>
                       </option>
-                      <option name="updateDate" />
+                      <option name="updateDate" value="1545019867000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -392,7 +394,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="&lt;html&gt;&lt;head&gt;&#10;&lt;style&gt;&#10;.reserved {color: blue; font-weight:bold;}&#10;.comment {color: gray; font-style: italic;}&#10;&lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;The &lt;b&gt;time&lt;/b&gt; module has a &lt;b&gt;sleep&lt;/b&gt; function to pause program for a number of seconds.&#10;The &lt;b&gt;time&lt;/b&gt; module is not included by default so has to be imported.&lt;/p&gt;&#10;&lt;code style='margin-left:2em;'&gt;from time import sleep&lt;/code&gt;&lt;br /&gt;&#10;&lt;code style='margin-left:2em;'&gt;sleep(2) #sleeps for 2 seconds&lt;/code&gt;&lt;br /&gt;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;Count down in seconds until blast off&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Enter a statement in the loop which will pause for 1 second each time it does the loop.&#10;Remember that all statements in loop must be indented by the same amount.&lt;/p&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;" />
+                      <option name="descriptionText" value="## Lesson&#10;The `time` module has a `sleep` function to pause program for a number of seconds.&#10;The `time` module is not included by default so has to be imported.&#10;&#10;        from time import sleep&#10;        sleep(2)  # sleeps for 2 seconds&#10;&#10;## Program&#10;Count down in seconds until blast off&#10;&#10;## Task&#10;Enter a statement in the loop which will pause for 1 second each time it does the loop.&#10;&#10;&#10;&lt;div class='hint'&gt;All statements in loop must be indented by the same amount.&lt;/div&gt;&#10;&lt;div class='hint'&gt;Use the &lt;code&gt;sleep()&lt;/code&gt; function from the &lt;code&gt;time&lt;/code&gt; module&lt;/div&gt;&#10;&lt;div class='hint'&gt;Enter a parameter of 1 to specify a sleep time of 1 second&lt;/div&gt;&#10;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -402,7 +404,7 @@
                       <option name="index" value="6" />
                       <option name="name" value="task6" />
                       <option name="status" value="Unchecked" />
-                      <option name="stepId" value="0" />
+                      <option name="stepId" value="569758" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
@@ -413,10 +415,7 @@
                                   <list>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Use the &lt;code&gt;sleep()&lt;/code&gt; function from the &lt;code&gt;time&lt;/code&gt; module" />
-                                          <option value="Enter a parameter of 1 to specify a sleep time of 1 second" />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
@@ -447,10 +446,10 @@
                       </option>
                       <option name="testsText">
                         <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders, get_file_output&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if &quot;sleep(1)&quot; in placeholder:&#10;        passed()&#10;    elif &quot;sleep&quot; in placeholder:&#10;        failed(&quot;The number of seconds to sleep must be supplied as a parameter&quot;)&#10;    else:&#10;        failed(&quot;Use the 'sleep' function&quot;)&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    test_answer_placeholders()&#10;&#10;&#10;" />
                         </map>
                       </option>
-                      <option name="updateDate" />
+                      <option name="updateDate" value="1545019868000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -458,7 +457,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;To make a game different every time you play, &#10;it is good to have a random number generator such as the roll of a die. The &lt;b&gt;random&lt;/b&gt; module has &#10;a &lt;b&gt;randint(a,b)&lt;/b&gt; function which will return a random integer between the values of &lt;b&gt;a&lt;/b&gt; and &#10;&lt;b&gt;b&lt;/b&gt; inclusively. You will often use this function when writing games.&lt;/p&gt;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;Returns a random value between 1 and 6 every time the program is run. This simulates the roll &#10;of a six-sided die.&lt;/p&gt;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Write the program to just return a random number between 1 and 6. The program can be three lines long.&lt;/p&gt;&#10;&lt;p&gt;The first line needs to import the correct function from the random module. Remember in the previous task&#10;the sleep function was imported from the time module using:&lt;/p&gt;&#10;&lt;code&gt;from time import sleep&lt;/code&gt;&#10;&lt;p&gt;The second line needs to call the imported function and store the result in a variable called die_roll&lt;/p&gt;&#10;&lt;p&gt;The third line needs to print the value of die_roll&lt;/p&gt;" />
+                      <option name="descriptionText" value="## Lesson&#10;To make a game different every time you play,&#10;you can use a random number generator to emulate the roll of a die. The `random` module has&#10;a `randint(a,b)` function which will return a random integer between the values of `a` and&#10;`b` inclusive. You will often use this function when writing games.&#10;&#10;## Program&#10;Returns a random value between 1 and 6 every time the program is run. This simulates the roll&#10;of a six-sided die.&#10;&#10;## Task&#10;Write the program to just return a random number between 1 and 6. The program can be three lines long.&#10;&#10;The first line needs to import the correct function from the random module. Remember in the previous task&#10;the sleep function was imported from the time module using:&#10;&#10;        from time import sleep&#10;&#10;The second line needs to call the imported function and store the result in a variable called die_roll.&#10;&#10;The third line needs to print the value of die_roll&#10;&#10;&lt;div class='hint'&gt;In the previous exercise you imported the &lt;code&gt;sleep&lt;/code&gt; function from the &lt;code&gt;time&lt;/code&gt; module.&lt;/div&gt;&#10;&lt;div class='hint'&gt;In this exercise you need to import the &lt;code&gt;randint&lt;/code&gt; function from the &lt;code&gt;random&lt;/code&gt; module.&lt;/div&gt;&#10;&lt;div class='hint'&gt;&lt;code&gt;randint(a, b)&lt;/code&gt; will return a random integer between &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; inclusive. &lt;/div&gt;&#10;&lt;div class='hint'&gt;&lt;code&gt;randint(1, 12)&lt;/code&gt; will return a random integer between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;12&lt;/code&gt; inclusive. &lt;/div&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -468,7 +467,7 @@
                       <option name="index" value="7" />
                       <option name="name" value="task7" />
                       <option name="status" value="Unchecked" />
-                      <option name="stepId" value="0" />
+                      <option name="stepId" value="569759" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
@@ -479,9 +478,7 @@
                                   <list>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="In the previous exercise you imported the sleep function from the time module" />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
@@ -498,9 +495,7 @@
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="&lt;code&gt;randint(a, b)&lt;/code&gt; will return a random integer between &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; inclusively. " />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
@@ -531,10 +526,10 @@
                       </option>
                       <option name="testsText">
                         <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders, get_file_output&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;def test_output():&#10;    results={}&#10;    for i in range(0,60):&#10;        for result in get_file_output():&#10;            try:&#10;                r=int(result)&#10;            except ValueError:&#10;                failed('Received &quot;' + result + '&quot; instead of an integer between 1 and 6')&#10;                return&#10;            if str(r)!=result:&#10;                failed('Received ' + result + ' which is not an integer')&#10;                return&#10;            if r&lt;1 or r&gt;6:&#10;                failed('Received ' + result + ' which is not in the range 1 to 6')&#10;                return&#10;            try:&#10;                results[r]=results[r]+1&#10;            except KeyError:&#10;                results[r]=1&#10;    for key in range(1,7):&#10;        try:&#10;            if results[key]&lt;3:&#10;                failed('Received the number ' + str(key) + ' only ' + str(results[key]) + ' times out of 60. Not random enough')&#10;            elif results[key]&gt;17:&#10;                failed('Received the number ' + str(key) + ' as many as ' + str(results[key]) + ' times out of 60. Not random enough')&#10;            #print(key,results[key])&#10;        except KeyError:&#10;            failed(&quot;Didn't receive the number &quot; + str(key) + &quot; after 60 times. Not random enough&quot;)&#10;    passed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;    test_output()&#10;&#10;&#10;" />
                         </map>
                       </option>
-                      <option name="updateDate" />
+                      <option name="updateDate" value="1545019869000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -542,7 +537,7 @@
                       </option>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="&lt;style&gt;&#10;.reserved {color: blue; font-weight:bold;}&#10;.comment {color: gray; font-style: italic;}&#10;.subs {color: gray; font-style: italic;}&#10;.indent {margin-left:2em; }&#10;.indent2 {margin-left:4em; }&#10;&lt;/style&gt;&#10;&lt;h3&gt;Lesson&lt;/h3&gt;&#10;&lt;p&gt;Previously we looked at &lt;code&gt;for&lt;/code&gt; loops which repeat the &#10;same lines of code a fixed number of times. Another loop structure is &#10;the &lt;code&gt;while&lt;/code&gt; loop which will repeat the lines of code while some &#10;condition is &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;&#10;&lt;div&gt;&lt;code class=&quot;indent&quot;&gt;while&lt;/code&gt; &lt;code class=&quot;subs&quot;&gt;condition:&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code class=&quot;indent2&quot;&gt;# lines of code&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code class=&quot;indent2&quot;&gt;# which are to be repeated&lt;/code&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;code class=&quot;indent2&quot;&gt;# all indented the same amount&lt;/code&gt;&lt;/div&gt;&#10;&lt;p&gt;&lt;code class=&quot;subs&quot;&gt;condition&lt;/code&gt; is often of the form&lt;/[&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code class=&quot;subs&quot;&gt;value1 operator value2&lt;/code&gt;&lt;/div&gt;&#10;&lt;p&gt;where &lt;code class=&quot;subs&quot;&gt;operator&lt;/code&gt; is one of the following&lt;/p&gt;&#10;&lt;code class=&quot;indent&quot;&gt;== # value1 equals value2&lt;/code&gt;&lt;br /&gt;&#10;&lt;code class=&quot;indent&quot;&gt;!= # value1 does not equal value2&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;&amp;lt; &amp;nbsp;# value1 is less than value2&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;&amp;gt; &amp;nbsp;# value1 is greater than value2&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;&amp;lt;= # value1 is less than or equal to value2&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;&amp;gt;= # value1 is greater than or equal to value2&lt;/code&gt;&lt;br/&gt;&#10;&lt;p&gt;The &lt;code&gt;if&lt;/code&gt; statement is similar to the &lt;code&gt;while&lt;/code&gt; statement but only executes&#10;once the indented lines which follow. &#10;&lt;code&gt;if elif else&lt;/code&gt; can be used to check several conditions with different responses&#10;for each condition.&lt;/p&gt;&#10;&lt;code class=&quot;indent&quot;&gt;if condition1:&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent2&quot;&gt;# What to do if condition1 is True&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;elif condition2:&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent2&quot;&gt;# What to do if condition1 is False and condition2 is True&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;elif condition3:&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent2&quot;&gt;# What to do if condition1 and condition2 are False and condition3 is True&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent&quot;&gt;else&lt;/code&gt;&lt;br/&gt;&#10;&lt;code class=&quot;indent2&quot;&gt;# What to do if all conditions are False&lt;/code&gt;&lt;br/&gt;&#10;&lt;p&gt;This program also introduces the &lt;code&gt;input&lt;/code&gt; function to get string data from the user. The &lt;code&gt;int&lt;/code&gt;&#10;function converts it to an integer number so that the program can compare it to the answer.&lt;/p&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;# Use input function to get the guess from the user (as a string)&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;s=input(&quot;Guess?&quot;)&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;# Check that guess is an integer by surrounding in try: except ValueError: else:&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;try:&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;# Convert from string to integer. If it can't be converted, &lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;# jump to &quot;except ValueError&quot;. Otherwise jump to &quot;else&quot;&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;guess=int(s)&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;except ValueError:&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;# Entered value can not be converted to integer&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;print(&quot;Your guess of '&quot; + s + &quot;' is not an integer (whole number). Please only enter integers.&quot;)&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent&quot;&gt;&lt;code&gt;else:&lt;/code&gt;&lt;/div&gt;&#10;&lt;div class=&quot;indent2&quot;&gt;&lt;code&gt;# Code in the else: only runs if there was no error in the try: section (converting to integer)&lt;/code&gt;&lt;/div&gt;&#10;&#10;&#10;&lt;h3&gt;Program&lt;/h3&gt;&#10;&lt;p&gt;Asks user to guess a random number between 0 and 63 and then gives clues until user guesses the number&lt;p&gt;&#10;&#10;&lt;h3&gt;Task&lt;/h3&gt;&#10;&lt;p&gt;Enter the correct operator in each of the conditional statements so program will stop when answer is correctly guessed. Also need to enter the correct conditions &#10;so the program responds correctly after each guess&lt;/p&gt;&#10;" />
+                      <option name="descriptionText" value="## Lesson - `while` and boolean expressions&#10;Previously we looked at `for` loops which repeat the&#10;same lines of code a fixed number of times. Another loop structure is&#10;the `while` loop which will repeat the lines of code while some&#10;`condition` is `True`.&#10;&#10;    while condition:&#10;        # lines of code&#10;        # which are to be repeated&#10;        # all indented the same amount&#10;&#10;The `condition` is any Python expression which can be evaluated to `True` or `False`. These are called boolean expressions.&#10;Common boolean expressions are comparisons of two values. For example:&#10;&#10;    while s != 'python':&#10;        s = input('Non-venomous snake (p****n) ?')&#10;&#10;The condition is `s != 'python'` which is a comparison of the value stored&#10;in the variable `s` and the literal string `'python'`. The operator &quot;`!=`&quot; is the &quot;does not equal&quot;&#10;operator. It is supposed to vaguely resemble &quot;≠&quot; but be easier to type. This boolean expression will return `True` and hence keep looping until&#10;the user types in the answer `'python'`. Then the boolean expression will return `False`, and the program will continue after the `while` loop.&#10;&#10;The `operator` can be one of the following:&#10;&#10;        == # left_value equals right_value&#10;        != # left_value does not equal right_value&#10;        &lt;  # left_value is less than right_value&#10;        &gt;  # left_value is greater than right_value&#10;        &lt;= # left_value is less than or equal to right_value&#10;        &gt;= # left_value is greater than or equal to right_value&#10;&#10;Multiple conditions can be combined with the logical operators `and` or `or`. The logical operator `not` works on a single condition.&#10;&#10;        and  # True if both left_condition and right_condition are True&#10;        or   # True if either left_condition or right_condition are True&#10;        not  # used with a single condition to reverse `True` to `False` or `False` to `True`&#10;&#10;When evaluating a `condition` to `True` or `False`, Python has some flexible rules to make coding easier.&#10;`False`, `None`, the number zero, empty strings, empty lists, empty tuples, and other empty containers all evaluate&#10;to `False`. Anything else evaluates to `True`. This means you can write the following code to do a countdown.&#10;&#10;    my_list = ['blast off', 'one', 'two', 'three']&#10;    while my_list:            # loops until my_list has no more elements&#10;        print(my_list.pop())  # pop() removes last value from list and returns it&#10;&#10;## Lesson - `if`&#10;The `if` statement is similar to the `while` statement but only executes a single time&#10;the indented lines which follow.&#10;&#10;`if elif else` can be used to check several conditions with different responses&#10;for each condition.&#10;&#10;    if condition1:&#10;        # What to do if condition1 is True&#10;    elif condition2:&#10;        # What to do if condition1 is False and condition2 is True&#10;    elif condition3:&#10;        # What to do if condition1 and condition2 are False and condition3 is True&#10;    else&#10;        # What to do if all conditions are False&#10;&#10;## Lesson - `input()`&#10;This program also introduces the `input` function to get string data from the user.&#10;The `int` function converts it to an integer number so that the program can compare&#10;it to the answer.&#10;&#10;    # Use input function to get the guess from the user (as a string)&#10;    s=input(&quot;Guess?&quot;)&#10;    # Check that guess is an integer by surrounding in try: except ValueError: else:&#10;    try:&#10;        # Convert from string to integer. If it can't be converted,&#10;        # jump to &quot;except ValueError&quot;. Otherwise jump to &quot;else&quot;&#10;        guess=int(s)&#10;    except ValueError:&#10;        # Entered value can not be converted to integer&#10;        print(&quot;Your guess of '&quot; + s + &quot;' is not an integer (whole number). Please only enter integers.&quot;)&#10;    else:&#10;        # Code in the else: only runs if there was no error in the try: section (converting to integer)&#10;&#10;&#10;## Program&#10;&#10;Asks user to guess a random number between 0 and 63 and then gives clues until user&#10;guesses the number.&#10;&#10;## Task&#10;&#10;Enter the correct operator in each of the conditional statements so program will stop when answer is correctly guessed. Also need to enter the correct conditions&#10;so the program responds correctly after each guess.&#10;&#10;&lt;div class='hint'&gt;To check the player hasn't guessed the correct answer yet, compare `guess` with `answer` using the &quot;does not equal&quot; operator&lt;/div&gt;&#10;&lt;div class='hint'&gt;To check the player hasn't exceeded the maximum number of guesses, compare `guesses` with `10` using the &quot;less than&quot; operator&lt;/div&gt;&#10;&lt;div class='hint'&gt;To check if guess is too high, compare `guess` with `answer` using the &quot;greater than&quot; operator&lt;/div&gt;&#10;&lt;div class='hint'&gt;To check if guess is too low, compare `guess` with `answer` using the &quot;less than&quot; operator&lt;/div&gt;&#10;&lt;div class='hint'&gt;To check if guess is correct, compare `guess` with `answer` using the &quot;equals&quot; operator&lt;/div&gt;&#10;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -552,7 +547,7 @@
                       <option name="index" value="8" />
                       <option name="name" value="task8" />
                       <option name="status" value="Unchecked" />
-                      <option name="stepId" value="0" />
+                      <option name="stepId" value="569760" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="taskFiles">
                         <map>
@@ -563,10 +558,7 @@
                                   <list>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Enter an &lt;code&gt;operator&lt;/code&gt; which will return &lt;code&gt;True&lt;/code&gt; when &lt;code&gt;while&lt;/code&gt; loop is looping and &lt;code&gt;False&lt;/code&gt; when &lt;code&gt;while&lt;/code&gt; is to loop no more." />
-                                          <option value="Keep looping while &lt;code&gt;guess&lt;/code&gt; is not equal to &lt;code&gt;answer&lt;/code&gt;" />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="0" />
                                       <option name="initialState" />
@@ -583,10 +575,7 @@
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Enter an &lt;code&gt;operator&lt;/code&gt; which will return &lt;code&gt;False&lt;/code&gt; when the maximum number of guesses is reached." />
-                                          <option value="&lt;code&gt;guesses&lt;/code&gt; is less than &lt;code&gt;10&lt;/code&gt;" />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="1" />
                                       <option name="initialState" />
@@ -603,9 +592,7 @@
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Enter an &lt;code&gt;operator&lt;/code&gt; which will return &lt;code&gt;True&lt;/code&gt; when the guess is too high." />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="2" />
                                       <option name="initialState" />
@@ -622,9 +609,7 @@
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Enter an &lt;code&gt;operator&lt;/code&gt; which return &lt;code&gt;True&lt;code&gt; when the guess is too low." />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="3" />
                                       <option name="initialState" />
@@ -641,9 +626,7 @@
                                     </AnswerPlaceholder>
                                     <AnswerPlaceholder>
                                       <option name="hints">
-                                        <list>
-                                          <option value="Enter an &lt;code&gt;operator&lt;/code&gt; which will return &lt;code&gt;True&lt;/code&gt; when &lt;code&gt;guess&lt;/code&gt; and &lt;code&gt;answer&lt;/code&gt; are the same. " />
-                                        </list>
+                                        <list />
                                       </option>
                                       <option name="index" value="4" />
                                       <option name="initialState" />
@@ -674,22 +657,18 @@
                       </option>
                       <option name="testsText">
                         <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders, import_task_file&#10;import sys&#10;from subprocess import Popen, PIPE, STDOUT&#10;from threading import Thread&#10;from queue import Queue, Empty&#10;&#10;&#10;def test_using_threads():&#10;&#10;    ioq=Queue()&#10;&#10;    def stream_watcher(identifier, stream):&#10;        #for line in stream:&#10;        #    ioq.put((identifier,line))&#10;        line=''&#10;        for c in iter(lambda: stream.read(1),''):&#10;            line+=c&#10;            if c in '?\n':&#10;                ioq.put((identifier,line))&#10;                line=''&#10;        if not stream.closed:&#10;            #print(&quot;Closing stream &quot; + identifier)&#10;            stream.close()&#10;&#10;&#10;    def test_guesser_success():&#10;        max=64&#10;        min=0&#10;        tfsuccess=False&#10;        tfpassed=False&#10;        while True:&#10;            try:&#10;                #block for 1 second&#10;                item=ioq. get(timeout=1)&#10;            except Empty:&#10;                if proc.poll() is not None:&#10;                    break&#10;            else:&#10;                identifier, line = item&#10;                print(identifier,&quot;:&quot;,line.strip())&#10;                if 'You win' in line:&#10;                    if min==guess and min!=0:&#10;                        failed(&quot;Should not say 'too low' when answer matches guess&quot;)&#10;                    elif max==guess:&#10;                        failed(&quot;Should not say 'too high' when answer matches guess&quot;)&#10;                    tfsuccess=True&#10;                    tfpassed=True&#10;                if 'too low' in line:&#10;                    min=guess&#10;                elif 'too high' in line:&#10;                    max=guess&#10;                elif 'Guess?' in line:&#10;                    guess=(max+min)//2&#10;                    proc.stdin.write(str(guess) + &quot;\n&quot;)&#10;                    proc.stdin.flush()&#10;        if not tfsuccess:&#10;            failed('Should say &quot;You win&quot; when final answer reached within 10 guesses')&#10;        elif tfpassed:&#10;            passed()&#10;&#10;&#10;    def test_guesser_high_low():&#10;        maxguess=65&#10;        minguess=-1&#10;        guess=maxguess&#10;        tfguesshigh=True&#10;        tfpassed=True&#10;        while True:&#10;            try:&#10;                #block for 1 second&#10;                item=ioq.get(timeout=1)&#10;            except Empty:&#10;                if proc.poll() is not None:&#10;                    break&#10;            else:&#10;                identifier, line = item&#10;                print(identifier,&quot;:&quot;,line.strip())&#10;                if 'too low' in line:&#10;                    if tfguesshigh:&#10;                        tfpassed=False&#10;                        failed(&quot;Guess &quot; + str(guess) + &quot; should return 'too high' not 'too low'&quot;)&#10;                    else:&#10;                        guess=maxguess-(guess-minguess)-1&#10;                        tfguesshigh=True&#10;                elif 'too high' in line:&#10;                    if not tfguesshigh:&#10;                        tfpassed=False&#10;                        failed(&quot;Guess &quot; + str(guess) + &quot; should return 'too low' not 'too high'&quot;)&#10;                    else:&#10;                        tfguesshigh=False&#10;                        guess=minguess+(maxguess-guess)&#10;                elif 'Guess?' in line:&#10;                    proc.stdin.write(str(guess) + &quot;\n&quot;)&#10;                    proc.stdin.flush()&#10;        if tfpassed:&#10;            passed('test_guesser_high_low')&#10;&#10;&#10;    def test_guesser_max_guesses_and_string_handling():&#10;        tffailure=False&#10;        tftestedstring=False&#10;        guesses=0&#10;        while guesses&lt;12:&#10;            try:&#10;                #block for 1 second&#10;                item=ioq.get(timeout=1)&#10;            except Empty:&#10;                if proc.poll() is not None:&#10;                    break&#10;            else:&#10;                identifier, line = item&#10;                print(identifier,&quot;:&quot;,line.strip())&#10;                calc=False&#10;                if 'You lose' in line:&#10;                    tffailure=True&#10;                elif 'Please only enter integers' in line:&#10;                    tftestedstring=True&#10;                elif 'Guess?' in line:&#10;                    proc.stdin.write(&quot;string\n&quot;)&#10;                    proc.stdin.flush()&#10;                    guesses+=1&#10;        if guesses&lt;10:&#10;            failed(&quot;Should allow 10 guesses but only allowed &quot; + str(guesses))&#10;        elif guesses&gt;10:&#10;            failed(&quot;Should only allow 10 guesses but allowed &quot; + str(guesses))&#10;        elif not tftestedstring:&#10;            failed(&quot;Should detect non-integer string and say 'Please only enter integers'&quot;)&#10;        elif not tffailure:&#10;            failed('Should say &quot;You lose&quot; when final answer not reached within 10 guesses')&#10;        else:&#10;            passed('test_guesser_max_guesses_and_string_handling')&#10;&#10;&#10;    # universal_newlines ensures default encoding is used and communication is by strings not bytearrays&#10;    proc = Popen([sys.executable, sys.argv[-1]], stdin=PIPE, stdout=PIPE, stderr=PIPE, universal_newlines=True)&#10;    Thread(target=stream_watcher, name='stdout-watcher', args=('STDOUT', proc.stdout)).start()&#10;    Thread(target=stream_watcher, name='stderr-watcher', args=('STDERR', proc.stderr)).start()&#10;    test_guesser_high_low()&#10;&#10;    proc = Popen([sys.executable, sys.argv[-1]], stdin=PIPE, stdout=PIPE, stderr=PIPE, universal_newlines=True)&#10;    Thread(target=stream_watcher, name='stdout-watcher', args=('STDOUT', proc.stdout)).start()&#10;    Thread(target=stream_watcher, name='stderr-watcher', args=('STDERR', proc.stderr)).start()&#10;    test_guesser_max_guesses_and_string_handling()&#10;&#10;    proc = Popen([sys.executable, sys.argv[-1]], stdin=PIPE, stdout=PIPE, stderr=PIPE, universal_newlines=True)&#10;    Thread(target=stream_watcher, name='stdout-watcher', args=('STDOUT', proc.stdout)).start()&#10;    Thread(target=stream_watcher, name='stderr-watcher', args=('STDERR', proc.stderr)).start()&#10;    test_guesser_success()&#10;&#10;&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    test_using_threads()&#10;" />
                         </map>
                       </option>
-                      <option name="updateDate" />
+                      <option name="updateDate" value="1545019870000" />
                     </EduTask>
                   </list>
                 </option>
-                <option name="unitId" value="0" />
+                <option name="unitId" value="171882" />
               </Lesson>
             </list>
           </option>
-        </Course>
-      </option>
-      <option name="VERSION" value="11" />
-      <option name="myUserTests">
-        <map />
+        </RemoteCourse>
       </option>
     </StudyTaskManager>
   </component>
