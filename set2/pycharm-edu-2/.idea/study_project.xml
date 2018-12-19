@@ -36,7 +36,7 @@
           <option name="languageCode" value="en" />
           <option name="loadSolutions" value="true" />
           <option name="name" value="pythonator b2 easy" />
-          <option name="public" value="false" />
+          <option name="public" value="true" />
           <option name="sectionIds">
             <list>
               <option value="67508" />
@@ -44,7 +44,7 @@
           </option>
           <option name="stepikChangeStatus" value="Info changed" />
           <option name="type" value="pycharm7 Python 3.x" />
-          <option name="updateDate" value="1545038581000" />
+          <option name="updateDate" value="1545103549000" />
           <option name="items">
             <list>
               <Lesson>
@@ -52,7 +52,7 @@
                 <option name="id" value="179702" />
                 <option name="index" value="1" />
                 <option name="name" value="lesson1" />
-                <option name="stepikChangeStatus" value="Up to date" />
+                <option name="stepikChangeStatus" value="Info changed" />
                 <option name="updateDate" value="1539158931000" />
                 <option name="taskList">
                   <list>
@@ -199,7 +199,7 @@
                       </option>
                       <option name="testsText">
                         <map>
-                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;from ircbuilder import MinetestConnection&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;def test_config():&#10;    from task import mtuser, mtuserpass, mtbotnick, ircserver, channel, player_z&#10;    file = open(&quot;../../minetest_irc.py&quot;, &quot;w&quot;)&#10;    file.write('mtuser = &quot;' + mtuser + '&quot;       # your minetest username\n')&#10;    file.write('mtuserpass = &quot;' + mtuserpass + '&quot;   # your minetest password. This file is not encrypted so don\'t use anything you want kept secret\n')&#10;    file.write('player_z = ' + str(player_z) + '  # your z value from sign in minetest with your username on it\n')&#10;    file.write('\n')&#10;    file.write('# The following must match your settings in minetest server &gt; Settings &gt; Advanced Settings &gt; Mods &gt; irc &gt; Basic &gt;\n')&#10;    file.write('ircserver = &quot;' + ircserver + '&quot;   # same as IRC server\n')&#10;    file.write('mtbotnick = &quot;' + mtbotnick + '&quot;   # same as Bot nickname\n')&#10;    file.write('channel = &quot;' + channel + '&quot;     # same as Channel to join\n')&#10;    file.close()&#10;    mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)&#10;    z = mc.send_cmd('get_player_z ' + mtuser)&#10;    try:&#10;        if int(z)!=player_z:&#10;            failed(&quot;Your player_z should be &quot; + z + &quot;, not &quot; + str(player_z))&#10;            return False&#10;    except TypeError:&#10;        failed(&quot;Didn't get an int for player_z. Instead got &quot; + str(z) + &quot; which has type &quot; + str(type(z)))&#10;        return False&#10;    except ValueError:&#10;        failed(&quot;Didn't get an int for player_z. Instead got &quot; + str(z) + &quot; which has type &quot; + str(type(z)))&#10;        return False&#10;    passed()&#10;    return True&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    test_config()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
+                          <entry key="tests.py" value="from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;from ircbuilder import MinetestConnection&#10;import os.path&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    placeholder = placeholders[0]&#10;    if placeholder == &quot;&quot;:       # TODO: your condition here&#10;        passed()&#10;    else:&#10;        failed()&#10;&#10;&#10;def test_config():&#10;    # Stepik changes directory structure so check first which directory structure&#10;    config_path = &quot;../../minetest_irc.py&quot;&#10;    if not os.path.exists(config_path):&#10;        if os.path.exists(&quot;../&quot; + config_path):&#10;            config_path = &quot;../&quot; + config_path&#10;    from task import mtuser, mtuserpass, mtbotnick, ircserver, channel, player_z&#10;    file = open(config_path, &quot;w&quot;)&#10;    file.write('mtuser = &quot;' + mtuser + '&quot;       # your minetest username\n')&#10;    file.write('mtuserpass = &quot;' + mtuserpass + '&quot;   # your minetest password. This file is not encrypted so don\'t use anything you want kept secret\n')&#10;    file.write('player_z = ' + str(player_z) + '  # your z value from sign in minetest with your username on it\n')&#10;    file.write('\n')&#10;    file.write('# The following must match your settings in minetest server &gt; Settings &gt; Advanced Settings &gt; Mods &gt; irc &gt; Basic &gt;\n')&#10;    file.write('ircserver = &quot;' + ircserver + '&quot;   # same as IRC server\n')&#10;    file.write('mtbotnick = &quot;' + mtbotnick + '&quot;   # same as Bot nickname\n')&#10;    file.write('channel = &quot;' + channel + '&quot;     # same as Channel to join\n')&#10;    file.close()&#10;    mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)&#10;    z = mc.send_cmd('get_player_z ' + mtuser)&#10;    try:&#10;        if int(z)!=player_z:&#10;            failed(&quot;Your player_z should be &quot; + z + &quot;, not &quot; + str(player_z))&#10;            return False&#10;    except TypeError:&#10;        failed(&quot;Didn't get an int for player_z. Instead got &quot; + str(z) + &quot; which has type &quot; + str(type(z)))&#10;        return False&#10;    except ValueError:&#10;        failed(&quot;Didn't get an int for player_z. Instead got &quot; + str(z) + &quot; which has type &quot; + str(type(z)))&#10;        return False&#10;    passed()&#10;    return True&#10;&#10;&#10;if __name__ == '__main__':&#10;    run_common_tests()&#10;    test_config()&#10;    # test_answer_placeholders()       # TODO: uncomment test call&#10;&#10;&#10;" />
                         </map>
                       </option>
                       <option name="updateDate" value="1539158934000" />
