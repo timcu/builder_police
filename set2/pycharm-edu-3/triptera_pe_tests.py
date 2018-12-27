@@ -1,6 +1,6 @@
 # © Copyright 2018 Triptera Pty Ltd
 # https://www.triptera.com.au
-# Authorised for use by CoderDojo in 2018
+# Authorised for use in schools and CoderDojo sessions in 2018 - 2019
 
 from test_helper import failed, passed
 from ircbuilder import MinetestConnection, NICK_MAX_LEN
@@ -28,6 +28,8 @@ def test_eval_phi(phi, str_answer_number, answer, list_data, modules=()):
     if len(phi) > len(answer) + 5:
         failed(str_answer_number + " is too long. Correct answer only " + str(len(answer)) + " characters long. Your answer " + phi + " has length " + str(len(phi)))
         return False
+    if not list_data:
+        list_data = [{}]
     global_data = {}
     if isinstance(modules, str):
         modules = (modules,)
@@ -54,7 +56,7 @@ def test_eval_phi(phi, str_answer_number, answer, list_data, modules=()):
     return True
 
 
-def test_eval(placeholders, i, answer, list_data, modules=()):
+def test_eval(placeholders, i, answer, list_data=None, modules=()):
     str_answer_number = "Answer " + str(i+1)
     return test_eval_phi(placeholders[i], str_answer_number, answer, list_data, modules)
 

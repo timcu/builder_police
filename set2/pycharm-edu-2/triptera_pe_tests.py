@@ -1,6 +1,6 @@
 # © Copyright 2018 Triptera Pty Ltd
 # https://www.triptera.com.au
-# Authorised for use by CoderDojo in 2018
+# Authorised for use in schools and CoderDojo sessions in 2018 - 2019
 
 from test_helper import failed, passed
 from ircbuilder import MinetestConnection, NICK_MAX_LEN
@@ -28,6 +28,8 @@ def test_eval_phi(phi, str_answer_number, answer, list_data, modules=()):
     if len(phi) > len(answer) + 5:
         failed(str_answer_number + " is too long. Correct answer only " + str(len(answer)) + " characters long. Your answer " + phi + " has length " + str(len(phi)))
         return False
+    if not list_data:
+        list_data = [{}]
     global_data = {}
     if isinstance(modules, str):
         modules = (modules,)
@@ -54,7 +56,7 @@ def test_eval_phi(phi, str_answer_number, answer, list_data, modules=()):
     return True
 
 
-def test_eval(placeholders, i, answer, list_data, modules=()):
+def test_eval(placeholders, i, answer, list_data=None, modules=()):
     str_answer_number = "Answer " + str(i+1)
     return test_eval_phi(placeholders[i], str_answer_number, answer, list_data, modules)
 
@@ -113,53 +115,6 @@ def test_exec(placeholders, i, answer, list_data, modules=()):
 
 def test_building_with_pattern(mc, building_pattern):
     #player_z = int(mc.send_cmd('get_player_z ' + mtuser))
-    building_guess = mc.building
-    building_correct = building_pattern(player_z)
-    for key, pattern in building_correct.items():
-        try:
-            guess = building_guess[key]
-        except KeyError:
-            failed("Missing build at " + str(key) + ". Should match " + str(pattern) )
-            return False
-        if guess[0]=='{':
-            guess_dict=json.loads(guess)
-        else:
-            guess_dict = {'name': guess}
-        if pattern[0]=='{':
-            pattern=json.loads(pattern)
-        try:
-            guess_dict['name']
-        except KeyError:
-            failed("Dict missing 'name' at " + str(key) + ". Dict is " + str(guess_dict) + " which should match " + str(pattern) )
-            return False
-        if not isinstance(guess_dict['name'], str):
-            failed("Dict 'name' not str at " + str(key) + ". Dict is " + str(guess_dict) + " of which 'name' is type " + str(type(guess_dict['name'])) + " but should be a str matching " + str(pattern) )
-            return False
-        if isinstance(pattern, str):
-            if not re.fullmatch(pattern, guess_dict['name']):
-                failed("Build at " + str(key) + " is " + guess_dict['name'] + " which doesn't match " + pattern)
-                return False
-        else:
-            for pat_key, pat_pattern in pattern.items():
-                if pat_key == 'name':
-                    if not re.fullmatch(pat_pattern, guess_dict['name']):
-                        failed("Build 'name' at " + str(key) + " is " + guess_dict['name'] + " which doesn't match " + pat_pattern)
-                        return False
-                else:
-                    try:
-                        guess_dict[pat_key]
-                    except KeyError:
-                        failed("Guess at " + str(key) + " is " + str(guess) + " missing '" + pat_key + "' which should match " + pat_pattern)
-                        return False
-                    if not re.fullmatch(pat_pattern, guess_dict[pat_key]):
-                        failed("Guess at " + str(key) + " is " + str(guess) + " wrong '" + pat_key + "' which should match " + pat_pattern)
-                        return False
-    passed()
-    return True
-
-
-def test_building_with_pattern_old(mc, building_pattern):
-    player_z = int(mc.send_cmd('get_player_z ' + mtuser))
     building_guess = mc.building
     building_correct = building_pattern(player_z)
     for key, pattern in building_correct.items():
