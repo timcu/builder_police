@@ -58,7 +58,7 @@ colours = ["wool:" + colour for colour in "white|grey|dark_grey|black|blue|cyan|
 
 # ENGINEERING CALCULATIONS
 num_colours = len(colours)
-stripe_width = 5
+stripe_width = 2
 
 mc.build(pole_x, range(pole_y, flag_y), ref_z, pole)
 mc.build(range(pole_x, pole_x + 26), range(flag_y, flag_y + 26), range(ref_z - 4, ref_z + 5), air)
@@ -71,14 +71,14 @@ for x in range(pole_x, pole_x + flag_length):
         # cx = pole_x
         # cy = flag_y
 
-        c = x // 2 % 15  # vertical stripes
-        # c = y // 2 % 15  # horizontal stripes
-        # c = (x+y)//2 % 15  # diagonal stripes
-        # c = (x-y)//2 % 15  # other diagonal stripes
-        # c = int(sqrt((x-cx)**2 + (y-cy)**2) ) // stripe_width % num_colours  #  circles centred on cx, cy
-        # c = int(max(abs(x-cx), abs(y-cy))) % len(colours)  # squares centred on cx, cy
-        # c = int(min(abs(x-cx), abs(y-cy))) % len(colours)  # cross centred on cx, cy
-        colour = colours[c]
+        # c = x  # vertical stripes
+        # c = y  # horizontal stripes
+        # c = (x + y)  # diagonal stripes
+        # c = (x - y)  # other diagonal stripes
+        c = int(sqrt((x - cx)**2 + (y - cy)**2))  # circles centred on cx, cy
+        # c = int(max(abs(x - cx), abs(y - cy)))  # squares centred on cx, cy
+        # c = int(min(abs(x - cx), abs(y - cy)))  # cross centred on cx, cy
+        colour = colours[c // stripe_width % num_colours]
         if rectangle_flag(x, y):
             mc.build(x, y, ref_z, colour)
         else:
