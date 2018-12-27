@@ -1,4 +1,5 @@
 from minetest_helper import build
+import json
 
 
 def build_cuboid(x1, y1, z1, x2, y2, z2, item):
@@ -18,11 +19,13 @@ def node_lists_from_node_dict(node_dict):
     """Convert node_dict to node_lists"""
     node_lists = {}
     for pos, item in node_dict.items():
-        if item not in node_lists:
-            # Create a new list and store in node_lists with key=item
-            node_lists[item] = []
-        # Add pos to the end of the list with key=item in node_lists
-        node_lists[item].append(pos)
+        # item could be str or dict. Can't use dict as key so convert to json str
+        str_item = json.dumps(item) if isinstance(item, dict) else str(item)
+        if str_item not in node_lists:
+            # Create a new list and store in node_lists with key=str_item
+            node_lists[str_item] = []
+        # Add pos to the end of the list with key=str_item in node_lists
+        node_lists[str_item].append(pos)
     return node_lists
 
 

@@ -1,4 +1,5 @@
 import math
+import json
 
 
 def build(x, y, z, item):
@@ -82,9 +83,10 @@ def node_lists_from_node_dict(node_dict):
     """Convert node_dict to node_lists"""
     node_lists = {}
     for pos, item in node_dict.items():
-        if item not in node_lists:
-            node_lists[item] = []
-        node_lists[item].append(pos)
+        str_item = json.dumps(item) if isinstance(item, dict) else str(item)
+        if str_item not in node_lists:
+            node_lists[str_item] = []
+        node_lists[str_item].append(pos)
     return node_lists_with_cuboids(node_lists)
 
 

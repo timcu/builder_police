@@ -113,7 +113,7 @@ The <i>true_result</i> can be 1 for stepping up and the <i>false_result</i> can 
 <div><code>my_dict["mine"] = my_list</code></div> </div>
 <div class='hint'>The following statement stores a new list in dictionary my_dict with variable my_key having the value of the key
 <div><code>my_dict[my_key] = []</code></div></div>
-<div class='hint'>In function <code>node_lists_from_node_dict</code> select the node_list using <code>node_lists[item]</code> and
+<div class='hint'>In function <code>node_lists_from_node_dict</code> select the node_list using <code>node_lists[str_item]</code> and
 initialise to empty list using <code>= []</code> or add new position to the end using <code>.append(pos)</code>.</div>
 <div class='hint'>If you have a dictionary of lists called <code>my_dict</code>, then the list with the key equal to <code>"default:glass"</code> is retrieved by
 <div><code>my_dict["default:glass"]</code></div></div>

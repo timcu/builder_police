@@ -16,9 +16,9 @@ def test_answer_placeholders():
         return False
     if not test_eval(placeholders, 3, "1 if z2 > z1 else -1", [{'z1': 1, 'z2': 5}, {'z1':10, 'z2':9}]):
         return False
-    if not test_exec(placeholders, 4, "node_lists[item] = []", [{'node_lists': {}, 'item': "air"}, {'node_lists': {'air': [(1,2,3)]}, 'item':"default:stone"}]):
+    if not test_exec(placeholders, 4, "node_lists[str_item] = []", [{'node_lists': {}, 'str_item': "air"}, {'node_lists': {'air': [(1,2,3)]}, 'str_item':"default:stone"}]):
         return False
-    if not test_exec(placeholders, 5, "node_lists[item].append(pos)", [{'node_lists': {'air':[]}, 'item': "air", "pos": (10, 20, 30)}, {'node_lists': {'air': [(1,2,3)]}, 'item':"air", 'pos':(2,3,4)}]):
+    if not test_exec(placeholders, 5, "node_lists[str_item].append(pos)", [{'node_lists': {'air':[]}, 'str_item': "air", "pos": (10, 20, 30)}, {'node_lists': {'air': [(1,2,3)]}, 'str_item':"air", 'pos':(2,3,4)}]):
         return False
     if not test_exec(placeholders, 6, "item_list.append(key)", [{'item_list': ['air'], 'key': "default:stone"}, {'item_list': ['default:glass'], 'key': "default:wood"}]):
         return False
