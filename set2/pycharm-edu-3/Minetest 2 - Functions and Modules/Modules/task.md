@@ -57,3 +57,43 @@ store the latest node type for a set of coordinates.</p>
 </code></p>
 <p>which is in a good format for using <code>mc.set_node_list()</code> command.</p>
 </html>
+<br>
+<div class='hint'>Choose one form of the import statement:
+
+<div><code>import <i>module</i></code></div>
+<div><code>import <i>module.submodule</i></code></div>
+<div><code>import <i>module</i> as <i>alias</i></code></div>
+<div><code>from <i>module</i> import <i>function</i></code></div>
+<div><code>from <i>module</i> import <i>submodule</i></code></div>
+<div><code>from <i>module.submodule</i> import <i>subsubmodule</i></code></div></div>
+<div class='hint'>step_x is used in range() function to indicate whether x1 is stepping up or down to get to x2</div>
+<div class='hint'>formula must return 1 to step up and -1 to step down</div>
+<div class='hint'>formula must be in terms of x1 and x2</div>
+<div class='hint'>Python ternary operator
+<div><code><i>a</i> if <i>b</i> else <i>c</i></code></div>
+means
+<div><code>if <i>b</i> is true return <i>a</i></code></div>
+<div><code>if <i>b</i> is false return <i>c</i></code></div></div>
+<div class='hint'>When using the ternary operator
+<div><code><i>true_result</i> if <i>condition</i> else </i>false_result</i></code></div>
+The <i>condition</i> can be formula in terms of x1 and x2 which returns True or False.</div>
+<div class='hint'>formula in terms of y1 and y2, to return 1 or -1</div>
+<div class='hint'>formula in terms of z1 and z2</div>
+<div class='hint'>The following statement creates a new list and stores it in the variable called my_list
+<div><code>my_list = []</code></div></div>
+<div class='hint'>The following statement stores the variable my_list in the dictionary my_dict with key = "mine"
+<div><code>my_dict["mine"] = my_list</code></div> </div>
+<div class='hint'>The following statement stores a new list in dictionary my_dict with variable my_key having the value of the key
+<div><code>my_dict[my_key] = []</code></div></div>
+<div class='hint'>Statement should be in terms of the two variables: node_lists and item</div>
+<div class='hint'>Find the list for the current item and append the current pos to it.</div>
+<div class='hint'>If you have a dictionary of lists called my_dict, then the list with the key equal to "default:glass" is retrieved by
+<div><code>my_dict["default:glass"]</code></div></div>
+<div class='hint'>Lists have a built-in function append() which adds a value to the end of a list
+<div><code>my_list.append((12, 34, 56))</code></div>
+appends the tuple (12, 34, 56) to the list stored in variable my_list. </div>
+<div class='hint'>Statement should be in terms of the three variables: node_lists, item, pos</div>
+<div class='hint'>add key to the list item_list at the end</div>
+<div class='hint'>mc.set_node_list() takes two arguments. List of (x, y, z) coordinates to be set to a block, and the name of the block</div>
+<div class='hint'>formula in terms of node_lists and item which returns the list of nodes to be set to the value of item</div>
+<br>

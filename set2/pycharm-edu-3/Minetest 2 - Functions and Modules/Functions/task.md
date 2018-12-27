@@ -15,3 +15,15 @@ node in it. We will merge that with our existing dictionary
 using the dict <code>update()</code> function which overwrites
 existing data when key is the same.</p> 
 </html> 
+<br>
+<div class='hint'>centre point of node</div>
+<div class='hint'>centre point of node</div>
+<div class='hint'>centre point of node</div>
+<div class='hint'>x value</div>
+<div class='hint'>y value</div>
+<div class='hint'>z value</div>
+<div class='hint'>item name as string</div>
+<div class='hint'>Five arguments are required</div>
+<div class='hint'>Five arguments are required</div>
+<div class='hint'>Five arguments are required</div>
+<br>

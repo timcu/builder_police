@@ -16,3 +16,26 @@ separated by commas. Try the following examples in the console</p>
 <div><code>for k,v in d1.items(): print("key=",k," value=",v) # loops through key:value pairs</code></div>
 <div><code>d1={} # creates an empty dictionary</code></div>
 <div><code>di=dict() # alternative method of creating empty dictionary</code></div>
+<br>
+<div class='hint'>Dictionaries are denoted by curly braces</div>
+<div class='hint'>A dictionary with keys and values looks like
+
+{'another':'mine', 'secret':"don't look"}</div>
+<div class='hint'>Assign a score of 10 to andy</div>
+<div class='hint'>key should be 'andy'</div>
+<div class='hint'>value should be 10</div>
+<div class='hint'>dictionary to use is stored in variable scores</div>
+<div class='hint'>scores[key] = value</div>
+<div class='hint'>Set value of 15 for key 'betty'</div>
+<div class='hint'>set value of 12 to key 'cathy'</div>
+<div class='hint'>Get andy's score, add 3, and save it back in scores dictionary</div>
+<div class='hint'>function to return all the key:value pairs of data in a for loop</div>
+<div class='hint'>function is a method of the dict class</div>
+<div class='hint'>to run class method on scores use 
+
+scores.<i>function_name</i>()</div>
+<div class='hint'>items() is the name of the function to run on the scores object</div>
+<div class='hint'>the variable name holding the current score as looping through scores items.</div>
+<div class='hint'>the variable name holding the current score as looping through scores items.</div>
+<div class='hint'>the variable name holding the current player's name as looping through scores items.</div>
+<br>

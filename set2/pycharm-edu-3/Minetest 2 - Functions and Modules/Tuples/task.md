@@ -37,3 +37,13 @@ which are mutable. (Lists are designated by square brackets
 <div><code>y # should display 45</code><div>
 <div><code>z # should display 'cat'</code><div>
 
+<br>
+<div class='hint'>Strings must be surrounded by single quotes or double quotes</div>
+<div class='hint'>int is the python term for integer</div>
+<div class='hint'>float is the python term for decimal number or floating point number</div>
+<div class='hint'>string is the python term for text</div>
+<div class='hint'>Tuple indexes are zero based so the first element has index 0</div>
+<div class='hint'>Index should be an integer between 0 and 2 inclusive for a tuple of length 3.</div>
+<div class='hint'>Enter a number which you think will be the correct number of elements in t5</div>
+<div class='hint'>multiple variables can have values assigned in a single equation</div>
+<br>
