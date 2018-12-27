@@ -5,11 +5,11 @@ def build(x, y, z, item):
     """similar to MinetestConnection.set_node but stores nodes in a dictionary rather than sending to minetest
 
     x, y, z: coordinates to be added to nodes. They are converted to integers so that each node has unique set of coordinates
-    item: minetest item name as a string "default:glass", or json string '{"name":"default:torch", "param2":"1"}'
+    item: minetest item name as a string "default:glass", or json string '{"name": "default:torch", "param2": "1"}'
     """
-    x = math.floor(x+0.5)
-    y = math.floor(y+0.5)
-    z = math.floor(z+0.5)
+    x = math.floor(x + 0.5)
+    y = math.floor(y + 0.5)
+    z = math.floor(z + 0.5)
     return {(x, y, z): item}
 
 
@@ -43,4 +43,4 @@ print("D:", node_dict)
 # See LICENSE.txt
 # Python code in task.py is free to be copied and reused.
 # Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at CoderDojo sessions in 2018.
+# Minetest course is authorised for use in schools and CoderDojo sessions in 2018 - 2019.

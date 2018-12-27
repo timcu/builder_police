@@ -1,5 +1,3 @@
-# tunnel = procedure to build tunnel
-
 from ircbuilder import MinetestConnection
 from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
 from minetest_helper import build, build_cuboid, send_node_dict, build_station_dirx
@@ -31,8 +29,10 @@ def build_tunnel_dirx(minetest_connection, x1, x2, z, y1=None, y2=None, material
     """
     nd = {}
     if x1 < x2:
+        # Sort x1, y1 and x2, y2 when x1 is less than x2
         xmin, y_at_xmin, xmax, y_at_xmax = x1, y1, x2, y2
     else:
+        # Sort x1, y1 and x2, y2 when x1 is greater than x2
         xmin, y_at_xmin, xmax, y_at_xmax = x2, y2, x1, y1
 
     # xmin = x value at one end of tunnel.
@@ -42,8 +42,8 @@ def build_tunnel_dirx(minetest_connection, x1, x2, z, y1=None, y2=None, material
     # tail = length of horizontal at each end of tunnel
 
     # Define blocks
-    stair_up_x = '{"name":"stairs:stair_stonebrick", "param2":"1"}'
-    stair_dn_x = '{"name":"stairs:stair_stonebrick", "param2":"3"}'
+    stair_up_x = {"name": "stairs:stair_stonebrick", "dir": "+x"}
+    stair_dn_x = {"name": "stairs:stair_stonebrick", "dir": "-x"}
 
     # First check we are not going to end up in a tree
     if not y_at_xmin:
@@ -91,7 +91,7 @@ def build_tunnel_dirx(minetest_connection, x1, x2, z, y1=None, y2=None, material
         nd.update(build_cuboid(x, y, z-1, x, y, z+1, "default:stone"))
 
     # Initialise previous value of y so can determine if stairs going up or down
-    yprev = tunnel_y_pos(xmin+1)
+    y_prev = tunnel_y_pos(xmin+1)
     # Second loop to convert solid glass into a tunnel
     for x in range(xmin+2, xmax-1):
         y = tunnel_y_pos(x)
@@ -100,31 +100,27 @@ def build_tunnel_dirx(minetest_connection, x1, x2, z, y1=None, y2=None, material
         # place a torch every 4 positions to light the tunnel
         # variation 5 = torch facing up
         # every 4 blocks
-        # pos 0: powered RAIL and normal torch
-        # pos 1: powered RAIL
-        # pos 2: powered RAIL
-        # pos 3: powered RAIL
         nd.update(build(x, y+1, z, "carts:powerrail"))
         if x % 4 == 0:
             nd.update(build(x, y+1, z+1, "default:torch"))
         # check if stairs are going up or down
-        if y > yprev:
+        if y > y_prev:
             # stairs ascending as x increases
             nd.update(build(x, y, z-1, stair_up_x))
-        if y < yprev:
+        if y < y_prev:
             # stairs descending as x increases
-            nd.update(build(x-1, yprev, z-1, stair_dn_x))
-        yprev = y
+            nd.update(build(x-1, y_prev, z-1, stair_dn_x))
+        y_prev = y
 
     # build station at xmax
-    platform_length = tail-3
+    platform_length = tail - 3
     platform_at_xmax = {
         'x': xmax - platform_length // 2 - 1,
         'y': y_at_xmax + 1,
         'z': z - 1,
         'length': platform_length
     }
-    # Build a station at platform_at_xmax with 3 levels
+    # Build a station at platform_at_xmax with 3 levels. Remember to set room dimensions and materials of construction
     nd.update(build_station_dirx(platform_at_xmax, room=room, materials=materials, levels=3))
 
     # build station at xmin
@@ -134,7 +130,7 @@ def build_tunnel_dirx(minetest_connection, x1, x2, z, y1=None, y2=None, material
         'z': z - 1,
         'length': platform_length
     }
-    # Build a station at platform_at_xmin with 1 level (the default)
+    # Build a station at platform_at_xmin with 1 level (the default). Remember to set room and materials
     nd.update(build_station_dirx(platform_at_xmin, room=room, materials=materials))
 
     return nd
@@ -152,4 +148,4 @@ send_node_dict(mc, nd_tunnel, end_list="air")
 # See LICENSE.txt
 # Python code in task.py is free to be copied and reused.
 # Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at CoderDojo sessions in 2018.
+# Minetest course is authorised for use in schools and CoderDojo sessions in 2018 - 2019.

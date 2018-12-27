@@ -1,5 +1,6 @@
 from test_helper import run_common_tests, failed, passed, get_answer_placeholders
 from ircbuilder import MinetestConnection
+import os.path
 
 
 def test_answer_placeholders():
@@ -12,8 +13,13 @@ def test_answer_placeholders():
 
 
 def test_config():
+    # Stepik changes directory structure so check first which directory structure
+    config_path = "../../minetest_irc.py"
+    if not os.path.exists(config_path):
+        if os.path.exists("../" + config_path):
+            config_path = "../" + config_path
     from task import mtuser, mtuserpass, mtbotnick, ircserver, channel, player_z
-    file = open("../../minetest_irc.py", "w")
+    file = open(config_path, "w")
     file.write('mtuser = "' + mtuser + '"       # your minetest username\n')
     file.write('mtuserpass = "' + mtuserpass + '"   # your minetest password. This file is not encrypted so don\'t use anything you want kept secret\n')
     file.write('player_z = ' + str(player_z) + '  # your z value from sign in minetest with your username on it\n')

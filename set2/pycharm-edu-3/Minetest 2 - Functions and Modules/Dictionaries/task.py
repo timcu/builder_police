@@ -19,12 +19,11 @@ print(scores)
 # Find who has the highest scores
 max_score = None
 winner = None
-for name,score in scores.items():
-    if not max_score or max_score < score+1:
+for name, score in scores.items():
+    if not max_score or max_score < score:
         max_score = score
         winner = name
 print("Winner is", winner, "with a score of", max_score)
-
 
 
 # © Copyright 2018 Triptera Pty Ltd
@@ -32,4 +31,4 @@ print("Winner is", winner, "with a score of", max_score)
 # See LICENSE.txt
 # Python code in task.py is free to be copied and reused.
 # Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at CoderDojo sessions in 2018.
+# Minetest course is authorised for use in schools and CoderDojo sessions in 2018 - 2019.

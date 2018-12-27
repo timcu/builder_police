@@ -19,11 +19,13 @@ def test_answer_placeholders():
         return False
     if not test_string(placeholders, 5, "10"):
         return False
-    if not test_eval(placeholders, 6, '16, 20, 10, "default:glass"', [{}]):
+    if not test_eval(placeholders, 6, '"default:wood"'):
         return False
-    if not test_eval(placeholders, 7, '16, 20, z, "default:stone"', [{'z':10}, {'z':11}]):
+    if not test_eval(placeholders, 7, '16, 20, 10, "default:glass"', [{}]):
         return False
-    if not test_eval(placeholders, 8, 'x, y, z, "wool:blue"', [{'x':5,'y':25,'z':10}, {'x':55,'y':255,'z':11}]):
+    if not test_eval(placeholders, 8, '16, 20, z, "default:stone"', [{'z':10}, {'z':11}]):
+        return False
+    if not test_eval(placeholders, 9, 'x, y, z, "wool:blue"', [{'x':5,'y':25,'z':10}, {'x':55,'y':255,'z':11}]):
         return False
     passed()
     return True

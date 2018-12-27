@@ -42,8 +42,8 @@ for i in range(-24, 25, 2):
     z = i / 10
     f1 = int(z)
     f2 = math.floor(z)
-    f3 = int(z+0.5)
-    f4 = math.floor(z+0.5)
+    f3 = int(z + 0.5)
+    f4 = math.floor(z + 0.5)
     print("{: .2f}     {: d}     {: d}     {: d}     {: d}".format(z, f1, f2, f3, f4))
 
 
@@ -52,4 +52,4 @@ for i in range(-24, 25, 2):
 # See LICENSE.txt
 # Python code in task.py is free to be copied and reused.
 # Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at CoderDojo sessions in 2018.
+# Minetest course is authorised for use in schools and CoderDojo sessions in 2018 - 2019.

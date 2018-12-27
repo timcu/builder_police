@@ -1,41 +1,43 @@
-<html>
-<h2>Dictionaries</h2>
-<p>A dictionary is a mutable group of data elements that are accessed by keys rather than their numeric
+# Dictionaries
+
+You will now learn about the `dict` data type which is the Python
+name for a dictionary. `dict`s are a powerful programming tool
+which enable Python programs to achieve a lot in a few lines of code.
+This exercise also does not use Minetest, but is necessary to be able to complete the
+"Railway station" exercise.
+
+## Task
+
+Complete the nine missing code fragments in the program on the left.
+Pay attention to the printed output after running the program.
+
+## Lesson
+
+A dictionary is a mutable group of data elements that are accessed by keys rather than their numeric
 position in the dictionary. The data type is named after the book by the same name because in the book 
 the word is the key and the meaning is the data element. You can only have one data element per key
 although that data element could be a complex data type such as a tuple, list or another dictionary.
 To create a dictionary, the keys and values are separated by colons (:) and the "key:value" pairs are 
-separated by commas. Try the following examples in the console</p>
-<div><code>d1={'score':25, 'another':'mine', 43:'numeric key', 'secret':"don't look"} # creates dict</code></div>
-<div><code>d1['secret'] # should display "don't look"</code></div>
-<div><code>d1['another']='dog' # assigns new value for existing key</code></div>
-<div><code>del(d1[43]) # removes data element with key 43 </code></div>
-<div><code>del(d1['secret']) # removes data element with key 43 </code></div>
-<div><code>d1['height']=180 # adds a new data element and key</code></div>
-<div><code>d1 # {'score': 25, 'another': 'dog', 'height': 180}</code></div>
-<div><code>for k,v in d1.items(): print("key=",k," value=",v) # loops through key:value pairs</code></div>
-<div><code>d1={} # creates an empty dictionary</code></div>
-<div><code>di=dict() # alternative method of creating empty dictionary</code></div>
+separated by commas. Try the following examples in the console
+
+        d1={'score':25, 'another':'mine', 43:'numeric key', 'secret':"don't look"}  # creates dict
+        d1['secret']  # should display "don't look"
+        d1['another']='dog'  # assigns new value for existing key
+        del(d1[43])  # removes data element with key 43
+        del(d1['secret'])  # removes data element with key 43
+        d1['height']=180  # adds a new data element and key
+        d1  # {'score': 25, 'another': 'dog', 'height': 180}
+        for k,v in d1.items(): print("key=",k," value=",v)  # loops through key:value pairs
+        d1={}  # creates an empty dictionary
+        d1=dict()  # alternative method of creating empty dictionary
+
 <br>
-<div class='hint'>Dictionaries are denoted by curly braces</div>
+<div class='hint'>Dictionaries are denoted by curly braces <code>{}</code></div>
 <div class='hint'>A dictionary with keys and values looks like
-
-{'another':'mine', 'secret':"don't look"}</div>
-<div class='hint'>Assign a score of 10 to andy</div>
-<div class='hint'>key should be 'andy'</div>
-<div class='hint'>value should be 10</div>
-<div class='hint'>dictionary to use is stored in variable scores</div>
-<div class='hint'>scores[key] = value</div>
-<div class='hint'>Set value of 15 for key 'betty'</div>
-<div class='hint'>set value of 12 to key 'cathy'</div>
-<div class='hint'>Get andy's score, add 3, and save it back in scores dictionary</div>
-<div class='hint'>function to return all the key:value pairs of data in a for loop</div>
-<div class='hint'>function is a method of the dict class</div>
-<div class='hint'>to run class method on scores use 
-
-scores.<i>function_name</i>()</div>
-<div class='hint'>items() is the name of the function to run on the scores object</div>
-<div class='hint'>the variable name holding the current score as looping through scores items.</div>
-<div class='hint'>the variable name holding the current score as looping through scores items.</div>
-<div class='hint'>the variable name holding the current player's name as looping through scores items.</div>
+<code>{'another':'mine', 'secret':"don't look"}</code></div>
+<div class='hint'>To assign a score of 100 to danny use the following
+<pre><code>    scores['danny'] = 100</code></pre></div>
+<div class='hint'>To add 3 to andy's score, get andy's score, add 3, and save it back in <code>scores</code> dictionary</div>
+<div class='hint'>To complete the <code>for</code> loop, enter a function to return all the key:value pairs of data in scores</div>
+<div class='hint'><code>items()</code> is the name of the function to run on the <code>scores</code> to get all key:value pairs <code>scores.items()</code></div>
 <br>

@@ -42,6 +42,7 @@ def send_node_lists(mc, node_lists, end_list=()):
     # Rearrange the list
     for item in end_list:
         for key in item_list:
+            # Match key to item. Doesn't have to be exact match. Can just start with it.
             if key.find(item) == 0:
                 # pull key out of the list from its current position
                 item_list.remove(key)
@@ -57,4 +58,4 @@ def send_node_lists(mc, node_lists, end_list=()):
 # See LICENSE.txt
 # Python code in task.py is free to be copied and reused.
 # Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at CoderDojo sessions in 2018.
+# Minetest course is authorised for use in schools and CoderDojo sessions in 2018 - 2019.
