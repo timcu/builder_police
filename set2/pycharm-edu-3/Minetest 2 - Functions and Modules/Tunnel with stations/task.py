@@ -42,8 +42,8 @@ def build_tunnel_dirx(minetest_connection, x1, x2, z, y1=None, y2=None, material
     # tail = length of horizontal at each end of tunnel
 
     # Define blocks
-    stair_up_x = {"name": "stairs:stair_stonebrick", "dir": "+x"}
-    stair_dn_x = {"name": "stairs:stair_stonebrick", "dir": "-x"}
+    stair_up_x = {"name": "stairs:stair_stonebrick", "direction": "+x"}
+    stair_dn_x = {"name": "stairs:stair_stonebrick", "direction": "-x"}
 
     # First check we are not going to end up in a tree
     if not y_at_xmin:

@@ -29,6 +29,7 @@ def test_answer_placeholders():
     passed()
     return True
 
+
 if __name__ == '__main__':
     if test_answer_placeholders():
         run_common_tests()

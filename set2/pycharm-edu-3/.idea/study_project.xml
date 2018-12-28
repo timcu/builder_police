@@ -44,7 +44,7 @@
           </option>
           <option name="stepikChangeStatus" value="Up to date" />
           <option name="type" value="pycharm8 Python" />
-          <option name="updateDate" value="1545896131000" />
+          <option name="updateDate" value="1545917717000" />
           <option name="items">
             <list>
               <Lesson>
@@ -1004,7 +1004,7 @@
                 <option name="index" value="2" />
                 <option name="name" value="Minetest 2 - Functions and Modules" />
                 <option name="stepikChangeStatus" value="Up to date" />
-                <option name="updateDate" value="1545896131000" />
+                <option name="updateDate" value="1545917717000" />
                 <option name="taskList">
                   <list>
                     <EduTask>
@@ -1898,7 +1898,7 @@
                           <entry key="tests.py" value="# © Copyright 2018 Triptera Pty Ltd&#10;# https://www.triptera.com.au&#10;# Authorised for use by schools and CoderDojo in 2018&#10;&#10;from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;from triptera_pe_tests import test_eval, test_exec&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    if not test_exec(placeholders, 0, &quot;from minetest_helper import set_node&quot;, []):&#10;        return False&#10;    if not test_eval(placeholders, 1, &quot;1 if x2 &gt; x1 else -1&quot;, [{'x1': 1, 'x2': 5}, {'x1':10, 'x2':9}]):&#10;        return False&#10;    if not test_eval(placeholders, 2, &quot;1 if y2 &gt; y1 else -1&quot;, [{'y1': 1, 'y2': 5}, {'y1':10, 'y2':9}]):&#10;        return False&#10;    if not test_eval(placeholders, 3, &quot;1 if z2 &gt; z1 else -1&quot;, [{'z1': 1, 'z2': 5}, {'z1':10, 'z2':9}]):&#10;        return False&#10;    if not test_exec(placeholders, 4, &quot;node_lists[str_item] = []&quot;, [{'node_lists': {}, 'str_item': &quot;air&quot;}, {'node_lists': {'air': [(1,2,3)]}, 'str_item':&quot;default:stone&quot;}]):&#10;        return False&#10;    if not test_exec(placeholders, 5, &quot;node_lists[str_item].append(pos)&quot;, [{'node_lists': {'air':[]}, 'str_item': &quot;air&quot;, &quot;pos&quot;: (10, 20, 30)}, {'node_lists': {'air': [(1,2,3)]}, 'str_item':&quot;air&quot;, 'pos':(2,3,4)}]):&#10;        return False&#10;    if not test_exec(placeholders, 6, &quot;item_list.append(key)&quot;, [{'item_list': ['air'], 'key': &quot;default:stone&quot;}, {'item_list': ['default:glass'], 'key': &quot;default:wood&quot;}]):&#10;        return False&#10;    if not test_eval(placeholders, 7, &quot;node_lists[item]&quot;, [{'node_lists': {'air':[(10, 20, 30)]}, 'item': &quot;air&quot; }, {'node_lists': {'air': [(1,2,3),(2,3,4)]}, 'item':&quot;air&quot;}]):&#10;        return False&#10;    passed()&#10;    return True&#10;&#10;&#10;if __name__ == '__main__':&#10;    if test_answer_placeholders():&#10;        run_common_tests()&#10;&#10;" />
                         </map>
                       </option>
-                      <option name="updateDate" value="1545917717000" />
+                      <option name="updateDate" value="1545955172000" />
                     </EduTask>
                     <EduTask>
                       <option name="additionalFiles">
@@ -2162,7 +2162,7 @@
                                       <option name="initialState" />
                                       <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="7" />
-                                      <option name="offset" value="3213" />
+                                      <option name="offset" value="3225" />
                                       <option name="placeholderDependency" />
                                       <option name="placeholderText" value="formula" />
                                       <option name="possibleAnswer" value="tunnel_y &gt; y_at_xmin" />
@@ -2179,7 +2179,7 @@
                                       <option name="initialState" />
                                       <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="9" />
-                                      <option name="offset" value="5249" />
+                                      <option name="offset" value="5261" />
                                       <option name="placeholderDependency" />
                                       <option name="placeholderText" value="arguments" />
                                       <option name="possibleAnswer" value="platform_at_xmax, room=room, materials=materials, levels=3" />
@@ -2196,7 +2196,7 @@
                                       <option name="initialState" />
                                       <option name="initializedFromDependency" value="false" />
                                       <option name="length" value="9" />
-                                      <option name="offset" value="5636" />
+                                      <option name="offset" value="5648" />
                                       <option name="placeholderDependency" />
                                       <option name="placeholderText" value="arguments" />
                                       <option name="possibleAnswer" value="platform_at_xmin, room=room, materials=materials" />
@@ -2221,10 +2221,10 @@
                       </option>
                       <option name="testsText">
                         <map>
-                          <entry key="tests.py" value="# © Copyright 2018 Triptera Pty Ltd&#10;# https://www.triptera.com.au&#10;# Authorised for use by schools and CoderDojo in 2018&#10;&#10;from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;from triptera_pe_tests import test_eval, test_eval_phi, test_exec&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    if not test_exec(placeholders, 0, &quot;xmin, y_at_xmin, xmax, y_at_xmax = x2, y2, x1, y1&quot;, [&#10;                    {'xmin':1, 'y_at_xmin':2, 'xmax':3, 'y_at_xmax':4, 'x2':50, 'y2':10, 'x1':100, 'y1':15},&#10;                    {'xmin':4, 'y_at_xmin':3, 'xmax':2, 'y_at_xmax':1, 'x2':55, 'y2':12, 'x1':150, 'y1':11}]):&#10;        return False&#10;    if not test_eval(placeholders, 1, &quot;tunnel_y &gt; y_at_xmin&quot;, [{'tunnel_y': 50, 'y_at_xmin': 40}, {'tunnel_y': 30, 'y_at_xmin': 35}]):&#10;        return False&#10;    phi = 'dict(' + placeholders[2] + &quot;)&quot;&#10;    if not test_eval_phi(phi, &quot;Answer 3&quot;, 'dict(platform_at_xmax, room=room, materials=materials, levels=3)', [&#10;        {'platform_at_xmax':{'x':1, 'levels':1}, 'room':{'length':10}, 'materials':{'stair':'wood'}, 'levels':2},&#10;        {'platform_at_xmax':{'x':3, 'levels':1}, 'room':{'length':15}, 'materials':{'stair':'wool'}, 'levels':1}&#10;    ]):&#10;        return False&#10;    phi = 'dict(' + placeholders[3] + &quot;)&quot;&#10;    if not test_eval_phi(phi, &quot;Answer 4&quot;, 'dict(platform_at_xmin, room=room, materials=materials, levels=1)', [&#10;        {'platform_at_xmin':{'x':1, 'levels':1}, 'room':{'length':10}, 'materials':{'stair':'wood'}, 'levels':2},&#10;        {'platform_at_xmin':{'x':3, 'levels':1}, 'room':{'length':15}, 'materials':{'stair':'wool'}, 'levels':1}&#10;    ]):&#10;        return False&#10;    passed()&#10;    return True&#10;&#10;if __name__ == '__main__':&#10;    if test_answer_placeholders():&#10;        run_common_tests()&#10;&#10;&#10;" />
+                          <entry key="tests.py" value="# © Copyright 2018 Triptera Pty Ltd&#10;# https://www.triptera.com.au&#10;# Authorised for use by schools and CoderDojo in 2018&#10;&#10;from test_helper import run_common_tests, failed, passed, get_answer_placeholders&#10;from triptera_pe_tests import test_eval, test_eval_phi, test_exec&#10;&#10;&#10;def test_answer_placeholders():&#10;    placeholders = get_answer_placeholders()&#10;    if not test_exec(placeholders, 0, &quot;xmin, y_at_xmin, xmax, y_at_xmax = x2, y2, x1, y1&quot;, [&#10;                    {'xmin':1, 'y_at_xmin':2, 'xmax':3, 'y_at_xmax':4, 'x2':50, 'y2':10, 'x1':100, 'y1':15},&#10;                    {'xmin':4, 'y_at_xmin':3, 'xmax':2, 'y_at_xmax':1, 'x2':55, 'y2':12, 'x1':150, 'y1':11}]):&#10;        return False&#10;    if not test_eval(placeholders, 1, &quot;tunnel_y &gt; y_at_xmin&quot;, [{'tunnel_y': 50, 'y_at_xmin': 40}, {'tunnel_y': 30, 'y_at_xmin': 35}]):&#10;        return False&#10;    phi = 'dict(' + placeholders[2] + &quot;)&quot;&#10;    if not test_eval_phi(phi, &quot;Answer 3&quot;, 'dict(platform_at_xmax, room=room, materials=materials, levels=3)', [&#10;        {'platform_at_xmax':{'x':1, 'levels':1}, 'room':{'length':10}, 'materials':{'stair':'wood'}, 'levels':2},&#10;        {'platform_at_xmax':{'x':3, 'levels':1}, 'room':{'length':15}, 'materials':{'stair':'wool'}, 'levels':1}&#10;    ]):&#10;        return False&#10;    phi = 'dict(' + placeholders[3] + &quot;)&quot;&#10;    if not test_eval_phi(phi, &quot;Answer 4&quot;, 'dict(platform_at_xmin, room=room, materials=materials, levels=1)', [&#10;        {'platform_at_xmin':{'x':1, 'levels':1}, 'room':{'length':10}, 'materials':{'stair':'wood'}, 'levels':2},&#10;        {'platform_at_xmin':{'x':3, 'levels':1}, 'room':{'length':15}, 'materials':{'stair':'wool'}, 'levels':1}&#10;    ]):&#10;        return False&#10;    passed()&#10;    return True&#10;&#10;&#10;if __name__ == '__main__':&#10;    if test_answer_placeholders():&#10;        run_common_tests()&#10;&#10;&#10;" />
                         </map>
                       </option>
-                      <option name="updateDate" value="1545873760000" />
+                      <option name="updateDate" value="1545955177000" />
                     </EduTask>
                   </list>
                 </option>
