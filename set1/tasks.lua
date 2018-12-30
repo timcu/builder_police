@@ -39,7 +39,9 @@ local task_1_test = function(player_name)
 	local pos = vector.add(pos_build, {x=0,y=4,z=0})
 	local pos_assess = vector.add(pos_build, {x=0,y=0,z=1})
 	local node = minetest.get_node(pos)
-	if node.name:find("wool:") == 1 then
+	if node.name == "ignore" then
+		return false
+	elseif node.name:find("wool:") == 1 then
 		return true
 	else
 		local text = "Task 1 Assessment\n \nBlock is type "..node.name.." which does not start with 'wool:'"
@@ -67,7 +69,9 @@ local task_2_test = function(player_name)
 	for y=pos.y-1,pos.y+1 do
 		for z=pos.z-1,pos.z+1 do
 			local node = minetest.get_node({x=pos.x,y=y,z=z})
-			if z == pos.z and y == pos.y then
+			if node.name == "ignore" then
+				return false
+			elseif z == pos.z and y == pos.y then
 				if node.name:find("wool:") ~= 1 then
 					local text = "Task 2 Assessment\n \nBlock in centre is type "..node.name.." which does not start with 'wool:'"
 					irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
@@ -105,7 +109,9 @@ local task_3_test = function(player_name)
 		for y=pos.y-1,pos.y+1 do
 			for z=pos.z-1,pos.z+1 do
 				local node = minetest.get_node({x=x,y=y,z=z})
-				if x == pos.x and z == pos.z and y == pos.y then
+				if node.name == "ignore" then
+					return false
+				elseif x == pos.x and z == pos.z and y == pos.y then
 					if node.name:find("wool:") ~= 1 then
 						local text = "Task 3 Assessment\n \nBlock in centre is type '"..node.name.."' which does not start with 'wool:'"
 						irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
@@ -171,7 +177,9 @@ local task_4_test = function(player_name)
 		for y=pos.y+4,pos.y+10 do
 			for z=pos.z-2,pos.z+2 do
 				local node=minetest.get_node({x=x,y=y,z=z})
-				if y==pos.y+4 then
+				if node.name == "ignore" then
+					return false
+				elseif y==pos.y+4 then
 					-- floor should be glass or stone
 					if node.name ~= "default:glass" and node.name ~= "default:stone" then
 						local text = "Task 4 Assessment\n \nBlock at ("..x..", "..y..", "..z..") is type '"..node.name.."' but should be 'default:glass'"
@@ -219,7 +227,9 @@ local task_5_test = function(player_name)
 		for y=pos.y+4,pos.y+5 do
 			for z=pos.z-1,pos.z+1 do
 				local node=minetest.get_node({x=x,y=y,z=z})
-				if y==pos.y+4 then
+				if node.name == "ignore" then
+					return false
+				elseif y==pos.y+4 then
 					-- floor should be stone
 					if node.name ~= "default:stone" then
 						local text = "Task 5 Assessment\n \nBlock at ("..x..", "..y..", "..z..") is type '"..node.name.."' but should be 'default:stone'"
@@ -266,6 +276,9 @@ local task_6_test = function(player_name)
 		local prev = ""
 		for x=pos.x-4,pos.x+4 do
 			local node=minetest.get_node({x=x,y=y,z=z})
+			if node.name == "ignore" then
+				return false
+			end
 			if node.name == prev then
 				local text = "Task 6 Assessment\n \nBlocks at ("..(x-1)..", "..y..", "..z..") and ("..x..", "..y..", "..z..") are both of type '"..node.name.."' but should be different if alternating"
 				irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
@@ -310,6 +323,9 @@ local task_7_test = function(player_name)
 		for i=1,21 do
 			local x=pos.x-11+i
 			local node=minetest.get_node({x=x,y=y,z=z})
+			if node.name == "ignore" then
+				return false
+			end
 			if i<woolmin or i> woolmax then
 				if node.name ~= "air" then
 					local text = "Task 7 Assessment\n \nBlock at ("..x..", "..y..", "..z..") is type '"..node.name.."' but should be 'air'"
@@ -392,7 +408,9 @@ local task_8_test = function(player_name)
         	for y=floory,floory+6 do
        			--print("x="..x.." y="..y.." z="..z.." floory="..floory.." pos.z="..pos.z.." i="..i)
         		local node=minetest.get_node({x=x, y=y, z=z})
-        		if y==floory then
+        		if node.name == "ignore" then
+					return false
+				elseif y==floory then
         			-- floor needs to be glass unless it is corner which doesn't matter
         			if z>pos.z-2 and z<pos.z+2 then
         				--not worried what bottom corners are
@@ -474,6 +492,9 @@ local task_9_test_from_pos = function(pos)
         if i < 60 then
         	-- Don't need stairs on the last block
 	        node=minetest.get_node({x=x, y=floory, z=pos.z-1})
+	        if node.name == "ignore" then
+				return false
+			end
 			if node.name:find("stairs:") ~= 1 then
 				text = "Task 9 Assessment\n \nBlock at ("..x..", "..floory..", "..(pos.z-1)..") is type '"..node.name.."' but should be 'stairs:stair_stonebrick' or similar"
 				return false, text
@@ -484,6 +505,9 @@ local task_9_test_from_pos = function(pos)
 			end
 		end
         node=minetest.get_node({x=x, y=floory+1, z=pos.z})
+		if node.name == "ignore" then
+			return false
+		end
 		if node.name ~= "carts:rail" and node.name ~= "carts:powerrail" then
 			text = "Task 9 Assessment\n \nBlock at ("..x..", "..(floory+1)..", "..pos.z..") is type '"..node.name.."' but should be 'carts:rail' or 'carts:powerrail'"
 			return false, text
@@ -493,6 +517,9 @@ local task_9_test_from_pos = function(pos)
 	-- check rail in flat section of tunnel
 	for x=pos.x-30,pos.x-7 do
 		local node=minetest.get_node({x=x,y=pos.y+5,z=pos.z})
+		if node.name == "ignore" then
+			return false, "ignore"
+		end
 		if node.name ~= "carts:rail" and node.name ~= "carts:powerrail" then
 			text = "Task 9 Assessment\n \nBlock at ("..x..", "..(pos.y+5)..", "..pos.z..") is type '"..node.name.."' but should be 'carts:rail' or 'carts:powerrail'"
 			return false, text
@@ -506,7 +533,9 @@ local task_9_test = function(player_name)
 	local pos = builder_police.pos_build(player_name) 
 	local pos_assess = vector.add(pos, {x=0,y=0,z=1})
 	local success, text = task_9_test_from_pos(pos)
-	irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
+	if text ~= "ignore" then
+		irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
+	end
 	return success
 end
 
@@ -621,7 +650,9 @@ local task_10_test = function(player_name)
 	text = "Task 10 Assessment\n \nTask 10 is not a programming task, although you may need to assist your neighbour's programming task to complete."
 	local pos_left = vector.add(pos, {x=0, y=0, z=-builder_police.get_delta_z()})
 	local pos_right = vector.add(pos, {x=0, y=0, z=-builder_police.get_delta_z()})
-	local test = task_9_test_from_pos(pos_left) or task_9_test_from_pos(pos_right)
+	local test_left, message_left = task_9_test_from_pos(pos_left) 
+	local test_right, message_right = task_9_test_from_pos(pos_right) 
+	local test = test_left or test_right
 	if test then 
 		text = text .. " Well done! One of your neighbours has also completed Task 9."
 	else

@@ -339,6 +339,11 @@ minetest.register_on_joinplayer(function(player)
 	--player:set_physics_override({jump=1, speed=1, gravity=1})
 end)
 
+-- Can't do this because it clears signs for other players
+-- minetest.register_on_leaveplayer(function(player, timed_out)
+-- 	minetest.clear_objects({mode="quick"})
+--end)
+
 minetest.register_on_newplayer(function(player)
 	-- new players given irc_builder privilege
 	local privs = minetest.get_player_privs(player:get_player_name())
