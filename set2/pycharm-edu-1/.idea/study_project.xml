@@ -14,7 +14,7 @@
               <StepikUserInfo>
                 <option name="firstName" value="D" />
                 <option name="guest" value="false" />
-                <option name="id" value="39599470" />
+                <option name="id" value="-1" />
                 <option name="lastName" value="Tim Cummings" />
               </StepikUserInfo>
             </list>
@@ -23,7 +23,7 @@
           <option name="courseMode" value="Course Creator" />
           <option name="courseType" value="PyCharm" />
           <option name="customPresentableName" />
-          <option name="description" value="An introduction to Python with some simple exercises to create a program which counts down and a program which guesses a number.&#10;&#10;This is the first course in stream b of pythonator series.&#10;&#10;https://pythonator.com" />
+          <option name="description" value="An introduction to Python with some simple exercises to create a program which counts down and a program which guesses a number.&#10;&#10;This is the first course in stream b of pythonator series. It does not use minetest.&#10;&#10;https://pythonator.com" />
           <option name="fromZip" value="false" />
           <option name="id" value="50842" />
           <option name="index" value="-1" />
@@ -32,7 +32,7 @@
               <option value="39599470" />
             </list>
           </option>
-          <option name="language" value="Python" />
+          <option name="language" value="Python 3.x" />
           <option name="languageCode" value="en" />
           <option name="loadSolutions" value="true" />
           <option name="name" value="pythonator b1 easy" />
@@ -42,8 +42,8 @@
               <option value="74733" />
             </list>
           </option>
-          <option name="stepikChangeStatus" value="Up to date" />
-          <option name="type" value="pycharm8 Python" />
+          <option name="stepikChangeStatus" value="Info changed" />
+          <option name="type" value="pycharm8 Python 3.x" />
           <option name="updateDate" value="1545019858000" />
           <option name="items">
             <list>
