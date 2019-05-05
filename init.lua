@@ -329,7 +329,7 @@ builder_police.pos_build = function(player_name)
 	return {x=tonumber(read_key('start_x')), y = tonumber(read_key('start_y')), z = builder_police.get_player_z(player_name)}
 end
 
-dofile(minetest.get_modpath(mod_this) .. "/set1/tasks.lua")
+dofile(minetest.get_modpath(mod_this) .. "/set2/tasks.lua")
 dofile(minetest.get_modpath(mod_this) .. "/set1/quizzes.lua")
 
 minetest.register_on_joinplayer(function(player)
