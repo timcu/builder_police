@@ -84,7 +84,7 @@ local get_ground_level = function(x, z)
 end  
 
 builder_police = {
-	version="0.0.6",
+	version="0.0.7",
 }
 builder_police.get_player_z = function(player_name)
 	local key = player_name..'_build_z'
