@@ -334,7 +334,7 @@ dofile(minetest.get_modpath(mod_this) .. "/set1/quizzes.lua")
 
 minetest.register_on_joinplayer(function(player)
 	assign_player_z(player:get_player_name())
-	player:setpos({x=102,y=9.5,z=builder_police.get_player_z(player:get_player_name())})
+	player:set_pos({x=102,y=9.5,z=builder_police.get_player_z(player:get_player_name())})
 	--following line only required if using physics to keep players in jail
 	--player:set_physics_override({jump=1, speed=1, gravity=1})
 end)
@@ -363,7 +363,7 @@ if pvp then
 			hitter:set_physics_override({jump=0, speed=0, gravity=0})
 			-- player has to complete current task to get out of jail
 			set_player_jail_free_task(player_name, task)
-			hitter:setpos({x=102,y=9.5,z=z})
+			hitter:set_pos({x=102,y=9.5,z=z})
 			minetest.chat_send_all(player_name..' has been jailed and immobilised for one task for hitting '..hittee:get_player_name())
 		end
 	end)
@@ -372,7 +372,7 @@ end
 local timer = 0
 minetest.register_globalstep(function(dtime)
 	timer = timer + dtime
-	if timer >= 5 then
+	if timer >= 10 then
 		timer = 0
 		local str_player_names = read_key('player_names')
 		local jail_free_task = tonumber(read_key('jail_free_task'))
@@ -384,55 +384,53 @@ minetest.register_globalstep(function(dtime)
 		end
 		--print("Jail free task ")
 		--print(jail_free_task)
-		if str_player_names then
-			for player_name in str_player_names:gmatch("%S+") do
-				local z = builder_police.get_player_z(player_name)
-				local task = get_player_task(player_name)
-				local num_quiz = builder_police.get_player_num_quiz(player_name)
-				local player_jail_free_task = get_player_jail_free_task(player_name)
-				if not task or task < 1 then
-					task = 1
-					set_player_task(player_name, task)
+		for _,player in ipairs(minetest.get_connected_players()) do
+			local player_name = player:get_player_name()
+			local z = builder_police.get_player_z(player_name)
+			local task = get_player_task(player_name)
+			local num_quiz = builder_police.get_player_num_quiz(player_name)
+			local player_jail_free_task = get_player_jail_free_task(player_name)
+			if not task or task < 1 then
+				task = 1
+				set_player_task(player_name, task)
+			end
+			while builder_police.tests[task](player_name) and task < #builder_police.tests do
+				if player_name and task then
+					-- player has completed their next task
+					minetest.chat_send_all(player_name.." has completed task "..task)
+					-- check what privileges player gets for completing task and grant them
+				end		
+				task = task + 1
+				set_player_task(player_name, task)
+				--builder_police.tasks[task](player_name) 
+			end
+			local privs = minetest.get_player_privs(player_name)
+			local task_privileges = get_task_privileges()
+			local count = 1
+			for p in task_privileges:gmatch("(%S+)") do
+				if count <= task-1 + math.floor((num_quiz-1) / 5) and p and p ~= "-" then
+					privs[p] = true
 				end
-				while builder_police.tests[task](player_name) and task < #builder_police.tests do
-					if player_name and task then
-						-- player has completed their next task
-						minetest.chat_send_all(player_name.." has completed task "..task)
-						-- check what privileges player gets for completing task and grant them
-					end		
-					task = task + 1
-					set_player_task(player_name, task)
-					--builder_police.tasks[task](player_name) 
+				count = count + 1
+			end
+			minetest.set_player_privs(player_name, privs)
+			-- test current players to see which ones need to be in jail
+			if player then
+				if (task <= jail_free_task) or (player_jail_free_task and task <= player_jail_free_task) then
+					local p1 = builder_police.jails[task].p1
+					local p2 = builder_police.jails[task].p2
+					local p = player:get_pos()
+					if p.x < p1.x or p.x > p2.x or p.y < p1.y or p.y > p2.y or p.z < p1.z + z or p.z > p2.z + z then
+						--player:set_physics_override({jump=0, speed=0, gravity=0})
+						--print(minetest.serialize(p)..minetest.serialize(p1)..minetest.serialize(p2))
+						minetest.set_node({x=102,y=9,z=z},{name="default:stone"})
+						player:set_pos({x=102,y=9.5,z=z})
+					end
 				end
-				local privs = minetest.get_player_privs(player_name)
-				local task_privileges = get_task_privileges()
-				local count = 1
-				for p in task_privileges:gmatch("(%S+)") do
-					if count <= task-1 + math.floor((num_quiz-1) / 5) and p and p ~= "-" then
-						privs[p] = true
-					end
-					count = count + 1
-				end
-				minetest.set_player_privs(player_name, privs)
-				-- test current players to see which ones need to be in jail
-				local player = players[player_name]
-				if player then
-					if (task <= jail_free_task) or (player_jail_free_task and task <= player_jail_free_task) then
-						local p1 = builder_police.jails[task].p1
-						local p2 = builder_police.jails[task].p2
-						local p = player:getpos()
-						if p.x < p1.x or p.x > p2.x or p.y < p1.y or p.y > p2.y or p.z < p1.z + z or p.z > p2.z + z then
-							--player:set_physics_override({jump=0, speed=0, gravity=0})
-							--print(minetest.serialize(p)..minetest.serialize(p1)..minetest.serialize(p2))
-							minetest.set_node({x=102,y=9,z=z},{name="default:stone"})
-							player:setpos({x=102,y=9.5,z=z})
-						end
-					end
-					-- check players who were in jail for punching other players and remobilise them if they have completed next task
-					if (player_jail_free_task and (task > player_jail_free_task or player_jail_free_task > #builder_police.tasks)) then
-						set_player_jail_free_task(player_name, 0)
-						player:set_physics_override({jump=1, speed=1, gravity=1})
-					end
+				-- check players who were in jail for punching other players and remobilise them if they have completed next task
+				if (player_jail_free_task and (task > player_jail_free_task or player_jail_free_task > #builder_police.tasks)) then
+					set_player_jail_free_task(player_name, 0)
+					player:set_physics_override({jump=1, speed=1, gravity=1})
 				end
 			end
 		end
