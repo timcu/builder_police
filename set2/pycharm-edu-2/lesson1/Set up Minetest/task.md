@@ -6,7 +6,7 @@
     name you will be able to login.
 2.  Please don't use spaces in your name or password. If you need to change your password in
     Minetest press the [esc] key and click the [Change password] button.
-3.  Don't use a password you want keep secret because there is very low security on this
+3.  Don't use a password you want to keep secret because there is very low security on this
     server and other people can find out your password. I don't mind if your password
     is just "*password*" but be prepared for others to login as you if you
     do that.
@@ -39,7 +39,7 @@ In Minetest, find the sign with your name and your player_z will be the z value 
 <div class='hint'>Sign will look like the following:<br>
 <br>
 <div align="center">tim</div>
-<div align="center"></div>
+<div align="center">&nbsp;</div>
 <div align="center">x=100</div>
 <div align="center">y=14</div>
 <div align="center">z=10</div>

@@ -1,0 +1,22 @@
+type: edu
+files:
+- name: tests.py
+  visible: false
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 152
+    length: 13
+    placeholder_text: data elements
+  - offset: 282
+    length: 13
+    placeholder_text: data elements
+  - offset: 383
+    length: 5
+    placeholder_text: index
+  - offset: 552
+    length: 1
+    placeholder_text: '?'
+  - offset: 701
+    length: 8
+    placeholder_text: equation

@@ -33,7 +33,7 @@ range_z_ext = range(wall_z, wall_z + tunnel_width)
 range_y_int = range(floor_y + 1, floor_y + tunnel_height - 1)
 range_z_int = range(wall_z + 1, wall_z + tunnel_width - 1)
 # x values for torches
-range_x_torch = range(x_min, x_min + tunnel_length, 4)
+range_x_torch = sequence
 
 # BUILD
 # build a solid cuboid of glass first which is 7 blocks high and 5 blocks wide
@@ -41,9 +41,9 @@ mc.build(range_x, range_y_ext, range_z_ext, wall)
 # replace the internal glass with air so left with a hollow tunnel
 mc.build(range_x, range_y_int, range_z_int, air)
 # replace the floor with stone
-mc.build(range_x, floor_y, range_z_int, floor)
+mc.build(variable, floor_y, range_z_int, floor)
 # place torches
-mc.build(range_x_torch, floor_y + 1, ref_z + 1, torch)
+mc.build(range_x_torch, formula, ref_z + 1, torch)
 
 mc.send_building()
 

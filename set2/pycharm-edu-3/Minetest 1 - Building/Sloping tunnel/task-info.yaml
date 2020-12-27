@@ -1,0 +1,53 @@
+type: edu
+files:
+- name: tests.py
+  visible: false
+- name: tunnel_segments_separate.png
+  visible: true
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 396
+    length: 7
+    placeholder_text: formula
+  - offset: 723
+    length: 7
+    placeholder_text: formula
+  - offset: 738
+    length: 7
+    placeholder_text: formula
+  - offset: 753
+    length: 7
+    placeholder_text: formula
+  - offset: 882
+    length: 7
+    placeholder_text: formula
+  - offset: 928
+    length: 7
+    placeholder_text: formula
+  - offset: 1073
+    length: 8
+    placeholder_text: sequence
+  - offset: 1304
+    length: 7
+    placeholder_text: formula
+  - offset: 1319
+    length: 7
+    placeholder_text: formula
+  - offset: 1334
+    length: 7
+    placeholder_text: formula
+  - offset: 1391
+    length: 7
+    placeholder_text: formula
+  - offset: 1432
+    length: 8
+    placeholder_text: sequence
+  - offset: 1508
+    length: 9
+    placeholder_text: condition
+  - offset: 1603
+    length: 7
+    placeholder_text: formula
+- name: tunnel_segments_joined.png
+  visible: true

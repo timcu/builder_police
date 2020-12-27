@@ -1,0 +1,18 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 221
+    length: 6
+    placeholder_text: number
+  - offset: 236
+    length: 6
+    placeholder_text: number
+  - offset: 272
+    length: 8
+    placeholder_text: variable
+- name: tests.py
+  visible: false
+- name: wool_blue.png
+  visible: true

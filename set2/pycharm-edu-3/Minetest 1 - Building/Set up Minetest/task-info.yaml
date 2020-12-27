@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: tests.py
+  visible: false
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 10
+    length: 8
+    placeholder_text: username
+  - offset: 60
+    length: 8
+    placeholder_text: password
+  - offset: 178
+    length: 6
+    placeholder_text: number

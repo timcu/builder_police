@@ -7,15 +7,15 @@ mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel
 # player's z coordinate used as reference point for all building
 ref_z = player_z
 # x value at start of stone path heading +x direction
-path_x_min = 105
+path_x_min = number
 # y value of stone in path
-floor_y = 9
+floor_y = number
 
 # BUILDING SIZE
 # height of arch in number of blocks (external dimension)
-arch_height = 7
+arch_height = number
 # width of arch in number of blocks (external dimension)
-arch_width = 5
+arch_width = number
 
 # BUILDING MATERIALS
 air = "air"

@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: tests.py
+  visible: false
+- name: stairs_and_rail.png
+  visible: true
+- name: rail_in_pairs.png
+  visible: true
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 373
+    length: 4
+    placeholder_text: dict
+  - offset: 435
+    length: 6
+    placeholder_text: string
+  - offset: 461
+    length: 6
+    placeholder_text: string
+  - offset: 855
+    length: 7
+    placeholder_text: formula

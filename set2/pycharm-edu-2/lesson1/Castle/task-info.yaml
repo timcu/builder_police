@@ -1,0 +1,35 @@
+type: edu
+files:
+- name: crenels.png
+  visible: true
+- name: red_carpet.png
+  visible: true
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 1073
+    length: 3
+    placeholder_text: colour
+  - offset: 1153
+    length: 46
+    placeholder_text: dict
+  - offset: 2748
+    length: 27
+    placeholder_text: formula
+  - offset: 2786
+    length: 16
+    placeholder_text: formula
+  - offset: 2852
+    length: 11
+    placeholder_text: formula
+  - offset: 2874
+    length: 11
+    placeholder_text: formula
+  - offset: 3913
+    length: 18
+    placeholder_text: sequence
+  - offset: 4183
+    length: 51
+    placeholder_text: sequence
+- name: tests.py
+  visible: false

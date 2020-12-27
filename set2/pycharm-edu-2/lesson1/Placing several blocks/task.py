@@ -11,11 +11,11 @@ mc.build(100, 13, ref_z - 1, glass)
 mc.build(100, 14, ref_z - 1, glass)
 mc.build(100, 15, ref_z - 1, glass)
 mc.build(100, 13, ref_z, glass)
-mc.build(100, 14, ref_z, wool)
+mc.build(100, 14, variable, wool)
 mc.build(100, 15, ref_z, glass)
 mc.build(100, 13, ref_z + 1, glass)
 mc.build(100, 14, ref_z + 1, glass)
-mc.build(100, 15, ref_z + 1, glass)
+mc.build(100, 15, formula, glass)
 mc.send_building()
 
 

@@ -22,14 +22,13 @@ The material names are the name of the mod they come from, a colon (:), and then
 
 Hints are available by clicking the light bulbs below.
 
-Click the [Check] button below to check you have completed the task correctly.
+Checking: Click the [Check] button below to check you have completed the task correctly.
 Checking the task does not run the task so it will not build anything in the Minetest world.
 
-Click the green triangle "play" button to run your program or use keyboard ctrl-shift-F10.
-This will build your construction in the Minetest world. It is safer to wait until your task checks completely before
-building it in Minetest world. However, sometimes it is hard to see where the problem is, so try running it with
-the green triangle or ctrl-shift-F10 to build your structure in Minetest. Then play Minetest
-and examine what you have built to see where the problem is with your code.
+Running: Click the green triangle "play" button to run your program or use keyboard (Windows/Linux = ctrl-shift-F10, Mac = ctrl-shift-r).
+This will build your construction in the Minetest world. It is safer to "run" your task only after it "checks" completely. 
+However, sometimes it is hard to see where the problem is from the "check". In that case, try "running" it and then in Minetest
+examine what you have built to see where the problem is with your code.
 
 When you have completed this task (Congratulations!) click the [Next] button to
 move to the next task.

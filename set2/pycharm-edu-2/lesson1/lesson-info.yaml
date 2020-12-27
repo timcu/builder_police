@@ -1,0 +1,20 @@
+custom_name: lesson1
+content:
+- Set up Minetest
+- Placing a block
+- Placing a block using variables
+- Placing several blocks
+- Placing blocks using a for loop
+- Placing blocks using nested for loops
+- Placing multiple blocks in one build
+- Tunnel
+- Tunnel floor
+- Wall of glass
+- Arch
+- Arch floor
+- Arches
+- Castle base
+- Castle windows
+- Castle roof
+- Castle
+- Flag

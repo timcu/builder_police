@@ -1,0 +1,38 @@
+type: edu
+files:
+- name: glass_cuboid.png
+  visible: true
+- name: glass_tunnel.png
+  visible: true
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 256
+    length: 6
+    placeholder_text: number
+  - offset: 271
+    length: 6
+    placeholder_text: number
+  - offset: 288
+    length: 6
+    placeholder_text: number
+  - offset: 328
+    length: 6
+    placeholder_text: number
+  - offset: 350
+    length: 6
+    placeholder_text: number
+  - offset: 657
+    length: 8
+    placeholder_text: sequence
+  - offset: 680
+    length: 8
+    placeholder_text: sequence
+  - offset: 967
+    length: 8
+    placeholder_text: variable
+  - offset: 1094
+    length: 8
+    placeholder_text: variable
+- name: tests.py
+  visible: false

@@ -1,0 +1,15 @@
+type: edu
+files:
+- name: og99.png
+  visible: true
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 354
+    length: 8
+    placeholder_text: sequence
+  - offset: 419
+    length: 8
+    placeholder_text: variable
+- name: tests.py
+  visible: false

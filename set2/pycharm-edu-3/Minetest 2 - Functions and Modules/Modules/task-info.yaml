@@ -1,0 +1,32 @@
+type: edu
+files:
+- name: tests.py
+  visible: false
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 70
+    placeholder_text: statement to import the build function from the minetest_helper
+      module
+  - offset: 224
+    length: 7
+    placeholder_text: formula
+  - offset: 258
+    length: 7
+    placeholder_text: formula
+  - offset: 292
+    length: 7
+    placeholder_text: formula
+  - offset: 966
+    length: 9
+    placeholder_text: statement
+  - offset: 1073
+    length: 9
+    placeholder_text: statement
+  - offset: 2199
+    length: 9
+    placeholder_text: statement
+  - offset: 2332
+    length: 7
+    placeholder_text: formula

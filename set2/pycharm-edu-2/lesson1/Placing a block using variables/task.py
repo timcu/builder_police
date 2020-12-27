@@ -4,11 +4,11 @@ from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel
 mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)
 
 ref_x = 100
-ref_y = 14
-ref_z = 10
+ref_y = number
+ref_z = number
 wool = "wool:blue"
 
-mc.build(ref_x, ref_y, ref_z, wool)
+mc.build(variable, ref_y, ref_z, wool)
 mc.send_building()
 
 

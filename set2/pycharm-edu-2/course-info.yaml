@@ -1,0 +1,12 @@
+title: pythonator b2 easy
+language: English
+summary: |-
+  Teaches simple python concepts using a virtual world in minetest. This course can use the free online minetest server at demo.pythonator.com:30000. This is the second course in stream b of pythonator series.
+
+  https://pythonator.com
+
+  Requires PyCharm Edu 2020.3 or later
+programming_language: Python
+programming_language_version: 3.9
+content:
+- lesson1

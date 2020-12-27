@@ -9,7 +9,7 @@ ref_z = player_z
 glass = "default:obsidian_glass"
 
 for y in (ref_y - 1, ref_y, ref_y + 1):
-    for z in (ref_z - 1, ref_z, ref_z + 1):
+    for z in sequence:
         mc.build(ref_x, y, z, glass)
         print("y", y, "z", z)
 mc.send_building()

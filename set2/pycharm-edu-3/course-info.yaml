@@ -1,0 +1,12 @@
+title: pythonator b3 advanced
+language: English
+summary: |-
+  Teaches more advanced python concepts using a virtual world in minetest. This course can use the free online minetest server at demo.pythonator.com:30000. This is the third course in stream b of pythonator series.
+
+  https://pythonator.com
+
+  Requires PyCharm Edu 2018.3 or later
+programming_language: Python
+content:
+- Minetest 1 - Building
+- Minetest 2 - Functions and Modules

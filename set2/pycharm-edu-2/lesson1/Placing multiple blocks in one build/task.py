@@ -9,9 +9,9 @@ ref_z = player_z
 wool = "wool:yellow"
 glass = "default:glass"
 
-seq_x = (ref_x - 1, ref_x, ref_x + 1)
-seq_y = (ref_y - 1, ref_y, ref_y + 1)
-seq_z = (ref_z - 1, ref_z, ref_z + 1)
+seq_x = sequence
+seq_y = sequence
+seq_z = sequence
 mc.build(seq_x, seq_y, seq_z, glass)
 mc.build(ref_x, ref_y, ref_z, wool)
 mc.send_building()

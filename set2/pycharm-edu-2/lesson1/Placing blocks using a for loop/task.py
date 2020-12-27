@@ -7,9 +7,9 @@ mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel
 ref_z = player_z
 glass = "default:obsidian_glass"
 
-for y in (13, 14, 15):
+for y in sequence:
     mc.build(99, y, ref_z - 1, glass)
-    mc.build(99, y, ref_z, glass)
+    mc.build(99, variable, ref_z, glass)
     mc.build(99, y, ref_z + 1, glass)
     print(y)
 mc.send_building()

@@ -1,0 +1,29 @@
+type: edu
+files:
+- name: tests.py
+  visible: false
+- name: station_1_level.png
+  visible: true
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 1905
+    length: 7
+    placeholder_text: formula
+  - offset: 2351
+    length: 7
+    placeholder_text: formula
+  - offset: 3068
+    length: 7
+    placeholder_text: formula
+  - offset: 4171
+    length: 7
+    placeholder_text: formula
+  - offset: 4964
+    length: 7
+    placeholder_text: formula
+  - offset: 6375
+    length: 7
+    placeholder_text: formula
+- name: station_3_levels.png
+  visible: true
