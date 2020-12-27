@@ -29,7 +29,7 @@ The difference with dicts is they can give names to
 each piece of data in the variable. The names are called keys
 and you use the key to specify which piece of data you want.
 
-    my_dict = {"name":"xpanes:bar_flat", "direction":"+x"}
+    my_dict = {"name": "xpanes:bar_flat", "direction": "+x"}
 
 The example above has two pieces of data, "xpanes:bar_flat" is a
 str and is the first piece of data. It has a key "name". The second

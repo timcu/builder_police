@@ -33,7 +33,7 @@ range_z_ext = range(wall_z, wall_z + tunnel_width)
 range_y_int = range(floor_y + 1, floor_y + tunnel_height - 1)
 range_z_int = range(wall_z + 1, wall_z + tunnel_width - 1)
 # x values for torches
-range_x_torch = sequence
+range_x_torch = range(x_min, x_min + tunnel_length, 4)
 
 # BUILD
 # build a solid cuboid of glass first which is 7 blocks high and 5 blocks wide
@@ -41,16 +41,16 @@ mc.build(range_x, range_y_ext, range_z_ext, wall)
 # replace the internal glass with air so left with a hollow tunnel
 mc.build(range_x, range_y_int, range_z_int, air)
 # replace the floor with stone
-mc.build(variable, floor_y, range_z_int, floor)
+mc.build(range_x, floor_y, range_z_int, floor)
 # place torches
-mc.build(range_x_torch, formula, ref_z + 1, torch)
+mc.build(range_x_torch, floor_y + 1, ref_z + 1, torch)
 
 mc.send_building()
 
 
-# © Copyright 2018 Triptera Pty Ltd
-# https://www.triptera.com.au
+# © Copyright 2018-2021 Triptera Pty Ltd
+# https://pythonator.com
 # See LICENSE.txt
 # Python code in task.py is free to be copied and reused.
 # Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2019.
+# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2021.

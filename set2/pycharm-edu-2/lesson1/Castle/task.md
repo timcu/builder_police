@@ -48,12 +48,12 @@ Well done!
 <div class='hint'>The <code>dict</code> for the wooden door needs two keys, "name" and "direction"</div>
 <div class='hint'>The value of key "name" for the wooden door needs the to be the item name of wooden door</div>
 <div class='hint'>The value of key "direction" for the wooden door needs to be "+x" or "+z" or "-x" or "-z"</div>
-<div class='hint'>The full <code>dict</code> for the wooden door is <code>{"name":"doors:door_wood_a", "direction":"+x"}</code></div>
+<div class='hint'>The full <code>dict</code> for the wooden door is <code>{"name": "doors:door_wood_a", "direction": "+x"}</code></div>
 <div class='hint'><code>crenel_y</code> needs to be the y value where crenels will be created in wall</div>
 <div class='hint'><code>crenel_y</code> can be a number or a formula</div>
 <div class='hint'><code>crenel_y</code> formula can be written in terms of <code>floor_y</code> and <code>castle_height</code></div>
 <div class='hint'><code>crenel_y</code> can be <br><br>
-<code>16</code><br><br>or<br>
+<code>16</code><br><br>or<br><br>
 <code>floor_y + castle_height + 2</code></div>
 <div class='hint'><code>roof_x1</code> needs to be the number or formula for x value at minimum x end of roof</div>
 <div class='hint'><code>roof_x1</code> formula can be written in terms of castle_x_min</div>

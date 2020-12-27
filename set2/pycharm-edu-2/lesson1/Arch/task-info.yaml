@@ -14,5 +14,14 @@ files:
   - offset: 1450
     length: 53
     placeholder_text: statement
+  - offset: 380
+    length: 3
+    placeholder_text: '# number'
+    dependency:
+      lesson: lesson1
+      task: Wall of glass
+      file: task.py
+      placeholder: 1
+      is_visible: false
 - name: tests.py
   visible: false

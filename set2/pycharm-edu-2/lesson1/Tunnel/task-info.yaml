@@ -8,31 +8,31 @@ files:
   visible: true
   placeholders:
   - offset: 256
-    length: 6
+    length: 2
     placeholder_text: number
-  - offset: 271
-    length: 6
+  - offset: 267
+    length: 2
     placeholder_text: number
-  - offset: 288
-    length: 6
+  - offset: 280
+    length: 2
     placeholder_text: number
-  - offset: 328
-    length: 6
+  - offset: 316
+    length: 1
     placeholder_text: number
-  - offset: 350
-    length: 6
+  - offset: 333
+    length: 1
     placeholder_text: number
-  - offset: 657
-    length: 8
+  - offset: 635
+    length: 39
     placeholder_text: sequence
-  - offset: 680
-    length: 8
+  - offset: 689
+    length: 36
     placeholder_text: sequence
-  - offset: 967
-    length: 8
+  - offset: 1004
+    length: 11
     placeholder_text: variable
-  - offset: 1094
-    length: 8
+  - offset: 1134
+    length: 11
     placeholder_text: variable
 - name: tests.py
   visible: false

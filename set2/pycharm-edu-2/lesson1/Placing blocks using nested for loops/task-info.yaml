@@ -6,7 +6,7 @@ files:
   visible: true
   placeholders:
   - offset: 338
-    length: 8
+    length: 29
     placeholder_text: sequence
 - name: tests.py
   visible: false

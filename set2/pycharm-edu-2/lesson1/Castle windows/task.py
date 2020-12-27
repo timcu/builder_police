@@ -26,9 +26,9 @@ castle_height = 5
 air = "air"
 castle = "default:stone"
 # player looking in x direction to look through this window
-window_x = {"name":"xpanes:bar_flat", "direction":"+x"}
+window_x = {"name": "xpanes:bar_flat", "direction": "+x"}
 # player looking in z direction to look through this window
-window_z = {"name":"xpanes:bar_flat", "direction":"+z"}
+window_z = {"name": "xpanes:bar_flat", "direction": "+z"}
 
 # ENGINEERING CALCULATIONS
 # z values of sides of castle
@@ -63,9 +63,9 @@ mc.build(castle_x_min, floor_y + 4, (ref_z - 1, ref_z, ref_z + 1), window_x)
 mc.send_building()
 
 
-# © Copyright 2018 Triptera Pty Ltd
-# https://www.triptera.com.au
+# © Copyright 2018-2021 Triptera Pty Ltd
+# https://pythonator.com
 # See LICENSE.txt
 # Python code in task.py is free to be copied and reused.
 # Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2019.
+# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2021.

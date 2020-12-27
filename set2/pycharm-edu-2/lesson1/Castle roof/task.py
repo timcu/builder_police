@@ -26,11 +26,11 @@ castle_height = 5
 air = "air"
 castle = "default:stone"
 # player looking in x direction to look through this window
-window_x = {"name":"xpanes:bar_flat", "direction":"+x"}
+window_x = {"name": "xpanes:bar_flat", "direction": "+x"}
 # player looking in z direction to look through this window
-window_z = {"name":"xpanes:bar_flat", "direction":"+z"}
+window_z = {"name": "xpanes:bar_flat", "direction": "+z"}
 # player looking in x direction to climb this ladder.
-ladder = {"name":"default:ladder_wood","direction":"+x"}
+ladder = {"name": "default:ladder_wood", "direction": "+x"}
 
 # ENGINEERING CALCULATIONS
 # z values of sides of castle
@@ -74,14 +74,12 @@ mc.build(range_x_roof_int, range_y_roof_int, range_z_roof_int, air)
 # build the ladder. Has to be against wall for player to climb it easily.
 mc.build(castle_x_min + castle_length - 2, range(floor_y + 1, floor_y + castle_height + 1), ref_z, ladder)
 
-
-
 mc.send_building()
 
 
-# © Copyright 2018 Triptera Pty Ltd
-# https://www.triptera.com.au
+# © Copyright 2018-2021 Triptera Pty Ltd
+# https://pythonator.com
 # See LICENSE.txt
 # Python code in task.py is free to be copied and reused.
 # Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2019.
+# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2021.

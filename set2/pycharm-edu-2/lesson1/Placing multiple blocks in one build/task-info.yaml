@@ -6,13 +6,13 @@ files:
   visible: true
   placeholders:
   - offset: 305
-    length: 8
+    length: 50
     placeholder_text: sequence
-  - offset: 322
-    length: 8
+  - offset: 364
+    length: 48
     placeholder_text: sequence
-  - offset: 339
-    length: 8
+  - offset: 421
+    length: 29
     placeholder_text: sequence
 - name: tests.py
   visible: false

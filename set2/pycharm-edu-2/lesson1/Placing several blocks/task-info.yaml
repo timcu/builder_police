@@ -5,17 +5,17 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 209
-    length: 6
+  - offset: 219
+    length: 8
     placeholder_text: number
-  - offset: 304
+  - offset: 316
     length: 3
     placeholder_text: number
-  - offset: 417
-    length: 8
+  - offset: 429
+    length: 5
     placeholder_text: variable
-  - offset: 555
-    length: 7
+  - offset: 564
+    length: 9
     placeholder_text: formula
 - name: tests.py
   visible: false

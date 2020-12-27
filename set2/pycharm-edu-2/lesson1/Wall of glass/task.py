@@ -7,15 +7,15 @@ mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel
 # player's z coordinate used as reference point for all building
 ref_z = player_z
 # x value at start of stone path heading +x direction
-path_x_min = number
+path_x_min = 105
 # y value of stone in path
-floor_y = number
+floor_y = 9
 
 # BUILDING SIZE
 # height of arch in number of blocks (external dimension)
-arch_height = number
+arch_height = 7
 # width of arch in number of blocks (external dimension)
-arch_width = number
+arch_width = 5
 
 # BUILDING MATERIALS
 air = "air"
@@ -37,13 +37,12 @@ mc.build(range(path_x_min, path_x_min + 16), floor_y, range(ref_z - 1, ref_z + 2
 # build a solid cuboid of glass first which is 7 blocks high and 5 blocks wide
 mc.build(range_x_arch, range_y_ext, range_z_ext, wall)
 
-
 mc.send_building()
 
 
-# © Copyright 2018 Triptera Pty Ltd
-# https://www.triptera.com.au
+# © Copyright 2018-2021 Triptera Pty Ltd
+# https://pythonator.com
 # See LICENSE.txt
 # Python code in task.py is free to be copied and reused.
 # Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2019.
+# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2021.

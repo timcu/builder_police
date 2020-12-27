@@ -17,6 +17,7 @@ flag_length = 21
 
 # SHAPE
 
+
 def rectangle_flag(global_x, global_y):
     local_x = global_x - pole_x
     local_y = global_y - flag_y
@@ -45,9 +46,9 @@ def half_ellipse_flag(global_x, global_y):
         return False
     if local_x == 0:
         return True
-    y = local_y - flag_height // 2
-    x = local_x
-    r2 = (x / flag_length) ** 2 + (2 * y / flag_height) ** 2
+    centre_y = local_y - flag_height // 2
+    centre_x = local_x
+    r2 = (centre_x / flag_length) ** 2 + (2 * centre_y / flag_height) ** 2
     return r2 <= 1.0
 
 
@@ -84,13 +85,12 @@ for x in range(pole_x, pole_x + flag_length):
         else:
             mc.build(x, y, ref_z, "air")
 
-
 mc.send_building()
 
 
-# © Copyright 2018 Triptera Pty Ltd
-# https://www.triptera.com.au
+# © Copyright 2018-2021 Triptera Pty Ltd
+# https://pythonator.com
 # See LICENSE.txt
 # Python code in task.py is free to be copied and reused.
 # Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2019.
+# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2021.
