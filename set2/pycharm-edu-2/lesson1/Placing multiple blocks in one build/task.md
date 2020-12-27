@@ -48,4 +48,6 @@ the first command.
 <div class='hint'>Enclose values of each sequence in parentheses () or square brackets []</div>
 <div class='hint'><code>seq_y</code> needs to be a sequence of y values for the glass blocks</div>
 <div class='hint'><code>seq_z</code> needs to be a sequence of z values for the glass blocks</div>
-<br>
+
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+

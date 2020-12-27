@@ -37,3 +37,4 @@ ladder should be placed. See the hints for more details.
 <code>range(10, 15)</code><br>or<br>
 <code>range(floor_y + 1, floor_y + 1 + castle_height)<code/></div>
 <br>
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

@@ -55,4 +55,5 @@ The six lines above can be replaced with three lines.
 <div class='hint'>In the <code>for</code> loop the required sequence is <code>(13, 14, 15)</code></div>
 <div class='hint'>In the second build command you need to provide the name of variable which contains the y coordinate of the location to place the glass block</div>
 <div class='hint'>In the second build command you can't just type a number, because the number needs to be different each of the three times through the loop</div>
-<br>
+
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

@@ -23,4 +23,5 @@ to Minetest.
 <div class='hint'>The fifth <code>build</code> command needs a z value for the centre wool block. You can enter a number or the name of the variable containing that number.</div>
 <div class='hint'>The ninth <code>build</code> command needs the z value for the top right glass block.
 Enter the number or a formula which equals that z value.</div>
-<br>
+
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

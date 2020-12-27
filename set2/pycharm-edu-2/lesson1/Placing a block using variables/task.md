@@ -38,3 +38,4 @@ becomes
 <div class='hint'>The second answer is a number and is the z coordinate from sign for position to place block</div>
 <div class='hint'>The third answer is the name of the variable containing the x value</div>
 
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

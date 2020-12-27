@@ -34,4 +34,5 @@ Here is an example using formulae.
 <div class='hint'>Complete the <code>for z</code> statement by providing a sequence of numbers for the different values of z.</div>
 <div class='hint'>Enclose values in parentheses () or square brackets []</div>
 <div class='hint'>Values can be numbers or variables or formulae containing variables</div>
-<br>
+
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

@@ -61,4 +61,5 @@ or<br>
 or<br>
 <br>
 <code>[floor_y + 1, floor_y + 2]</code></div>
-<br>
+
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

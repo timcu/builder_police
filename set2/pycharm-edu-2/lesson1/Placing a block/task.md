@@ -37,3 +37,5 @@ move to the next task.
 <div class='hint'>The missing number is the z coordinate where you want to place the wool.</div>
 <div class='hint'>Find the z coordinate by logging in to Minetest and finding the sign with your name on it.</div>
 
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+

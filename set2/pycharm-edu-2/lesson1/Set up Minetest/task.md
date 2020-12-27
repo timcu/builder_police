@@ -47,4 +47,5 @@ In Minetest, find the sign with your name and your player_z will be the z value 
 In this case use <code>player_z = 10</code></div>
 <div class='hint'>ircserver can be a host name (eg "irc.triptera.com.au") or ip address ("192.168.17.100") of the chat server. </div>
 <div class='hint'>Channel names start with ## if it is not a permanent channel, or # for a permanent channel</div>
-<br>
+
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

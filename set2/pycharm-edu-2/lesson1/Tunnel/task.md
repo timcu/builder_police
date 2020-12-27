@@ -60,4 +60,5 @@ stopping just before it gets to <code>stop</code>. It can be used for range_y_ex
 <div class='hint'>range_z_ext is a sequence of z values starting at <code>wall_z</code> and stopping just before it gets to <code>wall_z + tunnel_width</code></div>
 <div class='hint'>second parameter of the first build command needs variable containing the sequence of y values for the <b>external</b> glass of the tunnel</div>
 <div class='hint'>third parameter of the second build command needs variable containing the sequence of z values for the <b>internal</b> air</div>
-<br>
+
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

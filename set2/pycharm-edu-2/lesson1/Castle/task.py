@@ -100,9 +100,4 @@ mc.build(range(castle_x_min + 1, castle_x_min + castle_length - 1, 2), floor_y +
 mc.send_building()
 
 
-# © Copyright 2018-2021 Triptera Pty Ltd
-# https://pythonator.com
-# See LICENSE.txt
-# Python code in task.py is free to be copied and reused.
-# Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at schools and CoderDojo in 2018 - 2021.
+# © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

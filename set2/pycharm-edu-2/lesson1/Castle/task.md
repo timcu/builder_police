@@ -79,4 +79,5 @@ or<br>
 or<br>
 <br>
 a list of numbers!</div>
-<br>
+
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

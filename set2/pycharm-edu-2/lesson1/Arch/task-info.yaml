@@ -5,15 +5,6 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 985
-    length: 45
-    placeholder_text: sequence
-  - offset: 1045
-    length: 42
-    placeholder_text: sequence
-  - offset: 1450
-    length: 53
-    placeholder_text: statement
   - offset: 380
     length: 3
     placeholder_text: '# number'
@@ -23,5 +14,14 @@ files:
       file: task.py
       placeholder: 1
       is_visible: false
+  - offset: 985
+    length: 45
+    placeholder_text: sequence
+  - offset: 1045
+    length: 42
+    placeholder_text: sequence
+  - offset: 1450
+    length: 53
+    placeholder_text: statement
 - name: tests.py
   visible: false

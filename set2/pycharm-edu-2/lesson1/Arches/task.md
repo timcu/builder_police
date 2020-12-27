@@ -16,4 +16,5 @@ is one answer</div>
 <div class='hint'><code>range(path_x_min, path_xmin + path_length, 4)</code><br>
 <br>
 is another answer</div>
-<br>
+
+© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
