@@ -5,14 +5,14 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 832
+  - offset: 796
     length: 15
     placeholder_text: string
-  - offset: 1768
-    length: 51
+  - offset: 1729
+    length: 50
     placeholder_text: statement
-  - offset: 1849
-    length: 53
+  - offset: 1809
+    length: 52
     placeholder_text: statement
 - name: tests.py
   visible: false

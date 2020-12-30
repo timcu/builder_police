@@ -1,10 +1,8 @@
-# Task 3c - Placing multiple blocks in one build
+# Task 6 - Placing multiple blocks in one build
 There is an even easier way than using `for` loops.
 
 ## Task
 Place a 3x3x3 cube of glass blocks centred at (100, 14, ref_z). Use wool for the centre block
-
-Once you have completed this task, Minetest task 3 will be complete.
 
 <img src="glass_cube.png" width="100%" />
 

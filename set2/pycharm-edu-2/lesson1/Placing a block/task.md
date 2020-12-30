@@ -1,4 +1,4 @@
-# Task 1a - Placing a block
+# Task 1 - Placing a block
 Let's start building!
 
 ## Task
@@ -8,17 +8,28 @@ create a wool block. Enter the z coordinate in the program on the left.
 <img src="wool_green.png" width="100%" />
 
 ## Lesson
-This first task teaches you how to place a block using the `build` command from `MinetestConnection`.
+This first task teaches you how to place a block using the `build` command from `Building`.
 The following line places a stone block at x=100, y=14, z=0. The `build` command saves all the blocks
-in a `building` and then the `building` is sent to Minetest using the `send_building` command.
+in a `building`.
 
-        mc.build(100, 14, 0, "default:stone")
-        mc.send_building()
+        b.build(100, 14, 0, "default:stone")
 
 The `build` command has 4 parameters.
 They are x, y, z, and node_type. The first 3 parameters are the coordinates where the node will be placed.
 The last parameter is the name of the material to place. Examples are "default:wood", "default:dirt", "wool:blue", "default:glass", "carts:rail".
 The material names are the name of the mod they come from, a colon (:), and then the material name within that mod.
+
+Before using the `build` command you need to create a `Building` variable to store what you build. You can then use 
+many `build` commands to create a complex structure. When you have finished building in Python you open a connection to the IRC chat
+server (`with open_irc...`) and send the building to Minetest using the `Building.send` command. 
+
+        b = Building()
+        b.build(100, 14, 0, "default:stone")
+        with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel) as mc:
+            b.send(mc)
+
+ADVANCED: You don't need to fully understand yet why `b.send(mc)` is indented. However, it is important for `b.send` to be able to 
+use the IRC connection `mc`, and then automatically close the connection afterwards.
 
 Hints are available by clicking the light bulbs below.
 

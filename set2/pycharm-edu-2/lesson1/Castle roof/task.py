@@ -1,8 +1,9 @@
-from ircbuilder import MinetestConnection
+from ircbuilder import open_irc
+from ircbuilder.building import Building
 from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
 
 
-mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)
+b = Building()
 
 # BUILDING LOCATION
 # player's z coordinate used as reference point for all building
@@ -58,23 +59,24 @@ range_z_roof_int = range_z_castle_ext
 
 # BUILD
 # clear any existing structure or ground
-mc.build(range(castle_x_min - 1, castle_x_min + castle_length + 10), range(floor_y + 1, floor_y + 31), range(ref_z - 4, ref_z + 5), air)
+b.build(range(castle_x_min - 1, castle_x_min + castle_length + 10), range(floor_y + 1, floor_y + 31), range(ref_z - 4, ref_z + 5), air)
 # the base of the castle
-mc.build(range_x_castle_ext, range_y_castle_ext, range_z_castle_ext, castle)
-mc.build(range_x_castle_int, range_y_castle_int, range_z_castle_int, air)
+b.build(range_x_castle_ext, range_y_castle_ext, range_z_castle_ext, castle)
+b.build(range_x_castle_int, range_y_castle_int, range_z_castle_int, air)
 # create a doorway
-mc.build(castle_x_min, [floor_y + 1, floor_y + 2], ref_z, air)
+b.build(castle_x_min, [floor_y + 1, floor_y + 2], ref_z, air)
 # add windows on side walls
-mc.build(range_x_window, range_y_window, (wall_z1, wall_z2), window_z)
+b.build(range_x_window, range_y_window, (wall_z1, wall_z2), window_z)
 # add windows on front wall
-mc.build(castle_x_min, floor_y + 4, (ref_z - 1, ref_z, ref_z + 1), window_x)
+b.build(castle_x_min, floor_y + 4, (ref_z - 1, ref_z, ref_z + 1), window_x)
 # the roof of the castle
-mc.build(range_x_roof_ext, range_y_roof_ext, range_z_roof_ext, castle)
-mc.build(range_x_roof_int, range_y_roof_int, range_z_roof_int, air)
+b.build(range_x_roof_ext, range_y_roof_ext, range_z_roof_ext, castle)
+b.build(range_x_roof_int, range_y_roof_int, range_z_roof_int, air)
 # build the ladder. Has to be against wall for player to climb it easily.
-mc.build(castle_x_min + castle_length - 2, range(floor_y + 1, floor_y + castle_height + 1), ref_z, ladder)
+b.build(castle_x_min + castle_length - 2, range(floor_y + 1, floor_y + castle_height + 1), ref_z, ladder)
 
-mc.send_building()
+with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel) as mc:
+    b.send(mc)
 
 
 # © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

@@ -5,7 +5,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 380
+  - offset: 344
     length: 3
     placeholder_text: '# number'
     dependency:
@@ -14,14 +14,14 @@ files:
       file: task.py
       placeholder: 1
       is_visible: false
-  - offset: 985
+  - offset: 949
     length: 45
     placeholder_text: sequence
-  - offset: 1045
+  - offset: 1009
     length: 42
     placeholder_text: sequence
-  - offset: 1450
-    length: 53
+  - offset: 1412
+    length: 52
     placeholder_text: statement
 - name: tests.py
   visible: false

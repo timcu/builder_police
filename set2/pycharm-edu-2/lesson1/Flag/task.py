@@ -1,9 +1,10 @@
-from ircbuilder import MinetestConnection
+from ircbuilder import open_irc
+from ircbuilder.building import Building
 from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
 from math import sqrt
 
 
-mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)
+b = Building()
 
 # LOCATION
 ref_z = player_z
@@ -61,8 +62,8 @@ colours = ["wool:" + colour for colour in "white|grey|dark_grey|black|blue|cyan|
 num_colours = len(colours)
 stripe_width = 2
 
-mc.build(pole_x, range(pole_y, flag_y), ref_z, pole)
-mc.build(range(pole_x, pole_x + 26), range(flag_y, flag_y + 26), range(ref_z - 4, ref_z + 5), air)
+b.build(pole_x, range(pole_y, flag_y), ref_z, pole)
+b.build(range(pole_x, pole_x + 26), range(flag_y, flag_y + 26), range(ref_z - 4, ref_z + 5), air)
 for x in range(pole_x, pole_x + flag_length):
     for y in range(flag_y, flag_y + flag_height):
         # pattern centred on centre of flag
@@ -81,11 +82,12 @@ for x in range(pole_x, pole_x + flag_length):
         # c = int(min(abs(x - cx), abs(y - cy)))  # cross centred on cx, cy
         colour = colours[c // stripe_width % num_colours]
         if rectangle_flag(x, y):
-            mc.build(x, y, ref_z, colour)
+            b.build(x, y, ref_z, colour)
         else:
-            mc.build(x, y, ref_z, "air")
+            b.build(x, y, ref_z, "air")
 
-mc.send_building()
+with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel) as mc:
+    b.send(mc)
 
 
 # © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

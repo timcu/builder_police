@@ -1,11 +1,11 @@
-# Task 2 - Placing several blocks
+# Task 3 - Placing several blocks
 This is the easy course. Whenever the task asks for variable names
 or a formula, then it is also correct to just type in a number or list of numbers. The only
 time this won't work is for variables in loops.
 
 ## Task
-Find your sign in Minetest to find your second task. Then complete the program on the left
-to satisfy the task.
+Find your sign in Minetest to find your third task. Then complete the program on the left
+to satisfy the task. The picture shows you what you are trying to build.
 
 <img src="glass_frame.png" width="100%"/>
 

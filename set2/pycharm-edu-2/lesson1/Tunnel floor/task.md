@@ -1,6 +1,6 @@
-# Task 5 - Tunnel floor
+# Task 8 - Tunnel floor
 
-Look in your tunnel in the Minetest world to see Task 5.
+Look in the tunnel you just built in the Minetest world to see Task 8.
 
 ## Task
 Replace the floor of the tunnel with stone and place a torch every four blocks.

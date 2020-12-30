@@ -1,10 +1,11 @@
 --[[
-Copyright (c) 2018 Triptera Pty Ltd
+Copyright (c) 2018-2021 Triptera Pty Ltd
 
 This minetest mod "builder_police", including its tasks and the associated 
-pycharm-edu course, requires permission from Triptera Pty Ltd to use.
+pycharm-edu course Pythonator, requires permission from Triptera Pty Ltd to use.
 
-Permission is hereby granted, to any person at a CoderDojo session in 2018
+Permission is hereby granted, to any person at a school, CoderDojo session or
+"Beginners' Python and Machine Learning" in 2018-2021
 to use the Software, including the right to copy, and/or distribute,
 copies of the Software, subject to the following conditions:
 
@@ -84,7 +85,7 @@ local get_ground_level = function(x, z)
 end  
 
 builder_police = {
-	version="0.0.7",
+	version="0.0.9",
 }
 builder_police.get_player_z = function(player_name)
 	local key = player_name..'_build_z'

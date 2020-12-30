@@ -1,10 +1,9 @@
-# Task 3a - Placing blocks using a `for` loop
+# Task 4 - Placing blocks using a `for` loop
 The previous example was a lot of typing to place 9 blocks. Is there an easier way?
 
 ## Task
 Place 9 obsidian glass blocks in a square at x = 99. Centre of square is
-y = 14 and z = your player z value from Minetest. This will partially complete Minetest 
-Task 3 which you can read on your sign in Minetest.
+y = 14 and z = your player z value from Minetest.
 
 <img src="og99.png" width="100%" />
 

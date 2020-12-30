@@ -3,7 +3,7 @@
 # Authorised for use by schools and CoderDojo in 2018
 
 from test_helper import run_common_tests, failed, passed, get_answer_placeholders
-from triptera_pe_tests import test_building_with_pattern, mock_send_building, mock_create
+from triptera_pe_tests import test_building_with_pattern, mock_building_send, mock_create
 from unittest import mock
 from ircbuilder import nodebuilder
 
@@ -19,8 +19,8 @@ def building_pattern(player_z):
 
 
 def test_building():
-    from task import mc
-    return test_building_with_pattern(mc, building_pattern)
+    from task import b
+    return test_building_with_pattern(b, building_pattern)
 
 
 def test_answer_placeholders():

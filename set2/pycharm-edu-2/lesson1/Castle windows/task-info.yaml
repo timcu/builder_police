@@ -5,19 +5,19 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 1055
+  - offset: 1019
     length: 25
     placeholder_text: formula
-  - offset: 1640
+  - offset: 1604
     length: 43
     placeholder_text: sequence
-  - offset: 1774
+  - offset: 1738
     length: 60
     placeholder_text: sequence
-  - offset: 2369
+  - offset: 2328
     length: 8
     placeholder_text: variable
-  - offset: 2474
+  - offset: 2432
     length: 8
     placeholder_text: variable
 - name: tests.py

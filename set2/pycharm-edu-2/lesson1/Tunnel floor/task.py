@@ -1,7 +1,8 @@
-from ircbuilder import MinetestConnection
+from ircbuilder import open_irc
+from ircbuilder.building import Building
 from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
 
-mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)
+b = Building()
 
 # BUILDING LOCATION
 ref_z = player_z
@@ -37,15 +38,16 @@ range_x_torch = range(x_min, x_min + tunnel_length, 4)
 
 # BUILD
 # build a solid cuboid of glass first which is 7 blocks high and 5 blocks wide
-mc.build(range_x, range_y_ext, range_z_ext, wall)
+b.build(range_x, range_y_ext, range_z_ext, wall)
 # replace the internal glass with air so left with a hollow tunnel
-mc.build(range_x, range_y_int, range_z_int, air)
+b.build(range_x, range_y_int, range_z_int, air)
 # replace the floor with stone
-mc.build(range_x, floor_y, range_z_int, floor)
+b.build(range_x, floor_y, range_z_int, floor)
 # place torches
-mc.build(range_x_torch, floor_y + 1, ref_z + 1, torch)
+b.build(range_x_torch, floor_y + 1, ref_z + 1, torch)
 
-mc.send_building()
+with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel) as mc:
+    b.send(mc)
 
 
 # © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

@@ -2,20 +2,26 @@
 # https://www.triptera.com.au
 # Authorised for use in schools and CoderDojo sessions in 2018 - 2019
 
-from test_helper import failed, passed
-from ircbuilder import MinetestConnection, NICK_MAX_LEN
-from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
-from copy import deepcopy
 import importlib
 import json
 import re
+
+from contextlib import contextmanager
+from copy import deepcopy
+
+from ircbuilder import MinetestConnection, NICK_MAX_LEN, open_irc
+# from ircbuilder.building import Building
+# from ircbuilder.nodebuilder import send_node_lists
+from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
+from test_helper import failed, passed
+
 
 def test_minetest(num_task):
     pybotnick = "pt" + mtuser
     if len(pybotnick) > NICK_MAX_LEN:
         pybotnick = pybotnick[0:NICK_MAX_LEN]
-    mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick=pybotnick)
-    task = int(mc.send_cmd("get_player_task " + mtuser))
+    with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick=pybotnick) as mc:
+        task = int(mc.send_cmd("get_player_task " + mtuser))
     if task > num_task:
         passed()
         return True
@@ -102,10 +108,10 @@ def test_exec(placeholders, i, answer, list_data, modules=()):
             for k in data:
                 list_vars += comma + k
                 comma = ", "
-            failed(stri + " should only be in terms of variables " + list_vars + " but includes other variables. It is " + phi )
+            failed(stri + " should only be in terms of variables " + list_vars + " but includes other variables. It is " + phi)
         exec(answer, global_data, locals_answer)
         # print("answer", locals_answer, "guess", locals_guess)
-        for k,v in locals_answer.items():
+        for k, v in locals_answer.items():
             # print("k",k,"v",v,"guess[k]",locals_guess[k])
             if v != locals_guess[k]:
                 failed(stri + " gave incorrect answer for data " + str(data) + ". Correct answer: " + str(locals_answer) + ". Your answer: " + str(locals_guess) + ". Your statement: " + phi)
@@ -113,29 +119,28 @@ def test_exec(placeholders, i, answer, list_data, modules=()):
     return True
 
 
-def test_building_with_pattern(mc, building_pattern):
-    #player_z = int(mc.send_cmd('get_player_z ' + mtuser))
-    building_guess = mc.building
+def test_building_with_pattern(building, building_pattern):
+    building_guess = building.building
     building_correct = building_pattern(player_z)
     for key, pattern in building_correct.items():
         try:
             guess = building_guess[key]
         except KeyError:
-            failed("Missing build at " + str(key) + ". Should match " + str(pattern) )
+            failed(f"Missing build at {key}. Should match {pattern}")
             return False
-        if guess[0]=='{':
-            guess_dict=json.loads(guess)
+        if guess[0] == '{':
+            guess_dict = json.loads(guess)
         else:
             guess_dict = {'name': guess}
-        if pattern[0]=='{':
-            pattern=json.loads(pattern)
+        if pattern[0] == '{':
+            pattern = json.loads(pattern)
         try:
             guess_dict['name']
         except KeyError:
-            failed("Dict missing 'name' at " + str(key) + ". Dict is " + str(guess_dict) + " which should match " + str(pattern) )
+            failed("Dict missing 'name' at " + str(key) + ". Dict is " + str(guess_dict) + " which should match " + str(pattern))
             return False
         if not isinstance(guess_dict['name'], str):
-            failed("Dict 'name' not str at " + str(key) + ". Dict is " + str(guess_dict) + " of which 'name' is type " + str(type(guess_dict['name'])) + " but should be a str matching " + str(pattern) )
+            failed("Dict 'name' not str at " + str(key) + ". Dict is " + str(guess_dict) + " of which 'name' is type " + str(type(guess_dict['name'])) + " but should be a str matching " + str(pattern))
             return False
         if isinstance(pattern, str):
             if not re.fullmatch(pattern, guess_dict['name']):
@@ -164,11 +169,10 @@ def mock_send_building(self, end_list=()):
     pass
 
 
-@staticmethod
-def mock_create(ircserver, mtuser, mtuserpass, mtbotnick = "mtserver", channel = None, pybotnick = None, port = 6667 ):
+def mock_create(ircserver, mtuser, mtuserpass, mtbotnick="mtserver", channel=None, pybotnick=None, port=6697):
     if not pybotnick:
         pybotnick = "py" + mtuser
-    mc = MinetestConnection(ircserver,mtbotnick,pybotnick,port)
+    mc = MinetestConnection(ircserver, mtbotnick, pybotnick, port)
     # mc.send_string("USER " + pybotnick + " 0 * :" + pybotnick) # user authentication  first pybotnick is username, second pybotnick is real name
     # mc.send_string("NICK " + pybotnick) # assign the nick to this python app
     # mc.wait_for_message_num(376) # End of MOTD
@@ -177,4 +181,21 @@ def mock_create(ircserver, mtuser, mtuserpass, mtbotnick = "mtserver", channel =
     # mc.send_irccmd("login " + mtuser + " " + mtuserpass)
     return mc
 
+
+def mock_send_node_lists(mc, node_lists, end_list=()):
+    return
+
+
+def mock_building_send(self, mc, end_list=()):
+    return
+
+
+# @contextmanager
+# def open_irc(ircserver, mtuser, mtuserpass, mtbotnick="mtserver", channel=None, pybotnick=None, port=6697):
+#     """open_irc ensures channel is always parted """
+#     new_mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick, port)
+#     # @contextmanager requires a yield. Everything before yield is __enter__(). Everything after is __exit__()
+#     yield new_mc
+#     new_mc.part_channel()
+#
 

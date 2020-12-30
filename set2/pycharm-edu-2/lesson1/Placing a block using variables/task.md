@@ -1,4 +1,4 @@
-# Task 1b - Placing a block using variables
+# Task 2 - Placing a block using variables
 This is a repeat of Minetest Task 1 using variables instead of numbers. Fill in the rectangles
 in the program task.py on the left. Use hints to find out exactly what needs to be done.
 Ctrl-shift-F10 to run the program. "Check" button below to check it is completed correctly.
@@ -22,17 +22,24 @@ The above line creates a new variable called `my_variable` and gives it the valu
 Storing data in variables helps when you don't know the data when you are writing the program but will know it
 when the program is run. For example the z value is different for every player. The program can be written before the
 player is known and the z value can be filled later. The program on the left has a variable called `ref_z` which
-stores the player's z value. It is called `ref_z` because all your building will use it as a reference coordinate
-and you will build relative to it.
+stores the player's z value. I called it `ref_z` because your building will use it as a reference coordinate in the z axis
+and you will build relative to it. 
 
 To use the data in a variable, type its variable name where you previously typed the data. For example, if your `ref_z` was 0:
 
-    mc.build(100, 14, 0, "wool:blue")
+    b.build(100, 14, 0, "wool:blue")
 
 becomes
 
-    mc.build(ref_x, ref_y, ref_z, wool)
+    b.build(ref_x, ref_y, ref_z, wool)
 
+Even `b` is a variable. It stores the building. 
+
+You can name your variable almost anything. There are a few 
+restrictions but if you get it wrong Python will warn you with an error message. Variable names should start with a 
+letter, not a number. The variable name should contain only letters, numbers and _ the underscore character. It can't 
+contain spaces or special characters such as !@#$%^&*(). Python keywords, such as `with`, `from` or `import`, can't be used as variable names.
+It is recommended that variable names are all lower case with words in the name separated by underscores.
 
 <div class='hint'>The first answer is a number and is the y coordinate from sign for position to place block</div>
 <div class='hint'>The second answer is a number and is the z coordinate from sign for position to place block</div>

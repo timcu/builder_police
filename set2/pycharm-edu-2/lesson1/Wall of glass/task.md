@@ -1,4 +1,4 @@
-# Wall of glass
+# Task 9 - Wall of glass
 There are several steps to this program which is
 going to build some arches over the path heading
 from your signpost in the positive x direction. Each arch will
@@ -8,9 +8,6 @@ you have just built.
 ## Task
 Build a solid wall of glass 7 high x 5 wide at x = 105. Glass block in the centre at the
 bottom of the wall should be at y = 9, z = <em>your player z</em>.
-
-This is not one of the tasks assigned by Minetest. It is a repetition of Minetest tasks
-4 and 5 with some variations.
 
 <img src="glass_wall.png" width="100%" />
 

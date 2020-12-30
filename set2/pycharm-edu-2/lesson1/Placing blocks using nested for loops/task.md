@@ -1,4 +1,4 @@
-# Task 3b - Placing blocks using nested `for` loops
+# Task 5 - Placing blocks using nested `for` loops
 
 Nested loops are a loop within a loop.
 
@@ -6,9 +6,6 @@ Nested loops are a loop within a loop.
 Place a 3x3 square of obsidian glass at x = 101.
 Centre of square at y = 14 and z = player z. Remember you can use formulae (eg ref_z - 1, ref_z, ref_z + 1) or
 numbers (eg 19, 20, 21) in the sequence in the `for` statement.
-
-This will also add to Minetest Task 3. However, because we have used obsidian glass rather
-then normal glass, Minetest won't accept your task attempt as complete yet.
 
 <img src="og101.png" width="100%" />
 

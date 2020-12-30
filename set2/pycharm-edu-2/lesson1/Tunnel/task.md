@@ -1,4 +1,4 @@
-# Task 4 - Tunnel
+# Task 7 - Tunnel
 Visit the Minetest world to find your next task. You will have to climb down a ladder to
 find your next task on two signs.
 In Minetest you descend ladders using the \<shift> key. To ascend, use \<space> key.

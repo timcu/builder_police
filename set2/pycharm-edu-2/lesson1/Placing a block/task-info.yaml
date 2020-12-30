@@ -7,6 +7,6 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 219
-    length: 1
+  - offset: 182
+    length: 2
     placeholder_text: number

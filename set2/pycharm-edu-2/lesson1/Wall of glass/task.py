@@ -1,7 +1,8 @@
-from ircbuilder import MinetestConnection
+from ircbuilder import open_irc
+from ircbuilder.building import Building
 from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
 
-mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)
+b = Building()
 
 # BUILDING LOCATION
 # player's z coordinate used as reference point for all building
@@ -32,12 +33,13 @@ range_z_ext = range(wall_z, wall_z + arch_width)
 
 # BUILD
 # clear any existing structure or ground
-mc.build(range(path_x_min, path_x_min + 40), range(floor_y, floor_y + 31), range(ref_z - 4, ref_z + 5), air)
-mc.build(range(path_x_min, path_x_min + 16), floor_y, range(ref_z - 1, ref_z + 2), "default:stone")
+b.build(range(path_x_min, path_x_min + 40), range(floor_y, floor_y + 31), range(ref_z - 4, ref_z + 5), air)
+b.build(range(path_x_min, path_x_min + 16), floor_y, range(ref_z - 1, ref_z + 2), "default:stone")
 # build a solid cuboid of glass first which is 7 blocks high and 5 blocks wide
-mc.build(range_x_arch, range_y_ext, range_z_ext, wall)
+b.build(range_x_arch, range_y_ext, range_z_ext, wall)
 
-mc.send_building()
+with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel) as mc:
+    b.send(mc)
 
 
 # © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
