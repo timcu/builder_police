@@ -1,6 +1,4 @@
-# © Copyright 2018 Triptera Pty Ltd
-# https://www.triptera.com.au
-# Authorised for use by schools and CoderDojo in 2018
+# © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com
 
 from test_helper import run_common_tests, failed, passed, get_answer_placeholders
 from triptera_pe_tests import test_building_with_pattern, mock_building_send, mock_create

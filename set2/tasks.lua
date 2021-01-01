@@ -105,10 +105,6 @@ end
 
 local task_2_assign = function(player_name)
 	local pos = builder_police.pos_build(player_name) 
-	set_nodes_rdd(pos, {x=-6,y=-1,z=-5}, {x=-31,y=11,z=4}, {name="default:sandstone"})
-	set_nodes_rdd(pos, {x=-15,y=5,z=2},  {x=-25,y=7,z=4},  {name="default:obsidian"})
-	set_nodes_rdd(pos, {x=-5,y=-1,z=-5}, {x=4,y=-1,z=4},   {name="default:stone"})
-	set_nodes_rdd(pos, {x=-5,y=0,z=-5},  {x=4,y=16,z=4},   {name="air"})
 	minetest.set_node(pos, {name="default:stone"})
 	minetest.set_node(vector.add(pos,{x=0,y=0,z=-1}), {name="default:torch_wall", param2=minetest.dir_to_wallmounted({x=0,y=0,z=1})})
 	local sign_pos={x=pos.x,y=pos.y+1,z=pos.z}
@@ -136,7 +132,7 @@ local task_3_assign = function(player_name)
 	local text=player_name.."\n \nx="..pos.x..'\ny='..(pos.y+4)..'\nz='..pos.z
 	irc_builder.set_sign(sign_pos, "-x", "signs:sign_yard", text)
 	sign_pos={x=pos.x+1,y=pos.y,z=pos.z}
-	local text="Place a glass frame around block of yellow wool at coordinates above. All glass blocks are to have same x value.\n \ndefault:glass"
+	local text="Place a glass frame around block of red wool at coordinates above. All glass blocks are to have same x value.\n \ndefault:glass"
 	irc_builder.set_sign(sign_pos, "-x", "default:sign_wall_wood", text)
 end
 
@@ -147,7 +143,7 @@ local task_3_test = function(player_name)
 	for y=pos.y-1,pos.y+1 do
 		for z=pos.z-1,pos.z+1 do
 			if z == pos.z and y == pos.y then
-				correct_name = "wool:yellow"
+				correct_name = "wool:red"
 			else
 				correct_name = "default:glass"
 			end
@@ -205,7 +201,7 @@ local task_5_test = function(player_name)
 	local x = pos.x + 1
 	for y=pos.y-1,pos.y+1 do
 		for z=pos.z-1,pos.z+1 do
-			if not assert_correct(player_name, 4, x, y, z, "default:obsidian_glass", nil) then
+			if not assert_correct(player_name, 5, x, y, z, "default:obsidian_glass", nil) then
 				return false
 			end
 		end
@@ -534,7 +530,7 @@ local task_11_test = function(player_name)
 						irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
 						return false
 					end
-					if node.name:find("default:torch") ~= 1 then
+					if node.name:find("default:torch") == 1 then
 						torches = torches + 1
 					end
 				elseif node.name ~= "air" then
@@ -606,7 +602,7 @@ local task_12_test = function(player_name)
 						irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
 						return false
 					end
-					if node.name:find("default:torch") ~= 1 then
+					if node.name:find("default:torch") == 1 then
 						torches = torches + 1
 					end
 				elseif node.name ~= "air" then

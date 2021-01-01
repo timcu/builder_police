@@ -1,6 +1,4 @@
-# © Copyright 2018 Triptera Pty Ltd
-# https://www.triptera.com.au
-# Authorised for use by schools and CoderDojo in 2018
+# © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com
 
 from test_helper import run_common_tests, failed, passed, get_answer_placeholders
 from triptera_pe_tests import test_building_with_pattern, mock_building_send, mock_create
@@ -33,7 +31,7 @@ def test_answer_placeholders():
 
 
 @mock.patch('ircbuilder.MinetestConnection.create', mock_create)
-@mock.patch('ircbuilder.MinetestConnection.send_building', mock_send_building)
+@mock.patch('ircbuilder.building.Building.send', mock_building_send)
 def run_patched_tests():
     run_common_tests()
     # test_answer_placeholders()       # TODO: uncomment test call
