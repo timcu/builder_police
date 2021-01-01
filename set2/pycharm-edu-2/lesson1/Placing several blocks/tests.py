@@ -3,7 +3,7 @@
 # Authorised for use by schools and CoderDojo in 2018
 
 from test_helper import run_common_tests, failed, passed, get_answer_placeholders
-from triptera_pe_tests import test_building_with_pattern, mock_building_send, mock_create
+from triptera_pe_tests import test_building_with_pattern, mock_building_send, mock_create, configure_logging
 from unittest import mock
 from ircbuilder import nodebuilder
 
@@ -49,4 +49,5 @@ def run_patched_tests():
 
 
 if __name__ == '__main__':
+    configure_logging()
     run_patched_tests()

@@ -1,6 +1,8 @@
 from ircbuilder import open_irc
 from ircbuilder.building import Building
+
 from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel
+from triptera_pe_tests import configure_logging
 
 b = Building()
 

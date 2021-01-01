@@ -1,8 +1,9 @@
 # © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com
 
-from test_helper import run_common_tests, failed, passed, get_answer_placeholders
 from unittest import mock
-from triptera_pe_tests import mock_building_send, mock_create
+
+from test_helper import run_common_tests, failed, passed, get_answer_placeholders
+from triptera_pe_tests import mock_building_send, mock_create, configure_logging
 
 
 def test_answer_placeholders():
@@ -23,4 +24,5 @@ def run_patched_tests():
 
 
 if __name__ == '__main__':
+    configure_logging()
     run_patched_tests()

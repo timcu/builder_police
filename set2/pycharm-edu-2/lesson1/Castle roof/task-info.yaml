@@ -7,25 +7,25 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 1023
+  - offset: 1071
     length: 4
     placeholder_text: string
-  - offset: 1969
+  - offset: 2017
     length: 57
     placeholder_text: sequence
-  - offset: 2046
+  - offset: 2094
     length: 59
     placeholder_text: sequence
-  - offset: 2125
+  - offset: 2173
     length: 46
     placeholder_text: sequence
-  - offset: 3061
+  - offset: 3109
     length: 6
     placeholder_text: variable
-  - offset: 3131
+  - offset: 3179
     length: 3
     placeholder_text: variable
-  - offset: 3252
+  - offset: 3300
     length: 47
     placeholder_text: sequence
 - name: tests.py

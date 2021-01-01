@@ -8,5 +8,5 @@ mtbotnick = "mtserver"  # same as Bot nickname
 channel = "#pythonator"  # same as Channel to join
 
 # The logging level can be set to "CRITICAL", "ERROR", "WARNING" (default), "INFO", "DEBUG", "NOTSET"
-# Uncomment next line to change logging level from WARNING to INFO
+# Uncomment next line to change logging level from WARNING to INFO then add a line "configure_logging()" at beginning of each task you want to log
 # logging_config = {'root': {'level': 'INFO'}}

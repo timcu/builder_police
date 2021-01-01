@@ -4,14 +4,13 @@
 
 import importlib
 import json
+import logging.config
+import os
 import re
 
-from contextlib import contextmanager
 from copy import deepcopy
 
 from ircbuilder import MinetestConnection, NICK_MAX_LEN, open_irc
-# from ircbuilder.building import Building
-# from ircbuilder.nodebuilder import send_node_lists
 from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
 from test_helper import failed, passed
 
@@ -190,12 +189,13 @@ def mock_building_send(self, mc, end_list=()):
     return
 
 
-# @contextmanager
-# def open_irc(ircserver, mtuser, mtuserpass, mtbotnick="mtserver", channel=None, pybotnick=None, port=6697):
-#     """open_irc ensures channel is always parted """
-#     new_mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel, pybotnick, port)
-#     # @contextmanager requires a yield. Everything before yield is __enter__(). Everything after is __exit__()
-#     yield new_mc
-#     new_mc.part_channel()
-#
-
+def configure_logging():
+    # Stepik changes directory structure so check first which directory structure
+    config_dir = "../../"
+    config_file = "logging_config.json"
+    if not os.path.exists(f"{config_dir}{config_file}"):
+        if os.path.exists(f"../{config_dir}{config_file}"):
+            config_dir = f"../{config_dir}"
+    logging_config_path = f"{config_dir}{config_file}"
+    with open(logging_config_path, "r") as file:
+        logging.config.dictConfig(json.load(file))
