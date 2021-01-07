@@ -68,7 +68,7 @@ def test_config():
         # check if ircbuilder already installed
         from ircbuilder import open_irc
     except ImportError:
-        ircbuilder_version = "0.0.10"
+        ircbuilder_version = "0.0.11"  # will get overridden later if requirements.txt set up properly
         with open(requirements_path) as file:
             for line in file:
                 print(line)
@@ -78,7 +78,7 @@ def test_config():
         if re.fullmatch(r"[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}", ircserver):
             # install ircbuilder from LAN server
             logging.warning(f"LAN {ircserver}")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", f"http://{ircserver}/pypi/ircbuilder/ircbuilder-{ircbuilder_version}.tar.gz"])
+            subprocess.check_call([sys.executable, "-m", "pip", "install", f"http://{ircserver}/download/pypi/ircbuilder/ircbuilder-{ircbuilder_version}.tar.gz"])
         else:
             # install ircbuilder from pypi.org
             subprocess.check_call([sys.executable, "-m", "pip", "install", f"ircbuilder>={ircbuilder_version}"])
@@ -94,7 +94,7 @@ def test_config():
         file.write('channel = "' + channel + '"     # same as Channel to join\n')
 
     from ircbuilder import open_irc
-    with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel) as mc:
+    with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel, port=6697) as mc:
         z = mc.send_cmd('get_player_z ' + mtuser)
     try:
         if int(z)!=player_z:

@@ -332,6 +332,9 @@ local task_8_assign = function(player_name)
 	local sign_pos=vector.add(pos,{x=-18,y=6,z=-3})
 	local text="Congratulations "..player_name.."\n \nNow change the tunnel floor to stone and place a torch every 4 blocks"
 	irc_builder.set_sign(sign_pos, "-z", "default:sign_wall_wood", text)
+	sign_pos={x=pos.x+1,y=pos.y,z=pos.z}
+	local text="Walk up stairs and into your new tunnel to see task 8"
+	irc_builder.set_sign(sign_pos, "-x", "default:sign_wall_wood", text)
 end
 
 local task_8_test = function(player_name)

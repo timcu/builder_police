@@ -183,9 +183,12 @@ local function read_storage()
 	if not tonumber(read_key('start_z')) then write_key('start_z',10)  end
 	if not tonumber(read_key('delta_z')) then write_key('delta_z',10)  end
 	if not tonumber(read_key('next_z'))  then write_key('next_z',tonumber(read_key('start_z'))) end
+	-- get_connected_players is deprecated at mod load time. There should be no players connected at this time. Hence disabling the following code
+	--[[
 	for _,player in ipairs(minetest.get_connected_players()) do
 		assign_player_z(player:get_player_name())
 	end
+	--]]
 end
 
 -- run read_storage early on

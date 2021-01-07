@@ -123,7 +123,7 @@ local test_quiz_for_player = function(player)
 		return false
 	end
 	local pos_build = builder_police.pos_build(player_name)
-	local p = player:getpos()
+	local p = player:get_pos()
 
 	-- first check if player in one of answer tunnels
 	-- print(dump(pos_build)..dump(p))
