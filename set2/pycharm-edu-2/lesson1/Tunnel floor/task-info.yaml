@@ -3,13 +3,13 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 987
+  - offset: 939
     length: 38
     placeholder_text: sequence
-  - offset: 1317
+  - offset: 1269
     length: 7
     placeholder_text: sequence
-  - offset: 1394
+  - offset: 1346
     length: 11
     placeholder_text: formula
 - name: tests.py

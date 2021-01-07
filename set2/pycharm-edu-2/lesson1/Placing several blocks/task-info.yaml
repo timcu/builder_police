@@ -5,16 +5,16 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 232
+  - offset: 184
     length: 8
     placeholder_text: number
-  - offset: 327
+  - offset: 279
     length: 3
     placeholder_text: number
-  - offset: 437
+  - offset: 389
     length: 5
     placeholder_text: variable
-  - offset: 568
+  - offset: 520
     length: 9
     placeholder_text: formula
 - name: tests.py

@@ -3,13 +3,13 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 244
+  - offset: 196
     length: 2
     placeholder_text: number
-  - offset: 255
+  - offset: 207
     length: 70
     placeholder_text: number
-  - offset: 354
+  - offset: 306
     length: 5
     placeholder_text: variable
 - name: tests.py
