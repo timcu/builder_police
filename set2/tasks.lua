@@ -26,13 +26,18 @@ local assert_correct = function(player_name, task, x, y, z, correct_name, direct
 		-- map not available yet so ignore
 		return false
 	end
-	if node.name ~= correct_name then
+	if node.name:find(correct_name) ~= 1 then
 		local text = "Task "..task.." Assessment\n \nBlock at ("..x..", "..y..", "..z..") is type '"..node.name.."' but should be '"..correct_name.."'"
 		irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
 		return false
 	end
 	if direction then
 		local reg=minetest.registered_nodes[correct_name]
+		if not reg then
+			local text = "Task "..task.." Assessment\n \nBlock at ("..x..", "..y..", "..z..") should be '"..correct_name.."' but there are no blocks registered of that type"
+			irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
+			return false
+		end
 		local dira, dirb, correct_param2a, correct_param2b
 		direction = direction:lower()
 		if direction=="+x" then dira={x=1,y=0,z=0}
@@ -118,7 +123,7 @@ end
 local task_2_test = function(player_name)
 	local pos_build = builder_police.pos_build(player_name)
 	local pos = vector.add(pos_build, {x=0,y=4,z=0})
-	if not assert_correct(player_name, 1, pos.x, pos.y, pos.z, "wool:blue", nil) then
+	if not assert_correct(player_name, 2, pos.x, pos.y, pos.z, "wool:blue", nil) then
 		return false
 	end
 	return true
@@ -824,14 +829,14 @@ local task_16_test = function(player_name)
 	for x = 105, 128 do
 		for y = 9, 9 do
 			for z=pos.z, pos.z do
-				if not assert_correct(player_name, 16, x, y, z, "wool:red", nil) then 
+				if not assert_correct(player_name, 16, x, y, z, "wool:", nil) then 
 					return false
 				end
 			end
 		end
 	end
 	for x = 121, 121 do
-		for y = 10, 11 do
+		for y = 10, 10 do
 			for z=pos.z, pos.z do
 				if not assert_correct(player_name, 16, x, y, z, "doors:door_wood_a", "+x") then 
 					return false
@@ -1276,16 +1281,16 @@ local task_22_test = function(player_name)
 	local pos = builder_police.pos_build(player_name) 
 	local pos_assess = vector.add(pos, {x=0,y=0,z=1})
     local text
-	text = "Task 22 Assessment\n \nTask 10 is not a programming task, although you may need to assist your neighbour's programming task to complete."
+	text = "Task 22 Assessment\n \nTask 22 is not a programming task, although you may need to assist your neighbour's programming task to complete."
 	local pos_left = vector.add(pos, {x=0, y=0, z=-builder_police.get_delta_z()})
 	local pos_right = vector.add(pos, {x=0, y=0, z=-builder_police.get_delta_z()})
-	local test_left, message_left = task_9_test_from_pos(pos_left) 
-	local test_right, message_right = task_9_test_from_pos(pos_right) 
+	local test_left, message_left = task_21_test_from_pos(pos_left) 
+	local test_right, message_right = task_21_test_from_pos(pos_right) 
 	local test = test_left or test_right
 	if test then 
-		text = text .. " Well done! One of your neighbours has also completed Task 9."
+		text = text .. " Well done! One of your neighbours has also completed Task 21."
 	else
-		text = text .. " Currently neither of your neighbours has completed Task 9."
+		text = text .. " Currently neither of your neighbours has completed Task 21."
 	end
 	irc_builder.set_sign(pos_assess, "-z", "default:sign_wall_wood", text)
     return test
