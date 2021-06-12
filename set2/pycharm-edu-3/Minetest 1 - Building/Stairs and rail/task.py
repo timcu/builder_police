@@ -1,7 +1,9 @@
-from ircbuilder import MinetestConnection
+from ircbuilder import open_irc
+from ircbuilder.building import Building
+
 from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
 
-mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)
+b = Building()
 
 # start point of tunnel
 x1 = 69
@@ -20,23 +22,20 @@ power_rail = 'carts:powerrail'
 for i in range(num_segments):
     # Add stairs - Don't need stairs on very last block. Hence check i < 60
     if i < 60:
-        mc.build(x1 - i, y1 - i, z - 1, stair_up_x)
+        b.build(x1 - i, y1 - i, z - 1, stair_up_x)
     # Add power rail
-    mc.build(x1 - i, y1 - i + 1, z, power_rail)
+    b.build(x1 - i, y1 - i + 1, z, power_rail)
 
 # flat section of tunnel
 for x in range(x1, task4_x1 + 1):
     # Add rail or power rail in pairs
     if x // 2 % 2 == 0:
-        mc.build(x, y1 + 1, z, rail)
+        b.build(x, y1 + 1, z, rail)
     else:
-        mc.build(x, y1 + 1, z, power_rail)
-mc.send_building()
+        b.build(x, y1 + 1, z, power_rail)
+
+with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel) as mc:
+    b.send(mc)
 
 
-# © Copyright 2018 Triptera Pty Ltd
-# https://www.triptera.com.au
-# See LICENSE.txt
-# Python code in task.py is free to be copied and reused.
-# Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at schools and CoderDojo sessions in 2018 - 2019.
+# © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

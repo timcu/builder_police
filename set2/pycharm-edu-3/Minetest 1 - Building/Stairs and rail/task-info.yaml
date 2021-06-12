@@ -9,15 +9,15 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 373
-    length: 4
+  - offset: 338
+    length: 54
     placeholder_text: dict
-  - offset: 435
-    length: 6
+  - offset: 400
+    length: 12
     placeholder_text: string
-  - offset: 461
-    length: 6
+  - offset: 426
+    length: 17
     placeholder_text: string
-  - offset: 855
-    length: 7
+  - offset: 818
+    length: 10
     placeholder_text: formula

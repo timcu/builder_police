@@ -8,22 +8,22 @@ files:
   visible: true
   placeholders:
   - offset: 1905
-    length: 7
+    length: 13
     placeholder_text: formula
   - offset: 2351
-    length: 7
+    length: 41
     placeholder_text: formula
   - offset: 3068
-    length: 7
+    length: 83
     placeholder_text: formula
   - offset: 4171
-    length: 7
+    length: 9
     placeholder_text: formula
   - offset: 4964
-    length: 7
+    length: 13
     placeholder_text: formula
   - offset: 6375
-    length: 7
+    length: 34
     placeholder_text: formula
 - name: station_3_levels.png
   visible: true

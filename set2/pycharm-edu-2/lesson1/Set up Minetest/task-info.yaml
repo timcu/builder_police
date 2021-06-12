@@ -1,5 +1,7 @@
 type: edu
 files:
+- name: tests.py
+  visible: false
 - name: task.py
   visible: true
   placeholders:
@@ -21,5 +23,3 @@ files:
   - offset: 472
     length: 11
     placeholder_text: '#pythonator'
-- name: tests.py
-  visible: false

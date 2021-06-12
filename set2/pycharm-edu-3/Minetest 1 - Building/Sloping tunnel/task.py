@@ -1,7 +1,9 @@
-from ircbuilder import MinetestConnection
+from ircbuilder import open_irc
+from ircbuilder.building import Building
+
 from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
 
-mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)
+b = Building()
 
 # Location of end points of sloping section of tunnel (centre of floor)
 x1 = 69
@@ -31,10 +33,10 @@ for i in range(num_segments):
     # Build 5 x 7 blocks of glass at position i for walls, roof, and centre
     range_y_ext = range(y, y + tunnel_height)
     range_z_ext = range(z, z + tunnel_width)
-    mc.build(x, range_y_ext, range_z_ext, glass)
+    b.build(x, range_y_ext, range_z_ext, glass)
     # Build 3 x 1 blocks of stone at position i for floor
     range_z_floor = (z + 1, z + 2, z + 3)
-    mc.build(x, y, range_z_floor, floor)
+    b.build(x, y, range_z_floor, floor)
 # hollow out the tunnel because now we are sure that lava and water can't flow in the ends
 for i in range(num_segments):
     # Use air to hollow out the tunnel
@@ -43,19 +45,16 @@ for i in range(num_segments):
     z = ref_z - tunnel_width // 2
     range_y_air = range(y + 1, y + tunnel_height - 1)
     range_z_air = (z + 1, z + 2, z + 3)
-    mc.build(x, range_y_air, range_z_air, air)
+    b.build(x, range_y_air, range_z_air, air)
     if i % 4 == 0:
         # Place torches down the right hand side of the tunnel
-        mc.build(x, y + 1, ref_z + 1, torch)
+        b.build(x, y + 1, ref_z + 1, torch)
 # Send all blocks to minetest but send air and torches last to ensure tunnel is built
 # before adding these extras. If air is sent before the glass then adjacent lava and water could
 # flow into the void left by the air
-mc.send_building((air, torch))
+
+with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel) as mc:
+    b.send(mc, end_list=(air, torch))
 
 
-# © Copyright 2018 Triptera Pty Ltd
-# https://www.triptera.com.au
-# See LICENSE.txt
-# Python code in task.py is free to be copied and reused.
-# Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at schools and CoderDojo sessions in 2018 - 2019.
+# © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

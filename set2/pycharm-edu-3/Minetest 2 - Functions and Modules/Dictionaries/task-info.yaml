@@ -6,29 +6,29 @@ files:
   visible: true
   placeholders:
   - offset: 51
-    length: 16
+    length: 6
     placeholder_text: empty dictionary
   - offset: 106
-    length: 8
+    length: 19
     placeholder_text: equation
   - offset: 175
-    length: 8
+    length: 20
     placeholder_text: equation
   - offset: 245
-    length: 8
+    length: 20
     placeholder_text: equation
   - offset: 291
-    length: 8
+    length: 19
     placeholder_text: equation
   - offset: 434
-    length: 8
+    length: 14
     placeholder_text: function
   - offset: 486
-    length: 8
+    length: 5
     placeholder_text: variable
   - offset: 513
-    length: 8
+    length: 5
     placeholder_text: variable
   - offset: 536
-    length: 8
+    length: 4
     placeholder_text: variable

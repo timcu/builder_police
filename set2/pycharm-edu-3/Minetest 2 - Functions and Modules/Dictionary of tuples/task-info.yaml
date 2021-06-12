@@ -6,23 +6,23 @@ files:
   visible: true
   placeholders:
   - offset: 172
-    length: 6
+    length: 2
     placeholder_text: number
   - offset: 176
-    length: 6
+    length: 2
     placeholder_text: number
   - offset: 180
-    length: 6
+    length: 2
     placeholder_text: number
   - offset: 277
-    length: 9
+    length: 41
     placeholder_text: statement
   - offset: 435
-    length: 9
+    length: 40
     placeholder_text: statement
   - offset: 697
-    length: 9
+    length: 25
     placeholder_text: statement
   - offset: 913
-    length: 7
+    length: 20
     placeholder_text: formula

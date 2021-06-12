@@ -6,17 +6,17 @@ files:
   visible: true
   placeholders:
   - offset: 152
-    length: 13
+    length: 47
     placeholder_text: data elements
   - offset: 282
-    length: 13
+    length: 29
     placeholder_text: data elements
   - offset: 383
-    length: 5
+    length: 1
     placeholder_text: index
-  - offset: 552
+  - offset: 553
     length: 1
     placeholder_text: '?'
-  - offset: 701
-    length: 8
+  - offset: 703
+    length: 12
     placeholder_text: equation

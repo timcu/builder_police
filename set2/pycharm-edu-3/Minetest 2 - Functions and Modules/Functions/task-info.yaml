@@ -6,32 +6,32 @@ files:
   visible: true
   placeholders:
   - offset: 410
-    length: 7
+    length: 19
     placeholder_text: formula
   - offset: 438
-    length: 7
+    length: 19
     placeholder_text: formula
   - offset: 466
-    length: 7
+    length: 19
     placeholder_text: formula
   - offset: 688
-    length: 6
+    length: 2
     placeholder_text: number
   - offset: 692
-    length: 6
+    length: 2
     placeholder_text: number
   - offset: 696
-    length: 6
+    length: 2
     placeholder_text: number
   - offset: 700
-    length: 6
+    length: 14
     placeholder_text: string
   - offset: 815
-    length: 9
+    length: 27
     placeholder_text: arguments
   - offset: 984
-    length: 9
+    length: 26
     placeholder_text: arguments
   - offset: 1173
-    length: 9
+    length: 20
     placeholder_text: arguments

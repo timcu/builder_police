@@ -71,7 +71,7 @@ def node_lists_with_cuboids(node_lists_flat):
                 node_lists[item].append((start_x, start_y, start_z))
             else:
                 node_lists[item].append(((start_x, start_y, start_z), (start_x+dx, start_y+dy, start_z+dz)))
-                #print("Cuboid " + item + " " + str(((start_x, start_y, start_z), (start_x+dx, start_y+dy, start_z+dz))))
+                # print("Cuboid " + item + " " + str(((start_x, start_y, start_z), (start_x+dx, start_y+dy, start_z+dz))))
             for x in range(start_x, start_x+dx+1):
                 for y in range(start_y, start_y+dy+1):
                     for z in range(start_z, start_z+dz+1):

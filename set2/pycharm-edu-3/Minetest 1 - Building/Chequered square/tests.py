@@ -47,7 +47,7 @@ def building_pattern(player_z):
     b = {}
     # position of centre of square
     wool = r"wool:(white|grey|dark_grey|black|blue|cyan|green|dark_green|yellow|orange|brown|red|pink|magenta|violet)"
-    b.update(nodebuilder.build(range(x1,x2), range(y1,y2), z, wool))
+    b.update(nodebuilder.build(range(x1, x2), range(y1, y2), z, wool))
     return b
 
 
@@ -72,26 +72,36 @@ def test_building():
 def test_answer_placeholders():
     placeholders = get_answer_placeholders()
     list_wool = ["white", "grey", "dark_grey", "black", "blue", "cyan", "green", "dark_green", "yellow", "orange", "brown", "red", "pink", "magenta", "violet"]
-    if not test_string_in(placeholders, 0, list_wool): return False
-    if not test_string_in(placeholders, 1, list_wool): return False
-    if not test_string(placeholders, 2, '9'): return False
-    if not test_string(placeholders, 3, '9'): return False
-    if not test_eval(placeholders, 4, 'cx - width // 2', [{'cx':100, 'width':9}, {'cx':110, 'width':21}] ): return False
-    if not test_eval(placeholders, 5, 'cy - height // 2', [{'cy':14, 'height':9}, {'cy':15, 'height':21}] ): return False
+    if not test_string_in(placeholders, 0, list_wool):
+        return False
+    if not test_string_in(placeholders, 1, list_wool):
+        return False
+    if not test_string(placeholders, 2, '9'):
+        return False
+    if not test_string(placeholders, 3, '9'):
+        return False
+    if not test_eval(placeholders, 4, 'cx - width // 2', [{'cx': 100, 'width': 9}, {'cx': 110, 'width': 21}]):
+        return False
+    if not test_eval(placeholders, 5, 'cy - height // 2', [{'cy': 14, 'height': 9}, {'cy': 15, 'height': 21}]):
+        return False
     list_var = [x.strip() for x in placeholders[6].strip().split(",")]
     if len(list_var) != 2 and len(list_var) != 3:
         failed("Wrong number of arguments in answer 7. Should be 2 (or 3). You have " + str(len(list_var))) + str(list_var)
         return False
-    if not test_eval_phi(list_var[0], "First argument in answer 7" , 'y1', [{'y1':28}, {'y1':36}] ): return False
-    if not test_eval_phi(list_var[1], "Second argument in answer 7", 'y2', [{'y2':28}, {'y2':36}] ): return False
+    if not test_eval_phi(list_var[0], "First argument in answer 7", 'y1', [{'y1': 28}, {'y1': 36}]):
+        return False
+    if not test_eval_phi(list_var[1], "Second argument in answer 7", 'y2', [{'y2': 28}, {'y2': 36}]):
+        return False
     list_var = [x.strip() for x in placeholders[7].strip().split(",")]
     if len(list_var) != 2 and len(list_var) != 3:
         failed("Wrong number of arguments in answer 8. Should be 2 (or 3). You have " + str(len(list_var)))
         return False
-    if not test_eval_phi(list_var[0], "First argument in answer 8" , 'x1', [{'x1':96}, {'x1':104}] ): return False
-    if not test_eval_phi(list_var[1], "Second argument in answer 8", 'x2', [{'x2':96}, {'x2':104}] ): return False
+    if not test_eval_phi(list_var[0], "First argument in answer 8", 'x1', [{'x1': 96}, {'x1': 104}]):
+        return False
+    if not test_eval_phi(list_var[1], "Second argument in answer 8", 'x2', [{'x2': 96}, {'x2': 104}]):
+        return False
     # Can't test 8 because may have formula over several lines
-    #if not test_formula(placeholders, 6, 'colours[(y+x)%2]')
+    # if not test_formula(placeholders, 6, 'colours[(y+x)%2]')
     passed()
     return True
 
@@ -102,8 +112,8 @@ def run_patched_tests():
     if test_answer_placeholders():
         run_common_tests()
         test_building()
-        #test_nodes()
-        #test_minetest(6)
+        # test_nodes()
+        # test_minetest(6)
 
 
 if __name__ == '__main__':

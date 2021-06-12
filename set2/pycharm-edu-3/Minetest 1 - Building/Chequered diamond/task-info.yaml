@@ -7,21 +7,21 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 346
+  - offset: 310
     length: 5
     placeholder_text: white
-  - offset: 360
+  - offset: 324
     length: 6
     placeholder_text: orange
-  - offset: 409
-    length: 6
+  - offset: 373
+    length: 2
     placeholder_text: number
-  - offset: 421
-    length: 6
+  - offset: 385
+    length: 2
     placeholder_text: number
-  - offset: 683
-    length: 7
+  - offset: 646
+    length: 16
     placeholder_text: formula
-  - offset: 710
-    length: 7
+  - offset: 673
+    length: 16
     placeholder_text: formula

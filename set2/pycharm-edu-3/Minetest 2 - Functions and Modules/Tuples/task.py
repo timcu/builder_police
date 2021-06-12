@@ -17,7 +17,7 @@ print(t1[1])
 # Adding tuples creates a new tuple with all the elements
 # In the print statement, enter the number of elements you think t5 will have
 t5 = t1 + t2
-print(t5," has 5 elements. len(t5)=",len(t5))
+print(t5, " has 5 elements. len(t5)=", len(t5))
 
 # Assign x to the first element in t1,
 # Assign y to the second element in t1,
@@ -26,9 +26,4 @@ x, y, z = t1
 print("x =", x, " y =", y, " z =", z)
 
 
-# © Copyright 2018 Triptera Pty Ltd
-# https://www.triptera.com.au
-# See LICENSE.txt
-# Python code in task.py is free to be copied and reused.
-# Minetest course may not be copied without permission from Triptera Pty Ltd.
-# Minetest course is authorised for use at schools and CoderDojo sessions in 2018 - 2019.
+# © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

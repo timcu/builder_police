@@ -22,7 +22,7 @@ def test_answer_placeholders():
         return False
     if not test_exec(placeholders, 6, "item_list.append(key)", [{'item_list': ['air'], 'key': "default:stone"}, {'item_list': ['default:glass'], 'key': "default:wood"}]):
         return False
-    if not test_eval(placeholders, 7, "node_lists[item]", [{'node_lists': {'air':[(10, 20, 30)]}, 'item': "air" }, {'node_lists': {'air': [(1,2,3),(2,3,4)]}, 'item':"air"}]):
+    if not test_eval(placeholders, 7, "node_lists[item]", [{'node_lists': {'air': [(10, 20, 30)]}, 'item': "air"}, {'node_lists': {'air': [(1,2,3),(2,3,4)]}, 'item':"air"}]):
         return False
     passed()
     return True
