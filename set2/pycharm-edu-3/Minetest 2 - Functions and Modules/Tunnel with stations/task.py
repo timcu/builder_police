@@ -1,9 +1,6 @@
-from ircbuilder import MinetestConnection
+from ircbuilder import open_irc
 from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
 from minetest_helper import build, build_cuboid, send_node_dict, build_station_dirx
-
-
-mc = MinetestConnection.create(ircserver, mtuser, mtuserpass, mtbotnick, channel)
 
 
 def build_tunnel_dirx(minetest_connection, x1, x2, z, y1=None, y2=None, materials=None, floor=-55, tail=10, room=None):
@@ -139,8 +136,9 @@ def build_tunnel_dirx(minetest_connection, x1, x2, z, y1=None, y2=None, material
 
 # stations are too wide to be adjacent. Offset every second one by 50 in the x direction
 x_offset = (player_z // 10 % 2) * 50
-nd_tunnel = build_tunnel_dirx(mc, -300 + x_offset, -100 + x_offset, player_z)
-send_node_dict(mc, nd_tunnel, end_list="air")
+with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel) as mc:
+    nd_tunnel = build_tunnel_dirx(mc, -300 + x_offset, -100 + x_offset, player_z)
+    send_node_dict(mc, nd_tunnel, end_list="air")
 
 
 # © Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

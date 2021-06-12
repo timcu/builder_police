@@ -7,16 +7,16 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 1595
+  - offset: 1501
     length: 49
     placeholder_text: statement
-  - offset: 3225
+  - offset: 3131
     length: 20
     placeholder_text: formula
-  - offset: 5261
+  - offset: 5167
     length: 58
     placeholder_text: arguments
-  - offset: 5648
+  - offset: 5554
     length: 48
     placeholder_text: arguments
 - name: tests.py
