@@ -1,0 +1,28 @@
+type: edu
+files:
+- name: castle_windows.png
+  visible: false
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 1019
+    length: 25
+    placeholder_text: formula
+  - offset: 1604
+    length: 43
+    placeholder_text: sequence
+  - offset: 1738
+    length: 60
+    placeholder_text: sequence
+  - offset: 2328
+    length: 8
+    placeholder_text: variable
+  - offset: 2432
+    length: 8
+    placeholder_text: variable
+- name: tests.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false

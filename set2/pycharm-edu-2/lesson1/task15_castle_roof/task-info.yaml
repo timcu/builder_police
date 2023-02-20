@@ -1,0 +1,36 @@
+type: edu
+files:
+- name: castle_roof.png
+  visible: false
+- name: ladder.png
+  visible: false
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 1023
+    length: 4
+    placeholder_text: string
+  - offset: 1969
+    length: 57
+    placeholder_text: sequence
+  - offset: 2046
+    length: 59
+    placeholder_text: sequence
+  - offset: 2125
+    length: 46
+    placeholder_text: sequence
+  - offset: 3061
+    length: 6
+    placeholder_text: variable
+  - offset: 3131
+    length: 3
+    placeholder_text: variable
+  - offset: 3252
+    length: 47
+    placeholder_text: sequence
+- name: tests.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false

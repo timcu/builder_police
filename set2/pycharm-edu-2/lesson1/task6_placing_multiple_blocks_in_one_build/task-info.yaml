@@ -1,0 +1,24 @@
+type: edu
+files:
+- name: glass_cube.png
+  visible: false
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 270
+    length: 50
+    placeholder_text: sequence
+  - offset: 329
+    length: 48
+    placeholder_text: sequence
+  - offset: 386
+    length: 29
+    placeholder_text: sequence
+- name: tests.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false
+- name: task.md
+  visible: false

@@ -1,0 +1,27 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 10
+    length: 8
+    placeholder_text: username
+  - offset: 60
+    length: 8
+    placeholder_text: password
+  - offset: 178
+    length: 1
+    placeholder_text: number
+  - offset: 371
+    length: 19
+    placeholder_text: irc.triptera.com.au
+  - offset: 427
+    length: 8
+    placeholder_text: mtserver
+  - offset: 472
+    length: 11
+    placeholder_text: '#pythonator'
+- name: tests/__init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false

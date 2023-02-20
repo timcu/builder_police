@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: tests.py
+  visible: false
+- name: wool_green.png
+  visible: false
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 183
+    length: 2
+    placeholder_text: number
+- name: tests/__init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false

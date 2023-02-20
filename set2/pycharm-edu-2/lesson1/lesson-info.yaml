@@ -1,20 +1,21 @@
 custom_name: lesson1
 content:
-- Set up Minetest
-- Placing a block
-- Placing a block using variables
-- Placing several blocks
-- Placing blocks using a for loop
-- Placing blocks using nested for loops
-- Placing multiple blocks in one build
-- Tunnel
-- Tunnel floor
-- Wall of glass
-- Arch
-- Arch floor
-- Arches
-- Castle base
-- Castle windows
-- Castle roof
-- Castle
-- Flag
+- set_up_minetest
+- task1_placing_a_block
+- task2_placing_a_block_using_variables
+- task3_placing_several_blocks
+- task4_placing_blocks_using_for_loop
+- task5_placing_blocks_using_nested_for_loops
+- task6_placing_multiple_blocks_in_one_build
+- task7_tunnel
+- task8_tunnel_floor
+- task9_wall_of_glass
+- task10_arch
+- task11_arch_floor
+- task12_arches
+- task13_castle_base
+- task14_castle_windows
+- task15_castle_roof
+- task16_castle
+- task17_flag
+type: Stepik

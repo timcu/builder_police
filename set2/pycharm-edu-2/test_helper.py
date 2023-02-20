@@ -37,7 +37,7 @@ def test_file_importable():
         parent = os.path.abspath(os.path.join(path, os.pardir))
         python_files = [f for f in os.listdir(parent) if os.path.isfile(os.path.join(parent, f)) and f.endswith(".py")]
         for python_file in python_files:
-            if python_file == "tests.py":
+            if python_file == "test_task.py":
                 continue
             check_importable_path(os.path.join(parent, python_file))
         return

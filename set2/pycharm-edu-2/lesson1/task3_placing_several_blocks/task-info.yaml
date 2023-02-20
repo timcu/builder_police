@@ -1,0 +1,25 @@
+type: edu
+files:
+- name: glass_frame.png
+  visible: false
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 184
+    length: 8
+    placeholder_text: number
+  - offset: 279
+    length: 3
+    placeholder_text: number
+  - offset: 389
+    length: 5
+    placeholder_text: variable
+  - offset: 520
+    length: 9
+    placeholder_text: formula
+- name: tests.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false

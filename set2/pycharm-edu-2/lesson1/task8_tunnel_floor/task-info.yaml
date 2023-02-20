@@ -1,0 +1,22 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 939
+    length: 38
+    placeholder_text: sequence
+  - offset: 1269
+    length: 7
+    placeholder_text: sequence
+  - offset: 1346
+    length: 11
+    placeholder_text: formula
+- name: tests.py
+  visible: false
+- name: tunnel_floor.png
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false

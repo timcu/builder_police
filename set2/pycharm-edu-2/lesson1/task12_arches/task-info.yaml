@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: arches.png
+  visible: false
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 844
+    length: 46
+    placeholder_text: sequence
+- name: tests.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false

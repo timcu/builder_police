@@ -7,10 +7,11 @@ summary: |-
 
   Free for use by schools, CoderDojo and members of "Beginners' Python and Machine Learning" 2018 - 2021.
   See LICENSE.TXT for details.
-  © Copyright 2018-2021 Triptera Pty Ltd.
+  © Copyright 2018-2023 Triptera Pty Ltd.
 
-  Requires PyCharm Edu 2020.3 or later
+  Requires PyCharm Edu 2022.3 or later
 programming_language: Python
-programming_language_version: 3.9
+programming_language_version: 3.10
+environment: unittest
 content:
 - lesson1
