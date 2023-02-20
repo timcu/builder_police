@@ -12,8 +12,6 @@ files:
   - offset: 306
     length: 5
     placeholder_text: variable
-- name: tests.py
-  visible: false
 - name: wool_blue.png
   visible: false
 - name: tests/__init__.py

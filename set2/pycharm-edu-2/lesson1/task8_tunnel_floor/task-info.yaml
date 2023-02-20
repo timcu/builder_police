@@ -12,8 +12,6 @@ files:
   - offset: 1346
     length: 11
     placeholder_text: formula
-- name: tests.py
-  visible: false
 - name: tunnel_floor.png
   visible: false
 - name: tests/__init__.py

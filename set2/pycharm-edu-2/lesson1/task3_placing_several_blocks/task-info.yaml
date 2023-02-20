@@ -17,8 +17,6 @@ files:
   - offset: 520
     length: 9
     placeholder_text: formula
-- name: tests.py
-  visible: false
 - name: tests/__init__.py
   visible: false
 - name: tests/test_task.py

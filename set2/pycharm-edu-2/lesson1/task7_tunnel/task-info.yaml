@@ -34,8 +34,6 @@ files:
   - offset: 1097
     length: 11
     placeholder_text: variable
-- name: tests.py
-  visible: false
 - name: tests/__init__.py
   visible: false
 - name: tests/test_task.py

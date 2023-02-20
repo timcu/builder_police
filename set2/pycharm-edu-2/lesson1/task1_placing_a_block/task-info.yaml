@@ -1,7 +1,5 @@
 type: edu
 files:
-- name: tests.py
-  visible: false
 - name: wool_green.png
   visible: false
 - name: task.py
