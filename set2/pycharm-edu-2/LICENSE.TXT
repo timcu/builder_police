@@ -1,10 +1,10 @@
-Copyright (c) 2018-2021 Triptera Pty Ltd
+Copyright (c) 2018-2023 Triptera Pty Ltd
 
 This pycharm-edu course is part of the Pythonator series of courses and
 requires permission from Triptera Pty Ltd to use.
 
 Permission is hereby granted, to any person at a school, CoderDojo session or
-"Beginners' Python and Machine Learning" in 2018-2021
+"Beginners' Python and Machine Learning" in 2018-2023
 to use the Software, including the right to copy, and/or distribute,
 copies of the Software, subject to the following conditions:
 
@@ -24,7 +24,7 @@ All python code in files called task.py is licensed with an MIT license.
 
 MIT License
 
-Copyright (c) 2018-2021 Triptera Pty Ltd
+Copyright (c) 2018-2023 Triptera Pty Ltd
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

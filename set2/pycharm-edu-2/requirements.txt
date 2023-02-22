@@ -1,1 +1,1 @@
-ircbuilder>=0.0.11
+ircbuilder>=0.0.12
