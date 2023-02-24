@@ -33,22 +33,6 @@ Here is an example of how to fill in the details for LAN servers at CoderDojo.
     mtbotnick = "mtserver"        # same as Bot nickname
     channel = "#coderdojo"        # same as Channel to join
 
-If you want to configure logging for tasks at a level different to `WARNING`, add the following to just the file task.py in 
-Minetest setup. 
-The logging level can be set to "CRITICAL", "ERROR", "WARNING" (default), "INFO", "DEBUG", "NOTSET"
-
-    logging_config = {'root': {'level': 'INFO'}}
-
-In each task.py you want logging, add the following two lines to the top of the file just below
-the existing `import` statements
-
-    from triptera_pe_tests import configure_logging 
-    configure_logging()
-
-You can then add logging statements such as 
-
-    logging.info(f"My variable {player_z=}")
-
 <div class='hint'>
 In Minetest, find the sign with your name and your player_z will be the z value on that sign.
 </div>
@@ -63,5 +47,22 @@ In Minetest, find the sign with your name and your player_z will be the z value 
 In this case use <code>player_z = 10</code></div>
 <div class='hint'>ircserver can be a host name (eg "irc.triptera.com.au") or ip address ("192.168.17.100") of the chat server. </div>
 <div class='hint'>Channel names start with ## if it is not a permanent channel, or # for a permanent channel</div>
+<div class="hint">
+If you want to configure logging for tasks at a level different to `WARNING`, add the following to just the file task.py in 
+`set_up_minetest`. 
+The logging level can be set to "CRITICAL", "ERROR", "WARNING" (default), "INFO", "DEBUG", "NOTSET"
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+    logging_config = {'root': {'level': 'INFO'}}
+
+In each task.py you want logging, add the following two lines to the top of the file just below
+the existing `import` statements
+
+    from triptera_pe_tests import configure_logging 
+    configure_logging()
+
+You can then add logging statements such as 
+
+    logging.info(f"My variable {player_z=}")
+
+</div>
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

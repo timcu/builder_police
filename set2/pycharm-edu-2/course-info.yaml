@@ -1,11 +1,18 @@
-title: pythonator b2 easy
+type: marketplace
+title: Pythonator Minetest Castle
 language: English
 summary: |-
-  Teaches simple python concepts using a virtual world in minetest. This course can use the free online minetest server at demo.pythonator.com:30000. This is the second course in stream b of pythonator series.
-
+  This is an introductory Python course mainly aimed at children to show them how to write Python programs to build structures in a 3D Minetest world.
+  It can use the free online minetest server at demo.pythonator.com:30000.
+  
   https://pythonator.com
 
-  Free for use by schools, CoderDojo and members of "Beginners' Python and Machine Learning" 2018 - 2021.
+  - The course will be most beneficial for beginner-level Python learners.
+  - The course covers core Python features and the complementary library ircbuilder for connecting to Minetest using IRC.
+  - It contains hands-on examples of Python code implementation and exercises to practice new skills.
+  - The output from your programming efforts will be virtual structures in a Minetest world that you can join virtually to inspect.
+
+  Free for use by schools, CoderDojo and members of "Beginners' Python and Machine Learning" 2018 - 2023.
   See LICENSE.TXT for details.
   © Copyright 2018-2023 Triptera Pty Ltd.
 

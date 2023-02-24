@@ -26,4 +26,4 @@ If you are counting down, make sure your step is negative.
 <div class='hint'>replacing the floor with stone requires the same x values as the walls and air.</div>
 <div class='hint'>placing torches requires a number or formula for the y coordinate just above the floor of the tunnel</div>
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

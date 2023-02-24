@@ -1,4 +1,3 @@
-custom_name: lesson1
 content:
 - set_up_minetest
 - task1_placing_a_block
@@ -18,4 +17,3 @@ content:
 - task15_castle_roof
 - task16_castle
 - task17_flag
-type: Stepik

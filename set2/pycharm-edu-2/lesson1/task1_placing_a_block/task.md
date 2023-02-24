@@ -34,12 +34,7 @@ use the IRC connection `mc`, and then automatically close the connection afterwa
 Hints are available by clicking the light bulbs below.
 
 Checking: Click the [Check] button below to check you have completed the task correctly.
-Checking the task does not run the task so it will not build anything in the Minetest world.
-
-Running: Click the green triangle "play" button to run your program or use keyboard (Windows/Linux = ctrl-shift-F10, Mac = ctrl-shift-r).
-This will build your construction in the Minetest world. It is safer to "run" your task only after it "checks" completely. 
-However, sometimes it is hard to see where the problem is from the "check". In that case, try "running" it and then in Minetest
-examine what you have built to see where the problem is with your code.
+Checking the task also runs the task in Minetest, so log in to the Minetest world to see what was built.
 
 When you have completed this task (Congratulations!) click the [Next] button to
 move to the next task.
@@ -48,5 +43,5 @@ move to the next task.
 <div class='hint'>The missing number is the z coordinate where you want to place the wool.</div>
 <div class='hint'>Find the z coordinate by logging in to Minetest and finding the sign with your name on it.</div>
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
 

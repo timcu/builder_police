@@ -32,4 +32,4 @@ inside of the arch `range_y_int, range_z_int`.
 <div class='hint'>Use variables range_x_arch, range_y_int, range_z_int and air as parameters for <code>mc.build()</code></div>
 <div class='hint'>The final answer to be typed in is <code>mc.build(range_x_arch, range_y_int, range_z_int, air)</code>.</div>
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

@@ -26,4 +26,4 @@ numbers or sequences of numbers. The item is a str or dict describing the block 
 <div class='hint'>The second answer can use the variables range_x_arch, floor_y, range_z_int, floor</div>
 <div class='hint'>The third answer requires the full <code>mc.build()</code> command to place a torch at <code>range_x_arch, floor_y + 1, player_z + 1</code></div>
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

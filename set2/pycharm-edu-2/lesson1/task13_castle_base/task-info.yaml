@@ -5,32 +5,30 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 504
+  - offset: 520
     length: 1
     placeholder_text: number
-  - offset: 553
+  - offset: 569
     length: 1
     placeholder_text: number
-  - offset: 618
+  - offset: 634
     length: 1
     placeholder_text: number
-  - offset: 777
+  - offset: 793
     length: 25
     placeholder_text: formula
-  - offset: 861
+  - offset: 877
     length: 49
     placeholder_text: sequence
-  - offset: 932
+  - offset: 948
     length: 39
     placeholder_text: sequence
-  - offset: 993
+  - offset: 1009
     length: 36
     placeholder_text: sequence
-  - offset: 1678
+  - offset: 1694
     length: 26
     placeholder_text: sequence
-- name: tests.py
-  visible: false
 - name: tests/__init__.py
   visible: false
 - name: tests/test_task.py

@@ -44,36 +44,35 @@ class GeneralTestCase(unittest.TestCase):
         self.assertTrue(task > num_task,
                         msg=f"Check 'Task {num_task} Assessment' sign in minetest to find out what else is required")
 
-def test_eval_phi(phi, str_answer_number, answer, list_data, modules=()):
-    if len(phi) > len(answer) + 5:
-        failed(str_answer_number + " is too long. Correct answer only " + str(len(answer)) + " characters long. Your answer " + phi + " has length " + str(len(phi)))
-        return False
-    if not list_data:
-        list_data = [{}]
-    global_data = {}
-    if isinstance(modules, str):
-        modules = (modules,)
-    for module in modules:
-        global_data[module] = importlib.import_module(module)
-    for data in list_data:
-        try:
-            guess = eval(phi, global_data, data)
-        except NameError:
-            list_vars = ""
-            comma = ""
-            for k in data:
-                list_vars += comma + k
-                comma = ", "
-            failed(str_answer_number + " should only be in terms of variables " + list_vars + " but includes other variables. It is " + phi)
-            return False
-        except KeyError:
-            failed(str_answer_number + " had a KeyError. Your answer " + phi)
-            return False
-        correct = eval(answer, global_data, data)
-        if guess != correct:
-            failed(str_answer_number + " gave incorrect answer for data " + str(data) + ". Correct answer: " + str(correct) + ". Your answer: " + str(guess) + ". Your formula: " + phi)
-            return False
-    return True
+    def check_eval_phi(self, phi, str_answer_number, answer, list_data, modules=()):
+        self.assertLess(len(phi), len(answer) + 6, msg=f"{str_answer_number} is too long. Correct answer only "
+                                                       f"{len(answer)} characters long. Your answer {phi} has length "
+                                                       f"{len(phi)}")
+        if not list_data:
+            list_data = [{}]
+        global_data = {}
+        if isinstance(modules, str):
+            modules = (modules,)
+        for module in modules:
+            global_data[module] = importlib.import_module(module)
+        for data in list_data:
+            try:
+                guess = eval(phi, global_data, data)
+            except NameError:
+                list_vars = ""
+                comma = ""
+                for k in data:
+                    list_vars += comma + k
+                    comma = ", "
+                self.fail(f"{str_answer_number} should only be in terms of variables {list_vars} but includes "
+                          f"other variables. It is {phi}")
+            except KeyError:
+                self.fail(f"{str_answer_number} had a KeyError. Your answer {phi}")
+            correct = eval(answer, global_data, data)
+            self.assertEqual(guess, correct, msg=f"{str_answer_number} gave incorrect answer for data {data}. "
+                                                 f"Correct answer: {correct}. Your answer: {guess}. "
+                                                 f"Your formula: {phi}")
+        return True
 
     def check_eval(self, placeholders, i, answer, list_data=None, modules=()):
         str_answer_number = "Answer " + str(i+1)

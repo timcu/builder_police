@@ -2,7 +2,7 @@ from ircbuilder import open_irc
 from ircbuilder.building import Building
 from math import sqrt
 
-from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
+from lesson1.set_up_minetest.task import ircserver, mtuser, mtuserpass, mtbotnick, channel, player_z
 
 b = Building()
 
