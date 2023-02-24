@@ -1,11 +1,11 @@
 from ircbuilder import open_irc
 from ircbuilder.building import Building
 
-from minetest_irc import ircserver, mtuser, mtuserpass, mtbotnick, channel
+from lesson1.set_up_minetest.task import ircserver, mtuser, mtuserpass, mtbotnick, channel
 
 b = Building()
 
-b.build(100, 14, 10, "wool:green")
+b.build(100, 14, 0, "wool:green")
 
 with open_irc(ircserver, mtuser, mtuserpass, mtbotnick, channel) as mc:
     b.send(mc)

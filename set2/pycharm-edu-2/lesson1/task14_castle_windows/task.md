@@ -74,4 +74,4 @@ or<br>
 <div class='hint'>For windows on front wall, build command needs the name of variable storing building material to be used for windows on the front wall</div>
 <div class='hint'>Front wall is parallel with the z axis</div>
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

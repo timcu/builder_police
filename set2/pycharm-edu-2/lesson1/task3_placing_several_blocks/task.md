@@ -1,7 +1,7 @@
 # Task 3 - Placing several blocks
 This is the easy course. Whenever the task asks for variable names
 or a formula, then it is also correct to just type in a number or list of numbers. The only
-time this won't work is for variables in loops.
+time this won't work is for variables in loops which we will look at in the task 4.
 
 ## Task
 Find your sign in Minetest to find your third task. Then complete the program on the left
@@ -24,4 +24,4 @@ to Minetest.
 <div class='hint'>The ninth <code>build</code> command needs the z value for the top right glass block.
 Enter the number or a formula which equals that z value.</div>
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

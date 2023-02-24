@@ -48,4 +48,4 @@ our purposes the formula above for `range_y_ext` is equivalent to typing:
 <div class='hint'>range_y_ext is a formula (in terms of floor_y and arch_height) or numbers for all y values in arch (external dimensions)</div>
 <div class='hint'>range_z_ext is a formula (in terms of wall_z and arch_width) or numbers for all z values in arch (external dimensions)</div>
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

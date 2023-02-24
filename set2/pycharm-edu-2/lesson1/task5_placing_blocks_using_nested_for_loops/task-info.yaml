@@ -5,7 +5,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 303
+  - offset: 319
     length: 29
     placeholder_text: sequence
 - name: tests/__init__.py

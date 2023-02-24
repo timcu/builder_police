@@ -3,13 +3,13 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 939
+  - offset: 955
     length: 38
     placeholder_text: sequence
-  - offset: 1269
+  - offset: 1285
     length: 7
     placeholder_text: sequence
-  - offset: 1346
+  - offset: 1362
     length: 11
     placeholder_text: formula
 - name: tunnel_floor.png

@@ -47,5 +47,5 @@ the first command.
 <div class='hint'><code>seq_y</code> needs to be a sequence of y values for the glass blocks</div>
 <div class='hint'><code>seq_z</code> needs to be a sequence of z values for the glass blocks</div>
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
 

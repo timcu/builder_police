@@ -61,4 +61,4 @@ stopping just before it gets to <code>stop</code>. It can be used for range_y_ex
 <div class='hint'>second parameter of the first build command needs variable containing the sequence of y values for the <b>external</b> glass of the tunnel</div>
 <div class='hint'>third parameter of the second build command needs variable containing the sequence of z values for the <b>internal</b> air</div>
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

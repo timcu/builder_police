@@ -7,28 +7,28 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 1044
+  - offset: 1060
     length: 3
     placeholder_text: colour
-  - offset: 1124
+  - offset: 1140
     length: 48
     placeholder_text: dict
-  - offset: 2725
+  - offset: 2741
     length: 27
     placeholder_text: formula
-  - offset: 2763
+  - offset: 2779
     length: 16
     placeholder_text: formula
-  - offset: 2829
+  - offset: 2845
     length: 11
     placeholder_text: formula
-  - offset: 2851
+  - offset: 2867
     length: 11
     placeholder_text: formula
-  - offset: 3880
+  - offset: 3896
     length: 18
     placeholder_text: sequence
-  - offset: 4147
+  - offset: 4163
     length: 51
     placeholder_text: sequence
 - name: tests/__init__.py

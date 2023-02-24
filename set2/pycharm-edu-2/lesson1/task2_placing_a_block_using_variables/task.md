@@ -1,7 +1,7 @@
 # Task 2 - Placing a block using variables
 This is a repeat of Minetest Task 1 using variables instead of numbers. Fill in the rectangles
 in the program task.py on the left. Use hints to find out exactly what needs to be done.
-Ctrl-shift-F10 to run the program. "Check" button below to check it is completed correctly.
+"Check" button below to check it is completed correctly and build your construction in Minetest.
 After you have successfully completed this task, click the "Next" button to go to the next task.
 
 ## Task
@@ -22,7 +22,7 @@ The above line creates a new variable called `my_variable` and gives it the valu
 Storing data in variables helps when you don't know the data when you are writing the program but will know it
 when the program is run. For example the z value is different for every player. The program can be written before the
 player is known and the z value can be filled later. The program on the left has a variable called `ref_z` which
-stores the player's z value. I called it `ref_z` because your building will use it as a reference coordinate in the z axis
+stores the player's z value. I called it `ref_z` because your building will use it as a reference coordinate in the z axis,
 and you will build relative to it. 
 
 To use the data in a variable, type its variable name where you previously typed the data. For example, if your `ref_z` was 0:
@@ -45,4 +45,4 @@ It is recommended that variable names are all lower case with words in the name 
 <div class='hint'>The second answer is a number and is the z coordinate from sign for position to place block</div>
 <div class='hint'>The third answer is the name of the variable containing the x value</div>
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

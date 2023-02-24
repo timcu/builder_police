@@ -85,4 +85,4 @@ For the very advanced, try creating your own function.
 
     if half_ellipse_flag(x, y):
 
-© Copyright 2018-2021 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt
+© Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

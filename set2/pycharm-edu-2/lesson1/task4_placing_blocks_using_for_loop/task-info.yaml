@@ -5,10 +5,10 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 319
+  - offset: 335
     length: 12
     placeholder_text: sequence
-  - offset: 386
+  - offset: 402
     length: 1
     placeholder_text: variable
 - name: tests/__init__.py
