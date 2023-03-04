@@ -3,6 +3,7 @@ import unittest
 
 from triptera_pe_tests import GeneralTestCase, configure_logging
 
+
 class TestCase(GeneralTestCase):
     def test_by_building_in_minetest(self):
         from lesson1.task17_flag.task import b

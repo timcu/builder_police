@@ -2,7 +2,7 @@
 There are several steps to this program which is
 going to build some arches over the path heading
 from your signpost in the positive x direction. Each arch will
-have the same profile as a cross section of the tunnel
+have the same profile as a cross-section of the tunnel
 you have just built.
 
 ## Task
@@ -20,11 +20,11 @@ building the tunnel which was to build a solid glass cuboid.
 * The arch will have same dimensions as tunnel, 7 high and 5 wide, so store in `arch_height` and `arch_width`
 
 We need to calculate the z position of the sides of the arch. We know the z position
-of the centre of the arch and we know the width of the arch. Hence the formula is
+of the centre of the arch, and we know the width of the arch. Hence, the formula is
 
     wall_z = ref_z - arch_width // 2
 
-We are going to store the x values of the arches in variable `range_x_arch`. For testing we
+We are going to store the x values of the arches in variable `range_x_arch`. For testing, we
 will start with one x value. Let us use the start of the path which is `path_x_min`.
 
     range_x_arch = path_x_min

@@ -4,8 +4,8 @@ Nested loops are a loop within a loop.
 
 ## Task
 Place a 3x3 square of obsidian glass at x = 101.
-Centre of square at y = 14 and z = player z. Remember you can use formulae (eg ref_z - 1, ref_z, ref_z + 1) or
-numbers (eg 19, 20, 21) in the sequence in the `for` statement.
+Centre of square at y = 14 and z = player z. Remember you can use formulae (e.g. ref_z - 1, ref_z, ref_z + 1) or
+numbers (e.g. 19, 20, 21) in the sequence in the `for` statement.
 
 <img src="og101.png" width="100%" />
 

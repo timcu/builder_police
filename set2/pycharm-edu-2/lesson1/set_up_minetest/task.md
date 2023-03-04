@@ -3,7 +3,7 @@
 1.  The first step is to play Minetest :). Play online and connect to a Pythonator server.
     You can even connect to the free server at `demo.pythonator.com` using port `30000`.
     Use a name and password of your choosing, and as long as no-one else has chosen that
-    name you will be able to login.
+    name you will be able to log in.
 2.  Please don't use spaces in your name or password. If you need to change your password in
     Minetest press the [esc] key and click the [Change password] button.
 3.  Don't use a password you want to keep secret because there is very low security on this
@@ -15,7 +15,7 @@
     the Minetest op for that privilege.
 5.  Fill in your connection details to Minetest in the program on the left.
     * Enter your name as mtuser (mtuser="myname")
-    * Enter your password as mtuserpass (mtuserpass="mysecret")
+    * Enter your password as mtuserpass (mtuserpass="my_secret")
     * Find your z value from the sign in Minetest with your name in it. Every player gets a unique value.
     * Server details default for the <code>demo.pythonator.com</code> server. For other servers ask your Minetest op.
 6.  Click the [Check] button below.
@@ -47,22 +47,5 @@ In Minetest, find the sign with your name and your player_z will be the z value 
 In this case use <code>player_z = 10</code></div>
 <div class='hint'>ircserver can be a host name (eg "irc.triptera.com.au") or ip address ("192.168.17.100") of the chat server. </div>
 <div class='hint'>Channel names start with ## if it is not a permanent channel, or # for a permanent channel</div>
-<div class="hint">
-If you want to configure logging for tasks at a level different to `WARNING`, add the following to just the file task.py in 
-`set_up_minetest`. 
-The logging level can be set to "CRITICAL", "ERROR", "WARNING" (default), "INFO", "DEBUG", "NOTSET"
 
-    logging_config = {'root': {'level': 'INFO'}}
-
-In each task.py you want logging, add the following two lines to the top of the file just below
-the existing `import` statements
-
-    from triptera_pe_tests import configure_logging 
-    configure_logging()
-
-You can then add logging statements such as 
-
-    logging.info(f"My variable {player_z=}")
-
-</div>
 © Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

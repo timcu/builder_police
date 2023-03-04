@@ -40,7 +40,7 @@ If you do more than one `build` command for the same position, the second comman
 the first command.
 
 <br>
-<div class='hint'><code>seq_x</code> needs to be a sequnce of values of x for the glass block locations</div>
+<div class='hint'><code>seq_x</code> needs to be a sequence of values of x for the glass block locations</div>
 <div class='hint'><code>seq_x</code> numbers should centre on ref_x</div>
 <div class='hint'>Each sequence can use numbers or formulae</div>
 <div class='hint'>Enclose values of each sequence in parentheses () or square brackets []</div>

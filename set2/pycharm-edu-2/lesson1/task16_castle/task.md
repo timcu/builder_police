@@ -6,7 +6,7 @@ and red carpet under the arches, through the door and to the ladder.
 
 ## Door
 Only the bottom half of a door needs to be placed and the top half will automatically
-appear. It is important therefore to ensure top space for door is air. Otherwise the door
+appear. It is important therefore to ensure top space for door is air. Otherwise, the door
 will not be able to move.
 
 The name for a wooden door is `"doors:door_wood_a"`.
@@ -22,7 +22,7 @@ you like the best.
 ## Crenels and Merlons
 The classic castle design has a square tooth wall protecting soldiers in the castle. The gaps
 between the teeth are called crenels and the soldiers can shoot arrows or fling other
-projectiles through them. The teeth are called merlons and they protect the soldiers from
+projectiles through them. The teeth are called merlons, and they protect the soldiers from
 the attackers. We currently have a solid wall so need to add crenels for soldiers to 
 shoot arrows through. The crenels will be in every second position. We can't have a crenel 
 in the corners because the merlons will obscure them.

@@ -4,7 +4,7 @@ an open box without a top, but it extends on block on every side in the x and z 
 and is only three blocks high.
 
 ## Task
-Add a 11 x 7 x 3 open top stone box on top of the castle base to be the roof.
+Add an 11 x 7 x 3 open-top stone box on top of the castle base to be the roof.
 
 Add a ladder so that players can climb up the ladder to the roof. Ladder
 needs a direction so that its orientation is known and in which part of the cube of space the
@@ -35,6 +35,6 @@ ladder should be placed. See the hints for more details.
 <div class='hint'>The y values for the ladder can be <br><br>
 <code>[10, 11, 12, 13, 14]</code><br>or<br>
 <code>range(10, 15)</code><br>or<br>
-<code>range(floor_y + 1, floor_y + 1 + castle_height)<code/></div>
+<code>range(floor_y + 1, floor_y + 1 + castle_height)</code></div>
 <br>
 © Copyright 2018-2023 Triptera Pty Ltd - https://pythonator.com - See LICENSE.txt

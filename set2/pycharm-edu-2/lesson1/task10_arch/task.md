@@ -2,10 +2,8 @@
 That wall doesn't look like an arch!
 
 ## Task
-Remove the centre part of the
-wall so it becomes an arch. Remember for the `range_y_int`
-and `range_z_int` you can use a list
-of numbers or a formula.
+Remove the centre part of the wall, so it becomes an arch. Remember for the `range_y_int`
+and `range_z_int` you can use a list of numbers or a formula.
 
         range_y_int = [10, 11, 12, 13, 14]
 

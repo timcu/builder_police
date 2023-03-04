@@ -52,7 +52,7 @@ those used in range_x, range_y_int and range_z_int.
 <div class='hint'>range_y_ext can be specified using one of the following:<ul>
 <li>list of numbers</li>
 <li>list of formulae based on variables</li>
-<li>range using range() function</li> </div>
+<li>range using range() function</li></ul></div>
 <div class='hint'>The <code>range(start, stop)</code> function
 produces a sequence of consecutive numbers starting with <code>start</code> and 
 stopping just before it gets to <code>stop</code>. It can be used for range_y_ext and range_z_ext.</div>

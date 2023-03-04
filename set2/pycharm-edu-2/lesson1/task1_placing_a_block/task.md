@@ -39,7 +39,6 @@ Checking the task also runs the task in Minetest, so log in to the Minetest worl
 When you have completed this task (Congratulations!) click the [Next] button to
 move to the next task.
 
-<div class='hint'>The sign asks for orange wool but any colour will be considered correct.</div>
 <div class='hint'>The missing number is the z coordinate where you want to place the wool.</div>
 <div class='hint'>Find the z coordinate by logging in to Minetest and finding the sign with your name on it.</div>
 

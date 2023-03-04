@@ -70,7 +70,7 @@ or for the other diagonal
 ## Flag shape
 
 The shape of the flag can be defined in a function. This program contains
-three functions and you can choose one of them to define your flag shape.
+three functions, and you can choose one of them to define your flag shape.
 For the very advanced, try creating your own function.
 
 ### Rectangle

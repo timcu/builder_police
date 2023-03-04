@@ -10,52 +10,16 @@ import unittest
 from pathlib import Path
 
 
-def update(d, u):
-    for k, v in u.items():
-        if isinstance(v, collections.abc.Mapping):
-            d[k] = update(d.get(k, {}), v)
-        else:
-            d[k] = v
-    return d
-
-
 class TestCase(unittest.TestCase):
 
     def test_config(self):
         # Stepik changes directory structure so check first which directory structure
-        config_dir = Path("../../")
-        config_filename = "minetest_irc.py"
-        if not (config_dir / config_filename).exists():
-            if (config_dir.parent / config_filename).exists():
-                config_dir = config_dir.parent
-        config_path = config_dir / config_filename
-        logging_config_path = config_dir / "logging_config.json"
-        requirements_path = config_dir / "requirements.txt"
-
-        logging_config_final = {
-            'version': 1,
-            'disable_existing_loggers': False,
-            'handlers': {
-                'console': {
-                    'class': 'logging.StreamHandler',
-                },
-            },
-            'root': {
-                'handlers': ['console'],
-                'level': 'WARNING',
-            },
-        }
-        try:
-            from lesson1.set_up_minetest.task import logging_config
-            logging_config_final = update(logging_config_final, logging_config)
-        except ImportError:
-            # logging_config not specified so no changes required
-            logging_config = None
-            logging.debug(f"Import error on logging_config. {logging_config}")
-            pass
-        with open(logging_config_path, "w") as file:
-            json.dump(logging_config_final, file)
-        logging.config.dictConfig(logging_config_final)
+        reqs_dir = Path("../../")
+        reqs_filename = "requirements.txt"
+        if not (reqs_dir / reqs_filename).exists():
+            if (reqs_dir.parent / reqs_filename).exists():
+                reqs_dir = reqs_dir.parent
+        requirements_path = reqs_dir / reqs_filename
 
         # Check if ircserver is on LAN
         from lesson1.set_up_minetest.task import mtuser, mtuserpass, mtbotnick, ircserver, channel, player_z
@@ -78,18 +42,6 @@ class TestCase(unittest.TestCase):
             else:
                 # install ircbuilder from pypi.org
                 subprocess.check_call([sys.executable, "-m", "pip", "install", f"ircbuilder>={ircbuilder_version}"])
-
-        with open(config_path, "w") as file:
-            file.write(f'mtuser = "{mtuser}"       # your minetest username\n')
-            file.write(f'mtuserpass = "{mtuserpass}"   # your minetest password. This file is not encrypted so '
-                       'don\'t use anything you want kept secret\n')
-            file.write(f'player_z = {player_z}  # your z value from sign in minetest with your username on it\n')
-            file.write('\n')
-            file.write('# The following must match your settings in minetest server > Settings > Advanced Settings > '
-                       'Mods > irc > Basic >\n')
-            file.write('ircserver = "' + ircserver + '"   # same as IRC server\n')
-            file.write('mtbotnick = "' + mtbotnick + '"   # same as Bot nickname\n')
-            file.write('channel = "' + channel + '"     # same as Channel to join\n')
 
         from ircbuilder import open_irc
         try:

@@ -10,7 +10,7 @@ The length of the castle will be 9 blocks. The width of the
 castle will be 5 blocks.
 
 ## Task
-Create a 9 x 5 x 5 open top stone box starting at x = 121, y = 9. Add a 2 x 1 doorway.
+Create a 9 x 5 x 5 open-top stone box starting at x = 121, y = 9. Add a 2 x 1 doorway.
 
 <img src="castle_base.png" width="100%" />
 
